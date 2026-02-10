@@ -888,7 +888,7 @@ li {
 }
 
 .loopy-story__content.open {
-  max-height: 1000px;
+  max-height: 5000px;
   padding: var(--space-lg);
 }
 
@@ -896,7 +896,21 @@ li {
   color: var(--color-text-primary);
   line-height: 1.9;
   font-style: italic;
-  margin: 0;
+  margin: 0 0 var(--space-md) 0;
+}
+
+.loopy-story__content p:last-child {
+  margin-bottom: 0;
+}
+
+.loopy-story__content em {
+  color: var(--color-golden);
+  font-style: italic;
+}
+
+.loopy-story__content strong {
+  color: var(--color-golden);
+  font-weight: 700;
 }
 
 /* --- Compact Card Grid (for MVP modules) --- */
