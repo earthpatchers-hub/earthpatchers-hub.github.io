@@ -228,7 +228,7 @@ li {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: var(--space-sm) var(--space-lg);
+  padding: 0;
   background: none;
   border: none;
   color: var(--color-text-secondary);
@@ -238,6 +238,18 @@ li {
   border-left: 3px solid transparent;
   margin-left: -3px;
   transition: all var(--transition);
+}
+
+.sidebar__accordion-link {
+  flex: 1;
+  display: block;
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-lg);
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar__accordion-toggle .sidebar__accordion-arrow {
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-sm);
 }
 
 .sidebar__accordion-toggle:hover {
@@ -815,6 +827,115 @@ li {
 
 .callout__text {
   color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* --- Module Hero Subtitle --- */
+.module-hero__subtitle {
+  font-style: italic;
+  color: var(--color-bandage-amber);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Module Body --- */
+.module-body {
+  margin-bottom: var(--space-xl);
+}
+
+.module-body > p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.8;
+}
+
+/* --- Loopy Story Toggle --- */
+.loopy-story {
+  margin-top: var(--space-xl);
+}
+
+.loopy-story__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: rgba(212, 136, 30, 0.1);
+  border: 1px solid rgba(212, 136, 30, 0.3);
+  border-radius: var(--radius);
+  color: var(--color-bandage-amber);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.loopy-story__toggle::before {
+  content: '\1F43B';
+  font-size: 1.2em;
+}
+
+.loopy-story__toggle:hover {
+  background: rgba(212, 136, 30, 0.2);
+  border-color: var(--color-bandage-amber);
+}
+
+.loopy-story__toggle.open {
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom-color: transparent;
+}
+
+.loopy-story__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  background: rgba(212, 136, 30, 0.06);
+  border: 1px solid rgba(212, 136, 30, 0.3);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.loopy-story__content.open {
+  max-height: 1000px;
+  padding: var(--space-lg);
+}
+
+.loopy-story__content p {
+  color: var(--color-text-primary);
+  line-height: 1.9;
+  font-style: italic;
+  margin: 0;
+}
+
+/* --- Compact Card Grid (for MVP modules) --- */
+.card-grid--compact {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+
+.card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  transition: all var(--transition);
+}
+
+.card--link:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card--link .card__body {
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+}
+
+.card--link .card__title {
+  font-size: var(--font-size-sm);
   margin: 0;
 }
 

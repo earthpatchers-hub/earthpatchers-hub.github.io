@@ -42,27 +42,31 @@
       <li>
         <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">Overview</a>
       </li>
-      <li>
-        <a href="#mvp" class="sidebar__link" data-i18n="nav.mvp">MVP (36 months)</a>
-      </li>
-      <li>
-        <a href="#next-steps" class="sidebar__link" data-i18n="nav.next-steps">Next Steps</a>
-      </li>
       <li class="sidebar__accordion">
-        <button class="sidebar__accordion-toggle" aria-expanded="false">
-          <span data-i18n="nav.modules">Modules</span>
+        <button class="sidebar__accordion-toggle" data-accordion="mvp" aria-expanded="false">
+          <a href="#mvp" class="sidebar__accordion-link" data-i18n="nav.mvp">MVP (36 months)</a>
           <span class="sidebar__accordion-arrow">&#9654;</span>
         </button>
         <ul class="sidebar__submenu">
           <li><a href="#module/missions-hq" class="sidebar__sublink" data-i18n="mod.missions-hq">Missions HQ</a></li>
+          <li><a href="#module/tribes" class="sidebar__sublink" data-i18n="mod.tribes">Tribes</a></li>
           <li><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
+          <li><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
+          <li><a href="#module/games-room" class="sidebar__sublink" data-i18n="mod.games-room">Games Room</a></li>
+        </ul>
+      </li>
+      <li class="sidebar__accordion">
+        <button class="sidebar__accordion-toggle" data-accordion="next-steps" aria-expanded="false">
+          <a href="#next-steps" class="sidebar__accordion-link" data-i18n="nav.next-steps">Next Steps</a>
+          <span class="sidebar__accordion-arrow">&#9654;</span>
+        </button>
+        <ul class="sidebar__submenu">
+          <li><a href="#module/activity-hut" class="sidebar__sublink" data-i18n="mod.activity-hut">Activity Hut</a></li>
           <li><a href="#module/eco-shops" class="sidebar__sublink" data-i18n="mod.eco-shops">Eco Shops Directory</a></li>
           <li><a href="#module/green-wall" class="sidebar__sublink" data-i18n="mod.green-wall">The Green Wall</a></li>
-          <li><a href="#module/tribes" class="sidebar__sublink" data-i18n="mod.tribes">Tribes</a></li>
-          <li><a href="#module/safety-desk" class="sidebar__sublink" data-i18n="mod.safety-desk">Safety Desk</a></li>
+          <li><a href="#module/org-scientists" class="sidebar__sublink" data-i18n="mod.org-scientists">Organisations & Scientists</a></li>
+          <li><a href="#module/new-cities" class="sidebar__sublink" data-i18n="mod.new-cities">New Cities & Discovery Phase</a></li>
           <li><a href="#module/patcher-camp" class="sidebar__sublink" data-i18n="mod.patcher-camp">Patcher Camp</a></li>
-          <li><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
-          <li><a href="#module/city-map" class="sidebar__sublink" data-i18n="mod.city-map">City Map + City Funds</a></li>
         </ul>
       </li>
       <li>
@@ -100,7 +104,7 @@
       <div class="hero">
         <img src="assets/EP_FINAL_LOGO.png" alt="EarthPatchers Logo" class="hero__logo">
         <h1 class="hero__tagline" data-i18n="hero.tagline">Community-Powered Sustainability</h1>
-        <p class="hero__subtitle" data-i18n="hero.subtitle">A platform that helps families and young people turn sustainability into real-life action through missions, safe local collaboration, and circular habits — starting in Cluj.</p>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">EarthPatchers is a community-driven platform that helps families, young people, and local communities turn sustainability into everyday action. Through missions, safe collaboration, and circular habits, we make it easy to start small, act together, and grow real impact, starting in Cluj.</p>
         <div class="hero__ctas">
           <a href="#mvp" class="btn btn--primary" data-i18n="hero.cta.mvp">Explore the MVP Plan</a>
           <a href="#next-steps" class="btn btn--secondary" data-i18n="hero.cta.modules">Browse Modules</a>
@@ -113,9 +117,9 @@
           <h2 data-i18n="overview.problem.title">Why EarthPatchers Exists</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.problem.text">Most people want to help, but real life is busy. Sustainability often feels like too much research, too many choices, too much guilt, and not enough clarity on what actually matters. Young people feel climate anxiety, adults feel time pressure, and communities often lack a simple way to act together.</p>
+        <p data-i18n="overview.problem.text">Most people want to help the planet, but life gets in the way. Sustainability can feel like too much research, too many options, too much guilt, and not enough clarity on what actually makes a difference. Young people feel climate anxiety, parents feel time pressure, and communities don't have a simple way to act together.</p>
         <div class="callout callout--golden">
-          <p class="callout__text" data-i18n="overview.problem.solution">EarthPatchers exists because the missing piece isn't "more awareness." It's an easy path from intention to action, with support and trust built in.</p>
+          <p class="callout__text" data-i18n="overview.problem.solution">EarthPatchers exists because the missing piece isn't "more awareness." It's a clear, easy path from intention to action, with built-in trust, support, and a community that moves together.</p>
         </div>
       </div>
 
@@ -129,22 +133,22 @@
           <div class="feature-card">
             <div class="feature-card__icon">&#127919;</div>
             <h4 class="feature-card__title" data-i18n="overview.diff.action.title">Action-First</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.action.text">Instead of overwhelming people with information, we start with small, realistic actions that fit into everyday life.</p>
+            <p class="feature-card__text" data-i18n="overview.diff.action.text">We don't start with lectures or reports. We start with small, realistic actions that fit into everyday life. One mission at a time.</p>
           </div>
           <div class="feature-card">
             <div class="feature-card__icon">&#128106;</div>
             <h4 class="feature-card__title" data-i18n="overview.diff.families.title">Designed for Families & Youth</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.families.text">Young people care deeply about the future, but they need safe spaces, clear boundaries, and meaningful progress.</p>
+            <p class="feature-card__text" data-i18n="overview.diff.families.text">Young people care deeply about the future. They deserve safe spaces, clear boundaries, meaningful progress, and adults who support them.</p>
           </div>
           <div class="feature-card">
             <div class="feature-card__icon">&#9851;&#65039;</div>
             <h4 class="feature-card__title" data-i18n="overview.diff.practical.title">Everyday Practicality</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.practical.text">Circular habits (swap, reuse, repair) are powerful, but only work when they're easy and safe to do locally.</p>
+            <p class="feature-card__text" data-i18n="overview.diff.practical.text">Circular habits (swap, reuse, repair) are powerful but only work when they're easy and safe to do locally. We make that possible.</p>
           </div>
           <div class="feature-card">
             <div class="feature-card__icon">&#127758;</div>
             <h4 class="feature-card__title" data-i18n="overview.diff.local.title">Local First, Then Scale</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.local.text">We start with one city (Cluj), build a repeatable model, then expand with community support and partnerships.</p>
+            <p class="feature-card__text" data-i18n="overview.diff.local.text">We start with one city (Cluj), build something that truly works, and expand with the community's support and trust.</p>
           </div>
         </div>
       </div>
@@ -164,22 +168,22 @@
           <div class="step">
             <div class="step__number">2</div>
             <div class="step__title" data-i18n="overview.how.step2.title">Do the mission</div>
-            <div class="step__text" data-i18n="overview.how.step2.text">Alone, with friends, or as a group</div>
+            <div class="step__text" data-i18n="overview.how.step2.text">Alone, with your family, or with your tribe</div>
           </div>
           <div class="step">
             <div class="step__number">3</div>
-            <div class="step__title" data-i18n="overview.how.step3.title">Track progress</div>
-            <div class="step__text" data-i18n="overview.how.step3.text">Earn points, badges, and build your personal timeline</div>
+            <div class="step__title" data-i18n="overview.how.step3.title">Track your progress</div>
+            <div class="step__text" data-i18n="overview.how.step3.text">Earn badges, collect points, and build your personal timeline</div>
           </div>
           <div class="step">
             <div class="step__number">4</div>
             <div class="step__title" data-i18n="overview.how.step4.title">Join the community</div>
-            <div class="step__text" data-i18n="overview.how.step4.text">Participate in challenges and mutual support (optional)</div>
+            <div class="step__text" data-i18n="overview.how.step4.text">Take part in group challenges and support each other</div>
           </div>
           <div class="step">
             <div class="step__number">5</div>
-            <div class="step__title" data-i18n="overview.how.step5.title">Use circular exchange</div>
-            <div class="step__text" data-i18n="overview.how.step5.text">Swap, give away, or reuse instead of buying new (optional)</div>
+            <div class="step__title" data-i18n="overview.how.step5.title">Reuse and share</div>
+            <div class="step__text" data-i18n="overview.how.step5.text">Swap, give away, or borrow instead of buying new</div>
           </div>
         </div>
       </div>
@@ -190,7 +194,7 @@
           <div class="callout-box__icon">&#128205;</div>
           <div class="callout-box__text">
             <h3 data-i18n="overview.cluj.title">Starting in Cluj</h3>
-            <p data-i18n="overview.cluj.text">EarthPatchers starts in Cluj to keep it real, measurable, and community-led. Once it works well locally, it becomes a model that can be repeated elsewhere.</p>
+            <p data-i18n="overview.cluj.text">EarthPatchers starts in Cluj to keep things real, measurable, and community-led. Once it works locally, it becomes a model that can be repeated in other cities.</p>
           </div>
         </div>
       </div>
@@ -209,7 +213,7 @@
           <h2 data-i18n="overview.partners.title">Partnerships</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.partners.text">EarthPatchers is designed to work alongside schools and NGOs, not replace them. We're exploring local partnerships (e.g., Creionăm Viitorul) and future collaboration goals (e.g., Tășuleasa Social) as missions scale.</p>
+        <p data-i18n="overview.partners.text">EarthPatchers is designed to work alongside schools and NGOs, not replace them. We're building local partnerships and collaboration goals as missions scale.</p>
       </div>
 
       <!-- Bottom CTA -->
@@ -261,6 +265,47 @@
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
           </div>
+        </div>
+      </div>
+
+      <!-- MVP Modules -->
+      <div class="section">
+        <div class="section__heading">
+          <h2 data-i18n="mvp.modules.title">MVP Modules</h2>
+        </div>
+        <div class="section__divider"></div>
+        <p data-i18n="mvp.modules.intro">These five modules form the core of the MVP and will be built and tested during the 36-month plan:</p>
+        <div class="card-grid card-grid--compact">
+          <a href="#module/missions-hq" class="card card--link">
+            <img src="assets/EP_MissionsHQ_magic.png" alt="Missions HQ" class="card__image" loading="lazy">
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="mod.missions-hq">Missions HQ</h3>
+            </div>
+          </a>
+          <a href="#module/tribes" class="card card--link">
+            <img src="assets/EP_Tribes_magic.png" alt="Tribes" class="card__image" loading="lazy">
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="mod.tribes">Tribes</h3>
+            </div>
+          </a>
+          <a href="#module/market-hut" class="card card--link">
+            <img src="assets/EP_MarketHut_magic.png" alt="Market Hut" class="card__image" loading="lazy">
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="mod.market-hut">Market Hut</h3>
+            </div>
+          </a>
+          <a href="#module/earth-side" class="card card--link">
+            <img src="assets/EP_EarthSide_magic.png" alt="Earth's Side of the Story" class="card__image" loading="lazy">
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="mod.earth-side">Earth's Side of the Story</h3>
+            </div>
+          </a>
+          <a href="#module/games-room" class="card card--link">
+            <img src="assets/EP_GamesRoom_magic.png" alt="Games Room" class="card__image" loading="lazy">
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="mod.games-room">Games Room</h3>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -375,23 +420,13 @@
       <p data-i18n="nextsteps.intro">Beyond the MVP, EarthPatchers envisions a rich ecosystem of modules. These will be shaped by community voting and feasibility through the Green Wall.</p>
 
       <div class="card-grid">
-        <!-- Missions HQ -->
+        <!-- Activity Hut -->
         <div class="card">
-          <img src="assets/EP_MissionsHQ_magic.png" alt="Missions HQ" class="card__image" loading="lazy">
+          <img src="assets/EP_ActivityHut_magic.png" alt="Activity Hut" class="card__image" loading="lazy">
           <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.missions-hq">Missions HQ</h3>
-            <p class="card__text" data-i18n="mod.missions-hq.short">The central hub for eco missions — micro, mini, and weekend challenges for families and youth.</p>
-            <a href="#module/missions-hq" class="card__link" data-i18n="nextsteps.explore">Explore</a>
-          </div>
-        </div>
-
-        <!-- Market Hut -->
-        <div class="card">
-          <img src="assets/EP_MarketHut_magic.png" alt="Market Hut" class="card__image" loading="lazy">
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.market-hut">Market Hut</h3>
-            <p class="card__text" data-i18n="mod.market-hut.short">Swaps, giveaways, and reuse. A safe, community-driven circular exchange.</p>
-            <a href="#module/market-hut" class="card__link" data-i18n="nextsteps.explore">Explore</a>
+            <h3 class="card__title" data-i18n="mod.activity-hut">Activity Hut</h3>
+            <p class="card__text" data-i18n="mod.activity-hut.short">DIY activities, nature crafts, and seasonal projects for families and young people.</p>
+            <a href="#module/activity-hut" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
 
@@ -400,7 +435,7 @@
           <img src="assets/EP_EcoShops_magic.png" alt="Eco Shops Directory" class="card__image" loading="lazy">
           <div class="card__body">
             <h3 class="card__title" data-i18n="mod.eco-shops">Eco Shops Directory</h3>
-            <p class="card__text" data-i18n="mod.eco-shops.short">A curated local directory of sustainable shops and products.</p>
+            <p class="card__text" data-i18n="mod.eco-shops.short">A curated local directory of sustainable shops and services.</p>
             <a href="#module/eco-shops" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
@@ -410,28 +445,28 @@
           <img src="assets/EP_GreenWall_magic.png" alt="The Green Wall" class="card__image" loading="lazy">
           <div class="card__body">
             <h3 class="card__title" data-i18n="mod.green-wall">The Green Wall</h3>
-            <p class="card__text" data-i18n="mod.green-wall.short">Community idea backlog with voting, skill-matching, and team formation.</p>
+            <p class="card__text" data-i18n="mod.green-wall.short">Community idea board with voting, skill-matching, and team formation.</p>
             <a href="#module/green-wall" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
 
-        <!-- Tribes -->
+        <!-- Organisations & Scientists -->
         <div class="card">
-          <img src="assets/EP_Tribes_magic.png" alt="Tribes" class="card__image" loading="lazy">
+          <img src="assets/EP_OrgScientists_magic.png" alt="Organisations & Scientists" class="card__image" loading="lazy">
           <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.tribes">Tribes</h3>
-            <p class="card__text" data-i18n="mod.tribes.short">Local groups for challenges, meetups, and mutual support.</p>
-            <a href="#module/tribes" class="card__link" data-i18n="nextsteps.explore">Explore</a>
+            <h3 class="card__title" data-i18n="mod.org-scientists">Organisations & Scientists</h3>
+            <p class="card__text" data-i18n="mod.org-scientists.short">A bridge between community action and trusted science and expert guidance.</p>
+            <a href="#module/org-scientists" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
 
-        <!-- Safety Desk -->
+        <!-- New Cities & Discovery Phase -->
         <div class="card">
-          <img src="assets/EP_SafetyDesk_magic.png" alt="Safety Desk" class="card__image" loading="lazy">
+          <img src="assets/EP_NewCities_magic.png" alt="New Cities & Discovery Phase" class="card__image" loading="lazy">
           <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.safety-desk">Safety Desk</h3>
-            <p class="card__text" data-i18n="mod.safety-desk.short">Safety, moderation, and clear community rules for everyone.</p>
-            <a href="#module/safety-desk" class="card__link" data-i18n="nextsteps.explore">Explore</a>
+            <h3 class="card__title" data-i18n="mod.new-cities">New Cities & Discovery Phase</h3>
+            <p class="card__text" data-i18n="mod.new-cities.short">City-by-city expansion with transparent funding and community voting.</p>
+            <a href="#module/new-cities" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
 
@@ -440,28 +475,8 @@
           <img src="assets/EP_PatcherCamp_magic.png" alt="Patcher Camp" class="card__image" loading="lazy">
           <div class="card__body">
             <h3 class="card__title" data-i18n="mod.patcher-camp">Patcher Camp</h3>
-            <p class="card__text" data-i18n="mod.patcher-camp.short">A cooperative game where youth solve real problems as superpowers.</p>
+            <p class="card__text" data-i18n="mod.patcher-camp.short">A cooperative adventure game where youth solve real problems as superpowers.</p>
             <a href="#module/patcher-camp" class="card__link" data-i18n="nextsteps.explore">Explore</a>
-          </div>
-        </div>
-
-        <!-- Earth's Side of the Story -->
-        <div class="card">
-          <img src="assets/EP_EarthSide_magic.png" alt="Earth's Side of the Story" class="card__image" loading="lazy">
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.earth-side">Earth's Side of the Story</h3>
-            <p class="card__text" data-i18n="mod.earth-side.short">An interactive globe for learning about climate, pollution, and solutions.</p>
-            <a href="#module/earth-side" class="card__link" data-i18n="nextsteps.explore">Explore</a>
-          </div>
-        </div>
-
-        <!-- City Map + City Funds -->
-        <div class="card">
-          <img src="assets/EP_CityMapFunds_magic.png" alt="City Map + City Funds" class="card__image" loading="lazy">
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="mod.city-map">City Map + City Funds</h3>
-            <p class="card__text" data-i18n="mod.city-map.short">City-by-city expansion with transparent funding and community voting.</p>
-            <a href="#module/city-map" class="card__link" data-i18n="nextsteps.explore">Explore</a>
           </div>
         </div>
       </div>
@@ -478,132 +493,24 @@
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
           <h1 data-i18n="missions-hq.title">Missions HQ</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="missions-hq.subtitle">Missions to Save the Earth</p>
-          <p data-i18n="missions-hq.desc">The central hub for eco missions — micro, mini, and weekend challenges filtered by area, age, and interests. Short missions designed for families and schools, with badges, points, and visible progress.</p>
+          <p class="module-hero__subtitle" data-i18n="missions-hq.subtitle">The Heart of EarthPatchers</p>
         </div>
       </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="missions-hq.why">Missions turn climate anxiety into doable action. They give families and youth a clear starting point with a habit-first approach: 1–3 missions per month is a realistic, sustainable target.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="missions-hq.f1">Quick missions (10–20 min) and weekend missions (1–2 hours)</li>
-          <li data-i18n="missions-hq.f2">Filtered by age group, interest, and time available</li>
-          <li data-i18n="missions-hq.f3">Progress tracked with badges, points, and a personal timeline</li>
-          <li data-i18n="missions-hq.f4">Seasonal mission packs and partner mission imports (NGOs, schools)</li>
-          <li data-i18n="missions-hq.f5">Habit-first approach: built to launch in small steps, then connect into one journey</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
+      <div class="module-body">
+        <p data-i18n="missions-hq.desc">Missions HQ is the beating heart of EarthPatchers. It's where families and young people find real-world eco missions, from quick 10-minute actions to weekend adventures. Every mission is designed to be doable, age-appropriate, and meaningful. You can filter by time, interest, and age group, track your progress with badges and points, and build a personal timeline of everything you've done for the planet.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="missions-hq.why">Missions turn climate anxiety into doable action. They give families and young people a clear starting point, with a habit-first approach: one mission at a time, building real change step by step.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="missions-hq.loopy">Loopy, the little bear, scratched his head and looked around the forest clearing. "What can I do today?" he wondered. The Missions HQ board was glowing softly under the big oak tree. "Plant a seed," one card said. "Pick up 5 pieces of litter near the stream," said another. "Help a neighbour carry their recycling." Loopy smiled. He didn't need to save the whole forest today. He just needed to start. He picked the seed card, tucked it into his bandana, and trotted off toward the meadow. One small mission, one small bear, one big difference.</p>
+          </div>
+        </div>
       </div>
       <div class="module-nav">
         <span></span>
-        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ===== MODULE: MARKET HUT ===== -->
-    <section id="page-module-market-hut" class="page">
-      <div class="module-hero">
-        <img src="assets/EP_MarketHut_magic.png" alt="Market Hut" class="module-hero__image" loading="lazy">
-        <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
-          <h1 data-i18n="market-hut.title">Market Hut</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="market-hut.subtitle">Swap & Reuse</p>
-          <p data-i18n="market-hut.desc">Swaps, giveaways, and reuse, plus a future-friendly "borrow library" (tools, books, kids gear). A practical community hook that keeps people coming back.</p>
-        </div>
-      </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="market-hut.why">Circular habits are one of the fastest ways to reduce waste. Market Hut makes it safe, easy, and social — connecting directly to missions so reuse becomes a habit, not a one-time act.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="market-hut.f1">Swap and give-away listings focused locally</li>
-          <li data-i18n="market-hut.f2">Safe-by-design: adult-managed exchanges, clear rules, safe pickup points</li>
-          <li data-i18n="market-hut.f3">Missions connect directly to circular habits: donate, repair, reuse</li>
-          <li data-i18n="market-hut.f4">Future: "borrow library" for tools, books, and kids gear</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
-      </div>
-      <div class="module-nav">
-        <a href="#module/missions-hq" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/eco-shops" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ===== MODULE: ECO SHOPS ===== -->
-    <section id="page-module-eco-shops" class="page">
-      <div class="module-hero">
-        <img src="assets/EP_EcoShops_magic.png" alt="Eco Shops Directory" class="module-hero__image" loading="lazy">
-        <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
-          <h1 data-i18n="eco-shops.title">Eco Shops Directory</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="eco-shops.subtitle">Green Shops</p>
-          <p data-i18n="eco-shops.desc">A curated local directory of sustainable shops and products, starting in Cluj. Clear criteria, community contributions, and city-by-city expansion.</p>
-        </div>
-      </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="eco-shops.why">Finding truly sustainable shops is hard. This directory makes it simple with clear criteria and community-driven reviews, helping people make better purchasing choices.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="eco-shops.f1">Curated local directory of sustainable shops and products</li>
-          <li data-i18n="eco-shops.f2">Clear criteria: refill, compostable, recycled/reclaimed, repairable</li>
-          <li data-i18n="eco-shops.f3">Community contributions via template: photos, location, pros/cons</li>
-          <li data-i18n="eco-shops.f4">City-by-city expansion driven by voting and local support</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
-      </div>
-      <div class="module-nav">
-        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/green-wall" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ===== MODULE: GREEN WALL ===== -->
-    <section id="page-module-green-wall" class="page">
-      <div class="module-hero">
-        <img src="assets/EP_GreenWall_magic.png" alt="The Green Wall" class="module-hero__image" loading="lazy">
-        <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
-          <h1 data-i18n="green-wall.title">The Green Wall</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="green-wall.subtitle">Community Ideas & Skills</p>
-          <p data-i18n="green-wall.desc">A public startup-style idea backlog where the community votes on Impact + Feasibility. People join ideas with their skills, and ideas rise as teams form and funding appears.</p>
-        </div>
-      </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="green-wall.why">Good ideas need more than enthusiasm — they need skills, teamwork, and sometimes funding. The Green Wall turns community energy into real projects.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="green-wall.f1">Public idea backlog with community voting (Impact + Feasibility)</li>
-          <li data-i18n="green-wall.f2">Join ideas with your skills: design, education, dev, legal, ops</li>
-          <li data-i18n="green-wall.f3">Ideas rise when teams form and funding/mentors appear</li>
-          <li data-i18n="green-wall.f4">Optional angel/sponsor pathway for ideas that need funding</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
-      </div>
-      <div class="module-nav">
-        <a href="#module/eco-shops" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
         <a href="#module/tribes" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
@@ -615,97 +522,53 @@
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
           <h1 data-i18n="tribes.title">Tribes</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="tribes.subtitle">Local Communities</p>
-          <p data-i18n="tribes.desc">Local groups (neighbourhood/city) for challenges, meetups, and mutual support. A realistic rhythm: monthly or seasonal, not weekly obligations.</p>
+          <p class="module-hero__subtitle" data-i18n="tribes.subtitle">Your Local Crew</p>
         </div>
       </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="tribes.why">Sustainability is more than tasks — it's about belonging. Tribes turn the platform into a community where people support each other and act together.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="tribes.f1">Local groups for challenges, meetups, and mutual support</li>
-          <li data-i18n="tribes.f2">Realistic rhythm: monthly or seasonal, not weekly pressure</li>
-          <li data-i18n="tribes.f3">Integrates with schools, afterschool programs, and local NGOs</li>
-          <li data-i18n="tribes.f4">Turns the platform into belonging, not just an app</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
+      <div class="module-body">
+        <p data-i18n="tribes.desc">Tribes are small, local groups that do missions together, meet up, and support each other. Think of them as your neighbourhood crew for sustainability. Whether it's a school class, a group of parents, or a youth club, Tribes make EarthPatchers social, consistent, and fun. The rhythm is realistic, monthly or seasonal, not a weekly obligation. And every tribe is connected to the platform's safety system from day one.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="tribes.why">Sustainability isn't just about tasks. It's about belonging. Tribes turn the platform into a community where people support each other and act together.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="tribes.loopy">Loopy arrived at the oak stump circle just as the sun was setting. The other animals were already there: Mira the fox, Pip the hedgehog, and old Barbu the badger. "Welcome to the Moonlight Tribe," Mira said. "We meet once a month, right here." "What do we do?" Loopy asked. "Whatever the forest needs," Barbu said. "Last month we fixed the trail. This month, we're planting wildflowers by the stream." "And next month?" "We'll decide together." Loopy sat down and smiled. He wasn't alone anymore.</p>
+          </div>
+        </div>
       </div>
       <div class="module-nav">
-        <a href="#module/green-wall" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/safety-desk" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/missions-hq" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
 
-    <!-- ===== MODULE: SAFETY DESK ===== -->
-    <section id="page-module-safety-desk" class="page">
+    <!-- ===== MODULE: MARKET HUT ===== -->
+    <section id="page-module-market-hut" class="page">
       <div class="module-hero">
-        <img src="assets/EP_SafetyDesk_magic.png" alt="Safety Desk" class="module-hero__image" loading="lazy">
+        <img src="assets/EP_MarketHut_magic.png" alt="Market Hut" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
-          <h1 data-i18n="safety-desk.title">Safety Desk</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="safety-desk.subtitle">Moderation & Trust</p>
-          <p data-i18n="safety-desk.desc">Safety, moderation, reporting, permissions, and clear community rules — especially for kids. Plain-language policies that everyone can understand.</p>
+          <h1 data-i18n="market-hut.title">Market Hut</h1>
+          <p class="module-hero__subtitle" data-i18n="market-hut.subtitle">Swap, Share, Reuse</p>
         </div>
       </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="safety-desk.why">For a platform involving youth, safety isn't an add-on — it's the foundation. The Safety Desk ensures every interaction is protected, transparent, and age-appropriate.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="safety-desk.f1">Kids can learn and earn; sensitive interactions via adult accounts</li>
-          <li data-i18n="safety-desk.f2">Anti-spam/anti-scam basics, dispute flow, simple audit trail</li>
-          <li data-i18n="safety-desk.f3">Plain-language policies: what's allowed, what isn't, how we respond</li>
-          <li data-i18n="safety-desk.f4">Clear reporting and moderation workflows</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
+      <div class="module-body">
+        <p data-i18n="market-hut.desc">Market Hut is where circular habits come to life. It's a safe, community-driven space for swapping, giving away, and reusing things locally. From kids' clothes and books to tools and toys, Market Hut makes it easy to pass things on instead of throwing them away. Everything is moderated, with clear exchange rules, adult-managed interactions, and safe pickup guidance. In the future, it will also include a "borrow library" for things you only need once.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="market-hut.why">Circular habits are one of the fastest ways to reduce waste. Market Hut makes reuse safe, easy, and social, connecting it directly to missions so it becomes a habit, not a one-time act.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="market-hut.loopy">Loopy had outgrown his favourite rain boots. They were still good, just too small. He carried them to the Market Hut, a cosy wooden stall under the big chestnut tree. "I'd like to give these away," he said. Old Nana Owl checked the boots, nodded, and placed them on the shelf. "Someone will be very happy," she said. The next morning, Pip the hedgehog was splashing through puddles in bright green boots, grinning from ear to ear. "They fit!" he squeaked. Loopy waved. That was the best part: nothing wasted, everything shared.</p>
+          </div>
+        </div>
       </div>
       <div class="module-nav">
         <a href="#module/tribes" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/patcher-camp" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ===== MODULE: PATCHER CAMP ===== -->
-    <section id="page-module-patcher-camp" class="page">
-      <div class="module-hero">
-        <img src="assets/EP_PatcherCamp_magic.png" alt="Patcher Camp" class="module-hero__image" loading="lazy">
-        <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
-          <h1 data-i18n="patcher-camp.title">Patcher Camp</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="patcher-camp.subtitle">The Game</p>
-          <p data-i18n="patcher-camp.desc">A cooperative game across climate zones where youth solve real problems using skills-as-superpowers. Elements: Earth, Water, Fire, Wind.</p>
-        </div>
-      </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="patcher-camp.why">Games make learning irresistible. Patcher Camp connects play to real-world action, helping young people see their skills as superpowers for the planet.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="patcher-camp.f1">Cooperative gameplay across climate zones</li>
-          <li data-i18n="patcher-camp.f2">Four elements: Earth (materials), Water (resources), Fire (energy), Wind (mobility)</li>
-          <li data-i18n="patcher-camp.f3">Wizard Tent: zero-waste recipes + calm debrief space (ages 14–18)</li>
-          <li data-i18n="patcher-camp.f4">Tiny real-life tasks (cleaning, repair, cooking, upcycling) linked to missions</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
-      </div>
-      <div class="module-nav">
-        <a href="#module/safety-desk" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
         <a href="#module/earth-side" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
@@ -717,63 +580,227 @@
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
           <h1 data-i18n="earth-side.title">Earth's Side of the Story</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="earth-side.subtitle">Interactive Learning Globe</p>
-          <p data-i18n="earth-side.desc">An "Encarta-like" globe/map learning experience: pollutants, climate hazards, and plain-language stats. Learning paths with quizzes and games that unlock regions, badges, and new skills.</p>
+          <p class="module-hero__subtitle" data-i18n="earth-side.subtitle">Learning That Grows with You</p>
         </div>
       </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="earth-side.why">Understanding "why" is the bridge between action and lasting change. This module makes climate science accessible, age-appropriate, and emotionally safe.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="earth-side.f1">Globe/map learning experience with pollutants, climate hazards, plain-language stats</li>
-          <li data-i18n="earth-side.f2">Learning paths + quizzes/games that unlock regions, badges, skills</li>
-          <li data-i18n="earth-side.f3">Age-aware content: 5–7, 8–11, 12–14, 14–18</li>
-          <li data-i18n="earth-side.f4">Emotional safety in mind; trusted data layers added over time</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
+      <div class="module-body">
+        <p data-i18n="earth-side.desc">Earth's Side of the Story is EarthPatchers' learning module. It's an interactive, age-appropriate experience that helps people understand why sustainability matters, without overwhelm or guilt. Think of it like an "Encarta-style" globe and map, where you can explore topics like pollution, climate change, water, energy, and biodiversity, all explained in plain language, adapted for different age groups (5-7, 8-11, 12-14, 14-18). Learning paths include quizzes and mini-games that unlock new regions, badges, and skills. It's built to grow step by step, starting small and adding depth over time.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="earth-side.why">Understanding "why" is the bridge between action and lasting change. This module makes climate science accessible, emotionally safe, and deeply connected to the missions people do in real life.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="earth-side.loopy">Loopy found the old globe in the library hollow. When he touched it, it glowed. "Where would you like to go?" it asked. "The ocean," Loopy whispered. The globe spun, and suddenly he was watching tiny fish swim through coral reefs. "This reef is struggling," the globe said gently. "Warmer water makes it harder for coral to survive." "What can I do?" Loopy asked. "Start small. Use less plastic. Tell your friends. And keep learning." Loopy nodded. He didn't have all the answers, but now he understood the question. And that was the beginning.</p>
+          </div>
+        </div>
       </div>
       <div class="module-nav">
-        <a href="#module/patcher-camp" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/city-map" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/games-room" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
 
-    <!-- ===== MODULE: CITY MAP + CITY FUNDS ===== -->
-    <section id="page-module-city-map" class="page">
+    <!-- ===== MODULE: GAMES ROOM ===== -->
+    <section id="page-module-games-room" class="page">
       <div class="module-hero">
-        <img src="assets/EP_CityMapFunds_magic.png" alt="City Map + City Funds" class="module-hero__image" loading="lazy">
+        <img src="assets/EP_GamesRoom_magic.png" alt="Games Room" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
-          <h1 data-i18n="city-map.title">City Map + City Funds</h1>
-          <p style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="city-map.subtitle">City Expansion</p>
-          <p data-i18n="city-map.desc">Start with Cluj on the map, then let the community vote on the next cities. Transparent "City Funds" show what gets delivered at 30%, 60%, and 100%.</p>
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
+          <h1 data-i18n="games-room.title">Games Room</h1>
+          <p class="module-hero__subtitle" data-i18n="games-room.subtitle">Play With a Purpose</p>
         </div>
       </div>
-      <div class="callout callout--golden">
-        <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-        <p class="callout__text" data-i18n="city-map.why">Scaling should be transparent and community-driven. City Funds let everyone see where resources go, and voting ensures expansion reflects real demand.</p>
-      </div>
-      <div class="section">
-        <h3 data-i18n="module.features">Key Features</h3>
-        <ul class="feature-list">
-          <li data-i18n="city-map.f1">Start with Cluj, community votes the next cities/areas</li>
-          <li data-i18n="city-map.f2">Transparent City Funds per city: deliverables at 30/60/100%</li>
-          <li data-i18n="city-map.f3">Expansion via sponsorship/donations or local volunteering</li>
-          <li data-i18n="city-map.f4">Easy replication with quality guardrails: templates, mentors, moderation</li>
-        </ul>
-      </div>
-      <div class="growing-seed">
-        <span class="growing-seed__icon">&#127793;</span>
-        <p class="growing-seed__text" data-i18n="module.coming-soon">This section is still growing. We're developing detailed content here. Check back soon or get in touch to learn more.</p>
+      <div class="module-body">
+        <p data-i18n="games-room.desc">The Games Room is where fun meets learning. It's a collection of short, engaging mini-games that teach sustainability concepts through play. Think sorting waste, matching animals to habitats, water-saving challenges, and seasonal nature quizzes. Games are designed for different age groups, quick to play, and connected to real missions. The Games Room makes sustainability something kids actually want to do, and parents can join in too.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="games-room.why">Play is how children learn best. Short, purposeful games reinforce what kids learn through missions and make the platform a place they want to come back to.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="games-room.loopy">Loopy heard laughter coming from the hollow log. Inside, Mira the fox was sorting acorns and pinecones into baskets. "What are you doing?" Loopy asked. "Playing the Sorting Game!" Mira said. "You have to put each thing in the right place: compost, recycle, or reuse. Want to try?" Loopy tried. He got a few wrong at first, but then he got faster. "I didn't know banana peels could be composted!" he said. "Now you do," Mira grinned. "And tomorrow, you'll remember." They played three more rounds. Learning had never felt this fun.</p>
+          </div>
+        </div>
       </div>
       <div class="module-nav">
         <a href="#module/earth-side" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/activity-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: ACTIVITY HUT ===== -->
+    <section id="page-module-activity-hut" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_ActivityHut_magic.png" alt="Activity Hut" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="activity-hut.title">Activity Hut</h1>
+          <p class="module-hero__subtitle" data-i18n="activity-hut.subtitle">Hands-On Projects for All Ages</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="activity-hut.desc">The Activity Hut is EarthPatchers' creative workshop. It's a space full of DIY activities, nature crafts, seasonal projects, and hands-on guides that families and young people can do together. Think birdhouse building, seed bombing, DIY beeswax wraps, upcycling old t-shirts, and seasonal nature journals. Every activity is designed to be fun, educational, and connected to real sustainability goals. Activities are tagged by age, difficulty, season, and materials needed, so it's easy to find something that works for you.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="activity-hut.why">Doing things with your hands builds real understanding. The Activity Hut turns sustainability into something tangible, shareable, and genuinely fun for the whole family.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="activity-hut.loopy">Loopy walked into the Activity Hut and gasped. The walls were covered in drawings, dried flowers, and tiny birdhouses. "What's today's activity?" he asked. "Seed bombs!" said Lina the rabbit, holding up a ball of mud and seeds. "You roll them, dry them, and throw them in a field. Flowers grow where they land." Loopy made seven seed bombs. Some were lumpy, some were perfect. He carried them to the edge of the meadow and tossed them one by one. "By spring," Lina said, "this whole field will be full of wildflowers." Loopy couldn't wait.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/games-room" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/eco-shops" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: ECO SHOPS ===== -->
+    <section id="page-module-eco-shops" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_EcoShops_magic.png" alt="Eco Shops Directory" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="eco-shops.title">Eco Shops Directory</h1>
+          <p class="module-hero__subtitle" data-i18n="eco-shops.subtitle">Find What's Truly Sustainable</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="eco-shops.desc">The Eco Shops Directory is a curated, community-driven guide to sustainable shops and services in your city. Starting in Cluj, it helps people find places that genuinely care about the environment, with clear criteria: refill stations, compostable products, recycled or reclaimed materials, repair services. Community members can contribute new listings using a simple template (photos, location, what makes it sustainable, pros and cons). Over time, the directory expands city by city, driven by demand and community voting.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="eco-shops.why">Finding truly sustainable shops is hard. This directory makes it simple, with clear criteria and community-driven reviews, so people can make better choices without hours of research.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="eco-shops.loopy">Loopy needed a new notebook, but he didn't want one wrapped in plastic. "Try the Eco Shops board," Mira suggested. The board was pinned to the big oak tree: a map of the forest with little green flags. "Green Acorn Stationery," Loopy read. "Recycled paper, no plastic, refills available." He followed the trail to a small shop run by a family of squirrels. The notebook was beautiful: thick recycled pages with a cover made from pressed leaves. "Who added this to the board?" Loopy asked. "I did," said Pip the hedgehog proudly. "I found this place last month." That's how the directory grew: one good find at a time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/activity-hut" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/green-wall" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: GREEN WALL ===== -->
+    <section id="page-module-green-wall" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_GreenWall_magic.png" alt="The Green Wall" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="green-wall.title">The Green Wall</h1>
+          <p class="module-hero__subtitle" data-i18n="green-wall.subtitle">Where Ideas Become Real</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="green-wall.desc">The Green Wall is EarthPatchers' community idea board. It's where anyone can post an idea for a sustainability project, and the community votes on what matters most (Impact + Feasibility). People join ideas with their skills (design, education, tech, legal, organising), and ideas rise as teams form and support appears. It's like a public startup board for the community: transparent, skill-driven, and focused on turning good intentions into real projects. Ideas that gain traction can attract mentors, sponsors, or local funding.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="green-wall.why">Good ideas need more than enthusiasm. They need skills, teamwork, and sometimes funding. The Green Wall turns community energy into real projects.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="green-wall.loopy">Loopy had an idea: "What if we planted fruit trees along the main path so everyone could eat for free in autumn?" He wrote it on a leaf and pinned it to the Green Wall. The next day, three animals had voted for it. By the end of the week, a whole team had formed: Barbu knew where to plant, Mira knew which trees grew best, and Pip offered to water them every morning. "All it took," Loopy thought, "was one leaf on a wall." By autumn, the path was lined with apple and plum trees. And every animal who walked by took a bite and smiled.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/eco-shops" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/org-scientists" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: ORGANISATIONS & SCIENTISTS ===== -->
+    <section id="page-module-org-scientists" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_OrgScientists_magic.png" alt="Organisations & Scientists" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="org-scientists.title">Organisations & Scientists</h1>
+          <p class="module-hero__subtitle" data-i18n="org-scientists.subtitle">Trusted Knowledge for Real Action</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="org-scientists.desc">This module connects EarthPatchers to the world of trusted science, research, and expert organisations. It's a curated space where verified scientists, environmental NGOs, and research teams can share knowledge, co-create missions, and provide fact-checked content for the platform's learning layer. Community members can see who stands behind the information they're learning, making trust visible. Over time, it becomes a bridge between grassroots community action and the research world, ensuring that what people do is backed by real evidence.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="org-scientists.why">Sustainability needs trusted information. This module ensures that the platform's content is reliable, evidence-based, and connected to real experts who care about making science accessible.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="org-scientists.loopy">Loopy had a question nobody in the forest could answer: "Why is the stream warmer this year?" He followed the signs to the big oak where Professor Hoot the owl held office hours. "Ah," said Professor Hoot, adjusting her glasses. "That's a very good question. Let me show you the data." She unrolled a long scroll with charts and pictures. "The stream is warmer because the trees upstream were cut down. Without shade, the water heats up." "Can we fix it?" Loopy asked. "Yes. Plant shade trees along the bank. I'll show your tribe exactly where and what to plant." Loopy smiled. Now they didn't just have a feeling. They had a plan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/green-wall" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/new-cities" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: NEW CITIES & DISCOVERY PHASE ===== -->
+    <section id="page-module-new-cities" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_NewCities_magic.png" alt="New Cities & Discovery Phase" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="new-cities.title">New Cities & Discovery Phase</h1>
+          <p class="module-hero__subtitle" data-i18n="new-cities.subtitle">Growing Together, City by City</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="new-cities.desc">New Cities & Discovery Phase is how EarthPatchers grows beyond Cluj. It's a transparent, community-driven expansion model where the community votes on the next city to join, and resources are managed through clear "City Funds" that show exactly what gets delivered at 30%, 60%, and 100% funding. Every new city starts with a Discovery Phase: a light version of the platform where early adopters test missions, build a local tribe, and help shape the city's unique character on the platform. It's not just about copying, it's about growing together.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="new-cities.why">Scaling should be transparent and community-driven. City Funds let everyone see where resources go, and voting ensures expansion reflects real demand.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="new-cities.loopy">One day, a letter arrived at the forest clearing. "Dear EarthPatchers," it read. "We're a group of animals from the Mountain Valley. We heard about what you're doing and we want to start something similar here." Loopy gathered the tribe. "They want to join," he said. "But they need help getting started." "We could send them our mission cards," suggested Mira. "And our rulebook," added Barbu. "And we'll visit once to help them set up their own Green Wall." A few weeks later, the Mountain Valley had its own clearing, its own tribe, and its own missions. Different forest, same spirit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/org-scientists" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/patcher-camp" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: PATCHER CAMP ===== -->
+    <section id="page-module-patcher-camp" class="page">
+      <div class="module-hero">
+        <img src="assets/EP_PatcherCamp_magic.png" alt="Patcher Camp" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
+          <h1 data-i18n="patcher-camp.title">Patcher Camp</h1>
+          <p class="module-hero__subtitle" data-i18n="patcher-camp.subtitle">The Big Adventure Game</p>
+        </div>
+      </div>
+      <div class="module-body">
+        <p data-i18n="patcher-camp.desc">Patcher Camp is a cooperative adventure game set across four climate zones, where young people solve real environmental problems using their skills as superpowers. The four elements (Earth, Water, Fire, Wind) represent different sustainability themes: materials, resources, energy, and mobility. Players work together to restore balance, complete real-life micro-tasks (cleaning, repair, cooking, upcycling), and unlock new abilities. There's also a Wizard Tent, a calm, reflective space with zero-waste recipes and debrief activities, designed especially for older teens (14-18).</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="patcher-camp.why">Games make learning irresistible. Patcher Camp connects play to real-world action, helping young people see their skills as superpowers for the planet.</p>
+        </div>
+        <div class="loopy-story">
+          <button class="loopy-story__toggle" data-i18n="module.loopy-toggle">Read Loopy's Story</button>
+          <div class="loopy-story__content">
+            <p data-i18n="patcher-camp.loopy">Loopy put on his adventure bandana and stepped into Patcher Camp. The forest around him shimmered. "Choose your element," the old tree spirit said. "Earth," Loopy said. "I want to help with materials." His badge glowed green. His first quest: find three things in the forest that could be reused instead of thrown away. He found an old jar (lantern!), a broken branch (walking stick!), and a torn net (plant holder!). "Three out of three," the tree spirit smiled. "You've levelled up, Earth Patcher." Loopy grinned. He wasn't just playing a game. He was becoming someone who could fix the world, one small thing at a time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/new-cities" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
         <span></span>
       </div>
     </section>

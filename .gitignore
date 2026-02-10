@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Source/planning docs (not part of the live site)
+Earthpatchers_context.md
+earthpatchers_mvp.md
+earthpatchers_overview.md
+assets_new/
