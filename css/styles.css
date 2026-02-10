@@ -968,6 +968,50 @@ li {
   margin: 0;
 }
 
+/* --- Module Next Steps (later) --- */
+.module-next-steps {
+  padding: var(--space-lg);
+  border: 1px dashed var(--color-border-hover);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-xl);
+  background: rgba(45, 107, 63, 0.08);
+}
+
+.module-next-steps__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  color: var(--color-text-accent);
+  margin: 0 0 var(--space-md) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.module-next-steps__title::before {
+  content: '\1F331';
+}
+
+.module-next-steps__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.module-next-steps__list li {
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-lg);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+}
+
+.module-next-steps__list li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-accent);
+}
+
 /* --- Feature List (module pages) --- */
 .feature-list {
   list-style: none;
