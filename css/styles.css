@@ -836,9 +836,42 @@ li {
   margin-bottom: var(--space-xl);
 }
 
-.module-body > p {
+.module-body > p,
+.module-body > div > p {
   margin-bottom: var(--space-lg);
   line-height: 1.8;
+}
+
+/* Module description lists */
+.module-body ul,
+.module-body ol {
+  margin: var(--space-md) 0 var(--space-lg) var(--space-lg);
+  padding: 0;
+  line-height: 1.8;
+}
+
+.module-body ul {
+  list-style: disc;
+}
+
+.module-body ol {
+  list-style: decimal;
+}
+
+.module-body li {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+  padding-left: var(--space-xs);
+}
+
+.module-body li ul {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  list-style: circle;
+}
+
+.module-body li strong {
+  color: var(--color-golden-glow);
 }
 
 /* --- Loopy Story Toggle --- */
