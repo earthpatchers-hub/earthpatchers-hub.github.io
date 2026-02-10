@@ -266,6 +266,11 @@ li {
 .sidebar__accordion-arrow {
   transition: transform var(--transition);
   font-size: 0.7em;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .sidebar__accordion-toggle.open .sidebar__accordion-arrow {

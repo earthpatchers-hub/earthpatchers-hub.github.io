@@ -24,30 +24,32 @@ const Sidebar = {
       this.overlay.addEventListener('click', () => this.close());
     }
 
-    // Accordion toggles — only the arrow area toggles, the link navigates
-    this.accordionToggles.forEach(btn => {
-      // Clicking the arrow toggles the submenu
-      const arrow = btn.querySelector('.sidebar__accordion-arrow');
+    // Accordion toggles
+    this.accordionToggles.forEach(toggle => {
+      // Clicking the arrow button toggles the submenu
+      const arrow = toggle.querySelector('.sidebar__accordion-arrow');
       if (arrow) {
         arrow.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const submenu = btn.nextElementSibling;
-          btn.classList.toggle('open');
+          const submenu = toggle.nextElementSibling;
+          const isOpen = toggle.classList.contains('open');
+          toggle.classList.toggle('open');
           submenu.classList.toggle('open');
+          arrow.setAttribute('aria-expanded', !isOpen);
         });
       }
 
-      // Clicking the link part navigates (default behavior) but also opens the accordion
-      const link = btn.querySelector('.sidebar__accordion-link');
+      // Clicking the link navigates (default <a> behavior) and also opens the accordion
+      const link = toggle.querySelector('.sidebar__accordion-link');
       if (link) {
-        link.addEventListener('click', (e) => {
-          // Let the hash navigation happen naturally
-          // But also open this accordion
-          const submenu = btn.nextElementSibling;
+        link.addEventListener('click', () => {
+          const submenu = toggle.nextElementSibling;
           if (!submenu.classList.contains('open')) {
-            btn.classList.add('open');
+            toggle.classList.add('open');
             submenu.classList.add('open');
+            const arrow = toggle.querySelector('.sidebar__accordion-arrow');
+            if (arrow) arrow.setAttribute('aria-expanded', 'true');
           }
         });
       }
