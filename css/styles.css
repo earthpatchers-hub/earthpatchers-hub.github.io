@@ -491,13 +491,7 @@ li {
 }
 
 .section__heading::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: var(--color-golden-glow);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--color-golden-glow);
+  display: none;
 }
 
 .section__divider {
