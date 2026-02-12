@@ -14,10 +14,10 @@ const Router = {
     const hash = location.hash || '#overview';
     const pageId = this.hashToPageId(hash);
 
-    // Hide current page
-    if (this.currentPage) {
-      this.currentPage.classList.remove('active');
-    }
+    // Hide any active pages (including the server-rendered default)
+    document.querySelectorAll('.page.active').forEach(page => {
+      page.classList.remove('active');
+    });
 
     // Show target page
     const target = document.getElementById(pageId);

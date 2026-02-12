@@ -953,8 +953,8 @@ li {
 
 /* --- Compact Card Grid (for MVP modules) --- */
 .card-grid--compact {
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: var(--space-lg);
 }
 
 .card--link {
@@ -1328,6 +1328,10 @@ li {
     grid-template-columns: 1fr;
   }
 
+  .card-grid--compact {
+    grid-template-columns: 1fr;
+  }
+
   .feature-grid {
     grid-template-columns: 1fr;
   }
@@ -1363,9 +1367,23 @@ li {
   }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid--compact {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid--compact {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
   }
 }
 

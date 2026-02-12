@@ -93,7 +93,7 @@ const I18n = {
       'mvp.pillar3.why': 'Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.',
 
       'mvp.modules.title': 'MVP Modules',
-      'mvp.modules.intro': 'These five modules form the core of the MVP and will be built and tested during the 36-month plan:',
+      'mvp.modules.intro': 'These four modules form the core of the MVP and will be built and tested during the 36-month plan:',
 
       'mvp.timeline.title': '36-Month Timeline',
 
@@ -208,7 +208,7 @@ const I18n = {
       'eco-shops.subtitle': 'Find What’s Truly Sustainable',
       'eco-shops.desc': '<p>Eco Shops is a Cluj-first guide to sustainable products and local shops with ratings and comments to keep things honest. Quality rules reduce spam:</p><ul><li>You can review or add products after earning enough Patch Coins and completing a verified mission.</li><li>New products are submitted via a template (photo, where to buy, materials, why it’s better, what to watch out for).</li><li>MasterPatchers verify entries before they go live.</li></ul>',
       'eco-shops.why': 'Finding truly sustainable products is hard. This directory keeps things honest with community reviews, verified missions, and MasterPatcher oversight.',
-      'eco-shops.loopy': 'Loopy opened a guidebook full of notes and tiny opinions:<br>“This used to be refill.”<br>“This packaging changed.”<br>“This one is genuinely compostable.”</p><p>Loopy nodded. “Honesty is brave.”</p><p>A friendly rule glowed:<br>“You can only review orate or add products after you’ve earned Patch Coins and completed a verified mission.”</p><p>Loopy smiled. “So you don’t just wander in and shout opinions. You become a helper first.”',
+      'eco-shops.loopy': 'Loopy opened a guidebook full of notes and tiny opinions:<br>“This used to be refill.”<br>“This packaging changed.”<br>“This one is genuinely compostable.”</p><p>Loopy nodded. “Honesty is brave.”</p><p>A friendly rule glowed:<br>“You can only review or rate or add products after you’ve earned Patch Coins and completed a verified mission.”</p><p>Loopy smiled. “So you don’t just wander in and shout opinions. You become a helper first.”',
 
       // The Green Wall
       'green-wall.title': 'The Green Wall',
@@ -236,7 +236,7 @@ const I18n = {
       'patcher-camp.subtitle': 'The Big Adventure Game',
       'patcher-camp.desc': '<p>Patcher Camp is a future flagship teamwork game. Kids work together through Earth zones using “powers” that are real knowledge: Earth, Water, Fire, Wind. It teaches practical skills, problem-solving, and brave teamwork. It comes after the Games Room foundation is working.</p>',
       'patcher-camp.why': 'Games make learning irresistible. Patcher Camp connects play to real-world action, helping young people see their knowledge as superpowers for the planet.',
-      'patcher-camp.loopy': 'Loopy found a rolled-up poster labeled PATCHER CAMP.<br>It showed kids facing a map of Earth zones, not to compete, but to help together.</p><p>Loopy whispered, “Their superpower is learning.”</p><p>He tied the poster closed gently.<br>“Not yet,” he smiled. “First we open the Games Room properly. Then we build our big adventure.”</p><p>"',
+      'patcher-camp.loopy': 'Loopy found a rolled-up poster labeled PATCHER CAMP.<br>It showed kids facing a map of Earth zones, not to compete, but to help together.</p><p>Loopy whispered, “Their superpower is learning.”</p><p>He tied the poster closed gently.<br>“Not yet,” he smiled. “First we open the Games Room properly. Then we build our big adventure.”</p>',
 
       // Module short descriptions (for cards)
       'mod.missions-hq.short': 'Real-life missions for kids, teens, and adults. Earn Patch Coins, badges, and achievements.',
@@ -383,7 +383,7 @@ const I18n = {
       'mvp.pillar3.why': 'Obiceiurile circulare sunt una dintre cele mai rapide modalit\u0103\u021bi de a reduce risipa, dar func\u021bioneaz\u0103 doar dac\u0103 oamenii au \u00eencredere \u00een sistem.',
 
       'mvp.modules.title': 'Modulele MVP',
-      'mvp.modules.intro': 'Aceste cinci module formeaz\u0103 nucleul MVP-ului \u0219i vor fi construite \u0219i testate \u00een planul de 36 de luni:',
+      'mvp.modules.intro': 'Aceste patru module formeaz\u0103 nucleul MVP-ului \u0219i vor fi construite \u0219i testate \u00een planul de 36 de luni:',
 
       'mvp.timeline.title': 'Cronologie pe 36 de Luni',
 
