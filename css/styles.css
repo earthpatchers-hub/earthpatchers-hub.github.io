@@ -734,7 +734,7 @@ li {
 /* --- Pillar Cards (MVP) --- */
 .pillars {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
 }
@@ -933,8 +933,8 @@ li {
 .loopy-story__content p {
   color: var(--color-text-primary);
   line-height: 1.9;
-  font-style: italic;
-  margin: 0 0 var(--space-md) 0;
+  font-style: normal;
+  margin: 0 0 var(--space-lg) 0;
 }
 
 .loopy-story__content p:last-child {
@@ -942,13 +942,22 @@ li {
 }
 
 .loopy-story__content em {
-  color: var(--color-golden);
+  color: var(--color-text-primary);
   font-style: italic;
 }
 
 .loopy-story__content strong {
-  color: var(--color-golden);
+  color: var(--color-golden-glow);
   font-weight: 700;
+}
+
+.loopy-story__content ul {
+  margin: 0 0 var(--space-lg) var(--space-lg);
+}
+
+.loopy-story__content li {
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
 }
 
 /* --- Compact Card Grid (for MVP modules) --- */
