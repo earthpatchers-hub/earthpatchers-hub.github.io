@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## v1.5 - 2026-02-19
+
+### Changed
+- Reverted the visitor counter widget from production.
+- Removed widget UI, styling, and visitor counter script.
+- Restored website behavior to the previous version without a visitor counter.
+
 ## v1.4 - 2026-02-19
 
 ### Added
