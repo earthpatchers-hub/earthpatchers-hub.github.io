@@ -61,10 +61,3 @@ const Router = {
     return 'page-' + (path || 'overview');
   }
 };
-
-// Fallback init so routing still works if another script fails before calling Router.init().
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof Router !== 'undefined') {
-    Router.init();
-  }
-});

@@ -901,8 +901,8 @@ li {
 
 /* --- Compact Card Grid (for MVP modules) --- */
 .card-grid--compact {
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
 }
 
 .card--link {
@@ -1288,7 +1288,7 @@ li {
    Responsive
    ============================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sidebar {
     left: calc(-1 * var(--sidebar-width) - 20px);
     transition: left var(--transition);
@@ -1341,7 +1341,8 @@ li {
     align-items: center;
   }
 
-  .card-grid {
+  .card-grid,
+  .card-grid--compact {
     grid-template-columns: 1fr;
   }
 
@@ -1419,8 +1420,35 @@ li {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    left: calc(-1 * var(--sidebar-width) - 20px);
+    transition: left var(--transition);
+    width: min(var(--sidebar-width), 85vw);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 56px;
+  }
+
   .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid--compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
