@@ -1,0 +1,54 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E6F7A"/>
+      <stop offset="1" stop-color="#2F8A4D"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="14" y1="54" x2="58" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F8A4D"/>
+      <stop offset="1" stop-color="#4AAE67"/>
+    </linearGradient>
+    <linearGradient id="tower1" x1="23" y1="31" x2="29" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76B9E2"/>
+      <stop offset="1" stop-color="#2D7DAF"/>
+    </linearGradient>
+    <linearGradient id="tower2" x1="32" y1="27" x2="39" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FD3FF"/>
+      <stop offset="1" stop-color="#3A8CC2"/>
+    </linearGradient>
+    <linearGradient id="tower3" x1="41" y1="34" x2="47" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9BD7FF"/>
+      <stop offset="1" stop-color="#4B95C9"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="30" fill="url(#bg)" stroke="#F2CF55" stroke-width="2"/>
+
+  <path d="M14 54C20 49 28 47 36 47C44 47 52 49 58 54V58H14V54Z" fill="url(#hill)"/>
+
+  <rect x="23" y="31" width="6" height="18" rx="1.5" fill="url(#tower1)"/>
+  <rect x="32" y="27" width="7" height="22" rx="1.5" fill="url(#tower2)"/>
+  <rect x="41" y="34" width="6" height="15" rx="1.5" fill="url(#tower3)"/>
+
+  <rect x="24.5" y="35" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="26.8" y="35" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="24.5" y="38" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="26.8" y="38" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+
+  <rect x="33.8" y="31" width="1.5" height="1.5" rx="0.5" fill="#D6F0FF"/>
+  <rect x="36.1" y="31" width="1.5" height="1.5" rx="0.5" fill="#D6F0FF"/>
+  <rect x="33.8" y="34" width="1.5" height="1.5" rx="0.5" fill="#D6F0FF"/>
+  <rect x="36.1" y="34" width="1.5" height="1.5" rx="0.5" fill="#D6F0FF"/>
+
+  <rect x="42.5" y="37" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="44.8" y="37" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="42.5" y="40" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+  <rect x="44.8" y="40" width="1.4" height="1.4" rx="0.5" fill="#D6F0FF"/>
+
+  <path d="M48 25L52.5 20.5" stroke="#F2CF55" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M52.5 20.5H49.5" stroke="#F2CF55" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M52.5 20.5V23.5" stroke="#F2CF55" stroke-width="2.8" stroke-linecap="round"/>
+
+  <circle cx="19.5" cy="22.5" r="1.8" fill="#F2CF55"/>
+  <circle cx="24.5" cy="18.5" r="1.4" fill="#F2CF55"/>
+</svg>

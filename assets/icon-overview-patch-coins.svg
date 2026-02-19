@@ -1,0 +1,28 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18 14) rotate(35) scale(68)">
+      <stop stop-color="#48D8FF"/>
+      <stop offset="0.58" stop-color="#2FA861"/>
+      <stop offset="1" stop-color="#174A60"/>
+    </radialGradient>
+    <linearGradient id="coinEdge" x1="14" y1="14" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0A8"/>
+      <stop offset="1" stop-color="#A8680F"/>
+    </linearGradient>
+    <linearGradient id="coinFace" x1="18" y1="18" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE88A"/>
+      <stop offset="1" stop-color="#D9961F"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="30" fill="url(#bg)"/>
+
+  <ellipse cx="36" cy="36" rx="22" ry="22" fill="url(#coinEdge)"/>
+  <ellipse cx="36" cy="36" rx="18.4" ry="18.4" fill="url(#coinFace)" stroke="#87580C" stroke-width="1.8"/>
+
+  <path d="M36 24.5C31.7 24.5 28.2 27.9 28.2 32.1C28.2 38 36 45 36 45C36 45 43.8 38 43.8 32.1C43.8 27.9 40.3 24.5 36 24.5Z" fill="#3ABD5C" stroke="#1E7C3C" stroke-width="1.6"/>
+  <path d="M35.6 27.5C37.7 29.1 38.2 31.2 37.4 33.2" stroke="#B8F6C7" stroke-width="1.2" stroke-linecap="round"/>
+
+  <path d="M22 44.5C19.6 47.2 19 48.9 22 52C25 48.9 24.3 47.2 22 44.5Z" fill="#57C3FF" stroke="#2277B8" stroke-width="1.2"/>
+  <path d="M50 44.5C47.6 47.2 47 48.9 50 52C53 48.9 52.3 47.2 50 44.5Z" fill="#57C3FF" stroke="#2277B8" stroke-width="1.2"/>
+</svg>

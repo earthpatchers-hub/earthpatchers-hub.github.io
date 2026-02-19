@@ -17,12 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Loopy story toggles
-  document.querySelectorAll('.loopy-story__toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const content = btn.nextElementSibling;
-      btn.classList.toggle('open');
-      content.classList.toggle('open');
-    });
-  });
 });

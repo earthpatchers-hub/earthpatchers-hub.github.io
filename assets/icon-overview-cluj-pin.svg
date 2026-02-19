@@ -1,0 +1,27 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18 14) rotate(36) scale(68)">
+      <stop stop-color="#4AD9FF"/>
+      <stop offset="0.58" stop-color="#32AA63"/>
+      <stop offset="1" stop-color="#174A60"/>
+    </radialGradient>
+    <linearGradient id="pin" x1="24" y1="18" x2="49" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9A80"/>
+      <stop offset="1" stop-color="#E24F3C"/>
+    </linearGradient>
+    <linearGradient id="castle" x1="30" y1="28" x2="42" y2="39" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9F8F2"/>
+      <stop offset="1" stop-color="#BFC7CC"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="30" fill="url(#bg)"/>
+
+  <path d="M36 51.2C36 51.2 23 40 23 30.8C23 23.6 28.8 17.8 36 17.8C43.2 17.8 49 23.6 49 30.8C49 40 36 51.2 36 51.2Z" fill="url(#pin)" stroke="#8B2E20" stroke-width="1.8"/>
+  <circle cx="36" cy="30.8" r="6" fill="#FFE9AD"/>
+
+  <rect x="31" y="31" width="10" height="6" rx="1" fill="url(#castle)" stroke="#7F8A93" stroke-width="1"/>
+  <rect x="29.5" y="28.5" width="3" height="4" rx="0.7" fill="url(#castle)" stroke="#7F8A93" stroke-width="1"/>
+  <rect x="39.5" y="28.5" width="3" height="4" rx="0.7" fill="url(#castle)" stroke="#7F8A93" stroke-width="1"/>
+  <rect x="34.7" y="33" width="2.6" height="4" rx="1.1" fill="#7F8A93"/>
+</svg>

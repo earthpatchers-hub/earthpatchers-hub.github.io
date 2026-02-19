@@ -1,0 +1,25 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18 14) rotate(36) scale(68)">
+      <stop stop-color="#4AD9FF"/>
+      <stop offset="0.58" stop-color="#32AA63"/>
+      <stop offset="1" stop-color="#174A60"/>
+    </radialGradient>
+    <linearGradient id="pot" x1="24" y1="38" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A66"/>
+      <stop offset="1" stop-color="#D9563E"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="28" y1="22" x2="46" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8F68F"/>
+      <stop offset="1" stop-color="#48AA53"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="30" fill="url(#bg)"/>
+
+  <rect x="24" y="40" width="24" height="11" rx="4" fill="url(#pot)" stroke="#8B2E20" stroke-width="1.5"/>
+  <rect x="22.5" y="37" width="27" height="4" rx="2" fill="#FFE09D" stroke="#8B5D12" stroke-width="1.2"/>
+  <path d="M36 38V28" stroke="#2F8E4A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M36 30C31.8 30 28.5 27.1 28.5 23.8C33.3 23.8 36.8 26.3 38 30.4C37.4 30.2 36.7 30 36 30Z" fill="url(#leaf)" stroke="#2A8040" stroke-width="1.2"/>
+  <path d="M36 32C40.2 32 43.5 29.1 43.5 25.8C38.7 25.8 35.2 28.3 34 32.4C34.6 32.2 35.3 32 36 32Z" fill="url(#leaf)" stroke="#2A8040" stroke-width="1.2"/>
+</svg>

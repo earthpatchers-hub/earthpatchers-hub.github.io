@@ -4,8 +4,11 @@
 
 const Router = {
   currentPage: null,
+  initialized: false,
 
   init() {
+    if (this.initialized) return;
+    this.initialized = true;
     window.addEventListener('hashchange', () => this.navigate());
     this.navigate();
   },
@@ -14,10 +17,10 @@ const Router = {
     const hash = location.hash || '#overview';
     const pageId = this.hashToPageId(hash);
 
-    // Hide current page
-    if (this.currentPage) {
-      this.currentPage.classList.remove('active');
-    }
+    // Always reset active state to avoid stacked pages when init order changes.
+    document.querySelectorAll('.page.active').forEach((page) => {
+      page.classList.remove('active');
+    });
 
     // Show target page
     const target = document.getElementById(pageId);
@@ -34,13 +37,17 @@ const Router = {
     }
 
     // Update sidebar active state
-    Sidebar.setActive(hash);
+    if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.setActive === 'function') {
+      Sidebar.setActive(hash);
+    }
 
     // Scroll to top
     window.scrollTo(0, 0);
 
     // Close mobile sidebar
-    Sidebar.close();
+    if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.close === 'function') {
+      Sidebar.close();
+    }
   },
 
   hashToPageId(hash) {
@@ -54,3 +61,10 @@ const Router = {
     return 'page-' + (path || 'overview');
   }
 };
+
+// Fallback init so routing still works if another script fails before calling Router.init().
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof Router !== 'undefined') {
+    Router.init();
+  }
+});
