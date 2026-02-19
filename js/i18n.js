@@ -297,6 +297,9 @@ const I18n = {
       'contact.submit': 'Send Message',
       'contact.thanks': 'Thank you! Your message has been sent. We\'ll be in touch soon.',
 
+      // Visitor Widget
+      'widget.visitors.title': 'EarthPatchers Visited',
+
       // Footer
       'footer.text': 'EarthPatchers \u2014 Community-powered sustainability, starting in Cluj.',
     },
@@ -591,6 +594,9 @@ const I18n = {
       'contact.privacy': 'Politica de Confiden\u021bialitate',
       'contact.submit': 'Trimite Mesajul',
       'contact.thanks': 'Mul\u021bumim! Mesajul t\u0103u a fost trimis. Te vom contacta \u00een cur\u00e2nd.',
+
+      // Visitor Widget
+      'widget.visitors.title': 'Vizite EarthPatchers',
 
       // Footer
       'footer.text': 'EarthPatchers \u2014 Sustenabilitate ghidat\u0103 de comunitate, \u00eencep\u00e2nd din Cluj.',

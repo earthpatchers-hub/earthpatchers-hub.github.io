@@ -922,12 +922,22 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       </div>
     </section>
 
-  </main>
+</main>
+
+  <!-- ========== VISITOR WIDGET ========== -->
+  <aside class="visitor-widget" aria-live="polite" aria-label="Visitor counter">
+    <div class="visitor-widget__icon" aria-hidden="true"><img src="assets/icon-widget-paws-exact-source.jpg" alt="" loading="lazy" decoding="async"/></div>
+    <div class="visitor-widget__content">
+      <div class="visitor-widget__title" data-i18n="widget.visitors.title">EarthPatchers Visited</div>
+      <div class="visitor-widget__count" id="visitor-count">...</div>
+    </div>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/sidebar.js"></script>
   <script src="js/router.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/visitor-widget.js"></script>
 </body>
 </html>
