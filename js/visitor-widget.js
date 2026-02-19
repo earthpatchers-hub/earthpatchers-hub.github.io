@@ -8,7 +8,7 @@
 
   const namespace = 'earthpatchers-org';
   const key = 'unique-visitors-v1';
-  const seenKey = 'ep-visitor-seen-v1';
+  const countedKey = 'ep-visitor-counted-v1';
   const localCountKey = 'ep-visitor-local-count-v1';
   const lastKnownKey = 'ep-visitor-last-known-count-v1';
 
@@ -32,17 +32,17 @@
   };
   let currentValue = null;
 
-  const hasSeen = () => {
+  const isCounted = () => {
     try {
-      return localStorage.getItem(seenKey) === '1';
+      return localStorage.getItem(countedKey) === '1';
     } catch (_) {
       return false;
     }
   };
 
-  const markSeen = () => {
+  const markCounted = () => {
     try {
-      localStorage.setItem(seenKey, '1');
+      localStorage.setItem(countedKey, '1');
     } catch (_) {
       // ignore
     }
@@ -90,13 +90,7 @@
   };
 
   const run = async () => {
-    const firstVisitOnThisBrowser = !hasSeen();
-    const localBefore = getLocalCount();
-    if (firstVisitOnThisBrowser) {
-      // Always register one local unique visit even if external counter is blocked.
-      setLocalCount(Math.max(1, localBefore + 1));
-      markSeen();
-    }
+    const firstVisitOnThisBrowser = !isCounted();
 
     try {
       const value = firstVisitOnThisBrowser
@@ -104,6 +98,7 @@
         : await fetchCount(getUrl);
 
       if (typeof value === 'number' && Number.isFinite(value)) {
+        if (firstVisitOnThisBrowser) markCounted();
         setLastKnownCount(value);
         // Keep local count monotonic in this browser.
         setLocalCount(Math.max(getLocalCount(), value));
@@ -111,7 +106,8 @@
       currentValue = value;
       updateCount(value);
     } catch (_) {
-      // Fallback order: last known global value -> local unique value -> 1.
+      // Fallback order: last known global value -> local value -> 1.
+      // If first global hit fails, we keep browser as uncounted and retry on next page load.
       const fallback = getLastKnownCount() || getLocalCount() || 1;
       currentValue = fallback;
       updateCount(fallback);
