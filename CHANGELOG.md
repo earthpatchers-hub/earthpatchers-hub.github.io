@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## v1.7 - 2026-02-20
+
+### Changed
+- Expanded and refined Overview content with clearer mission explanations and age-group examples.
+- Updated mission sizing examples and rewards messaging (small missions now use 10 points in Overview examples).
+- Reworked "How It Works" into a 6-step flow, including Tribe leader validation and clearer Earth learning + Market Hut usage path.
+- Converted "Starting in Cluj" section to match card-based Overview styling behavior.
+- Improved Romanian localization consistency across pages (terminology and phrasing cleanup, including "Monede Patch", "Căsuța de Schimb", and natural-language adventure wording).
+
 ## v1.6 - 2026-02-20
 
 ### Changed
