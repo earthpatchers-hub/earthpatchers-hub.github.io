@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented in this file.
 
+## v1.6 - 2026-02-20
+
+### Changed
+- Added responsive layout refinements across mobile, tablet, and desktop breakpoints.
+- Updated compact module card grid behavior for improved consistency across screen sizes.
+- Adjusted module-to-module next/previous navigation links in chapter pages.
+- Removed redundant router fallback initialization block in `js/router.js`.
+
+### Notes
+- Release based on commit `2857cda` (Style Update).
+
+
 ## v1.5 - 2026-02-19
 
 ### Changed
