@@ -36,6 +36,10 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="ro">RO</button>
       </div>
+      <div class="audience-switch">
+        <a id="audience-switch-to-partners" class="audience-switch__btn" href="partners.html" data-i18n="audience.switch.partners" data-audience="public">Partners View</a>
+        <a id="audience-switch-to-public" class="audience-switch__btn" href="index.html" data-i18n="audience.switch.public" data-audience="partners">Public View</a>
+      </div>
     </div>
 
     <ul class="sidebar__nav">
@@ -44,17 +48,17 @@
       </li>
       <li class="sidebar__accordion">
         <div class="sidebar__accordion-toggle" data-accordion="mvp">
-          <a href="#mvp" class="sidebar__accordion-link" data-i18n="nav.mvp">MVP (36 months)</a>
+          <a href="#mvp" class="sidebar__accordion-link" data-i18n="nav.mvp">Base Camp</a>
           <button class="sidebar__accordion-arrow" aria-label="Toggle submenu" aria-expanded="false">&#9654;</button>
         </div>
         <ul class="sidebar__submenu">
           <li><a href="#module/missions-hq" class="sidebar__sublink" data-i18n="mod.missions-hq">Missions HQ</a></li>
           <li><a href="#module/tribes" class="sidebar__sublink" data-i18n="mod.tribes">Tribes</a></li>
-          <li><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
           <li><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
+          <li><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
         </ul>
       </li>
-      <li class="sidebar__accordion">
+      <li class="sidebar__accordion" data-audience="partners">
         <div class="sidebar__accordion-toggle" data-accordion="next-steps">
           <a href="#next-steps" class="sidebar__accordion-link" data-i18n="nav.next-steps">Next Steps</a>
           <button class="sidebar__accordion-arrow" aria-label="Toggle submenu" aria-expanded="false">&#9654;</button>
@@ -75,6 +79,9 @@
       <li>
         <a href="#contact" class="sidebar__link" data-i18n="nav.contact">Contact Us</a>
       </li>
+      <li>
+        <a href="#donate" class="sidebar__link sidebar__link--donate" data-i18n="nav.donate">Donate</a>
+      </li>
     </ul>
   </nav>
 
@@ -92,6 +99,7 @@
       <button class="lang-btn active" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="ro">RO</button>
     </div>
+    <a id="audience-switch-mobile" class="audience-switch__btn audience-switch__btn--mobile" href="partners.html" data-i18n="audience.switch.partners-mobile">Partners</a>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
@@ -102,13 +110,8 @@
 
       <!-- Hero -->
       <div class="hero">
-        <img src="assets/EP_FINAL_LOGO.png" alt="EarthPatchers Logo" class="hero__logo">
         <h1 class="hero__tagline" data-i18n="hero.tagline">Community-Powered Sustainability</h1>
         <p class="hero__subtitle" data-i18n="hero.subtitle">EarthPatchers is a magical camp-style community where kids and adults complete real missions to save the Earth, learn how the world works, and reuse things instead of wasting them.</p>
-        <div class="hero__ctas">
-          <a href="#mvp" class="btn btn--primary" data-i18n="hero.cta.mvp">Explore the MVP Plan</a>
-          <a href="#next-steps" class="btn btn--secondary" data-i18n="hero.cta.modules">Browse Modules</a>
-        </div>
       </div>
 
       <!-- Why EarthPatchers Exists -->
@@ -133,7 +136,10 @@
         <p data-i18n="overview.mission.examples-intro">Examples by mission size and age group:</p>
         <div class="feature-grid mission-size-grid">
           <div class="feature-card">
-            <h4 class="feature-card__title" data-i18n="overview.mission.small.title">Small Mission (10 Patch Coins)</h4>
+            <div class="mission-size-header">
+              <img src="assets/10_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <h4 class="feature-card__title" data-i18n="overview.mission.small.title">Small Mission (10 Patch Coins)</h4>
+            </div>
             <div class="feature-card__text" data-i18n="overview.mission.small.examples" data-i18n-html>
               <ul>
                 <li>Kids: water one local tree or plant and track it for a week.</li>
@@ -143,7 +149,10 @@
             </div>
           </div>
           <div class="feature-card">
-            <h4 class="feature-card__title" data-i18n="overview.mission.medium.title">Medium Mission (25 Patch Coins)</h4>
+            <div class="mission-size-header">
+              <img src="assets/25_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <h4 class="feature-card__title" data-i18n="overview.mission.medium.title">Medium Mission (25 Patch Coins)</h4>
+            </div>
             <div class="feature-card__text" data-i18n="overview.mission.medium.examples" data-i18n-html>
               <ul>
                 <li>Kids + family: 45-60 minute park or riverbank clean-up.</li>
@@ -153,7 +162,10 @@
             </div>
           </div>
           <div class="feature-card">
-            <h4 class="feature-card__title" data-i18n="overview.mission.big.title">Big Mission (50 Patch Coins)</h4>
+            <div class="mission-size-header">
+              <img src="assets/50_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <h4 class="feature-card__title" data-i18n="overview.mission.big.title">Big Mission (50 Patch Coins)</h4>
+            </div>
             <div class="feature-card__text" data-i18n="overview.mission.big.examples" data-i18n-html>
               <ul>
                 <li>Kids + school: build and maintain a pollinator corner in the school yard.</li>
@@ -165,74 +177,114 @@
         </div>
       </div>
 
-      <!-- What Makes EarthPatchers Different -->
-      <div class="section">
-        <div class="section__heading">
-          <h2 data-i18n="overview.diff.title">Patch Coins, Badges, Achievements</h2>
-        </div>
-        <div class="section__divider"></div>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-card__icon"><img src="assets/icon-overview-patch-coins.svg" alt="" aria-hidden="true"></div>
-            <h4 class="feature-card__title" data-i18n="overview.diff.action.title">Patch Coins</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.action.text">Earn and spend. Use them in the Market Hut now, and later to unlock Games.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon"><img src="assets/icon-overview-badges.svg" alt="" aria-hidden="true"></div>
-            <h4 class="feature-card__title" data-i18n="overview.diff.families.title">Badges</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.families.text">Who you are becoming: brave, kind, curious.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon"><img src="assets/icon-overview-achievements.svg" alt="" aria-hidden="true"></div>
-            <h4 class="feature-card__title" data-i18n="overview.diff.practical.title">Achievements</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.practical.text">Things you did, like stickers in your book.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card__icon"><img src="assets/icon-overview-local-scale.svg" alt="" aria-hidden="true"></div>
-            <h4 class="feature-card__title" data-i18n="overview.diff.local.title">Local First, Then Scale</h4>
-            <p class="feature-card__text" data-i18n="overview.diff.local.text">We start with one city (Cluj), build something that truly works, and expand with the community's support and trust.</p>
-          </div>
-        </div>
-      </div>
-
       <!-- How It Works -->
       <div class="section">
         <div class="section__heading">
           <h2 data-i18n="overview.how.title">How It Works</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.how.example-intro">A practical example:</p>
-        <div class="steps">
-          <div class="step">
-            <div class="step__number">1</div>
-            <div class="step__title" data-i18n="overview.how.step1.title">You join</div>
-            <div class="step__text" data-i18n="overview.how.step1.text">A parent in Cluj creates a family account, joins a Tribe, and sets child visibility rules.</div>
-          </div>
-          <div class="step">
-            <div class="step__number">2</div>
-            <div class="step__title" data-i18n="overview.how.step2.title">Pick missions from Missions HQ</div>
-            <div class="step__text" data-i18n="overview.how.step2.text">They filter for 60 minutes and choose a medium mission: clean a small park area.</div>
-          </div>
-          <div class="step">
-            <div class="step__number">3</div>
-            <div class="step__title" data-i18n="overview.how.step3.title">Do missions inside a Tribe</div>
-            <div class="step__text" data-i18n="overview.how.step3.text">The family completes the clean-up, posts before and after photos in the Tribe, and the Tribe leader validates the mission.</div>
-          </div>
-          <div class="step">
-            <div class="step__number">4</div>
-            <div class="step__title" data-i18n="overview.how.step4.title">Earn Patch Coins</div>
-            <div class="step__text" data-i18n="overview.how.step4.text">Because it is a medium mission, they receive 25 Patch Coins.</div>
-          </div>
-          <div class="step">
-            <div class="step__number">5</div>
-            <div class="step__title" data-i18n="overview.how.step5.title">Explore Earth&rsquo;s Side of the Story</div>
-            <div class="step__text" data-i18n="overview.how.step5.text">They continue in Earth&rsquo;s Side of the Story, complete learning cards and quizzes, and can earn extra Patch Coins from learning too.</div>
-          </div>
-          <div class="step">
-            <div class="step__number">6</div>
-            <div class="step__title" data-i18n="overview.how.step6.title">Use Patch Coins in Market Hut</div>
-            <div class="step__text" data-i18n="overview.how.step6.text">They use the Patch Coins earned from missions and learning in Market Hut to swap, choose useful items, and keep things in reuse.</div>
-          </div>
+        <div class="journey-table-wrap">
+          <table class="journey-table">
+            <thead>
+              <tr>
+                <th data-i18n="overview.how.table.col.step">Step</th>
+                <th data-i18n="overview.how.table.col.parent">Parent Journey</th>
+                <th data-i18n="overview.how.table.col.adult">Adult Journey</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="overview.how.table.step1.label">Join</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step1.parent">Create family account + linked child account. Set child safety permissions.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step1.adult">Adult creates an account and sets own visibility permissions.</li>
+                    <li data-i18n="overview.how.table.step1.adult.extra">If they become a validated user, they can also create their own Tribe.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="overview.how.table.step2.label">Join a Tribe</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step2.parent">Trusted leader (teacher, scout leader, or parent leader) shares safe link to connect child account.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step2.adult">Filters a medium mission by available time and required skills.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="overview.how.table.step3.label">Join and Complete the Mission</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step3.parent">Child joins a small mission (example: sew a button). In-person missions need a minimum number of parents present, based on age and mission type.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step3.adult">Joins the Tribe that created the chosen mission and completes it.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="overview.how.table.step4.label">Validation + Coins</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step4.parent">Leader validates. Child earns 10 Patch Coins.</li>
+                    <li data-i18n="overview.how.table.step4.parent.extra">If parent also participates and is validated: parent earns 10 Patch Coins.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step4.adult">For this medium mission: 25 Patch Coins are earned.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="overview.how.table.step5.label">Explore + Quiz</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step5.parent">Explore Earth&apos;s Side of the Story (useful for kids and adults). Age-tailored content. Quiz can add extra Patch Coins.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step5.adult">Explores Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="overview.how.table.step6.label">Use Coins</td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step6.parent">Use Patch Coins in Market Hut (toys, jackets, books, school supplies, games, reusable household items).</li>
+                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step6.adult">Uses Patch Coins in Market Hut for practical reusable items.</li>
+                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Trust & Safety -->
+      <div class="section section--trust">
+        <div class="callout callout--green">
+          <h4 class="callout__title" data-i18n="overview.trust.title">Safety & Privacy</h4>
+          <p class="callout__text" data-i18n="overview.trust.text">Kids use aliases and avatars, and no visible kids&rsquo; faces are allowed. Kids&rsquo; activity is only visible within their Tribe. Adults choose their own visibility settings. Tribe leaders need a validated account. They help with moderation, keep things safe and clean, and can earn more Patch Coins for this extra responsibility.</p>
         </div>
       </div>
 
@@ -245,14 +297,6 @@
         <div class="feature-card feature-card--single">
           <div class="feature-card__icon"><img src="assets/icon-overview-cluj-pin.svg" alt="" aria-hidden="true"></div>
           <p class="feature-card__text" data-i18n="overview.cluj.text">EarthPatchers starts in Cluj and grows carefully. New cities open later only when there is enough discovery support (data + partners), so it stays real and trustworthy.</p>
-        </div>
-      </div>
-
-      <!-- Trust & Safety -->
-      <div class="section">
-        <div class="callout callout--green">
-          <h4 class="callout__title" data-i18n="overview.trust.title">Safety & Privacy</h4>
-          <p class="callout__text" data-i18n="overview.trust.text">Kids use aliases and avatars, and no visible kids&rsquo; faces are allowed. Kids&rsquo; activity is only visible within their Tribe. Adults choose their own visibility settings.</p>
         </div>
       </div>
 
@@ -269,9 +313,9 @@
       <div class="cta-strip">
         <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
         <div class="cta-strip__buttons">
-          <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read the MVP Plan</a>
-          <a href="#next-steps" class="btn btn--secondary" data-i18n="overview.cta.modules">Explore Modules</a>
+          <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
           <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Get in Touch</a>
+          <a href="#donate" class="btn btn--donate" data-i18n="nav.donate">Donate</a>
         </div>
       </div>
 
@@ -280,89 +324,62 @@
       </div>
     </section>
 
-    <!-- ===== MVP PAGE ===== -->
+    <!-- ===== WHERE WE START PAGE ===== -->
     <section id="page-mvp" class="page">
 
-      <h1 data-i18n="mvp.title">MVP — 36-Month Plan</h1>
-      <p data-i18n="mvp.intro">EarthPatchers is starting with a focused MVP that proves the platform works in real life, in Cluj, before we expand. This MVP has four pillars:</p>
+      <h1 data-i18n="mvp.title">Base Camp — 36-Month Plan</h1>
+      <p data-i18n="mvp.intro">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life, in Cluj, before we expand. This starting plan has four pillars:</p>
 
       <!-- MVP Pillars -->
       <div class="pillars">
         <div class="pillar">
-          <div class="pillar__icon"><img src="assets/icon-compass-color.svg" alt="" aria-hidden="true"></div>
-          <h3 class="pillar__title" data-i18n="mvp.pillar1.title">Missions</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
+          <a href="#module/missions-hq" class="pillar__image-link" aria-label="Open Missions HQ module">
+            <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Missions HQ" class="pillar__image" loading="lazy">
+          </a>
+          <h3 class="pillar__title" data-i18n="mvp.pillar1.title">Missions HQ</h3>
+          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
           <p class="pillar__text" data-i18n="mvp.pillar1.text">Quick missions (10–20 min) and weekend missions (1–2 hours), filtered by age, interest, and time. Progress tracked with badges, points, and a personal timeline.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar1.why">Missions turn climate anxiety into doable action and give families and youth a clear starting point.</p>
           </div>
         </div>
         <div class="pillar">
-          <div class="pillar__icon">&#127957;&#65039;&#10024;</div>
-          <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Youth Community Pilot</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
+          <a href="#module/tribes" class="pillar__image-link" aria-label="Open Tribes module">
+            <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="pillar__image" loading="lazy">
+          </a>
+          <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Tribes</h3>
+          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
           <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups in Cluj with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
-            <p class="callout__text" data-i18n="mvp.pillar2.why">Young people care deeply about their future. This gives them a safe way to contribute without overwhelm.</p>
+            <p class="callout__text" data-i18n="mvp.pillar2.why">Young people care deeply about their future. This gives them a safe way to contribute without being overwhelmed.</p>
           </div>
         </div>
         <div class="pillar">
-          <div class="pillar__icon"><img src="assets/icon-circular-orbit.svg" alt="" aria-hidden="true"></div>
-          <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Safe Circular Exchange</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
-          <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
-          <div class="callout callout--golden" style="margin-top:var(--space-md);">
-            <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar__icon"><img src="assets/icon-globe-stitched.png" alt="" aria-hidden="true"></div>
+          <a href="#module/earth-side" class="pillar__image-link" aria-label="Open Earth's Side of the Story module">
+            <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="pillar__image" loading="lazy">
+          </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar4.title">Earth’s Side of the Story</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-bandage-amber);" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
+          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
           <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar4.why">This makes learning practical and trustworthy by connecting “why” directly to local action.</p>
           </div>
         </div>
-      </div>
-
-      <!-- MVP Modules -->
-      <div class="section">
-        <div class="section__heading">
-          <h2 data-i18n="mvp.modules.title">MVP Modules</h2>
-        </div>
-        <div class="section__divider"></div>
-        <p data-i18n="mvp.modules.intro">These five modules form the core of the MVP and will be built and tested during the 36-month plan:</p>
-        <div class="card-grid card-grid--compact">
-          <a href="#module/missions-hq" class="card card--link">
-            <img src="assets/EP_MissionsHQ_magic_hd.png" alt="Missions HQ" class="card__image" loading="lazy">
-            <div class="card__body">
-              <h3 class="card__title" data-i18n="mod.missions-hq">Missions HQ</h3>
-            </div>
+        <div class="pillar">
+          <a href="#module/market-hut" class="pillar__image-link" aria-label="Open Market Hut module">
+            <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="pillar__image" loading="lazy">
           </a>
-          <a href="#module/tribes" class="card card--link">
-            <img src="assets/EP_Tribes_magic_hd.png" alt="Tribes" class="card__image" loading="lazy">
-            <div class="card__body">
-              <h3 class="card__title" data-i18n="mod.tribes">Tribes</h3>
-            </div>
-          </a>
-          <a href="#module/market-hut" class="card card--link">
-            <img src="assets/EP_MarketHut_magic_hd.png" alt="Market Hut" class="card__image" loading="lazy">
-            <div class="card__body">
-              <h3 class="card__title" data-i18n="mod.market-hut">Market Hut</h3>
-            </div>
-          </a>
-          <a href="#module/earth-side" class="card card--link">
-            <img src="assets/EP_EarthSide_magic_new_hd.png" alt="Earth's Side of the Story" class="card__image" loading="lazy">
-            <div class="card__body">
-              <h3 class="card__title" data-i18n="mod.earth-side">Earth's Side of the Story</h3>
-            </div>
-          </a>
+          <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Market Hut</h3>
+          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
+          <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
+          <div class="callout callout--golden" style="margin-top:var(--space-md);">
+            <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
+          </div>
         </div>
       </div>
 
       <!-- Timeline -->
-      <div class="section">
+      <div class="section" data-audience="partners">
         <div class="section__heading">
           <h2 data-i18n="mvp.timeline.title">36-Month Timeline</h2>
         </div>
@@ -438,14 +455,6 @@
         </div>
       </div>
 
-      <!-- What MVP Does NOT Include -->
-      <div class="section">
-        <div class="not-included">
-          <h3 data-i18n="mvp.notincluded.title">What the MVP Does NOT Include</h3>
-          <p data-i18n="mvp.notincluded.text">EarthPatchers has many future ideas (eco shops directory, idea backlog, games, city expansion tools). These are not part of the MVP and will be developed as Next Steps, so people don't confuse the MVP with everything we might build.</p>
-        </div>
-      </div>
-
       <!-- What Success Looks Like -->
       <div class="section">
         <div class="section__heading">
@@ -466,8 +475,8 @@
       </div>
     </section>
 
-    <!-- ===== NEXT STEPS PAGE ===== -->
-    <section id="page-next-steps" class="page">
+    <!-- ===== NEXT STEPS PAGE (HIDDEN) ===== -->
+    <section id="page-next-steps" class="page" data-audience="partners">
       <h1 data-i18n="nextsteps.title">Next Steps</h1>
       <p data-i18n="nextsteps.intro">Beyond the MVP, EarthPatchers envisions a rich ecosystem of modules. These will be shaped by community voting and feasibility through the Green Wall.</p>
 
@@ -565,9 +574,9 @@
     <!-- ===== MODULE: MISSIONS HQ ===== -->
     <section id="page-module-missions-hq" class="page">
       <div class="module-hero">
-        <img src="assets/EP_MissionsHQ_magic_hd.png" alt="Missions HQ" class="module-hero__image" loading="lazy">
+        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Missions HQ" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="missions-hq.title">Missions HQ</h1>
           <p class="module-hero__subtitle" data-i18n="missions-hq.subtitle">Where It All Begins</p>
         </div>
@@ -577,9 +586,24 @@
 
 Missions come in sizes that fit busy life: • Tiny missions (10–20 minutes) • Weekend missions (1–2 hours) • Team missions (families, schools, clubs, Tribes)
 
-Adults can filter missions by time, topic, and skills (repairing, organising, teaching, gardening, design, photography), so helping can match what people are actually good at.
-
-Rewards stay simple: • Patch Coins are earned through missions and learning and can be used in the Market Hut (and later Games). • Badges are about who you are becoming (brave, kind, curious). • Achievements are things you did, like stickers in your book.</div>
+Adults can filter missions by time, topic, and skills (repairing, organising, teaching, gardening, design, photography), so helping can match what people are actually good at.</div>
+        <div class="module-rewards">
+          <h4 class="module-rewards__title" data-i18n="missions-hq.rewards.title">Rewards stay simple:</h4>
+          <div class="feature-grid mission-rewards-grid">
+            <div class="feature-card">
+              <div class="feature-card__icon"><img src="assets/icon-overview-patch-coins.svg" alt="" aria-hidden="true"></div>
+              <p class="feature-card__text" data-i18n="missions-hq.rewards.coins">Patch Coins: you earn them through missions and learning, and use them in Market Hut (and later in Games Room).</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><img src="assets/icon-overview-badges.svg" alt="" aria-hidden="true"></div>
+              <p class="feature-card__text" data-i18n="missions-hq.rewards.badges">Badges: they are about who you are becoming (brave, kind, curious).</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><img src="assets/icon-overview-achievements.svg" alt="" aria-hidden="true"></div>
+              <p class="feature-card__text" data-i18n="missions-hq.rewards.achievements">Achievements: the things you did, like stickers in your adventure notebook.</p>
+            </div>
+          </div>
+        </div>
         <div class="callout callout--golden">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="missions-hq.why">Missions turn climate anxiety into doable action. They give families and young people a clear starting point: one mission at a time, building real change step by step.</p>
@@ -594,9 +618,9 @@ Rewards stay simple: • Patch Coins are earned through missions and learning an
     <!-- ===== MODULE: TRIBES ===== -->
     <section id="page-module-tribes" class="page">
       <div class="module-hero">
-        <img src="assets/EP_Tribes_magic_hd.png" alt="Tribes" class="module-hero__image" loading="lazy">
+        <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="tribes.title">Tribes</h1>
           <p class="module-hero__subtitle" data-i18n="tribes.subtitle">Your Safe Team Space</p>
         </div>
@@ -624,16 +648,16 @@ Tribe “camp rules” keep things kind and clean: • Be kind • Keep private 
       </div>
       <div class="module-nav">
         <a href="#module/missions-hq" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/earth-side" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
 
     <!-- ===== MODULE: MARKET HUT ===== -->
     <section id="page-module-market-hut" class="page">
       <div class="module-hero">
-        <img src="assets/EP_MarketHut_magic_hd.png" alt="Market Hut" class="module-hero__image" loading="lazy">
+        <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="market-hut.title">Market Hut</h1>
           <p class="module-hero__subtitle" data-i18n="market-hut.subtitle">Swap, Share, Reuse</p>
         </div>
@@ -657,17 +681,18 @@ Safety guidance is built into the flow. Adults choose their visibility, but chil
         </div>
       </div>
       <div class="module-nav">
-        <a href="#module/tribes" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/earth-side" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/earth-side" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/activity-hut" class="module-nav__link" data-i18n="module.next" data-audience="partners">Next &rarr;</a>
+        <a href="#about" class="module-nav__link" data-i18n="module.next" data-audience="public">Next &rarr;</a>
       </div>
     </section>
 
     <!-- ===== MODULE: EARTH'S SIDE OF THE STORY ===== -->
     <section id="page-module-earth-side" class="page">
       <div class="module-hero">
-        <img src="assets/EP_EarthSide_magic_new_hd.png" alt="Earth's Side of the Story" class="module-hero__image" loading="lazy">
+        <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
-          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">In MVP</span>
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="earth-side.title">Earth's Side of the Story</h1>
           <p class="module-hero__subtitle" data-i18n="earth-side.subtitle">Learning That Starts in Cluj</p>
         </div>
@@ -698,13 +723,13 @@ Pins can become missions (or requests for missions). Later, this map can include
         </div>
       </div>
       <div class="module-nav">
-        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/activity-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/tribes" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/market-hut" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
 
     <!-- ===== MODULE: GAMES ROOM ===== -->
-    <section id="page-module-games-room" class="page">
+    <section id="page-module-games-room" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_GamesRoom_magic.png" alt="Games Room" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -733,7 +758,7 @@ Pins can become missions (or requests for missions). Later, this map can include
     </section>
 
     <!-- ===== MODULE: ACTIVITY HUT ===== -->
-    <section id="page-module-activity-hut" class="page">
+    <section id="page-module-activity-hut" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_ActivityHut_magic.png" alt="Activity Hut" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -762,7 +787,7 @@ Pins can become missions (or requests for missions). Later, this map can include
     </section>
 
     <!-- ===== MODULE: ECO SHOPS ===== -->
-    <section id="page-module-eco-shops" class="page">
+    <section id="page-module-eco-shops" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_EcoShops_magic_hd.png" alt="Eco Shops Directory" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -785,7 +810,7 @@ Pins can become missions (or requests for missions). Later, this map can include
     </section>
 
     <!-- ===== MODULE: GREEN WALL ===== -->
-    <section id="page-module-green-wall" class="page">
+    <section id="page-module-green-wall" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_GreenWall_magic_hd.png" alt="The Green Wall" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -810,7 +835,7 @@ Helper Page explanation: The Helper Page is found inside the Activity Hut. It’
     </section>
 
     <!-- ===== MODULE: ORGANISATIONS & SCIENTISTS ===== -->
-    <section id="page-module-org-scientists" class="page">
+    <section id="page-module-org-scientists" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_OrgScientists_magic.png" alt="Organisations & Scientists" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -835,7 +860,7 @@ This helps people discover real helper teams, learn what they do in clear langua
     </section>
 
     <!-- ===== MODULE: NEW CITIES & DISCOVERY PHASE ===== -->
-    <section id="page-module-new-cities" class="page">
+    <section id="page-module-new-cities" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_NewCities_Discovery_magic.png" alt="New Cities & Discovery Phase" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -860,7 +885,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
     </section>
 
     <!-- ===== MODULE: PATCHER CAMP ===== -->
-    <section id="page-module-patcher-camp" class="page">
+    <section id="page-module-patcher-camp" class="page" data-audience="partners">
       <div class="module-hero">
         <img src="assets/EP_PatcherCamp_magic_hd.png" alt="Patcher Camp" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
@@ -971,10 +996,71 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       </div>
     </section>
 
+    <!-- ===== DONATE PAGE ===== -->
+    <section id="page-donate" class="page">
+      <h1 data-i18n="donate.title">Donate</h1>
+      <p data-i18n="donate.intro">If you want to support EarthPatchers, leave your contact details and donation interest. For now, this is an interest form, and we will contact you directly.</p>
+
+      <div class="callout callout--golden">
+        <p class="callout__text" data-i18n="donate.coming-soon">Coming later: direct account transfer options and the 3.5% tax redirection option once incorporation setup is complete.</p>
+      </div>
+
+      <form id="donate-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="donate-name" data-i18n="donate.name">Full Name</label>
+          <input id="donate-name" name="name" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="donate-email" data-i18n="donate.email">Email Address</label>
+          <input id="donate-email" name="email" type="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="donate-phone" data-i18n="donate.phone">Phone Number (optional)</label>
+          <input id="donate-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="donate-location" data-i18n="donate.location">City / Country</label>
+          <input id="donate-location" name="location" type="text" required autocomplete="address-level2">
+        </div>
+
+        <div class="form-group">
+          <label for="donate-interest" data-i18n="donate.interest">I want to support as</label>
+          <select id="donate-interest" name="interest" required>
+            <option value="" data-i18n="donate.interest.select">-- Select --</option>
+            <option value="individual" data-i18n="donate.interest.individual">Individual donor</option>
+            <option value="parent" data-i18n="donate.interest.parent">Parent / Family</option>
+            <option value="organization" data-i18n="donate.interest.organization">Organization / Company</option>
+            <option value="partner" data-i18n="donate.interest.partner">Potential partner</option>
+            <option value="other" data-i18n="donate.interest.other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="donate-message" data-i18n="donate.message">Notes (optional)</label>
+          <textarea id="donate-message" name="message" data-i18n-placeholder="donate.message.placeholder" placeholder="Anything you'd like us to know about your donation interest."></textarea>
+        </div>
+
+        <div class="donate-actions">
+          <button type="submit" class="btn btn--primary" data-i18n="donate.submit">Send Donate Interest</button>
+          <button type="button" id="donate-back-btn" class="btn btn--secondary" data-i18n="donate.back">Back</button>
+        </div>
+      </form>
+
+      <p id="donate-status" class="donate-status" aria-live="polite"></p>
+
+      <div class="footer-note">
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+      </div>
+    </section>
+
 </main>
 
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
+  <script src="js/audience.js"></script>
   <script src="js/sidebar.js"></script>
   <script src="js/router.js"></script>
   <script src="js/main.js"></script>

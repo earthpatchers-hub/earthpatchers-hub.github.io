@@ -14,7 +14,10 @@ const Router = {
   },
 
   navigate() {
-    const hash = location.hash || '#overview';
+    const currentHash = location.hash || '#overview';
+    const hash = (typeof Audience !== 'undefined' && Audience && typeof Audience.normalizeHash === 'function')
+      ? Audience.normalizeHash(currentHash)
+      : currentHash;
     const pageId = this.hashToPageId(hash);
 
     // Always reset active state to avoid stacked pages when init order changes.
@@ -34,6 +37,12 @@ const Router = {
         fallback.classList.add('active');
         this.currentPage = fallback;
       }
+    }
+
+    // Keep URL clean and consistent if public mode requested a restricted page.
+    if (hash !== currentHash) {
+      const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+      window.history.replaceState(null, '', newUrl);
     }
 
     // Update sidebar active state
