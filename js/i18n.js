@@ -33,7 +33,7 @@ const I18n = {
       'mod.patcher-camp': 'Patcher Camp',
 
       // Overview / Landing
-      'hero.tagline': 'Community-Powered Sustainability',
+      'hero.tagline': 'Community\nPowered\nSustainability',
       'hero.subtitle': 'EarthPatchers is a magical camp-style community where kids and adults complete real missions to save the Earth, learn how the world works, and reuse things instead of wasting them.',
       'hero.cta.mvp': 'See Base Camp',
       'hero.cta.donate': 'Donate Interest',
