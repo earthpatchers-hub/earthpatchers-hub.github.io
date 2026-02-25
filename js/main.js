@@ -3,6 +3,7 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const DONATE_FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@earthpatchers.org';
   let lastNonDonateHash = '#overview';
 
   const rememberPreviousHash = () => {
@@ -37,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const donateForm = document.getElementById('donate-form');
   const donateBackBtn = document.getElementById('donate-back-btn');
   const donateStatus = document.getElementById('donate-status');
+  const contactCopyEmailBtn = document.getElementById('contact-copy-email-btn');
+  const contactCopyStatus = document.getElementById('contact-copy-status');
 
   if (donateBackBtn) {
     donateBackBtn.addEventListener('click', () => {
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (donateForm) {
-    donateForm.addEventListener('submit', (event) => {
+    donateForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       if (!donateForm.checkValidity()) {
@@ -60,28 +63,81 @@ document.addEventListener('DOMContentLoaded', () => {
       const interest = (document.getElementById('donate-interest')?.selectedOptions?.[0]?.textContent || '').trim();
       const message = (document.getElementById('donate-message')?.value || '').trim();
 
-      const subject = 'EarthPatchers Donate Interest';
-      const bodyLines = [
-        'New donate interest submission:',
-        '',
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Phone: ${phone || 'Not provided'}`,
-        `City/Country: ${locationValue}`,
-        `Support type: ${interest}`,
-        `Notes: ${message || 'None'}`,
-        '',
-        `Sent from: ${window.location.href}`
-      ];
+      const payload = {
+        name,
+        email,
+        phone: phone || 'Not provided',
+        location: locationValue,
+        interest,
+        message: message || 'None',
+        page: window.location.href,
+        _subject: 'EarthPatchers Donate Interest',
+        _template: 'table',
+        _captcha: 'false'
+      };
 
-      const mailto = `mailto:contact@earthpatchers.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-      window.location.href = mailto;
+      try {
+        const response = await fetch(DONATE_FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
 
-      if (donateStatus) {
-        const statusText = (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
-          ? I18n.t('donate.status.opening')
-          : 'Your email app is opening with your donation details prefilled.';
-        donateStatus.textContent = statusText;
+        if (!response.ok) {
+          throw new Error(`Donate form submit failed: ${response.status}`);
+        }
+
+        donateForm.reset();
+        if (donateStatus) {
+          donateStatus.textContent = (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
+            ? I18n.t('donate.status.sent')
+            : 'Thanks. Your donate interest was sent successfully.';
+        }
+      } catch (error) {
+        if (donateStatus) {
+          donateStatus.textContent = (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
+            ? I18n.t('donate.status.error')
+            : 'Could not send right now. Please use the email button above.';
+        }
+      }
+    });
+  }
+
+  if (contactCopyEmailBtn) {
+    contactCopyEmailBtn.addEventListener('click', async () => {
+      const email = 'contact@earthpatchers.org';
+      const successText = (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
+        ? I18n.t('contact.copy-success')
+        : 'Email copied. You can now paste it into your email app.';
+      const failText = (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
+        ? I18n.t('contact.copy-failed')
+        : 'Copy failed. Please copy manually: contact@earthpatchers.org';
+
+      try {
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          await navigator.clipboard.writeText(email);
+        } else {
+          const helper = document.createElement('textarea');
+          helper.value = email;
+          helper.setAttribute('readonly', '');
+          helper.style.position = 'fixed';
+          helper.style.opacity = '0';
+          document.body.appendChild(helper);
+          helper.select();
+          document.execCommand('copy');
+          document.body.removeChild(helper);
+        }
+
+        if (contactCopyStatus) {
+          contactCopyStatus.textContent = successText;
+        }
+      } catch (err) {
+        if (contactCopyStatus) {
+          contactCopyStatus.textContent = failText;
+        }
       }
     });
   }

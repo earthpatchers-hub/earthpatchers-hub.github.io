@@ -39,7 +39,20 @@ const Audience = {
       el.hidden = !visible;
     });
 
+    this.updateSubmenuTrails();
     this.updateSwitchLinks();
+  },
+
+  updateSubmenuTrails() {
+    document.querySelectorAll('.sidebar__submenu').forEach((submenu) => {
+      const items = Array.from(submenu.querySelectorAll(':scope > li'));
+      items.forEach((li) => li.removeAttribute('data-last-visible'));
+      const visibleItems = items.filter((li) => !li.hidden);
+      const lastVisible = visibleItems[visibleItems.length - 1];
+      if (lastVisible) {
+        lastVisible.setAttribute('data-last-visible', 'true');
+      }
+    });
   },
 
   isPartners() {

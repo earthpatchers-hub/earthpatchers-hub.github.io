@@ -44,7 +44,7 @@
 
     <ul class="sidebar__nav">
       <li>
-        <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">Overview</a>
+        <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">What We Are Trying to Fix</a>
       </li>
       <li class="sidebar__accordion">
         <div class="sidebar__accordion-toggle" data-accordion="mvp">
@@ -54,8 +54,8 @@
         <ul class="sidebar__submenu">
           <li><a href="#module/missions-hq" class="sidebar__sublink" data-i18n="mod.missions-hq">Missions HQ</a></li>
           <li><a href="#module/tribes" class="sidebar__sublink" data-i18n="mod.tribes">Tribes</a></li>
-          <li><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
-          <li><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
+          <li data-audience="partners"><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
+          <li data-audience="partners"><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
         </ul>
       </li>
       <li class="sidebar__accordion" data-audience="partners">
@@ -77,7 +77,7 @@
         <a href="#about" class="sidebar__link" data-i18n="nav.about">About Us</a>
       </li>
       <li>
-        <a href="#contact" class="sidebar__link" data-i18n="nav.contact">Contact Us</a>
+        <a href="#contact" class="sidebar__link" data-i18n="nav.contact">Ways to Get Involved</a>
       </li>
       <li>
         <a href="#donate" class="sidebar__link sidebar__link--donate" data-i18n="nav.donate">Donate</a>
@@ -110,29 +110,30 @@
 
       <!-- Hero -->
       <div class="hero">
-        <h1 class="hero__tagline" data-i18n="hero.tagline">Community-Powered Sustainability</h1>
-        <p class="hero__subtitle" data-i18n="hero.subtitle">EarthPatchers is a magical camp-style community where kids and adults complete real missions to save the Earth, learn how the world works, and reuse things instead of wasting them.</p>
+        <h1 class="hero__tagline" data-i18n="hero.tagline">Patching the Earth Together,
+One Stitch at a Time</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>Between work, school, laundry, and remembering where you left your keys, searching for trusted planet missions shouldn&rsquo;t be another task on the list.<br><br>EarthPatchers wants to gather them for you in one place. Creating your own Tribe (group), starting your own mission, jumping into one started by others, or teaming up with one created by our trusted NGO partners is what we plan to start building first.</p>
       </div>
 
       <!-- Why EarthPatchers Exists -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.problem.title">Why EarthPatchers Exists</h2>
+          <h2 data-i18n="overview.problem.title">What is EarthPatchers planning to fix</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.problem.text">Because the world's problems feel enormous, and people freeze. EarthPatchers turns &ldquo;too big&rdquo; into small brave steps that fit real life, then connects those steps to a local community (starting in Cluj).</p>
+        <p data-i18n="overview.problem.text" data-i18n-html>There&rsquo;s no shortage of information about the planet.<br>There&rsquo;s just a shortage of time, clarity, and simple ways to act on it.<br><br>Important missions are scattered across websites, hidden in long reports, or buried in social media feeds. Finding them can feel a bit like looking for a needle in a haystack&hellip; while holding a laundry basket in one hand..<br><br>EarthPatchers is building a space that brings these missions together in one place &mdash; so instead of just reading about problems, you&rsquo;ll be able to actually do something about them.<br><br>Small missions at home.<br>Real missions created by trusted NGOs.<br>Ideas started by people like you.</p>
         <div class="callout callout--golden">
-          <p class="callout__text" data-i18n="overview.problem.solution">The missing piece isn't more awareness. It's a clear, easy path from intention to action, with built-in trust, support, and a community that moves together.</p>
+          <p class="callout__text" data-i18n="overview.problem.solution" data-i18n-html>No stress. No fuss.<br>Just practical action, shared effort, and the reminder that big things don&rsquo;t get fixed alone.<br><br><span class="overview-problem-signoff">We&rsquo;re patching the Earth together &mdash; one stitch at a time.</span></p>
         </div>
       </div>
 
       <!-- What Is a Mission -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.mission.title">What Is a Mission to Save the Earth?</h2>
+          <h2 data-i18n="overview.mission.title">What would a Mission to Save the Earth look like</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.mission.text">A mission is one practical action that helps nature, your neighborhood, or your community, and that can be finished in real life. Missions are designed to be clear, safe, and doable for different ages and schedules.</p>
+        <p data-i18n="overview.mission.text">A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules.</p>
         <p data-i18n="overview.mission.examples-intro">Examples by mission size and age group:</p>
         <div class="feature-grid mission-size-grid">
           <div class="feature-card">
@@ -177,10 +178,28 @@
         </div>
       </div>
 
+      <!-- What Is a Tribe -->
+      <div class="section">
+        <div class="section__heading">
+          <h2 data-i18n="overview.tribe.title">What Is a Tribe</h2>
+        </div>
+        <div class="section__divider"></div>
+        <p data-i18n="overview.tribe.text" data-i18n-html>A Tribe is a small team.<br>Not a crowd. Not a stadium. A handful of people saying, &ldquo;Let&rsquo;s do this together.&rdquo;<br>The kind of team where you know who brings snacks and who always forgets socks.<br>Like a camp club, but for real life.</p>
+        <div class="callout callout--golden">
+          <h4 class="callout__title" data-i18n="overview.tribe.types-intro">Tribes can be:</h4>
+          <div class="feature-card__text" data-i18n="overview.tribe.types" data-i18n-html>
+            <ul>
+              <li>for kids and teens + leaders (kids use aliases and avatars, no visible faces, and their activity is visible only inside the Tribe)</li>
+              <li>adults-only (adults choose how public their involvement is)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!-- How It Works -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.how.title">How It Works</h2>
+          <h2 data-i18n="overview.how.title">How We Plan It to Work</h2>
         </div>
         <div class="section__divider"></div>
         <div class="journey-table-wrap">
@@ -188,8 +207,9 @@
             <thead>
               <tr>
                 <th data-i18n="overview.how.table.col.step">Step</th>
-                <th data-i18n="overview.how.table.col.parent">Parent Journey</th>
                 <th data-i18n="overview.how.table.col.adult">Adult Journey</th>
+                <th data-i18n="overview.how.table.col.parent">Parent Journey</th>
+                <th data-i18n="overview.how.table.col.child">Child Journey</th>
               </tr>
             </thead>
             <tbody>
@@ -197,13 +217,17 @@
                 <td data-i18n="overview.how.table.step1.label">Join</td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step1.parent">Create family account + linked child account. Set child safety permissions.</li>
+                    <li data-i18n="overview.how.table.step1.adult">Adult creates an account and sets own visibility permissions.</li>
                   </ul>
                 </td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step1.adult">Adult creates an account and sets own visibility permissions.</li>
-                    <li data-i18n="overview.how.table.step1.adult.extra">If they become a validated user, they can also create their own Tribe.</li>
+                    <li data-i18n="overview.how.table.step1.parent">Parent creates family account + linked child account(s). Sets child safety permissions.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step1.child">Child account(s) are linked to parent account. Parent permissions define what child or children can see and do.</li>
                   </ul>
                 </td>
               </tr>
@@ -211,12 +235,17 @@
                 <td data-i18n="overview.how.table.step2.label">Join a Tribe</td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step2.parent">Trusted leader (teacher, scout leader, or parent leader) shares safe link to connect child account.</li>
+                    <li data-i18n="overview.how.table.step2.adult">Adult selects missions based on size and skills, and can belong to one or more Tribes.</li>
                   </ul>
                 </td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step2.adult">Filters a medium mission by available time and required skills.</li>
+                    <li data-i18n="overview.how.table.step2.parent">Parent chooses trusted Tribe leaders (teacher, scout leader, or parent leader). The leader sends a safe invite to connect child account(s).</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step2.child">Child or children join only after parent approval through the safe invite, can belong to one or more Tribes, and see only Tribe-shared content.</li>
                   </ul>
                 </td>
               </tr>
@@ -224,12 +253,17 @@
                 <td data-i18n="overview.how.table.step3.label">Join and Complete the Mission</td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step3.parent">Child joins a small mission (example: sew a button). In-person missions need a minimum number of parents present, based on age and mission type.</li>
+                    <li data-i18n="overview.how.table.step3.adult">Joins the Tribe that created the chosen mission and completes it.</li>
                   </ul>
                 </td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step3.adult">Joins the Tribe that created the chosen mission and completes it.</li>
+                    <li data-i18n="overview.how.table.step3.parent">Parent supports child or children participation where needed. In-person missions may require a minimum number of parents, based on age and mission type.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step3.child">Child or children join and complete a mission with the Tribe.</li>
                   </ul>
                 </td>
               </tr>
@@ -237,40 +271,56 @@
                 <td data-i18n="overview.how.table.step4.label">Validation + Coins</td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step4.parent">Leader validates. Child earns 10 Patch Coins.</li>
+                    <li data-i18n="overview.how.table.step4.adult">Patch Coins are earned after validation.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step4.parent">Leader validates. Child or children earn 10 Patch Coins.</li>
                     <li data-i18n="overview.how.table.step4.parent.extra">If parent also participates and is validated: parent earns 10 Patch Coins.</li>
                   </ul>
                 </td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step4.adult">For this medium mission: 25 Patch Coins are earned.</li>
+                    <li data-i18n="overview.how.table.step4.child">Leader validates. Child or children earn 10 Patch Coins.</li>
                   </ul>
                 </td>
               </tr>
-              <tr>
+              <tr data-audience="partners">
                 <td data-i18n="overview.how.table.step5.label">Explore + Quiz</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step5.parent">Explore Earth&apos;s Side of the Story (useful for kids and adults). Age-tailored content. Quiz can add extra Patch Coins.</li>
-                  </ul>
-                </td>
                 <td>
                   <ul class="journey-list">
                     <li data-i18n="overview.how.table.step5.adult">Explores Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
                   </ul>
                 </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step5.parent">Parent can also explore Earth&apos;s Side of the Story to understand local needs. Content is age-tailored. Quiz can add extra Patch Coins.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step5.child">Child or children explore age-tailored Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
+                  </ul>
+                </td>
               </tr>
-              <tr>
+              <tr data-audience="partners">
                 <td data-i18n="overview.how.table.step6.label">Use Coins</td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step6.parent">Use Patch Coins in Market Hut (toys, jackets, books, school supplies, games, reusable household items).</li>
+                    <li data-i18n="overview.how.table.step6.adult">Uses Patch Coins in Market Hut for practical reusable items (jackets, books, tools, board games, household items).</li>
                     <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
                   </ul>
                 </td>
                 <td>
                   <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step6.adult">Uses Patch Coins in Market Hut for practical reusable items.</li>
+                    <li data-i18n="overview.how.table.step6.parent">Parent helps child or children use Patch Coins in Market Hut safely (toys, jackets, books, school supplies, board games, reusable household items).</li>
+                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="journey-list">
+                    <li data-i18n="overview.how.table.step6.child">Child or children can use earned Patch Coins in Market Hut with parent permissions and guidance.</li>
                     <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
                   </ul>
                 </td>
@@ -283,8 +333,8 @@
       <!-- Trust & Safety -->
       <div class="section section--trust">
         <div class="callout callout--green">
-          <h4 class="callout__title" data-i18n="overview.trust.title">Safety & Privacy</h4>
-          <p class="callout__text" data-i18n="overview.trust.text">Kids use aliases and avatars, and no visible kids&rsquo; faces are allowed. Kids&rsquo; activity is only visible within their Tribe. Adults choose their own visibility settings. Tribe leaders need a validated account. They help with moderation, keep things safe and clean, and can earn more Patch Coins for this extra responsibility.</p>
+          <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
+          <p class="callout__text" data-i18n="overview.trust.text">Tribe leaders will need a validated account. They will help with moderation, keep things safe and clean, and can earn more Patch Coins for this extra responsibility.</p>
         </div>
       </div>
 
@@ -296,7 +346,7 @@
         <div class="section__divider"></div>
         <div class="feature-card feature-card--single">
           <div class="feature-card__icon feature-card__icon--cluj"><img src="assets/Starting_in_Cluj_scene_1200x1200_last_one.png" alt="" aria-hidden="true"></div>
-          <p class="feature-card__text" data-i18n="overview.cluj.text">EarthPatchers starts in Cluj and grows carefully. New cities open later only when there is enough discovery support (data + partners), so it stays real and trustworthy.</p>
+          <p class="feature-card__text" data-i18n="overview.cluj.text">EarthPatchers plans to start in Cluj and grow carefully. New cities would open later only when there is enough discovery support (data + partners), so the information stays real and trustworthy.</p>
         </div>
       </div>
 
@@ -306,7 +356,7 @@
           <h2 data-i18n="overview.partners.title">Partnerships</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.partners.text">EarthPatchers is designed to work alongside schools and NGOs, not replace them. We're building local partnerships and collaboration goals as missions scale.</p>
+        <p data-i18n="overview.partners.text">EarthPatchers is designed to work alongside schools and NGOs, not replace them. We plan to build local partnerships and collaboration goals as missions scale. If you want to start missions or get involved as a teacher, parent, scout leader, NGO, or partner, find more details in Ways to Get Involved.</p>
       </div>
 
       <!-- Bottom CTA -->
@@ -314,7 +364,7 @@
         <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
         <div class="cta-strip__buttons">
           <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
-          <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Get in Touch</a>
+          <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
           <a href="#donate" class="btn btn--donate" data-i18n="nav.donate">Donate</a>
         </div>
       </div>
@@ -327,8 +377,10 @@
     <!-- ===== WHERE WE START PAGE ===== -->
     <section id="page-mvp" class="page">
 
-      <h1 data-i18n="mvp.title">Base Camp — 36-Month Plan</h1>
-      <p data-i18n="mvp.intro">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life, in Cluj, before we expand. This starting plan has four pillars:</p>
+      <h1 data-i18n="mvp.title.public">Base Camp</h1>
+      <p class="mvp-title-plan" data-i18n="mvp.title.plan" data-audience="partners">36-Month Plan</p>
+      <p data-i18n="mvp.intro.public" data-audience="public">EarthPatchers starts with a focused plan in Cluj and begins with two core pillars:</p>
+      <p data-i18n="mvp.intro" data-audience="partners">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life, in Cluj, before we expand. This starting plan has four pillars:</p>
 
       <!-- MVP Pillars -->
       <div class="pillars">
@@ -337,7 +389,7 @@
             <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Missions HQ" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar1.title">Missions HQ</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
+          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
           <p class="pillar__text" data-i18n="mvp.pillar1.text">Quick missions (10–20 min) and weekend missions (1–2 hours), filtered by age, interest, and time. Progress tracked with badges, points, and a personal timeline.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar1.why">Missions turn climate anxiety into doable action and give families and youth a clear starting point.</p>
@@ -348,29 +400,29 @@
             <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Tribes</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
+          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
           <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups in Cluj with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar2.why">Young people care deeply about their future. This gives them a safe way to contribute without being overwhelmed.</p>
           </div>
         </div>
-        <div class="pillar">
+        <div class="pillar" data-audience="partners">
           <a href="#module/earth-side" class="pillar__image-link" aria-label="Open Earth's Side of the Story module">
             <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar4.title">Earth’s Side of the Story</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
+          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
           <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar4.why">This makes learning practical and trustworthy by connecting “why” directly to local action.</p>
           </div>
         </div>
-        <div class="pillar">
+        <div class="pillar" data-audience="partners">
           <a href="#module/market-hut" class="pillar__image-link" aria-label="Open Market Hut module">
             <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Market Hut</h3>
-          <p class="pillar__text" style="font-style:italic; color:var(--color-text-heading);" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
+          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
           <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
           <div class="callout callout--golden" style="margin-top:var(--space-md);">
             <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
@@ -439,7 +491,7 @@
       </div>
 
       <!-- Globe is Staged -->
-      <div class="section">
+      <div class="section" data-audience="partners">
         <div class="section__heading">
           <h2 data-i18n="mvp.globe.title">The "Globe" Is Staged</h2>
         </div>
@@ -464,10 +516,17 @@
         <ul class="metrics">
           <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Missions are completed and people return.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item1">Missions are completed and people return for more</span></li>
           <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item2">Youth participation is safe, supportive, and meaningful</span></li>
-          <li><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/Circular_exchange_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item3">Circular exchange works smoothly with trust and moderation</span></li>
-          <li><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/povestea_pamantului_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item4">The staged learning layer helps people understand "why" and "what to do next"</span></li>
+          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/Circular_exchange_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item3">Circular exchange works smoothly with trust and moderation</span></li>
+          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/povestea_pamantului_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item4">The staged learning layer helps people understand "why" and "what to do next"</span></li>
           <li><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/Cluj becomes a strong foundation.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item5">Cluj becomes a strong foundation for future expansion</span></li>
         </ul>
+      </div>
+      <div class="callout callout--golden" data-audience="public">
+        <h4 class="callout__title" data-i18n="mvp.public.more.title">Want to see everything we plan next?</h4>
+        <p class="callout__text" data-i18n="mvp.public.more.text">Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.</p>
+        <p style="margin-top: var(--space-md);">
+          <a href="partners.html#mvp" class="btn btn--secondary" data-i18n="mvp.public.more.cta">Go to Partner View</a>
+        </p>
       </div>
 
       <div class="footer-note">
@@ -946,22 +1005,22 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
         <div class="section__divider"></div>
         <div class="values-grid">
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/icon-about-sustainability.svg" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/sustainability.png" alt="" aria-hidden="true"></div>
             <h4 class="value-card__title" data-i18n="about.value1.title">Sustainability</h4>
             <p class="value-card__text" data-i18n="about.value1.text">Real action over awareness campaigns. Small steps that add up to lasting change.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/icon-about-community.svg" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/community.png" alt="" aria-hidden="true"></div>
             <h4 class="value-card__title" data-i18n="about.value2.title">Community</h4>
             <p class="value-card__text" data-i18n="about.value2.text">Local support, shared missions, and the power of acting together.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/icon-about-transparency.svg" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/Transparency.png" alt="" aria-hidden="true"></div>
             <h4 class="value-card__title" data-i18n="about.value3.title">Transparency</h4>
             <p class="value-card__text" data-i18n="about.value3.text">Open plans, community voting, and clear funding accountability.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/icon-about-child-safety.svg" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="" aria-hidden="true"></div>
             <h4 class="value-card__title" data-i18n="about.value4.title">Child Safety</h4>
             <p class="value-card__text" data-i18n="about.value4.text">Privacy-by-design, age-appropriate content, and guardian involvement at every step.</p>
           </div>
@@ -984,12 +1043,14 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
 
     <!-- ===== CONTACT US PAGE ===== -->
     <section id="page-contact" class="page">
-      <h1 data-i18n="contact.title">Contact Us</h1>
-      <p data-i18n="contact.intro">Whether you're a parent, teacher, NGO, potential partner, or just curious — we'd love to hear from you.</p>
+      <h1 data-i18n="contact.title">Ways to Get Involved</h1>
+      <p data-i18n="contact.intro">If you want to start missions or get involved as a teacher, parent, scout leader, NGO, or partner, email us directly and we will guide you.</p>
 
-      <p>
+      <div class="donate-actions">
         <a class="btn btn--primary" href="mailto:contact@earthpatchers.org">contact@earthpatchers.org</a>
-      </p>
+        <button id="contact-copy-email-btn" type="button" class="btn btn--secondary" data-i18n="contact.copy-email">Copy Email</button>
+      </div>
+      <p id="contact-copy-status" class="donate-status" aria-live="polite"></p>
 
       <div class="footer-note">
         <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>

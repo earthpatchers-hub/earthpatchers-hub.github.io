@@ -13,7 +13,7 @@
   --color-bg-sidebar: #0f2418;
 
   /* Text */
-  --color-text-primary: #f0ead6;
+  --color-text-primary: #b8c4a8;
   --color-text-secondary: #b8c4a8;
   --color-text-heading: #F0C040;
   --color-text-accent: #6dbf5a;
@@ -80,6 +80,10 @@ body {
   background: var(--color-bg-deep);
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -391,6 +395,10 @@ html[data-audience="partners"] #audience-switch-to-partners {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 120' preserveAspectRatio='none'%3E%3Cpolyline points='20,0 44,54 56,120' fill='none' stroke='%232d6b3f' stroke-opacity='0.78' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='3 5'/%3E%3C/svg%3E");
 }
 
+.sidebar__submenu li[data-last-visible="true"]::after {
+  display: none;
+}
+
 .sidebar__submenu li:nth-child(odd) {
   --dot-x: 20px;
   --label-pad: 44px;
@@ -528,19 +536,44 @@ html[data-audience="partners"] #audience-switch-to-partners {
 .page::before {
   content: '';
   position: absolute;
-  top: var(--space-xl);
-  right: var(--space-xl);
+  top: var(--space-xs);
+  right: var(--space-lg);
   width: 200px;
   height: 200px;
   background: url('../assets/EP_FINAL_LOGO.png') center/contain no-repeat;
   filter: drop-shadow(0 0 24px rgba(240, 192, 64, 0.25));
   pointer-events: none;
+  z-index: 0;
 }
 
 /* Keep top page titles/intros clear of the top-right logo */
 .page > h1:first-child,
 .page > p:nth-child(2) {
   padding-right: 220px;
+}
+
+/* Base Camp has audience-specific lead elements; ensure they clear the logo too */
+#page-mvp > h1,
+#page-mvp > p[data-i18n^="mvp.intro"] {
+  padding-right: 220px;
+}
+
+#page-mvp.page {
+  padding-top: var(--space-2xl);
+}
+
+#page-mvp .mvp-title-plan {
+  color: var(--color-bandage-brown);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  margin: calc(-1 * var(--space-md)) 0 var(--space-lg);
+  padding-right: 220px;
+}
+
+#page-mvp .pillars {
+  padding-right: 0;
+  margin-top: var(--space-md);
 }
 
 .page.active {
@@ -561,8 +594,13 @@ html[data-audience="partners"] #audience-switch-to-partners {
 
 #page-overview .hero {
   margin-bottom: 0;
-  padding-top: var(--space-xl);
+  padding-top: 0;
   padding-bottom: var(--space-lg);
+}
+
+#page-overview .hero__tagline {
+  font-size: var(--font-size-3xl);
+  max-width: none;
 }
 
 .hero__logo {
@@ -992,7 +1030,9 @@ html[data-audience="partners"] #audience-switch-to-partners {
 }
 
 .journey-table-wrap {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   border: none;
   border-radius: var(--radius);
   background: transparent;
@@ -1002,7 +1042,7 @@ html[data-audience="partners"] #audience-switch-to-partners {
 
 .journey-table {
   width: 100%;
-  min-width: 0;
+  min-width: 980px;
   border-collapse: collapse;
 }
 
@@ -1282,9 +1322,17 @@ html[data-audience="partners"] #audience-switch-to-partners {
   margin: 0;
 }
 
+.overview-problem-signoff {
+  display: block;
+  color: var(--color-bandage-amber);
+  font-size: var(--font-size-lg);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
 /* --- Module Hero Subtitle --- */
 .module-hero__subtitle {
-  font-style: italic;
+  font-style: normal;
   color: var(--color-text-heading);
   margin-bottom: var(--space-sm);
 }
@@ -1580,16 +1628,16 @@ html[data-audience="partners"] #audience-switch-to-partners {
 .value-card__icon {
   font-size: 1.8rem;
   margin-bottom: var(--space-sm);
-  width: 56px;
-  height: 56px;
+  width: 112px;
+  height: 112px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .value-card__icon img {
-  width: 56px;
-  height: 56px;
+  width: 104px;
+  height: 104px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 }
@@ -1791,10 +1839,6 @@ html[data-audience="partners"] #audience-switch-to-partners {
     overflow-x: auto;
   }
 
-  .journey-table {
-    min-width: 780px;
-  }
-
   .sidebar {
     left: calc(-1 * var(--sidebar-width) - 20px);
     transition: left var(--transition);
@@ -1833,6 +1877,19 @@ html[data-audience="partners"] #audience-switch-to-partners {
 
   .page > h1:first-child,
   .page > p:nth-child(2) {
+    padding-right: 0;
+  }
+
+  #page-mvp > h1,
+  #page-mvp > p[data-i18n^="mvp.intro"] {
+    padding-right: 0;
+  }
+
+  #page-mvp .mvp-title-plan {
+    padding-right: 0;
+  }
+
+  #page-mvp .pillars {
     padding-right: 0;
   }
 
@@ -1930,6 +1987,43 @@ html[data-audience="partners"] #audience-switch-to-partners {
     text-align: center;
   }
 
+  /* Keep key custom icons readable on mobile */
+  .metrics__icon--missions {
+    width: 88px;
+    height: 88px;
+  }
+
+  .metrics__icon--missions img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .metrics__icon--missions-boost img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .feature-card__icon--missions-coin {
+    width: 96px;
+    height: 96px;
+    min-width: 96px;
+  }
+
+  .feature-card__icon--missions-coin img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .value-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .value-card__icon img {
+    width: 80px;
+    height: 80px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1958,15 +2052,48 @@ html[data-audience="partners"] #audience-switch-to-partners {
     width: 48px;
     height: 48px;
   }
+
+  /* Override generic small-icon shrink for custom large icons */
+  .metrics__icon--missions {
+    width: 80px;
+    height: 80px;
+  }
+
+  .metrics__icon--missions img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .metrics__icon--missions-boost img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .value-card__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .value-card__icon img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .feature-card__icon--missions-coin {
+    width: 84px;
+    height: 84px;
+    min-width: 84px;
+  }
+
+  .feature-card__icon--missions-coin img {
+    width: 84px;
+    height: 84px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .journey-table-wrap {
     overflow-x: auto;
-  }
-
-  .journey-table {
-    min-width: 780px;
   }
 
   .sidebar {
@@ -2003,6 +2130,19 @@ html[data-audience="partners"] #audience-switch-to-partners {
     padding-right: 0;
   }
 
+  #page-mvp > h1,
+  #page-mvp > p[data-i18n^="mvp.intro"] {
+    padding-right: 0;
+  }
+
+  #page-mvp .mvp-title-plan {
+    padding-right: 0;
+  }
+
+  #page-mvp .pillars {
+    padding-right: 0;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2017,6 +2157,43 @@ html[data-audience="partners"] #audience-switch-to-partners {
 
   .hero {
     padding-right: 0;
+  }
+
+  /* Keep key custom icons readable on tablet */
+  .metrics__icon--missions {
+    width: 96px;
+    height: 96px;
+  }
+
+  .metrics__icon--missions img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .metrics__icon--missions-boost img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .feature-card__icon--missions-coin {
+    width: 104px;
+    height: 104px;
+    min-width: 104px;
+  }
+
+  .feature-card__icon--missions-coin img {
+    width: 104px;
+    height: 104px;
+  }
+
+  .value-card__icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  .value-card__icon img {
+    width: 88px;
+    height: 88px;
   }
 }
 
