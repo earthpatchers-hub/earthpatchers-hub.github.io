@@ -26,30 +26,41 @@ const Sidebar = {
 
     // Accordion toggles
     this.accordionToggles.forEach(toggle => {
+      const submenu = toggle.nextElementSibling;
+      const setOpenState = (shouldOpen) => {
+        toggle.classList.toggle('open', shouldOpen);
+        submenu?.classList.toggle('open', shouldOpen);
+        const arrowBtn = toggle.querySelector('.sidebar__accordion-arrow');
+        if (arrowBtn) {
+          arrowBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        }
+      };
+
       // Clicking the arrow button toggles the submenu
       const arrow = toggle.querySelector('.sidebar__accordion-arrow');
       if (arrow) {
         arrow.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const submenu = toggle.nextElementSibling;
           const isOpen = toggle.classList.contains('open');
-          toggle.classList.toggle('open');
-          submenu.classList.toggle('open');
-          arrow.setAttribute('aria-expanded', !isOpen);
+          setOpenState(!isOpen);
         });
       }
+
+      // Clicking anywhere on the row (except arrow) toggles the submenu.
+      toggle.addEventListener('click', (e) => {
+        if (e.target.closest('.sidebar__accordion-arrow')) return;
+        if (e.target.closest('.sidebar__accordion-link')) return;
+        const isOpen = toggle.classList.contains('open');
+        setOpenState(!isOpen);
+      });
 
       // Clicking the link navigates (default <a> behavior) and also opens the accordion
       const link = toggle.querySelector('.sidebar__accordion-link');
       if (link) {
         link.addEventListener('click', () => {
-          const submenu = toggle.nextElementSibling;
-          if (!submenu.classList.contains('open')) {
-            toggle.classList.add('open');
-            submenu.classList.add('open');
-            const arrow = toggle.querySelector('.sidebar__accordion-arrow');
-            if (arrow) arrow.setAttribute('aria-expanded', 'true');
+          if (!submenu?.classList.contains('open')) {
+            setOpenState(true);
           }
         });
       }
