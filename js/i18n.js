@@ -32,7 +32,7 @@ const I18n = {
       }
     }
   },
-  sectionPrefixes: [
+  baseSectionPrefixes: [
     'nav.',
     'audience.',
     'theme.',
@@ -41,6 +41,13 @@ const I18n = {
     'mvp.',
     'nextsteps.',
     'module.',
+    'mod.',
+    'about.',
+    'contact.',
+    'donate.',
+    'footer.'
+  ],
+  moduleSectionPrefixes: [
     'missions-hq.',
     'tribes.',
     'market-hut.',
@@ -51,13 +58,12 @@ const I18n = {
     'green-wall.',
     'org-scientists.',
     'new-cities.',
-    'patcher-camp.',
-    'mod.',
-    'about.',
-    'contact.',
-    'donate.',
-    'footer.'
+    'patcher-camp.'
   ],
+
+  get sectionPrefixes() {
+    return [...this.baseSectionPrefixes, ...this.moduleSectionPrefixes];
+  },
 
   translations: {
     en: {
