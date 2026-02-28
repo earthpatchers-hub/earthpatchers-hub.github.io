@@ -1992,6 +1992,10 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   margin-top: var(--space-3xl);
 }
 
+.page-end-cta {}
+
+.page-footer-note {}
+
 /* ============================================
    Responsive
    ============================================ */
