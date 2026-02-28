@@ -1914,6 +1914,10 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   font-weight: 600;
 }
 
+.module-nav__prev {}
+
+.module-nav__next {}
+
 /* --- Not Included Box --- */
 .not-included {
   background: rgba(139, 69, 19, 0.1);
