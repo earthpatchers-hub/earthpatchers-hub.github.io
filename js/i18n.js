@@ -868,9 +868,13 @@ const I18n = {
   setLang(lang) {
     if (!this.translations[lang]) return;
     this.currentLang = lang;
-    this.mergedTranslationsCache = {};
+    this.clearMergedTranslationsCache();
     localStorage.setItem('ep-lang', lang);
     this.apply();
+  },
+
+  clearMergedTranslationsCache() {
+    this.mergedTranslationsCache = {};
   },
 
   getSectionNameForKey(key) {
@@ -939,6 +943,14 @@ const I18n = {
     return 'public';
   },
 
+  getCurrentLanguageTranslations() {
+    return this.translations[this.currentLang] || {};
+  },
+
+  getCurrentAudienceOverrides() {
+    return this.audienceOverrides[this.currentLang]?.[this.getActiveAudience()] || {};
+  },
+
   getMergedTranslations() {
     const audience = this.getActiveAudience();
     const cacheKey = `${this.currentLang}:${audience}`;
@@ -946,15 +958,15 @@ const I18n = {
       return this.mergedTranslationsCache[cacheKey];
     }
 
-    const base = this.translations[this.currentLang] || {};
-    const overrides = this.audienceOverrides[this.currentLang]?.[audience] || {};
+    const base = this.getCurrentLanguageTranslations();
+    const overrides = this.getCurrentAudienceOverrides();
     const merged = { ...base, ...overrides };
     this.mergedTranslationsCache[cacheKey] = merged;
     return merged;
   },
 
   getAudienceSectionOverrides(sectionName) {
-    const overrides = this.audienceOverrides[this.currentLang]?.[this.getActiveAudience()] || {};
+    const overrides = this.getCurrentAudienceOverrides();
     return Object.entries(overrides).reduce((acc, [key, value]) => {
       if (this.getSectionNameForKey(key) === sectionName) {
         acc[key] = value;
@@ -963,17 +975,17 @@ const I18n = {
     }, {});
   },
 
-  resolveAudienceScopedValue(t, key) {
-    if (t[key] !== undefined) return t[key];
+  getResolvedValue(translationsMap, key) {
+    if (translationsMap[key] !== undefined) return translationsMap[key];
     const audienceKey = `${key}.${this.getActiveAudience()}`;
-    if (t[audienceKey] !== undefined) return t[audienceKey];
+    if (translationsMap[audienceKey] !== undefined) return translationsMap[audienceKey];
     return undefined;
   },
 
-  applyTextTranslations(t) {
+  applyTextTranslations(translationsMap) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const value = this.resolveAudienceScopedValue(t, key);
+      const value = this.getResolvedValue(translationsMap, key);
       if (value === undefined) return;
 
       if (el.hasAttribute('data-i18n-html')) {
@@ -984,10 +996,10 @@ const I18n = {
     });
   },
 
-  applyPlaceholderTranslations(t) {
+  applyPlaceholderTranslations(translationsMap) {
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
-      const value = this.resolveAudienceScopedValue(t, key);
+      const value = this.getResolvedValue(translationsMap, key);
       if (value !== undefined) el.placeholder = value;
     });
   },
@@ -1008,9 +1020,9 @@ const I18n = {
   },
 
   apply() {
-    const t = this.getMergedTranslations();
-    this.applyTextTranslations(t);
-    this.applyPlaceholderTranslations(t);
+    const translationsMap = this.getMergedTranslations();
+    this.applyTextTranslations(translationsMap);
+    this.applyPlaceholderTranslations(translationsMap);
     this.applyLanguageButtonState();
 
     // Update HTML lang attribute
@@ -1033,8 +1045,8 @@ const I18n = {
   },
 
   t(key) {
-    const t = this.getMergedTranslations();
-    return this.resolveAudienceScopedValue(t, key) || key;
+    const translationsMap = this.getMergedTranslations();
+    return this.getResolvedValue(translationsMap, key) || key;
   },
 
   tSection(sectionName) {
