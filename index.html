@@ -36,6 +36,14 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="ro">RO</button>
       </div>
+      <div class="theme-switch" aria-label="Theme switch">
+        <span class="theme-switch__label" data-i18n="theme.light">Light</span>
+        <label class="theme-toggle">
+          <input class="theme-toggle__input" type="checkbox" data-theme-toggle aria-label="Toggle dark mode">
+          <span class="theme-toggle__slider"></span>
+        </label>
+        <span class="theme-switch__label" data-i18n="theme.dark">Dark</span>
+      </div>
       <div class="audience-switch">
         <a id="audience-switch-to-partners" class="audience-switch__btn" href="partners.html" data-i18n="audience.switch.partners" data-audience="public">Partners View</a>
         <a id="audience-switch-to-public" class="audience-switch__btn" href="index.html" data-i18n="audience.switch.public" data-audience="partners">Public View</a>
@@ -44,7 +52,7 @@
 
     <ul class="sidebar__nav">
       <li>
-        <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">What We Are Trying to Fix</a>
+        <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">What We're Trying to Fix</a>
       </li>
       <li class="sidebar__accordion">
         <div class="sidebar__accordion-toggle" data-accordion="mvp">
@@ -99,8 +107,21 @@
       <button class="lang-btn active" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="ro">RO</button>
     </div>
+    <div class="theme-switch theme-switch--mobile" aria-label="Theme switch">
+      <span class="theme-switch__label" data-i18n="theme.light">Light</span>
+      <label class="theme-toggle">
+        <input class="theme-toggle__input" type="checkbox" data-theme-toggle aria-label="Toggle dark mode">
+        <span class="theme-toggle__slider"></span>
+      </label>
+      <span class="theme-switch__label" data-i18n="theme.dark">Dark</span>
+    </div>
     <a id="audience-switch-mobile" class="audience-switch__btn audience-switch__btn--mobile" href="partners.html" data-i18n="audience.switch.partners-mobile">Partners</a>
   </header>
+
+  <div id="theme-energy-note" class="theme-energy-note" hidden>
+    <p class="theme-energy-note__text" data-i18n="theme.auto.note">Dark mode was auto-enabled to save energy. Friendly reminder: turn off lights you don't need.</p>
+    <button id="theme-energy-note-close" class="theme-energy-note__close" type="button" aria-label="Dismiss">✕</button>
+  </div>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main class="content">
@@ -112,13 +133,13 @@
       <div class="hero">
         <h1 class="hero__tagline" data-i18n="hero.tagline">Patching the Earth Together,
 One Stitch at a Time</h1>
-        <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>Between work, school, laundry, and remembering where you left your keys, searching for trusted planet missions shouldn&rsquo;t be another task on the list.<br><br>EarthPatchers wants to gather them for you in one place. Creating your own Tribe (group), starting your own mission, jumping into one started by others, or teaming up with one created by our trusted NGO partners is what we plan to start building first.</p>
+        <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>Between work, school, laundry, and the everlasting question "where did I leave my keys?", searching for trusted planet missions shouldn&rsquo;t be another task on the list.<br><br>EarthPatchers wants to gather them for you in one place. Creating your own Tribe (a team), starting your own mission, jumping into one started by others, or teaming up with one created by our trusted NGO partners is what we plan to start building first.</p>
       </div>
 
       <!-- Why EarthPatchers Exists -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.problem.title">What is EarthPatchers planning to fix</h2>
+          <h2 data-i18n="overview.problem.title">What would EarthPatchers stitch together</h2>
         </div>
         <div class="section__divider"></div>
         <p data-i18n="overview.problem.text" data-i18n-html>There&rsquo;s no shortage of information about the planet.<br>There&rsquo;s just a shortage of time, clarity, and simple ways to act on it.<br><br>Important missions are scattered across websites, hidden in long reports, or buried in social media feeds. Finding them can feel a bit like looking for a needle in a haystack&hellip; while holding a laundry basket in one hand..<br><br>EarthPatchers is building a space that brings these missions together in one place &mdash; so instead of just reading about problems, you&rsquo;ll be able to actually do something about them.<br><br>Small missions at home.<br>Real missions created by trusted NGOs.<br>Ideas started by people like you.</p>
@@ -377,9 +398,9 @@ One Stitch at a Time</h1>
     <!-- ===== WHERE WE START PAGE ===== -->
     <section id="page-mvp" class="page">
 
-      <h1 data-i18n="mvp.title.public">Base Camp</h1>
+      <h1 data-i18n="mvp.title">Base Camp</h1>
       <p class="mvp-title-plan" data-i18n="mvp.title.plan" data-audience="partners">36-Month Plan</p>
-      <p data-i18n="mvp.intro.public" data-audience="public">EarthPatchers starts with a focused plan in Cluj and begins with two core pillars:</p>
+      <p data-i18n="mvp.intro" data-audience="public">EarthPatchers starts with a focused plan in Cluj and begins with two core pillars:</p>
       <p data-i18n="mvp.intro" data-audience="partners">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life, in Cluj, before we expand. This starting plan has four pillars:</p>
 
       <!-- MVP Pillars -->
@@ -389,9 +410,9 @@ One Stitch at a Time</h1>
             <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Missions HQ" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar1.title">Missions HQ</h3>
-          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
+          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
           <p class="pillar__text" data-i18n="mvp.pillar1.text">Quick missions (10–20 min) and weekend missions (1–2 hours), filtered by age, interest, and time. Progress tracked with badges, points, and a personal timeline.</p>
-          <div class="callout callout--golden" style="margin-top:var(--space-md);">
+          <div class="callout callout--golden pillar__callout">
             <p class="callout__text" data-i18n="mvp.pillar1.why">Missions turn climate anxiety into doable action and give families and youth a clear starting point.</p>
           </div>
         </div>
@@ -400,9 +421,9 @@ One Stitch at a Time</h1>
             <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Tribes</h3>
-          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
+          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
           <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups in Cluj with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
-          <div class="callout callout--golden" style="margin-top:var(--space-md);">
+          <div class="callout callout--golden pillar__callout">
             <p class="callout__text" data-i18n="mvp.pillar2.why">Young people care deeply about their future. This gives them a safe way to contribute without being overwhelmed.</p>
           </div>
         </div>
@@ -411,9 +432,9 @@ One Stitch at a Time</h1>
             <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar4.title">Earth’s Side of the Story</h3>
-          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
+          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
           <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.</p>
-          <div class="callout callout--golden" style="margin-top:var(--space-md);">
+          <div class="callout callout--golden pillar__callout">
             <p class="callout__text" data-i18n="mvp.pillar4.why">This makes learning practical and trustworthy by connecting “why” directly to local action.</p>
           </div>
         </div>
@@ -422,9 +443,9 @@ One Stitch at a Time</h1>
             <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Market Hut</h3>
-          <p class="pillar__text" style="color:var(--color-text-heading);" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
+          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
           <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
-          <div class="callout callout--golden" style="margin-top:var(--space-md);">
+          <div class="callout callout--golden pillar__callout">
             <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
           </div>
         </div>
@@ -446,7 +467,7 @@ One Stitch at a Time</h1>
             <ul class="timeline__list">
               <li data-i18n="mvp.phase1.item1">Launch the missions library and start tracking progress</li>
               <li data-i18n="mvp.phase1.item2">Run the first youth community pilot groups with strong safety rules</li>
-              <li data-i18n="mvp.phase1.item3">Launch the circular exchange pilot with moderation and safe pickup guidance</li>
+              <li data-i18n="mvp.phase1.item3">Launch the Market Hut pilot, with moderation and clear guidance for safe pickup</li>
               <li data-i18n="mvp.phase1.item4">Add the first "learning corner" (small, curated, age-aware)</li>
             </ul>
             <div class="timeline__goal">
@@ -490,23 +511,6 @@ One Stitch at a Time</h1>
         </div>
       </div>
 
-      <!-- Globe is Staged -->
-      <div class="section" data-audience="partners">
-        <div class="section__heading">
-          <h2 data-i18n="mvp.globe.title">The "Globe" Is Staged</h2>
-        </div>
-        <div class="section__divider"></div>
-        <p data-i18n="mvp.globe.intro">Our future learning experience (an "Encarta-like" Earth globe/map) is added step-by-step as a learning layer that supports Missions:</p>
-        <ul class="feature-list">
-          <li data-i18n="mvp.globe.phase1">Phase 1: A small learning corner (simple, clear, age-aware)</li>
-          <li data-i18n="mvp.globe.phase2">Phase 2: A richer learning map with carefully chosen topics</li>
-          <li data-i18n="mvp.globe.phase3">Phase 3: More complete learning paths (still focused on clarity and reliability)</li>
-        </ul>
-        <div class="callout callout--golden">
-          <p class="callout__text" data-i18n="mvp.globe.why">We want learning to be trustworthy and understandable, not flashy and confusing.</p>
-        </div>
-      </div>
-
       <!-- What Success Looks Like -->
       <div class="section section--mvp-success">
         <div class="section__heading">
@@ -522,10 +526,10 @@ One Stitch at a Time</h1>
         </ul>
       </div>
       <div class="callout callout--golden" data-audience="public">
-        <h4 class="callout__title" data-i18n="mvp.public.more.title">Want to see everything we plan next?</h4>
-        <p class="callout__text" data-i18n="mvp.public.more.text">Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.</p>
+        <h4 class="callout__title" data-i18n="mvp.more.title">Want to see everything we would like to build?</h4>
+        <p class="callout__text" data-i18n="mvp.more.text">Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.</p>
         <p style="margin-top: var(--space-md);">
-          <a href="partners.html#mvp" class="btn btn--secondary" data-i18n="mvp.public.more.cta">Go to Partner View</a>
+          <a href="partners.html#mvp" class="btn btn--secondary" data-i18n="mvp.more.cta">Go to Partner View</a>
         </p>
       </div>
 
@@ -537,13 +541,13 @@ One Stitch at a Time</h1>
     <!-- ===== NEXT STEPS PAGE (HIDDEN) ===== -->
     <section id="page-next-steps" class="page" data-audience="partners">
       <h1 data-i18n="nextsteps.title">Next Steps</h1>
-      <p data-i18n="nextsteps.intro">Beyond the MVP, EarthPatchers envisions a rich ecosystem of modules. These will be shaped by community voting and feasibility through the Green Wall.</p>
+      <p data-i18n="nextsteps.intro">Beyond Base Camp, EarthPatchers envisions a rich ecosystem of modules. These will be shaped by community voting and implementation possibilities through the Green Wall.</p>
 
       <div class="card-grid">
         <!-- Activity Hut -->
         <div class="card">
           <a href="#module/activity-hut">
-            <img src="assets/EP_ActivityHut_magic.png" alt="Activity Hut" class="card__image" loading="lazy">
+            <img src="assets/EP_ActivityHut_magic_1200.png" alt="Activity Hut" class="card__image" loading="lazy">
           </a>
           <div class="card__body">
             <h3 class="card__title" data-i18n="mod.activity-hut">Activity Hut</h3>
@@ -591,7 +595,7 @@ One Stitch at a Time</h1>
         <!-- New Cities & Discovery Phase -->
         <div class="card">
           <a href="#module/new-cities">
-            <img src="assets/EP_NewCities_Discovery_magic.png" alt="New Cities & Discovery Phase" class="card__image" loading="lazy">
+            <img src="assets/New Cities & Discovery Phase_last.png" alt="New Cities & Discovery Phase" class="card__image" loading="lazy">
           </a>
           <div class="card__body">
             <h3 class="card__title" data-i18n="mod.new-cities">New Cities & Discovery Phase</h3>
@@ -637,11 +641,10 @@ One Stitch at a Time</h1>
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="missions-hq.title">Missions HQ</h1>
-          <p class="module-hero__subtitle" data-i18n="missions-hq.subtitle">Where It All Begins</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="missions-hq.desc" data-i18n-html>Missions HQ is where EarthPatchers begins. It’s a library of real-life missions for kids, teens, and adults, designed to make “saving the Earth” feel doable.
+        <div class="rich-text module-body__intro" data-i18n="missions-hq.desc" data-i18n-html>Missions HQ is where EarthPatchers begins. It’s a library of real-life missions for kids, teens, and adults, designed to make “saving the Earth” feel doable.
 
 Missions come in sizes that fit busy life: • Tiny missions (10–20 minutes) • Weekend missions (1–2 hours) • Team missions (families, schools, clubs, Tribes)
 
@@ -663,13 +666,13 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
             </div>
           </div>
         </div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="missions-hq.why">Missions turn climate anxiety into doable action. They give families and young people a clear starting point: one mission at a time, building real change step by step.</p>
         </div>
       </div>
       <div class="module-nav">
-        <span></span>
+        <span class="module-nav__spacer" aria-hidden="true"></span>
         <a href="#module/tribes" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
@@ -681,16 +684,26 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="tribes.title">Tribes</h1>
-          <p class="module-hero__subtitle" data-i18n="tribes.subtitle">Your Safe Team Space</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="tribes.desc" data-i18n-html>A Tribe is EarthPatchers’ word for a small team (like a club). Tribes can be: • Kids/Teens Tribes (aliases + avatars, no visible kids’ faces, kid activity visible only in the Tribe) • Adults-only Tribes (adults choose their visibility)
+        <div class="rich-text module-body__intro" data-i18n="tribes.desc" data-i18n-html>A Tribe is EarthPatchers’ word for a small team (like a club). Tribes can be: • Kids/Teens Tribes (aliases + avatars, no visible kids’ faces, kid activity visible only in the Tribe) • Adults-only Tribes (adults choose their visibility)
 
 Missions can be shared across Tribes so great missions spread without exposing children’s accounts.
 
 Tribe “camp rules” keep things kind and clean: • Be kind • Keep private details private • No visible kids’ faces • Don’t post littering (and don’t encourage it) • Use a Littering report when something shouldn’t be there</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why" data-audience="partners">
+          <h4 class="callout__title" data-i18n="tribes.roles.title">Roles</h4>
+          <div class="callout__text" data-i18n="tribes.roles.items" data-i18n-html>
+            <ul>
+              <li>MasterPatchers (Mentors, Campaigners)</li>
+              <li>NewsPatcher (Reporters)</li>
+              <li>AppPatchers (Developers, QAs)</li>
+              <li>CraftPatchers (Craft makers - Market Hut)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="tribes.why">Sustainability isn’t just about tasks — it’s about belonging. Tribes turn the platform into a community where people support each other, act together, and keep things safe and kind.</p>
         </div>
@@ -707,7 +720,7 @@ Tribe “camp rules” keep things kind and clean: • Be kind • Keep private 
       </div>
       <div class="module-nav">
         <a href="#module/missions-hq" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <a href="#module/earth-side" class="module-nav__link" data-i18n="module.next">Next &rarr;</a>
+        <a href="#module/earth-side" class="module-nav__link" data-i18n="module.next" data-audience="partners">Next &rarr;</a>
       </div>
     </section>
 
@@ -718,14 +731,13 @@ Tribe “camp rules” keep things kind and clean: • Be kind • Keep private 
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="market-hut.title">Market Hut</h1>
-          <p class="module-hero__subtitle" data-i18n="market-hut.subtitle">Swap, Share, Reuse</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="market-hut.desc" data-i18n-html>The Market Hut is a Cluj-first circular exchange where people reuse items instead of buying new. Patch Coins make it work without awkward item-for-item matching: you earn coins by helping, then use coins to choose items.
+        <div class="rich-text module-body__intro" data-i18n="market-hut.desc" data-i18n-html>The Market Hut is a Cluj-first circular exchange where people reuse items instead of buying new. Patch Coins make it work without awkward item-for-item matching: you earn coins by helping, then use coins to choose items.
 
 Safety guidance is built into the flow. Adults choose their visibility, but children’s faces are never allowed.</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="market-hut.why">Circular habits are one of the fastest ways to reduce waste. Patch Coins make reuse simple and fair — no awkward item-for-item matching, just kindness and coins.</p>
         </div>
@@ -753,11 +765,10 @@ Safety guidance is built into the flow. Adults choose their visibility, but chil
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="earth-side.title">Earth's Side of the Story</h1>
-          <p class="module-hero__subtitle" data-i18n="earth-side.subtitle">Learning That Starts in Cluj</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="earth-side.desc" data-i18n-html>Earth’s Side of the Story is the learning-and-action world that starts in Cluj and connects learning to missions. It has three doors:
+        <div class="rich-text module-body__intro" data-i18n="earth-side.desc" data-i18n-html>Earth’s Side of the Story is the learning-and-action world that starts in Cluj and connects learning to missions. It has three doors:
 
 1) My Hazards • Explains hazards in a friendly way: - natural hazards - natural hazards made worse by pollution/changes people cause - hazards caused directly by people • Short learning cards and quizzes earn Patch Coins.
 
@@ -766,7 +777,7 @@ Safety guidance is built into the flow. Adults choose their visibility, but chil
 Pins can become missions (or requests for missions). Later, this map can include verified helper pins: • Helpers (NGOs, researchers, community groups) • Missions (ways to help) • Reports (things needing attention)
 
 3) Learn & Play Short learning paths and quizzes that connect back to missions and Patch Coins.</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="earth-side.why">Understanding "why" is the bridge between action and lasting change. This module makes learning accessible, emotionally safe, and directly connected to real missions.</p>
         </div>
@@ -794,12 +805,11 @@ Pins can become missions (or requests for missions). Later, this map can include
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="games-room.title">Games Room</h1>
-          <p class="module-hero__subtitle" data-i18n="games-room.subtitle">Play With a Purpose</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="games-room.desc" data-i18n-html>The Games Room starts by embedding trusted nature-learning games so EarthPatchers can offer play-based learning quickly. Patch Coins unlock games (simple rule: coins open doors). Adults can play too and earn Patch Coins.</div>
-        <div class="callout callout--golden">
+        <div class="rich-text module-body__intro" data-i18n="games-room.desc" data-i18n-html>The Games Room starts by embedding trusted nature-learning games so EarthPatchers can offer play-based learning quickly. Patch Coins unlock games (simple rule: coins open doors). Adults can play too and earn Patch Coins.</div>
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="games-room.why">Play is how children learn best. Starting with trusted games means learning happens fast, and Patch Coins keep engagement connected to real effort.</p>
         </div>
@@ -819,16 +829,15 @@ Pins can become missions (or requests for missions). Later, this map can include
     <!-- ===== MODULE: ACTIVITY HUT ===== -->
     <section id="page-module-activity-hut" class="page" data-audience="partners">
       <div class="module-hero">
-        <img src="assets/EP_ActivityHut_magic.png" alt="Activity Hut" class="module-hero__image" loading="lazy">
+        <img src="assets/EP_ActivityHut_magic_1200.png" alt="Activity Hut" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="activity-hut.title">Activity Hut</h1>
-          <p class="module-hero__subtitle" data-i18n="activity-hut.subtitle">Your Adventure Journal</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="activity-hut.desc" data-i18n-html>The Activity Hut is a personal home base that feels like an adventure journal. It shows: • your adventure trail (missions and milestones) • Patch Coins now (spendable) and Patch Coins earned (lifetime effort) • badges and achievements • role path (like MasterPatcher) Adults choose what to share publicly; kids stay within Tribe visibility rules.</div>
-        <div class="callout callout--golden">
+        <div class="rich-text module-body__intro" data-i18n="activity-hut.desc" data-i18n-html>The Activity Hut is a personal home base that feels like an adventure journal. It shows: • your adventure trail (missions and milestones) • Patch Coins now (spendable) and Patch Coins earned (lifetime effort) • badges and achievements • role path (like Leader, or MasterPatcher as we call it) Adults choose what to share publicly; kids stay within Tribe visibility rules.</div>
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="activity-hut.why">Your adventure journal is where effort becomes visible. Badges show who you're becoming, achievements show what you've done, and your Patch Coins total shows your lifetime impact.</p>
         </div>
@@ -852,14 +861,13 @@ Pins can become missions (or requests for missions). Later, this map can include
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="eco-shops.title">Eco Shops Directory</h1>
-          <p class="module-hero__subtitle" data-i18n="eco-shops.subtitle">Find What’s Truly Sustainable</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="eco-shops.desc" data-i18n-html>Eco Shops is a Cluj-first guide to sustainable products and local shops with ratings and comments to keep things honest. Quality rules reduce spam: • You can review or add products after earning enough Patch Coins and completing a verified mission. • New products are submitted via a template (photo, where to buy, materials, why it’s better, what to watch out for). • MasterPatchers verify entries before they go live.</div>
-        <div class="callout callout--golden">
+        <div class="rich-text module-body__intro" data-i18n="eco-shops.desc" data-i18n-html>Eco Shops is a Cluj-first guide to sustainable products and local shops with ratings and comments to keep things honest. Quality rules reduce spam: • You can review or add products after earning enough Patch Coins and completing a verified mission. • New products are submitted via a template (photo, where to buy, materials, why it’s better, what to watch out for). • Leaders, also called MasterPatchers, verify entries before they go live.</div>
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
-          <p class="callout__text" data-i18n="eco-shops.why">Finding truly sustainable products is hard. This directory keeps things honest with community reviews, verified missions, and MasterPatcher oversight.</p>
+          <p class="callout__text" data-i18n="eco-shops.why">Finding truly sustainable products is hard. This directory keeps things honest with community reviews, verified missions, and Leader oversight (MasterPatcher role).</p>
         </div>
       </div>
       <div class="module-nav">
@@ -875,14 +883,13 @@ Pins can become missions (or requests for missions). Later, this map can include
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="green-wall.title">Green Wall</h1>
-          <p class="module-hero__subtitle" data-i18n="green-wall.subtitle">Where Ideas Grow</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="green-wall.desc" data-i18n-html>The Green Wall is an idea garden where people post ideas, vote, and form teams based on skills. Ideas can be: • local community projects (repair clubs, refill stations) • next steps for EarthPatchers itself (new features, new modules, expansion ideas)
+        <div class="rich-text module-body__intro" data-i18n="green-wall.desc" data-i18n-html>The Green Wall is an idea garden where people post ideas, vote, and form teams based on skills. Ideas can be: • local community projects (repair clubs, refill stations) • next steps for EarthPatchers itself (new features, new modules, expansion ideas)
 
 Helper Page explanation: The Helper Page is found inside the Activity Hut. It’s the part of your profile that can show what you learned and how you helped (optional sharing, adult-controlled).</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="green-wall.why">Good ideas need more than enthusiasm — they need skills, teamwork, and sometimes funding. The Green Wall turns community energy into real projects.</p>
         </div>
@@ -900,14 +907,13 @@ Helper Page explanation: The Helper Page is found inside the Activity Hut. It’
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="org-scientists.title">Organisations & Scientists</h1>
-          <p class="module-hero__subtitle" data-i18n="org-scientists.subtitle">Helper Pins on the Map</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="org-scientists.desc" data-i18n-html>Verified organisations and researchers appear as special Helper pins within the Contamination & Recovery Zone in Earth’s Side of the Story. Pin types can include: • Helpers (NGOs, researchers, community groups) • Missions (ways to help) • Reports (things needing attention)
+        <div class="rich-text module-body__intro" data-i18n="org-scientists.desc" data-i18n-html>Verified organisations and researchers appear as special Helper pins within the Contamination & Recovery Zone in Earth’s Side of the Story. Pin types can include: • Helpers (NGOs, researchers, community groups) • Missions (ways to help) • Reports (things needing attention)
 
 This helps people discover real helper teams, learn what they do in clear language, and join missions.</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="org-scientists.why">Seeing who helps — and how to join them — turns a map of problems into a map of hope. Verified helper pins connect community action to real expertise.</p>
         </div>
@@ -921,18 +927,17 @@ This helps people discover real helper teams, learn what they do in clear langua
     <!-- ===== MODULE: NEW CITIES & DISCOVERY PHASE ===== -->
     <section id="page-module-new-cities" class="page" data-audience="partners">
       <div class="module-hero">
-        <img src="assets/EP_NewCities_Discovery_magic.png" alt="New Cities & Discovery Phase" class="module-hero__image" loading="lazy">
+        <img src="assets/New Cities & Discovery Phase_last.png" alt="New Cities & Discovery Phase" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="new-cities.title">New Cities & Discovery Phase</h1>
-          <p class="module-hero__subtitle" data-i18n="new-cities.subtitle">Growing Together, City by City</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="new-cities.desc" data-i18n-html>EarthPatchers expands slowly and honestly. Each new city starts with a Discovery Phase: • find reliable data sources • find local helpers and partners • identify priority missions
+        <div class="rich-text module-body__intro" data-i18n="new-cities.desc" data-i18n-html>EarthPatchers expands slowly and honestly. Each new city starts with a Discovery Phase: • find reliable data sources • find local helpers and partners • identify priority missions
 
 If discovery isn’t supported yet, the new city stays “sleeping” until the community helps find data sources or partners.</div>
-        <div class="callout callout--golden">
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="new-cities.why">Scaling should be honest and community-driven. No half-built chapters — each city opens properly with real data, real partners, and real priority missions.</p>
         </div>
@@ -950,19 +955,18 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--future" data-i18n="module.future-badge">Future Module</span>
           <h1 data-i18n="patcher-camp.title">Patcher Camp</h1>
-          <p class="module-hero__subtitle" data-i18n="patcher-camp.subtitle">The Big Adventure Game</p>
         </div>
       </div>
       <div class="module-body">
-        <div data-i18n="patcher-camp.desc" data-i18n-html>Patcher Camp is a future flagship teamwork game. Kids work together through Earth zones using “powers” that are real knowledge: Earth, Water, Fire, Wind. It teaches practical skills, problem-solving, and brave teamwork. It comes after the Games Room foundation is working.</div>
-        <div class="callout callout--golden">
+        <div class="rich-text module-body__intro" data-i18n="patcher-camp.desc" data-i18n-html>Patcher Camp is a future flagship teamwork game. Kids work together through Earth zones using “powers” that are real knowledge: Earth, Water, Fire, Wind. It teaches practical skills, problem-solving, and brave teamwork. It comes after the Games Room foundation is working.</div>
+        <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="patcher-camp.why">Games make learning irresistible. Patcher Camp connects play to real-world action, helping young people see their knowledge as superpowers for the planet.</p>
         </div>
       </div>
       <div class="module-nav">
         <a href="#module/games-room" class="module-nav__link" data-i18n="module.prev">&larr; Previous</a>
-        <span></span>
+        <span class="module-nav__spacer" aria-hidden="true"></span>
       </div>
     </section>
 
@@ -976,7 +980,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
           <h2 data-i18n="about.mission.title">Our Mission</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="about.mission.text">To make sustainable living feel doable, social, and rewarding by giving people clear actions (missions), a safe community to learn together, and practical ways to reuse instead of waste.</p>
+        <div data-i18n="about.mission.text" data-i18n-html>We don't believe the planet needs panic. We believe it needs people who know what they can do today. That's why we offer clear missions, a safe community, and simple reuse solutions. With superheroes but without all the drama. Just small steps, taken together.</div>
       </div>
 
       <!-- Vision -->
@@ -993,7 +997,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       <div class="section">
         <div class="callout callout--golden">
           <h4 class="callout__title" data-i18n="about.why.title">Why EarthPatchers</h4>
-          <p class="callout__text" data-i18n="about.why.text">The missing piece isn't more awareness. It's an easy path from intention to action, with support and trust built in. EarthPatchers bridges the gap between wanting to help and knowing how.</p>
+          <div class="callout__text rich-text" data-i18n="about.why.text" data-i18n-html><p>Because for 13 years, it was “that brilliant idea someone should build.”</p><p>We shared it with over 1,000 people. It got feedback. It grew. The reaction was always the same:</p><p>“Wow. This should exist.”</p><p>And then… silence.</p><p>Not because it didn’t matter. But because it felt too big. Too complex. Too “let’s solve everything now.”</p><p>Developers are busy. But so are teachers, parents, entrepreneurs, and students.</p><p>Most of us live from one near step to the next: what I do tomorrow, this month, this quarter. We rarely have mental space for “what we do in 10 years.”</p><p>Not from indifference. From reality.</p><p>EarthPatchers was born from this exact question: How do we help busy people quickly do something valuable — without searching for needles in haystacks?</p><p>So we changed the big question: not “How do we build everything?”, but “Where do we start?”</p><p>Today, with the help of AI and a lot of perseverance, we start small. Clear. Concrete.</p><p>We don’t promise to save the planet in a weekend.</p><p>We promise a simpler path from “we should” to “let’s do it.”</p><p>Together.</p></div>
         </div>
       </div>
 
@@ -1027,13 +1031,22 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
         </div>
       </div>
 
-      <!-- How We Work -->
+      <!-- Where We Start -->
       <div class="section section--about-trail-before">
         <div class="section__heading">
-          <h2 data-i18n="about.how.title">How We Work</h2>
+          <h2 data-i18n="about.how.title">Where We Start</h2>
         </div>
         <div class="section__divider"></div>
         <p data-i18n="about.how.text">We work through partnerships with schools and NGOs, pilot programs in Cluj, and community voting to decide what gets built next. Everything starts small, gets tested, and grows based on real feedback.</p>
+      </div>
+
+      <div class="cta-strip">
+        <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
+        <div class="cta-strip__buttons">
+          <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
+          <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
+          <a href="#donate" class="btn btn--donate" data-i18n="nav.donate">Donate</a>
+        </div>
       </div>
 
       <div class="footer-note">
@@ -1044,7 +1057,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
     <!-- ===== CONTACT US PAGE ===== -->
     <section id="page-contact" class="page">
       <h1 data-i18n="contact.title">Ways to Get Involved</h1>
-      <p data-i18n="contact.intro">If you want to start missions or get involved as a teacher, parent, scout leader, NGO, or partner, email us directly and we will guide you.</p>
+      <p data-i18n="contact.intro" data-i18n-html>Do you want to bring EarthPatchers to your school, your community, or your organization?<br><br>Give us a sign. We promise we will not send a 48-page PDF.<br><br>We will sit down together (virtually or in person) and get things moving together.</p>
 
       <div class="donate-actions">
         <a class="btn btn--primary" href="mailto:contact@earthpatchers.org">contact@earthpatchers.org</a>
