@@ -1711,6 +1711,16 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   color: var(--color-text-accent);
 }
 
+.module-next-steps__list li ol {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  padding-left: var(--space-lg);
+}
+
+.module-next-steps__list li ol li {
+  padding: 0;
+}
+
 /* --- Feature List (module pages) --- */
 .feature-list {
   list-style: none;

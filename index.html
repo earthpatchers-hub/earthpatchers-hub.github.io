@@ -370,7 +370,7 @@ One Stitch at a Time</h1>
       <div class="section section--trust">
         <div class="callout callout--green">
           <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
-          <p class="callout__text" data-i18n="overview.trust.text">Tribe leaders will need a validated account. They will help with moderation, keep things safe and clean, and can earn more Patch Coins for this extra responsibility.</p>
+          <div class="callout__text rich-text" data-i18n="overview.trust.text" data-i18n-html><p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p></div>
         </div>
       </div>
 
@@ -695,22 +695,11 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
 Missions can be shared across Tribes so great missions spread without exposing children’s accounts.
 
 Tribe “camp rules” keep things kind and clean: • Be kind • Keep private details private • No visible kids’ faces • Don’t post littering (and don’t encourage it) • Use a Littering report when something shouldn’t be there</div>
-        <div class="callout callout--golden module-body__why" data-audience="partners">
-          <h4 class="callout__title" data-i18n="tribes.roles.title">Roles</h4>
-          <div class="callout__text rich-text" data-i18n="tribes.roles.items" data-i18n-html>
-            <ul>
-              <li>MasterPatchers (Mentors, Campaigners)</li>
-              <li>NewsPatcher (Reporters)</li>
-              <li>AppPatchers (Developers, QAs)</li>
-              <li>CraftPatchers (Craft makers - Market Hut)</li>
-            </ul>
-          </div>
-        </div>
         <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="tribes.why">Sustainability isn’t just about tasks — it’s about belonging. Tribes turn the platform into a community where people support each other, act together, and keep things safe and kind.</p>
         </div>
-        <div class="module-next-steps">
+        <div class="module-next-steps" data-audience="partners">
           <h4 class="module-next-steps__title" data-i18n="module.next-steps-title">Coming Later</h4>
           <ul class="module-next-steps__list">
             <li data-i18n="tribes.next1">More Tribe types: schools, neighbourhoods, NGOs, and interest-based Tribes.</li>
@@ -718,6 +707,15 @@ Tribe “camp rules” keep things kind and clean: • Be kind • Keep private 
             <li data-i18n="tribes.next3">Optional area-based Tribe challenges (monthly or seasonal, not overwhelming).</li>
             <li data-i18n="tribes.next4">Cleaner moderation tools and clearer littering reports.</li>
             <li data-i18n="tribes.next5">Optional adult-only community events and learning circles.</li>
+            <li class="rich-text" data-i18n="tribes.next6" data-i18n-html>
+              Roles:
+              <ol>
+                <li>MasterPatchers (Mentors, Campaigners)</li>
+                <li>NewsPatcher (Reporters)</li>
+                <li>AppPatchers (Developers, QAs)</li>
+                <li>CraftPatchers (Craft makers - Market Hut)</li>
+              </ol>
+            </li>
           </ul>
         </div>
       </div>
@@ -1079,7 +1077,8 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       <p data-i18n="donate.intro">If you want to support EarthPatchers, leave your contact details and donation interest. For now, this is an interest form, and we will contact you directly.</p>
 
       <div class="callout callout--golden">
-        <p class="callout__text" data-i18n="donate.coming-soon">Coming later: direct account transfer options and the 3.5% tax redirection option once incorporation setup is complete.</p>
+        <h4 class="callout__title" data-i18n="donate.coming-soon.title">Coming soon:</h4>
+        <p class="callout__text" data-i18n="donate.coming-soon.text">Direct account transfer options and the 3.5% tax redirection option will come once incorporation setup is complete.</p>
       </div>
 
       <form id="donate-form" class="contact-form" novalidate>

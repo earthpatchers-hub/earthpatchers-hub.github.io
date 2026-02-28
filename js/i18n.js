@@ -10,6 +10,7 @@ const I18n = {
     en: {
       public: {
         'overview.mission.small.examples': '<ul><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: donate one item you no longer use (for example a toy, book, or jacket).</li></ul>',
+        'overview.trust.text': '<p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p>',
         'mvp.intro': 'EarthPatchers will start with a focused plan in Cluj and will begin with two core pillars:',
         'mvp.more.title': 'Want to see everything we would like to build?',
         'mvp.more.text': 'Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.',
@@ -22,9 +23,10 @@ const I18n = {
     ro: {
       public: {
         'overview.mission.small.examples': '<ul><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: donează un obiect pe care nu îl mai folosesc (de exemplu o jucărie, o carte sau o geacă).</li></ul>',
+        'overview.trust.text': '<p><strong>Liderii de Trib</strong> vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe <strong>Monede Patch</strong> pentru această responsabilitate extra.</p><p>Deocamdată, <strong>Monedele Patch</strong> vor fi doar contorizate, până când vom construi funcționalitățile viitoare în care vor fi folosite.</p>',
         'mvp.intro': 'EarthPatchers va începe cu un plan concentrat în Cluj și va porni cu doi piloni de bază:',
         'mvp.more.title': 'Vrei să vezi tot ce am dori să construim?',
-        'mvp.more.text': 'Treci în Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.',
+        'mvp.more.text': 'Schimbă la Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.',
         'mvp.more.cta': 'Mergi la Varianta Parteneri'
       },
       partners: {
@@ -184,7 +186,7 @@ const I18n = {
       'overview.cluj.text': 'EarthPatchers plans to start in Cluj and grow carefully. New cities would open later only when there is enough discovery support (data + partners), so the information stays real and trustworthy.',
 
       'overview.trust.title': 'Important!',
-      'overview.trust.text': 'Tribe leaders will need a validated account. They will help with moderation, keep things safe and clean, and can earn more Patch Coins for this extra responsibility.',
+      'overview.trust.text': '<p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p>',
 
       'overview.partners.title': 'Partnerships',
       'overview.partners.text': 'EarthPatchers is designed to work alongside schools and NGOs, not replace them. We plan to build local partnerships and collaboration goals as missions scale. If you want to start missions or get involved as a teacher, parent, scout leader, NGO, or partner, find more details in Ways to Get Involved.',
@@ -306,8 +308,7 @@ const I18n = {
       'tribes.next3': "Optional area-based Tribe challenges (monthly or seasonal, not overwhelming).",
       'tribes.next4': "A button to \"Report Uncollected Litter\" when something is not right.",
       'tribes.next5': "Optional adult-only community events and learning circles.",
-      'tribes.roles.title': 'Roles',
-      'tribes.roles.items': '<ul><li>MasterPatchers (Mentors, Campaigners)</li><li>NewsPatcher (Reporters)</li><li>AppPatchers (Developers, QAs)</li><li>CraftPatchers (Craft makers - Market Hut)</li></ul>',
+      'tribes.next6': '<span>Roles:</span><ol><li>MasterPatchers (Mentors, Campaigners)</li><li>NewsPatcher (Reporters)</li><li>AppPatchers (Developers, QAs)</li><li>CraftPatchers (Craft makers - Market Hut)</li></ol>',
 
       // Market Hut
       'market-hut.title': 'Market Hut',
@@ -434,7 +435,8 @@ const I18n = {
       // Donate
       'donate.title': 'Donate',
       'donate.intro': 'If you feel like adding your own stitch to this bigger patch, leave us your details and tell us you are interested in supporting EarthPatchers. For now, this is just an interest form. We will contact you directly, calmly, so we can see together how to help good grow.',
-      'donate.coming-soon': 'Coming later: direct account transfer options and the 3.5% tax redirection option once incorporation setup is complete.',
+      'donate.coming-soon.title': 'Coming soon:',
+      'donate.coming-soon.text': 'Direct account transfer options and the 3.5% tax redirection option will come once incorporation setup is complete.',
       'donate.name': 'Full Name',
       'donate.email': 'Email Address',
       'donate.phone': 'Phone Number (optional)',
@@ -576,7 +578,7 @@ const I18n = {
       'overview.cluj.text': "EarthPatchers își propune să pornească din Cluj și să crească cu grijă. Orașele noi s-ar deschide mai târziu doar când există suficient suport pentru faza de descoperire (date + parteneri), ca informația să rămână reală și de încredere.",
 
       'overview.trust.title': "Important!",
-      'overview.trust.text': "Liderii de Trib vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe Monede Patch pentru această responsabilitate extra.",
+      'overview.trust.text': "<p><strong>Liderii de Trib</strong> vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe <strong>Monede Patch</strong> pentru această responsabilitate extra.</p><p>Deocamdată, <strong>Monedele Patch</strong> vor fi doar contorizate, până când vom construi funcționalitățile viitoare în care vor fi folosite.</p>",
 
       'overview.partners.title': "Parteneriate",
       'overview.partners.text': "EarthPatchers este gândit să lucreze alături de școli și ONG-uri, nu să le înlocuiască. Planificăm să dezvoltăm parteneriate locale și obiective de colaborare pe măsură ce misiunile se extind. Dacă vrei să începi misiuni sau să te implici ca profesor, părinte, lider de cercetași, ONG sau partener, află mai multe detalii la secțiunea Modalități de Implicare.",
@@ -659,7 +661,7 @@ const I18n = {
       'mvp.success.item4': "Povestea Pământului îi va ajuta pe oameni să înțeleagă „de ce” și „ce urmează”",
       'mvp.success.item5': "Cluj va deveni o bază solidă pentru extinderea viitoare",
       'mvp.more.title': "Vrei să vezi tot ce am dori să construim?",
-      'mvp.more.text': "Treci în Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.",
+      'mvp.more.text': "Schimbă la Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.",
       'mvp.more.cta': "Mergi la Varianta Parteneri",
 
       // Next Steps
@@ -675,7 +677,7 @@ const I18n = {
       'module.coming-soon': 'Aceast\u0103 sec\u021biune este \u00een cre\u0219tere. Dezvolt\u0103m con\u021binut detaliat aici. Reveni\u021bi cur\u00e2nd sau contacta\u021bi-ne pentru mai multe informa\u021bii.',
       'module.prev': '\u2190 Anterior',
       'module.next': 'Urm\u0103tor \u2192',
-      'module.next-steps-title': 'Vine Mai T\u00e2rziu',
+      'module.next-steps-title': 'Pentru mai încolo',
 
 
       // Missions HQ
@@ -698,8 +700,7 @@ const I18n = {
       'tribes.next3': "Provocări opționale pe zone pentru Triburi (lunare sau sezoniere, fără să fie copleșitoare).",
       'tribes.next4': "Un buton pentru a \"Raporta Gunoi Neridicat\" când ceva nu e în regulă.",
       'tribes.next5': "Evenimente opționale doar pentru adulți și cercuri de învățare.",
-      'tribes.roles.title': 'Roluri',
-      'tribes.roles.items': '<ul><li>MasterPatchers (Mentori, organizatori de campanii)</li><li>NewsPatcher (Reporteri)</li><li>AppPatchers (Dezvoltatori, QA)</li><li>CraftPatchers (Artizani - Căsuța de Schimb)</li></ul>',
+      'tribes.next6': '<span>Roluri:</span><ol><li>MasterPatchers (Mentori, organizatori de campanii)</li><li>NewsPatcher (Reporteri)</li><li>AppPatchers (Dezvoltatori, QA)</li><li>CraftPatchers (Artizani - Căsuța de Schimb)</li></ol>',
 
       // Market Hut
       'market-hut.title': 'Căsuța de Schimb',
@@ -826,7 +827,8 @@ const I18n = {
       // Donate
       'donate.title': 'Donează',
       'donate.intro': 'Dacă simți că vrei să pui și tu un fir în cusătura asta mare, lasă-ne datele tale și spune-ne că te interesează să susții EarthPatchers. Momentan e doar un formular de interes. Te contactăm noi, liniștit, ca să vedem împreună cum putem face binele să crească.',
-      'donate.coming-soon': 'În curând: opțiuni de donație directă în cont și opțiunea de redirecționare a 3.5% din impozit, după finalizarea încorporării.',
+      'donate.coming-soon.title': 'În curând:',
+      'donate.coming-soon.text': 'Opțiuni de donație directă în cont și opțiunea de redirecționare a 3.5% din impozit vor apărea după finalizarea încorporării.',
       'donate.name': 'Nume complet',
       'donate.email': 'Adresa de email',
       'donate.phone': 'Număr de telefon (opțional)',
