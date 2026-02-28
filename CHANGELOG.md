@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.11 - 2026-02-28
+
+### Changed
+- Fixed page-to-page navigation so switching sections resets scroll position to the top instead of keeping the previous page's scroll offset.
+- Improved sidebar accordion behavior so clicking the whole row is easier, opens the destination page and submenu together, and allows collapsing the row on a second click.
+
 ## v1.10 - 2026-02-28
 
 ### Changed
