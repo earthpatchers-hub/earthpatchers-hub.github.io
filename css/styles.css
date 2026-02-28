@@ -974,6 +974,10 @@ html[data-theme="light"] .theme-toggle__slider::before {
   object-fit: cover;
 }
 
+.card__image-link {
+  display: block;
+}
+
 .card__body {
   padding: var(--space-lg);
 }
@@ -992,6 +996,10 @@ html[data-theme="light"] .theme-toggle__slider::before {
 .card__link {
   font-size: var(--font-size-sm);
   font-weight: 600;
+}
+
+.card__cta {
+  display: inline-block;
 }
 
 /* --- Card Grid --- */
