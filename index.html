@@ -13,6 +13,21 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://earthpatchers.org">
 
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var savedLang = localStorage.getItem('ep-lang');
+      var hour = new Date().getHours();
+      var autoTheme = (hour >= 18 || hour < 6) ? 'dark' : 'light';
+      var manualTheme = sessionStorage.getItem('ep-theme-manual-override');
+      var resolvedTheme = (manualTheme === 'light' || manualTheme === 'dark') ? manualTheme : autoTheme;
+
+      root.lang = (savedLang === 'ro' || savedLang === 'en') ? savedLang : 'en';
+      root.setAttribute('data-lang', root.lang);
+      root.setAttribute('data-theme', resolvedTheme);
+    })();
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -410,44 +425,32 @@ One Stitch at a Time</h1>
             <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Missions HQ" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar1.title">Missions HQ</h3>
-          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar1.subtitle">Real-world eco actions</p>
           <p class="pillar__text" data-i18n="mvp.pillar1.text">Quick missions (10–20 min) and weekend missions (1–2 hours), filtered by age, interest, and time. Progress tracked with badges, points, and a personal timeline.</p>
-          <div class="callout callout--golden pillar__callout">
-            <p class="callout__text" data-i18n="mvp.pillar1.why">Missions turn climate anxiety into doable action and give families and youth a clear starting point.</p>
-          </div>
+          <a href="#module/missions-hq" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
         <div class="pillar">
           <a href="#module/tribes" class="pillar__image-link" aria-label="Open Tribes module">
             <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Tribes</h3>
-          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar2.subtitle">Small, safe, meaningful</p>
           <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups in Cluj with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
-          <div class="callout callout--golden pillar__callout">
-            <p class="callout__text" data-i18n="mvp.pillar2.why">Young people care deeply about their future. This gives them a safe way to contribute without being overwhelmed.</p>
-          </div>
+          <a href="#module/tribes" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
         <div class="pillar" data-audience="partners">
           <a href="#module/earth-side" class="pillar__image-link" aria-label="Open Earth's Side of the Story module">
             <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar4.title">Earth’s Side of the Story</h3>
-          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar4.subtitle">Learning + action, Cluj-first</p>
           <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.</p>
-          <div class="callout callout--golden pillar__callout">
-            <p class="callout__text" data-i18n="mvp.pillar4.why">This makes learning practical and trustworthy by connecting “why” directly to local action.</p>
-          </div>
+          <a href="#module/earth-side" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
         <div class="pillar" data-audience="partners">
           <a href="#module/market-hut" class="pillar__image-link" aria-label="Open Market Hut module">
             <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Market Hut</h3>
-          <p class="pillar__text pillar__subtitle" data-i18n="mvp.pillar3.subtitle">Swap, give away, reuse</p>
           <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
-          <div class="callout callout--golden pillar__callout">
-            <p class="callout__text" data-i18n="mvp.pillar3.why">Circular habits are one of the fastest ways to reduce waste, but only work if people trust the system.</p>
-          </div>
+          <a href="#module/market-hut" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
       </div>
 

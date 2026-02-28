@@ -75,6 +75,7 @@ const I18n = {
       'theme.light': 'Light',
       'theme.dark': 'Dark',
       'theme.auto.note': "Dark mode was auto-enabled to save energy. Friendly reminder: turn off lights you don't need.",
+      'theme.manual.daytime-note': 'You kept dark mode on. If you prefer, you can switch to light mode for daytime at any time.',
 
       // Module names
       'mod.missions-hq': 'Missions HQ',
@@ -193,8 +194,8 @@ const I18n = {
       'mvp.intro': 'EarthPatchers will start with a focused 36-month plan that will prove the core loop works in real life in Cluj, before expanding. This starting plan will have four pillars:',
 
       'mvp.pillar1.title': 'Missions HQ',
-      'mvp.pillar1.subtitle': 'Real-world eco actions',
-      'mvp.pillar1.text': 'Real-world eco actions that will fit busy life: tiny missions (10-20 minutes), weekend missions (1-2 hours), and team missions (families, schools, clubs, Tribes).',
+      'mvp.pillar1.subtitle': 'Real actions for the planet',
+      'mvp.pillar1.text': 'Real actions for the planet that will fit busy life: tiny missions (10-20 minutes), weekend missions (1-2 hours), and team missions (families, schools, clubs, Tribes).',
       'mvp.pillar1.why': 'Missions will turn saving the Earth from a scary-big idea into small brave steps.',
 
       'mvp.pillar2.title': 'Tribes',
@@ -466,6 +467,7 @@ const I18n = {
       'theme.light': 'Light',
       'theme.dark': 'Dark',
       'theme.auto.note': 'Modul dark a fost activat automat pentru a consuma mai puțină energie. Mic reminder: stinge luminile de care nu ai nevoie.',
+      'theme.manual.daytime-note': 'Ai păstrat dark mode. Dacă vrei, poți trece oricând la varianta light pentru timpul zilei.',
 
       // Module names
       'mod.missions-hq': 'Cartierul Misiunilor',
@@ -584,8 +586,8 @@ const I18n = {
       'mvp.intro': "EarthPatchers va începe cu un plan concentrat pe 36 de luni, care va dovedi că bucla de bază va funcționa în viața reală, în Cluj, înainte de extindere. Acest plan de pornire va avea patru piloni:",
 
       'mvp.pillar1.title': "Cartierul Misiunilor",
-      'mvp.pillar1.subtitle': "Acțiuni eco din viața reală",
-      'mvp.pillar1.text': "Acțiuni eco reale care se vor potrivi unei vieți ocupate: misiuni mici (10–20 minute), misiuni de weekend (1–2 ore) și misiuni de echipă (familii, școli, cluburi, Triburi).",
+      'mvp.pillar1.subtitle': "Acțiuni reale pentru planetă",
+      'mvp.pillar1.text': "Acțiuni reale pentru planetă, potrivite unei vieți ocupate: misiuni mici (10–20 minute), misiuni de weekend (1–2 ore) și misiuni de echipă (familii, școli, cluburi, Triburi).",
       'mvp.pillar1.why': "Misiunile vor transforma ideea „salvăm Pământul”, care poate părea copleșitoare, în pași mici și curajoși.",
 
       'mvp.pillar2.title': "Triburi",
@@ -1027,6 +1029,7 @@ const I18n = {
 
     // Update HTML lang attribute
     document.documentElement.lang = this.currentLang;
+    document.documentElement.setAttribute('data-lang', this.currentLang);
     this.runPostApplyHooks();
   },
 

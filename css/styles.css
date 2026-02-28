@@ -254,6 +254,22 @@ html[data-audience="partners"] #audience-switch-to-partners {
   font-weight: 600;
 }
 
+html[data-lang="en"] .lang-btn[data-lang="en"],
+html[data-lang="ro"] .lang-btn[data-lang="ro"] {
+  background: var(--color-golden-glow);
+  color: var(--color-bg-deep);
+  border-color: var(--color-golden-glow);
+  font-weight: 600;
+}
+
+html[data-lang="en"] .lang-btn[data-lang="ro"],
+html[data-lang="ro"] .lang-btn[data-lang="en"] {
+  background: none;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+  font-weight: 400;
+}
+
 .lang-btn:hover:not(.active) {
   border-color: var(--color-golden-glow);
   color: var(--color-golden-glow);
@@ -315,6 +331,26 @@ html[data-audience="partners"] #audience-switch-to-partners {
 .theme-toggle__input:checked + .theme-toggle__slider::before {
   transform: translateX(20px);
   background: var(--color-golden-glow);
+}
+
+html[data-theme="dark"] .theme-toggle__slider {
+  background: rgba(240, 192, 64, 0.24);
+  border-color: var(--color-golden-glow);
+}
+
+html[data-theme="dark"] .theme-toggle__slider::before {
+  transform: translateX(20px);
+  background: var(--color-golden-glow);
+}
+
+html[data-theme="light"] .theme-toggle__slider {
+  background: rgba(240, 192, 64, 0.08);
+  border-color: var(--color-border);
+}
+
+html[data-theme="light"] .theme-toggle__slider::before {
+  transform: translateX(0);
+  background: var(--color-text-secondary);
 }
 
 .theme-toggle__input:focus-visible + .theme-toggle__slider {
@@ -1361,7 +1397,7 @@ html[data-theme="light"] #page-overview .journey-table td:first-child {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-lg);
-  text-align: center;
+  text-align: left;
 }
 
 .pillar__image-link {
@@ -1405,6 +1441,11 @@ html[data-theme="light"] #page-overview .journey-table td:first-child {
 .pillar__text {
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+}
+
+.pillar__explore-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
 }
 
 .pillar__subtitle {

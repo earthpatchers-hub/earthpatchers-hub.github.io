@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const DONATE_FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@earthpatchers.org';
   const THEME_NOTE_DATE_KEY = 'ep-theme-energy-note-date';
+  const THEME_OVERRIDE_KEY = 'ep-theme-manual-override';
   let lastNonDonateHash = '#overview';
   const donateForm = document.getElementById('donate-form');
   const donateBackBtn = document.getElementById('donate-back-btn');
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactCopyStatus = document.getElementById('contact-copy-status');
   const themeToggles = Array.from(document.querySelectorAll('[data-theme-toggle]'));
   const themeEnergyNote = document.getElementById('theme-energy-note');
+  const themeEnergyNoteText = document.querySelector('.theme-energy-note__text');
   const themeEnergyNoteClose = document.getElementById('theme-energy-note-close');
 
   const getText = (key, fallback) => {
@@ -31,11 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
     return (hour >= 18 || hour < 6) ? 'dark' : 'light';
   };
 
+  const getManualThemeOverride = () => {
+    const savedTheme = sessionStorage.getItem(THEME_OVERRIDE_KEY);
+    return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : null;
+  };
+
+  const setManualThemeOverride = (theme) => {
+    sessionStorage.setItem(THEME_OVERRIDE_KEY, theme);
+  };
+
   const setTheme = (resolvedTheme) => {
     document.documentElement.setAttribute('data-theme', resolvedTheme);
     themeToggles.forEach((toggle) => {
       toggle.checked = resolvedTheme === 'dark';
     });
+  };
+
+  const setThemeNoteText = (key, fallback) => {
+    if (!themeEnergyNoteText) return;
+    themeEnergyNoteText.textContent = getText(key, fallback);
   };
 
   const showEnergyNote = () => {
@@ -52,10 +68,26 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applyAutoThemeOnEntry = () => {
-    const resolvedTheme = getAutoTheme();
+    const autoTheme = getAutoTheme();
+    const manualTheme = getManualThemeOverride();
+    const resolvedTheme = manualTheme || autoTheme;
     setTheme(resolvedTheme);
 
-    if (resolvedTheme === 'dark') {
+    if (manualTheme === 'dark' && autoTheme === 'light') {
+      setThemeNoteText(
+        'theme.manual.daytime-note',
+        'You kept dark mode on. If you prefer, you can switch to light mode for daytime at any time.'
+      );
+      showEnergyNote();
+      return;
+    }
+
+    setThemeNoteText(
+      'theme.auto.note',
+      "Dark mode was auto-enabled to save energy. Friendly reminder: turn off lights you don't need."
+    );
+
+    if (resolvedTheme === 'dark' && !manualTheme) {
       const shownDate = localStorage.getItem(THEME_NOTE_DATE_KEY);
       if (shownDate !== getTodayKey()) {
         showEnergyNote();
@@ -89,11 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggles.forEach((toggle) => {
       toggle.addEventListener('change', () => {
         if (toggle.checked) {
+          setManualThemeOverride('dark');
           setTheme('dark');
           hideEnergyNote();
           return;
         }
 
+        setManualThemeOverride('light');
         setTheme('light');
         hideEnergyNote(false);
       });
