@@ -4,12 +4,23 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.10 - 2026-02-28
+
 ### Changed
+- Improved theme behavior so manual dark/light selection persists while switching between public and partner views during the current session.
+- Removed theme/language flicker on page load by preloading saved language and resolved theme state before CSS paints.
+- Simplified Base Camp cards by removing extra subtitles/callouts and aligning descriptions and Explore links consistently.
+- Updated Romanian Base Camp and partner CTA wording, including `Pentru mai încolo` and `Schimbă la Varianta Parteneri`.
+- Moved Tribes partner roles into the later/planned section and hid that section from public view.
+- Reformatted the Overview `Important!` callout into clearer two-paragraph messaging, with stronger emphasis on Tribe leaders and Patch Coins.
+- Reformatted the Donate `Coming soon` notice into a title + body callout in both languages.
+
+### Refactored
 - Refactored `js/i18n.js` to separate translation application concerns, add section indexing, and prepare public/partner audience overrides.
 - Added translation parity checks and audience override validation to reduce future localization regressions.
-- Simplified `index.html` by replacing repeated inline styling with reusable classes for Base Camp pillars and module content blocks.
-- Centralized repeated trail divider styling and removed unused CSS from `css/styles.css` for a cleaner shared UI foundation.
-- Standardized module content structure with reusable `rich-text`, `module-body__intro`, and `module-body__why` classes.
+- Simplified `index.html` by replacing repeated inline styling with reusable classes for Base Camp pillars, cards, page-end CTA/footer hooks, and module navigation hooks.
+- Centralized repeated trail divider styling, removed unused CSS, and added reusable semantic hooks in `css/styles.css`.
+- Standardized module content structure with reusable `rich-text`, `module-body__intro`, `module-body__why`, and shared module page hooks.
 
 ## v1.7 - 2026-02-20
 
