@@ -1466,6 +1466,8 @@ html[data-theme="light"] #page-overview .journey-table td:first-child {
 }
 
 /* --- Module Page --- */
+.page--module {}
+
 .module-hero {
   display: flex;
   gap: var(--space-xl);
