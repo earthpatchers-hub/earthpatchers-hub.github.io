@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## Unreleased
+
+### Changed
+- Refactored `js/i18n.js` to separate translation application concerns, add section indexing, and prepare public/partner audience overrides.
+- Added translation parity checks and audience override validation to reduce future localization regressions.
+- Simplified `index.html` by replacing repeated inline styling with reusable classes for Base Camp pillars and module content blocks.
+- Centralized repeated trail divider styling and removed unused CSS from `css/styles.css` for a cleaner shared UI foundation.
+- Standardized module content structure with reusable `rich-text`, `module-body__intro`, and `module-body__why` classes.
+
 ## v1.7 - 2026-02-20
 
 ### Changed
