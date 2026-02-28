@@ -27,12 +27,28 @@ const Sidebar = {
     // Accordion toggles
     this.accordionToggles.forEach(toggle => {
       const submenu = toggle.nextElementSibling;
+      const link = toggle.querySelector('.sidebar__accordion-link');
       const setOpenState = (shouldOpen) => {
         toggle.classList.toggle('open', shouldOpen);
         submenu?.classList.toggle('open', shouldOpen);
         const arrowBtn = toggle.querySelector('.sidebar__accordion-arrow');
         if (arrowBtn) {
           arrowBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        }
+      };
+      const openOrCollapseRow = () => {
+        const href = link?.getAttribute('href');
+        const isOpen = toggle.classList.contains('open');
+        const isActive = toggle.classList.contains('active') || (href && (location.hash || '#overview') === href);
+
+        if (isOpen && isActive) {
+          setOpenState(false);
+          return;
+        }
+
+        setOpenState(true);
+        if (href && location.hash !== href) {
+          location.hash = href;
         }
       };
 
@@ -47,21 +63,18 @@ const Sidebar = {
         });
       }
 
-      // Clicking anywhere on the row (except arrow) toggles the submenu.
+      // Clicking anywhere on the row (except arrow) opens the page and toggles the submenu.
       toggle.addEventListener('click', (e) => {
         if (e.target.closest('.sidebar__accordion-arrow')) return;
         if (e.target.closest('.sidebar__accordion-link')) return;
-        const isOpen = toggle.classList.contains('open');
-        setOpenState(!isOpen);
+        openOrCollapseRow();
       });
 
-      // Clicking the link navigates (default <a> behavior) and also opens the accordion
-      const link = toggle.querySelector('.sidebar__accordion-link');
+      // Clicking the link navigates and also opens/collapses the accordion.
       if (link) {
-        link.addEventListener('click', () => {
-          if (!submenu?.classList.contains('open')) {
-            setOpenState(true);
-          }
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          openOrCollapseRow();
         });
       }
     });
