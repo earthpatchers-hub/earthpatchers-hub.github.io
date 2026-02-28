@@ -9,8 +9,22 @@ const Router = {
   init() {
     if (this.initialized) return;
     this.initialized = true;
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
     window.addEventListener('hashchange', () => this.navigate());
     this.navigate();
+  },
+
+  resetScrollPosition() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    const content = document.querySelector('.content');
+    if (content) {
+      content.scrollTop = 0;
+    }
   },
 
   navigate() {
@@ -50,8 +64,9 @@ const Router = {
       Sidebar.setActive(hash);
     }
 
-    // Scroll to top
-    window.scrollTo(0, 0);
+    // Scroll to top after layout updates so page switches do not keep prior position.
+    this.resetScrollPosition();
+    requestAnimationFrame(() => this.resetScrollPosition());
 
     // Close mobile sidebar
     if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.close === 'function') {
