@@ -1492,6 +1492,11 @@ html:not([data-theme="light"]) .callout__title {
   margin: 0;
 }
 
+.callout__actions {
+  margin-top: var(--space-md);
+  margin-bottom: 0;
+}
+
 .overview-problem-signoff {
   display: block;
   color: var(--color-bandage-amber);
