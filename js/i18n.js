@@ -100,7 +100,7 @@ const I18n = {
 
       // Overview / Landing
       'hero.tagline': 'Patching the Earth Together,\nOne Stitch at a Time',
-      'hero.subtitle': 'Between work, school, laundry, and the everlasting question "where did I leave my keys?", searching for trusted planet missions shouldn’t be another task on the list.<br><br>EarthPatchers aims to gather them in one place. Creating your own Tribe (a team), starting your own mission, jumping into one started by others, or teaming up with one created by our trusted NGO partners is what we plan to start building first.',
+      'hero.subtitle': 'Between work, school, laundry, and the everlasting question "where did I leave my keys?", searching for trusted planet missions shouldn’t be another task on the list.<br><br>EarthPatchers aims to gather them in one place. You will be able to create your own Tribe (a team), join a Tribe already created by a Leader (MasterPatcher), or join a Tribe created by our trusted NGO partners.',
       'hero.cta.mvp': 'See Base Camp',
       'hero.cta.donate': 'Donate Interest',
       'hero.cta.modules': 'Browse Modules',
@@ -491,14 +491,14 @@ const I18n = {
       'mod.patcher-camp': 'Tab\u0103ra Patcher',
 
       // Overview / Landing
-      'hero.tagline': "Reparăm Pământul împreună,\nPetec cu Petec.",
-      'hero.subtitle': "Între serviciu, școală, rufe de spălat și veșnica întrebare „unde mi-am pus cheile?”, căutarea unor misiuni de încredere pentru planetă n-ar trebui să mai fie încă o sarcină pe listă.<br><br>EarthPatchers își propune să le adune într-un singur loc. Vei putea să-ți creezi propriul Trib (o echipă), să pornești propria misiune, să te alături uneia deja începute sau să te alături uneia create de ONG-urile noastre partenere.",
+      'hero.tagline': "Reparăm Pământul împreună,\nPetec cu Petec.",
+      'hero.subtitle': "Între serviciu, școală, rufe de spălat și veșnica întrebare „unde mi-am pus cheile?”, căutarea unor misiuni de încredere pentru planetă n-ar trebui să mai fie încă un lucru de bifat pe listă.<br><br>EarthPatchers își propune să le adune într-un singur loc. Vei putea să-ți creezi propriul Trib (o echipă), să te alături unui Trib deja creat de un Leader (MasterPatcher) sau unui Trib creat de ONG-urile noastre partenere.",
       'hero.cta.mvp': "Vezi Tabăra de Bază",
       'hero.cta.donate': "Interes pentru donație",
       'hero.cta.modules': "Vezi modulele",
 
       'overview.problem.title': "Ce problemă ar rezolva EarthPatchers",
-      'overview.problem.text': "Nu ducem lipsă de informații despre planetă.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile importante sunt share-uite pe site-uri, ascunse în rapoarte lungi sau îngropate în feed-uri de social media. Să le găsești poate părea ca și cum ai căuta acul în carul cu fân… în timp ce ții și un coș cu rufe într-o mână..<br><br>EarthPatchers construiește un spațiu care adună aceste misiuni într-un singur loc — ca, în loc să citim doar despre probleme, să putem face ceva concret în legătură cu ele.<br><br>Misiuni mici acasă.<br>Misiuni reale create de ONG-uri de încredere.<br>Idei pornite de oameni ca tine.",
+      'overview.problem.text': "Nu ducem lipsă de informații despre planetă.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile importante sunt împrăștiate pe mai multe site-uri, ascunse în rapoarte lungi sau îngropate prin social media. Să le găsești poate părea ca și cum ai căuta acul în carul cu fân… în timp ce ții și un coș cu rufe într-o mână..<br><br>EarthPatchers construiește un spațiu care adună aceste misiuni într-un singur loc — ca, în loc să citim doar despre probleme, să putem face ceva concret în legătură cu ele.<br><br>Misiuni mici acasă.<br>Misiuni reale create de ONG-uri de încredere.<br>Idei pornite de oameni ca tine.",
       'overview.problem.solution': "Fără stress. Fără griji.<br>Doar acțiune practică, efort împărțit și reamintirea că lucrurile mari nu se repară când încerci să le faci de unul singur.<br><br><span class=\"overview-problem-signoff\">Reparăm Pământul împreună — Petec cu Petec.</span>",
 
       'overview.mission.title': "Cum ar arăta o misiune pentru a salva Pământul?",

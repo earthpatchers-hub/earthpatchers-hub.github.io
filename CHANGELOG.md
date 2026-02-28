@@ -4,6 +4,20 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.12 - 2026-02-28
+
+### Fixed
+- Added the missing `Activity Hut` image asset to version control so it appears correctly on live, not only in local/test environments.
+- Removed the audience switch from the mobile top bar and kept view switching in the sidebar, where it remains accessible without crowding the header.
+- Reworked the mobile/tablet Overview hero so the top-right logo stays anchored right while the Romanian title falls below it when space is tight instead of overlapping.
+- Kept the Romanian Overview hero title locked to two lines and aligned the subtitle width with the rest of the Overview text flow.
+- Increased the mobile `Starting in Cluj` icon to match the visual scale of the `What Success Looks Like` icons and aligned its card spacing with the mission card style.
+- Replaced the mobile Light/Dark text labels with matching themed lightbulb icons for better fit in the compact header.
+
+### Changed
+- Updated the Overview hero subtitle copy in both languages to describe joining Tribes led by Leaders (`MasterPatchers`) or trusted NGO partners.
+- Refined Romanian Overview wording for more natural phrasing, including the “lucru de bifat pe listă” and “împrăștiate pe mai multe site-uri” changes.
+
 ## v1.11 - 2026-02-28
 
 ### Changed
