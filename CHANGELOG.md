@@ -8,6 +8,7 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 - Added the missing `Activity Hut` image asset to version control so it appears correctly on live, not only in local/test environments.
+- Added the missing `New Cities & Discovery Phase` image asset to version control so it appears correctly on live.
 - Removed the audience switch from the mobile top bar and kept view switching in the sidebar, where it remains accessible without crowding the header.
 - Reworked the mobile/tablet Overview hero so the top-right logo stays anchored right while the Romanian title falls below it when space is tight instead of overlapping.
 - Kept the Romanian Overview hero title locked to two lines and aligned the subtitle width with the rest of the Overview text flow.
