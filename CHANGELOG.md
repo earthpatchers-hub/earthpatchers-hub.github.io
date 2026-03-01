@@ -4,6 +4,22 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.13 - 2026-03-01
+
+### Changed
+- Reworked page-to-page navigation so links now use the destination page title instead of generic Previous/Next labels.
+- Updated page navigation ordering for public and partner views so public users skip partner-only pages.
+- Moved `Who We Are / Cine Suntem` to the first page position and made it the default landing page.
+- Hid the Donate page from the visible site flow, removed Donate CTAs, and redirected manual `#donate` access to `#contact`.
+- Updated the Overview mission examples with clearer time expectations and revised examples across small, medium, and big missions.
+- Changed the public Missions HQ rewards copy so Patch Coins are framed as something that will be used in future features.
+- Added horizontal table navigation arrows to the Overview journey table on mobile and tablet, while keeping normal touch/scroll behavior.
+
+### Fixed
+- Fixed mobile/tablet Overview hero layout so the Romanian title and logo no longer overlap at narrow widths.
+- Restored the public/partner switch inside the mobile sidebar while keeping it out of the crowded mobile top bar.
+- Fixed the Overview journey-table arrow controls so they stay visible over the table viewport and work on click.
+
 ## v1.12 - 2026-02-28
 
 ### Fixed
