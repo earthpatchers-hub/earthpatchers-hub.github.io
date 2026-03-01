@@ -9,28 +9,30 @@ const I18n = {
   audienceOverrides: {
     en: {
       public: {
-        'overview.mission.small.examples': '<ul><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: donate one item you no longer use (for example a toy, book, or jacket).</li></ul>',
+        'overview.mission.small.examples': '<ul><li>Time: about 10-20 minutes, either as a one-off or as a small daily habit.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>',
         'overview.trust.text': '<p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p>',
+        'missions-hq.rewards.coins': 'Patch Coins: you will earn them through missions and learning, and use them in later wonderful things we will create, like Market Hut and Games Room.',
         'mvp.intro': 'EarthPatchers will start with a focused plan in Cluj and will begin with two core pillars:',
         'mvp.more.title': 'Want to see everything we would like to build?',
         'mvp.more.text': 'Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.',
         'mvp.more.cta': 'Go to Partner View'
       },
       partners: {
-        'overview.mission.small.examples': '<ul><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: add one item you no longer use to Market Hut (for example a toy, book, or jacket).</li></ul>'
+        'overview.mission.small.examples': '<ul><li>Time: about 10-20 minutes, either as a one-off or as a small daily habit.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>'
       }
     },
     ro: {
       public: {
-        'overview.mission.small.examples': '<ul><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: donează un obiect pe care nu îl mai folosesc (de exemplu o jucărie, o carte sau o geacă).</li></ul>',
+        'overview.mission.small.examples': '<ul><li>Timp: aproximativ 10-20 de minute, fie ca obicei scurt, fie ca acțiune făcută o singură dată.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găsesc 2 lucruri care trebuie mâncate azi sau mâine și le mută în față.</li></ul>',
         'overview.trust.text': '<p><strong>Liderii de Trib</strong> vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe <strong>Monede Patch</strong> pentru această responsabilitate extra.</p><p>Deocamdată, <strong>Monedele Patch</strong> vor fi doar contorizate, până când vom construi funcționalitățile viitoare în care vor fi folosite.</p>',
+        'missions-hq.rewards.coins': 'Monede Patch: le vei câștiga din misiuni și învățare și le vei folosi mai târziu în lucrurile minunate pe care le vom construi, cum ar fi Căsuța de Schimb și Camera de Jocuri.',
         'mvp.intro': 'EarthPatchers va începe cu un plan concentrat în Cluj și va porni cu doi piloni de bază:',
         'mvp.more.title': 'Vrei să vezi tot ce am dori să construim?',
         'mvp.more.text': 'Schimbă la Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.',
         'mvp.more.cta': 'Mergi la Varianta Parteneri'
       },
       partners: {
-        'overview.mission.small.examples': '<ul><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: adaugă în Căsuța de Schimb un obiect pe care nu îl mai folosesc (de exemplu o jucărie, o carte sau o geacă).</li></ul>'
+        'overview.mission.small.examples': '<ul><li>Timp: aproximativ 10-20 de minute, fie ca obicei scurt, fie ca acțiune făcută o singură dată.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găsesc 2 lucruri care trebuie mâncate azi sau mâine și le mută în față.</li></ul>'
       }
     }
   },
@@ -73,7 +75,7 @@ const I18n = {
       'nav.overview': "What We're Trying to Fix",
       'nav.mvp': 'Base Camp',
       'nav.next-steps': 'Next Steps',
-      'nav.about': 'About Us',
+      'nav.about': 'Who We Are',
       'nav.donate': 'Donate',
       'nav.contact': 'Ways to Get Involved',
       'audience.switch.partners': 'Partners View',
@@ -110,14 +112,14 @@ const I18n = {
       'overview.problem.solution': 'No stress. No fuss.<br>Just practical action, shared effort, and the reminder that big things don’t get fixed alone.<br><br><span class="overview-problem-signoff">We’re patching the Earth together — one stitch at a time.</span>',
 
       'overview.mission.title': 'What would a Mission to Save the Earth look like',
-      'overview.mission.text': 'A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules.',
+      'overview.mission.text': 'A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules. A realistic rhythm could be one to three missions a month, when life allows.',
       'overview.mission.examples-intro': 'Planned examples by mission size and age group:',
       'overview.mission.small.title': 'Small Mission (10 Patch Coins)',
-      'overview.mission.small.examples': '<ul><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: donate one item you no longer use (for example a toy, book, or jacket).</li></ul>',
+      'overview.mission.small.examples': '<ul><li>Time: about 10-20 minutes, either as a one-off or as a small daily habit.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>',
       'overview.mission.medium.title': 'Medium Mission (25 Patch Coins)',
-      'overview.mission.medium.examples': '<ul><li>Kids + family: 45-60 minute park or riverbank clean-up.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: host a small repair session for clothes or appliances.</li></ul>',
+      'overview.mission.medium.examples': '<ul><li>Time: about 45-60 minutes a week, usually done in one session.</li><li>Kids + family: park or riverbank clean-up.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: donate one item you no longer use (for example a pair of sunglasses, a book, or a jacket).</li></ul>',
       'overview.mission.big.title': 'Big Mission (50 Patch Coins)',
-      'overview.mission.big.examples': '<ul><li>Kids + school: build and maintain a pollinator corner in the school yard.</li><li>Teens: lead a neighborhood energy-saving mini campaign with measurable results.</li><li>Adults: coordinate a community day with clean-up, repair, and tree-care actions.</li></ul>',
+      'overview.mission.big.examples': '<ul><li>Time: about half a day to a full day, usually during the weekend.</li><li>Kids + school: build and maintain a pollinator corner in the school yard.</li><li>Teens: lead a neighborhood energy-saving mini campaign with measurable results.</li><li>Adults: coordinate a community day with clean-up, repair, and tree-care actions.</li></ul>',
 
       'overview.tribe.title': 'What Is a Tribe',
       'overview.tribe.text': 'A Tribe is a small team, led by a Leader (MasterPatcher).<br>Not a crowd. Not a stadium. A handful of people saying, “Let’s do this together.”<br>The kind of team where you know who brings snacks and who always forgets socks.<br>Like a camp club, but for real life.',
@@ -125,6 +127,8 @@ const I18n = {
       'overview.tribe.types': '<ul><li>for kids and teens + leaders (kids use aliases and avatars, no visible faces, and their activity is visible only inside the Tribe)</li><li>adults-only (adults choose how public their involvement is)</li></ul>',
 
       'overview.how.title': 'How We Plan It to Work',
+      'overview.how.scroll.left': 'Scroll table left',
+      'overview.how.scroll.right': 'Scroll table right',
       'overview.how.example-intro': 'Planned journeys for adults, parents, and children:',
       'overview.how.table.col.step': 'Step',
       'overview.how.table.col.adult': 'Adult Journey',
@@ -389,7 +393,7 @@ const I18n = {
       'mod.patcher-camp.short': 'Future flagship teamwork game where practical knowledge becomes problem-solving power.',
 
       // About Us
-      'about.title': 'About Us',
+      'about.title': 'Who We Are',
       'about.mission.title': 'Our Mission',
       'about.mission.text': "We don't believe the planet needs panic. We believe it needs people who know what they can do today. That's why we offer clear missions, a safe community, and simple reuse solutions. With superheroes but without all the drama. Just small steps, taken together.",
       'about.vision.title': 'Our Vision',
@@ -465,7 +469,7 @@ const I18n = {
       'nav.overview': 'Ce Încercăm să Reparăm',
       'nav.mvp': 'Tabăra de Bază',
       'nav.next-steps': 'Pa\u0219i Urm\u0103tori',
-      'nav.about': 'Despre Noi',
+      'nav.about': 'Cine Suntem',
       'nav.donate': 'Donează',
       'nav.contact': 'Modalități de Implicare',
       'audience.switch.partners': 'Varianta Parteneri',
@@ -502,14 +506,14 @@ const I18n = {
       'overview.problem.solution': "Fără stress. Fără griji.<br>Doar acțiune practică, efort împărțit și reamintirea că lucrurile mari nu se repară când încerci să le faci de unul singur.<br><br><span class=\"overview-problem-signoff\">Reparăm Pământul împreună — Petec cu Petec.</span>",
 
       'overview.mission.title': "Cum ar arăta o misiune pentru a salva Pământul?",
-      'overview.mission.text': "O misiune va fi o acțiune practică ce ajută natura, cartierul sau comunitatea ta și care poate fi dusă la capăt în viața reală. Planificăm misiuni clare, sigure și realizabile pentru vârste și programe diferite.",
+      'overview.mission.text': "O misiune va fi o acțiune practică ce ajută natura, cartierul sau comunitatea ta și care poate fi dusă la capăt în viața reală. Planificăm misiuni clare, sigure și realizabile pentru vârste și programe diferite. Un ritm realist ar putea fi una până la trei misiuni pe lună, când programul îți permite.",
       'overview.mission.examples-intro': "Exemple planificate pe mărimi de misiune și grupe de vârstă:",
       'overview.mission.small.title': "Misiune mică (10 Monede Patch)",
-      'overview.mission.small.examples': "<ul><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: donează un obiect pe care nu îl mai folosesc (de exemplu o jucărie, o carte sau o geacă).</li></ul>",
+      'overview.mission.small.examples': "<ul><li>Timp: aproximativ 10-20 de minute, fie ca obicei scurt, fie ca acțiune făcută o singură dată.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găsesc 2 lucruri care trebuie mâncate azi sau mâine și le mută în față.</li></ul>",
       'overview.mission.medium.title': "Misiune medie (25 Monede Patch)",
-      'overview.mission.medium.examples': "<ul><li>Copii + familie: curățenie de 45-60 de minute într-un parc sau pe malul unui râu.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: fac o sesiune mică de reparat haine sau aparate.</li></ul>",
+      'overview.mission.medium.examples': "<ul><li>Timp: aproximativ 45-60 de minute pe săptămână, de obicei într-o singură zi.</li><li>Copii + familie: curățenie într-un parc sau pe malul unui râu.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: donează un obiect pe care nu îl mai folosesc (de exemplu o pereche de ochelari de soare, o carte sau o geacă).</li></ul>",
       'overview.mission.big.title': "Misiune mare (50 Monede Patch)",
-      'overview.mission.big.examples': "<ul><li>Copii + școală: construiesc și întrețin un colț pentru polenizatori în curtea școlii.</li><li>Adolescenți: conduc o mini-campanie de cartier pentru economisirea energiei, cu rezultate măsurabile.</li><li>Adulți: coordonează o zi comunitară cu acțiuni de curățenie, reparații și îngrijirea copacilor.</li></ul>",
+      'overview.mission.big.examples': "<ul><li>Timp: aproximativ o jumătate de zi sau o zi întreagă, de regulă în weekend.</li><li>Copii + școală: construiesc și întrețin un colț pentru polenizatori în curtea școlii.</li><li>Adolescenți: conduc o mini-campanie de cartier pentru economisirea energiei, cu rezultate măsurabile.</li><li>Adulți: coordonează o zi comunitară cu acțiuni de curățenie, reparații și îngrijirea copacilor.</li></ul>",
 
       'overview.tribe.title': "Ce reprezintă un Trib",
       'overview.tribe.text': "Un Trib este o echipă mică, condusă de un Leader (MasterPatcher).<br>Nu o mulțime. Nu un stadion. O mână de oameni care spun: „Hai să facem asta împreună.”<br>Genul de echipă în care știi cine aduce gustările și cine uită mereu șosetele.<br>Ca un club de tabără, dar pentru viața reală.",
@@ -517,6 +521,8 @@ const I18n = {
       'overview.tribe.types': "<ul><li>pentru copii și adolescenți + lideri (copiii folosesc aliasuri și avataruri, fără fețe vizibile, iar activitatea lor este vizibilă doar în Trib)</li><li>doar pentru adulți (adulții aleg cât de publică este implicarea lor)</li></ul>",
 
       'overview.how.title': "Cum planificăm să funcționeze",
+      'overview.how.scroll.left': 'Derulează tabelul la stânga',
+      'overview.how.scroll.right': 'Derulează tabelul la dreapta',
       'overview.how.example-intro': "Parcursuri planificate pentru adulți, părinți și copii:",
       'overview.how.table.col.step': 'Pas',
       'overview.how.table.col.adult': 'Parcurs Adult',
@@ -781,7 +787,7 @@ const I18n = {
       'mod.patcher-camp.short': 'Joc mare de echipă pe care îl vom lansa, unde cunoștințele vor deveni superputeri.',
 
       // About Us
-      'about.title': 'Despre Noi',
+      'about.title': 'Cine Suntem',
       'about.mission.title': 'Misiunea Noastr\u0103',
       'about.mission.text': 'Nu credem că planeta are nevoie de panică. Credem că are nevoie de oameni care știu ce pot face azi. De aceea oferim misiuni clare, o comunitate sigură și soluții simple de reutilizare. Cu Supereroi dar fără toată drama. Doar pași mici, făcuți împreună.',
       'about.vision.title': 'Viziunea Noastr\u0103',
@@ -1039,6 +1045,7 @@ const I18n = {
     document.documentElement.lang = this.currentLang;
     document.documentElement.setAttribute('data-lang', this.currentLang);
     this.runPostApplyHooks();
+    document.dispatchEvent(new CustomEvent('i18n:applied'));
   },
 
   applyModuleListLeadStyles() {

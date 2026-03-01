@@ -28,11 +28,12 @@ const Router = {
   },
 
   navigate() {
-    const currentHash = location.hash || '#overview';
+    const currentHash = location.hash || '#about';
     const hash = (typeof Audience !== 'undefined' && Audience && typeof Audience.normalizeHash === 'function')
       ? Audience.normalizeHash(currentHash)
       : currentHash;
-    const pageId = this.hashToPageId(hash);
+    const safeHash = hash === '#donate' ? '#contact' : hash;
+    const pageId = this.hashToPageId(safeHash);
 
     // Always reset active state to avoid stacked pages when init order changes.
     document.querySelectorAll('.page.active').forEach((page) => {
@@ -46,7 +47,7 @@ const Router = {
       this.currentPage = target;
     } else {
       // Fallback to overview
-      const fallback = document.getElementById('page-overview');
+      const fallback = document.getElementById('page-about');
       if (fallback) {
         fallback.classList.add('active');
         this.currentPage = fallback;
@@ -54,14 +55,14 @@ const Router = {
     }
 
     // Keep URL clean and consistent if public mode requested a restricted page.
-    if (hash !== currentHash) {
-      const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+    if (safeHash !== currentHash) {
+      const newUrl = `${window.location.pathname}${window.location.search}${safeHash}`;
       window.history.replaceState(null, '', newUrl);
     }
 
     // Update sidebar active state
     if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.setActive === 'function') {
-      Sidebar.setActive(hash);
+      Sidebar.setActive(safeHash);
     }
 
     // Scroll to top after layout updates so page switches do not keep prior position.
@@ -82,6 +83,6 @@ const Router = {
       return 'page-module-' + path.replace('module/', '');
     }
 
-    return 'page-' + (path || 'overview');
+    return 'page-' + (path || 'about');
   }
 };

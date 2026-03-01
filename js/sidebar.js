@@ -39,7 +39,7 @@ const Sidebar = {
       const openOrCollapseRow = () => {
         const href = link?.getAttribute('href');
         const isOpen = toggle.classList.contains('open');
-        const isActive = toggle.classList.contains('active') || (href && (location.hash || '#overview') === href);
+        const isActive = toggle.classList.contains('active') || (href && (location.hash || '#about') === href);
 
         if (isOpen && isActive) {
           setOpenState(false);

@@ -823,7 +823,7 @@ html[data-lang="ro"] #page-overview .hero__tagline {
 .hero__tagline {
   font-size: var(--font-size-2xl);
   color: var(--color-bandage-brown);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-xl);
   font-family: var(--font-heading);
   white-space: pre-line;
   text-align: left;
@@ -1257,6 +1257,11 @@ html:not([data-theme="light"]) #page-overview [data-i18n="overview.trust.title"]
   margin-bottom: var(--space-xl);
 }
 
+.journey-table-shell {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
 .journey-table-wrap {
   overflow-x: auto;
   overflow-y: hidden;
@@ -1265,13 +1270,50 @@ html:not([data-theme="light"]) #page-overview [data-i18n="overview.trust.title"]
   border-radius: var(--radius);
   background: transparent;
   box-shadow: none;
-  margin-bottom: var(--space-lg);
 }
 
 .journey-table {
   width: 100%;
   min-width: 980px;
   border-collapse: collapse;
+}
+
+.journey-table-controls {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.journey-table-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  pointer-events: auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-heading);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.journey-table-control--left {
+  left: var(--space-xs);
+}
+
+.journey-table-control--right {
+  right: var(--space-xs);
+}
+
+.journey-table-control[disabled] {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .journey-table th,
@@ -2070,17 +2112,15 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   .mission-rewards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  html[data-lang="ro"] #page-overview .hero {
-    padding-right: 0;
-    min-height: 0;
-    padding-top: calc(150px + var(--space-sm));
-  }
 }
 
 @media (max-width: 767px) {
   .journey-table-wrap {
     overflow-x: auto;
+  }
+
+  .journey-table-controls {
+    display: block;
   }
 
   .sidebar {
@@ -2097,10 +2137,6 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     display: flex;
   }
 
-  .sidebar__header .audience-switch {
-    display: none;
-  }
-
   .theme-energy-note {
     left: 12px;
     right: 12px;
@@ -2115,7 +2151,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
 
   .page {
     padding: var(--space-lg) var(--space-md);
-    padding-top: calc(var(--space-xl) + 86px);
+    padding-top: calc(86px + var(--space-sm));
     padding-right: var(--space-md);
   }
 
@@ -2166,21 +2202,17 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     padding-right: 0;
   }
 
-  #page-overview.page {
-    padding-top: var(--space-lg);
-  }
-
   #page-overview .hero {
     padding-right: 0;
     min-height: 0;
-    padding-top: calc(86px + var(--space-md));
+    padding-top: 0;
   }
 
   #page-overview .hero__tagline {
     font-size: var(--font-size-2xl);
     line-height: 1.3;
-    margin-bottom: var(--space-md);
-    max-width: 12ch;
+    margin-bottom: var(--space-xl);
+    max-width: 11ch;
   }
 
   html[data-lang="en"] #page-overview .hero__tagline {
@@ -2361,9 +2393,37 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 }
 
+@media (max-width: 400px) {
+  html[data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.66rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.05em !important;
+  }
+}
+
+@media (max-width: 375px) {
+  html[data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.48rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.06em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  html[data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.4rem !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.065em !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .journey-table-wrap {
     overflow-x: auto;
+  }
+
+  .journey-table-controls {
+    display: block;
   }
 
   .sidebar {
@@ -2386,6 +2446,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 
   .page {
+    padding-top: calc(150px + var(--space-sm));
     padding-right: var(--space-lg);
   }
 
@@ -2417,7 +2478,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   #page-overview .hero {
     padding-right: 0;
     min-height: 0;
-    padding-top: calc(150px + var(--space-sm));
+    padding-top: 0;
   }
 
   html[data-lang="ro"] #page-overview .hero__tagline {

@@ -44,7 +44,7 @@
   <!-- ========== SIDEBAR ========== -->
   <nav id="sidebar" class="sidebar" aria-label="Main navigation">
     <div class="sidebar__header">
-      <a href="#overview">
+      <a href="#about">
         <img src="assets/EP_FINAL_LOGO.png" alt="EarthPatchers Logo" class="sidebar__logo">
       </a>
       <div class="sidebar__lang">
@@ -67,7 +67,10 @@
 
     <ul class="sidebar__nav">
       <li>
-        <a href="#overview" class="sidebar__link active" data-i18n="nav.overview">What We're Trying to Fix</a>
+        <a href="#about" class="sidebar__link active" data-i18n="nav.about">Who We Are</a>
+      </li>
+      <li>
+        <a href="#overview" class="sidebar__link" data-i18n="nav.overview">What We're Trying to Fix</a>
       </li>
       <li class="sidebar__accordion">
         <div class="sidebar__accordion-toggle" data-accordion="mvp">
@@ -97,13 +100,7 @@
         </ul>
       </li>
       <li>
-        <a href="#about" class="sidebar__link" data-i18n="nav.about">About Us</a>
-      </li>
-      <li>
         <a href="#contact" class="sidebar__link" data-i18n="nav.contact">Ways to Get Involved</a>
-      </li>
-      <li>
-        <a href="#donate" class="sidebar__link sidebar__link--donate" data-i18n="nav.donate">Donate</a>
       </li>
     </ul>
   </nav>
@@ -141,7 +138,7 @@
   <main class="content">
 
     <!-- ===== OVERVIEW PAGE ===== -->
-    <section id="page-overview" class="page active">
+    <section id="page-overview" class="page">
 
       <!-- Hero -->
       <div class="hero">
@@ -168,7 +165,7 @@ One Stitch at a Time</h1>
           <h2 data-i18n="overview.mission.title">What would a Mission to Save the Earth look like</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="overview.mission.text">A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules.</p>
+        <p data-i18n="overview.mission.text">A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules. A realistic rhythm could be one to three missions a month, when life allows.</p>
         <p data-i18n="overview.mission.examples-intro">Examples by mission size and age group:</p>
         <div class="feature-grid mission-size-grid">
           <div class="feature-card">
@@ -178,9 +175,10 @@ One Stitch at a Time</h1>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.small.examples" data-i18n-html>
               <ul>
+                <li>Time: about 10-20 minutes, either as a one-off or as a small daily habit.</li>
                 <li>Kids: water one local tree or plant and track it for a week.</li>
-                <li>Teens: take one no-car day and use bike, bus, or walking.</li>
-                <li>Adults: replace 5 home bulbs with efficient LEDs.</li>
+                <li>Teens: run a one-week save water at home Tribe challenge.</li>
+                <li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li>
               </ul>
             </div>
           </div>
@@ -191,9 +189,10 @@ One Stitch at a Time</h1>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.medium.examples" data-i18n-html>
               <ul>
-                <li>Kids + family: 45-60 minute park or riverbank clean-up.</li>
-                <li>Teens: run a one-week "save water at home" Tribe challenge.</li>
-                <li>Adults: host a small repair session for clothes or appliances.</li>
+                <li>Time: about 45-60 minutes a week, usually done in one session.</li>
+                <li>Kids + family: park or riverbank clean-up.</li>
+                <li>Teens: take one no-car day and use bike, bus, or walking.</li>
+                <li>Adults: donate one item you no longer use (for example a pair of sunglasses, a book, or a jacket).</li>
               </ul>
             </div>
           </div>
@@ -204,6 +203,7 @@ One Stitch at a Time</h1>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.big.examples" data-i18n-html>
               <ul>
+                <li>Time: about half a day to a full day, usually during the weekend.</li>
                 <li>Kids + school: build and maintain a pollinator corner in the school yard.</li>
                 <li>Teens: lead a neighborhood energy-saving mini campaign with measurable results.</li>
                 <li>Adults: coordinate a community day with clean-up, repair, and tree-care actions.</li>
@@ -237,131 +237,137 @@ One Stitch at a Time</h1>
           <h2 data-i18n="overview.how.title">How We Plan It to Work</h2>
         </div>
         <div class="section__divider"></div>
-        <div class="journey-table-wrap">
-          <table class="journey-table">
-            <thead>
-              <tr>
-                <th data-i18n="overview.how.table.col.step">Step</th>
-                <th data-i18n="overview.how.table.col.adult">Adult Journey</th>
-                <th data-i18n="overview.how.table.col.parent">Parent Journey</th>
-                <th data-i18n="overview.how.table.col.child">Child Journey</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-i18n="overview.how.table.step1.label">Join</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step1.adult">Adult creates an account and sets own visibility permissions.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step1.parent">Parent creates family account + linked child account(s). Sets child safety permissions.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step1.child">Child account(s) are linked to parent account. Parent permissions define what child or children can see and do.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td data-i18n="overview.how.table.step2.label">Join a Tribe</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step2.adult">Adult selects missions based on size and skills, and can belong to one or more Tribes.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step2.parent">Parent chooses trusted Tribe leaders (teacher, scout leader, or parent leader). The leader sends a safe invite to connect child account(s).</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step2.child">Child or children join only after parent approval through the safe invite, can belong to one or more Tribes, and see only Tribe-shared content.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td data-i18n="overview.how.table.step3.label">Join and Complete the Mission</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step3.adult">Joins the Tribe that created the chosen mission and completes it.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step3.parent">Parent supports child or children participation where needed. In-person missions may require a minimum number of parents, based on age and mission type.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step3.child">Child or children join and complete a mission with the Tribe.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td data-i18n="overview.how.table.step4.label">Validation + Coins</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step4.adult">Patch Coins are earned after validation.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step4.parent">Leader validates. Child or children earn 10 Patch Coins.</li>
-                    <li data-i18n="overview.how.table.step4.parent.extra">If parent also participates and is validated: parent earns 10 Patch Coins.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step4.child">Leader validates. Child or children earn 10 Patch Coins.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr data-audience="partners">
-                <td data-i18n="overview.how.table.step5.label">Explore + Quiz</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step5.adult">Explores Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step5.parent">Parent can also explore Earth&apos;s Side of the Story to understand local needs. Content is age-tailored. Quiz can add extra Patch Coins.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step5.child">Child or children explore age-tailored Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr data-audience="partners">
-                <td data-i18n="overview.how.table.step6.label">Use Coins</td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step6.adult">Uses Patch Coins in Market Hut for practical reusable items (jackets, books, tools, board games, household items).</li>
-                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step6.parent">Parent helps child or children use Patch Coins in Market Hut safely (toys, jackets, books, school supplies, board games, reusable household items).</li>
-                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="journey-list">
-                    <li data-i18n="overview.how.table.step6.child">Child or children can use earned Patch Coins in Market Hut with parent permissions and guidance.</li>
-                    <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="journey-table-shell">
+          <div class="journey-table-controls" aria-hidden="true">
+            <button type="button" class="journey-table-control journey-table-control--left" data-journey-scroll="left" data-i18n-aria-label="overview.how.scroll.left" aria-label="Scroll left">←</button>
+            <button type="button" class="journey-table-control journey-table-control--right" data-journey-scroll="right" data-i18n-aria-label="overview.how.scroll.right" aria-label="Scroll right">→</button>
+          </div>
+          <div class="journey-table-wrap">
+            <table class="journey-table">
+              <thead>
+                <tr>
+                  <th data-i18n="overview.how.table.col.step">Step</th>
+                  <th data-i18n="overview.how.table.col.adult">Adult Journey</th>
+                  <th data-i18n="overview.how.table.col.parent">Parent Journey</th>
+                  <th data-i18n="overview.how.table.col.child">Child Journey</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="overview.how.table.step1.label">Join</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step1.adult">Adult creates an account and sets own visibility permissions.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step1.parent">Parent creates family account + linked child account(s). Sets child safety permissions.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step1.child">Child account(s) are linked to parent account. Parent permissions define what child or children can see and do.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="overview.how.table.step2.label">Join a Tribe</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step2.adult">Adult selects missions based on size and skills, and can belong to one or more Tribes.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step2.parent">Parent chooses trusted Tribe leaders (teacher, scout leader, or parent leader). The leader sends a safe invite to connect child account(s).</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step2.child">Child or children join only after parent approval through the safe invite, can belong to one or more Tribes, and see only Tribe-shared content.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="overview.how.table.step3.label">Join and Complete the Mission</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step3.adult">Joins the Tribe that created the chosen mission and completes it.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step3.parent">Parent supports child or children participation where needed. In-person missions may require a minimum number of parents, based on age and mission type.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step3.child">Child or children join and complete a mission with the Tribe.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="overview.how.table.step4.label">Validation + Coins</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step4.adult">Patch Coins are earned after validation.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step4.parent">Leader validates. Child or children earn 10 Patch Coins.</li>
+                      <li data-i18n="overview.how.table.step4.parent.extra">If parent also participates and is validated: parent earns 10 Patch Coins.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step4.child">Leader validates. Child or children earn 10 Patch Coins.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr data-audience="partners">
+                  <td data-i18n="overview.how.table.step5.label">Explore + Quiz</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step5.adult">Explores Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step5.parent">Parent can also explore Earth&apos;s Side of the Story to understand local needs. Content is age-tailored. Quiz can add extra Patch Coins.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step5.child">Child or children explore age-tailored Earth&apos;s Side of the Story and can earn extra Patch Coins from the quiz.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr data-audience="partners">
+                  <td data-i18n="overview.how.table.step6.label">Use Coins</td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step6.adult">Uses Patch Coins in Market Hut for practical reusable items (jackets, books, tools, board games, household items).</li>
+                      <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step6.parent">Parent helps child or children use Patch Coins in Market Hut safely (toys, jackets, books, school supplies, board games, reusable household items).</li>
+                      <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="journey-list">
+                      <li data-i18n="overview.how.table.step6.child">Child or children can use earned Patch Coins in Market Hut with parent permissions and guidance.</li>
+                      <li data-audience="partners" data-i18n="overview.how.table.step6.games-room">In partners view: Patch Coins can also unlock games in the Games Room.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -395,15 +401,6 @@ One Stitch at a Time</h1>
       </div>
 
       <!-- Bottom CTA -->
-      <div class="cta-strip page-end-cta">
-        <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
-        <div class="cta-strip__buttons">
-          <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
-          <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
-          <a href="#donate" class="btn btn--donate" data-i18n="nav.donate">Donate</a>
-        </div>
-      </div>
-
       <div class="footer-note page-footer-note">
         <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
       </div>
@@ -971,8 +968,8 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
     </section>
 
     <!-- ===== ABOUT US PAGE ===== -->
-    <section id="page-about" class="page">
-      <h1 data-i18n="about.title">About Us</h1>
+    <section id="page-about" class="page active">
+      <h1 data-i18n="about.title">Who We Are</h1>
 
       <!-- Mission -->
       <div class="section">
@@ -1045,7 +1042,6 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
         <div class="cta-strip__buttons">
           <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
           <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
-          <a href="#donate" class="btn btn--donate" data-i18n="nav.donate">Donate</a>
         </div>
       </div>
 
@@ -1071,7 +1067,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
     </section>
 
     <!-- ===== DONATE PAGE ===== -->
-    <section id="page-donate" class="page">
+    <section id="page-donate" class="page" hidden>
       <h1 data-i18n="donate.title">Donate</h1>
       <p data-i18n="donate.intro">If you want to support EarthPatchers, leave your contact details and donation interest. For now, this is an interest form, and we will contact you directly.</p>
 

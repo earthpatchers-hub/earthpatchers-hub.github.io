@@ -23,6 +23,125 @@ document.addEventListener('DOMContentLoaded', () => {
       : fallback;
   };
 
+  const pageOrderByAudience = {
+    public: [
+      '#about',
+      '#overview',
+      '#mvp',
+      '#module/missions-hq',
+      '#module/tribes',
+      '#contact'
+    ],
+    partners: [
+      '#about',
+      '#overview',
+      '#mvp',
+      '#module/missions-hq',
+      '#module/tribes',
+      '#module/earth-side',
+      '#module/market-hut',
+      '#next-steps',
+      '#module/activity-hut',
+      '#module/eco-shops',
+      '#module/green-wall',
+      '#module/org-scientists',
+      '#module/new-cities',
+      '#module/games-room',
+      '#module/patcher-camp',
+      '#contact'
+    ]
+  };
+
+  const pageTitleKeyByHash = {
+    '#about': 'about.title',
+    '#overview': 'nav.overview',
+    '#mvp': 'nav.mvp',
+    '#next-steps': 'nav.next-steps',
+    '#contact': 'contact.title',
+    '#donate': 'donate.title',
+    '#module/missions-hq': 'mod.missions-hq',
+    '#module/tribes': 'mod.tribes',
+    '#module/market-hut': 'mod.market-hut',
+    '#module/earth-side': 'mod.earth-side',
+    '#module/games-room': 'mod.games-room',
+    '#module/activity-hut': 'mod.activity-hut',
+    '#module/eco-shops': 'mod.eco-shops',
+    '#module/green-wall': 'mod.green-wall',
+    '#module/org-scientists': 'mod.org-scientists',
+    '#module/new-cities': 'mod.new-cities',
+    '#module/patcher-camp': 'mod.patcher-camp'
+  };
+
+  const getAudienceMode = () => {
+    if (typeof Audience !== 'undefined' && Audience && typeof Audience.isPartners === 'function') {
+      return Audience.isPartners() ? 'partners' : 'public';
+    }
+    return 'public';
+  };
+
+  const getTitleForHash = (hash) => {
+    const key = pageTitleKeyByHash[hash];
+    return key ? getText(key, hash) : hash;
+  };
+
+  const createNavLink = (hash, direction) => {
+    if (!hash) {
+      const spacer = document.createElement('span');
+      spacer.className = 'module-nav__spacer';
+      spacer.setAttribute('aria-hidden', 'true');
+      return spacer;
+    }
+
+    const link = document.createElement('a');
+    link.href = hash;
+    link.className = `module-nav__link module-nav__${direction}`;
+    link.textContent = direction === 'prev'
+      ? `← ${getTitleForHash(hash)}`
+      : `${getTitleForHash(hash)} →`;
+    return link;
+  };
+
+  const ensurePageNav = (page) => {
+    let nav = page.querySelector('.module-nav');
+    if (!nav) {
+      nav = document.createElement('div');
+      nav.className = 'module-nav page-nav';
+      const anchor =
+        page.querySelector('.page-footer-note, .footer-note, .page-end-cta, .cta-strip') || null;
+      if (anchor) {
+        page.insertBefore(nav, anchor);
+      } else {
+        page.appendChild(nav);
+      }
+    }
+    return nav;
+  };
+
+  const renderPageNavigation = () => {
+    const audience = getAudienceMode();
+    const pageOrder = pageOrderByAudience[audience];
+    const pages = document.querySelectorAll('.page');
+
+    pages.forEach((page) => {
+      const pageHash = page.id.replace(/^page-module-/, '#module/').replace(/^page-/, '#');
+      if (!pageOrder.includes(pageHash)) {
+        const existingNav = page.querySelector('.module-nav');
+        if (existingNav) {
+          existingNav.remove();
+        }
+        return;
+      }
+
+      const currentIndex = pageOrder.indexOf(pageHash);
+      const prevHash = currentIndex > 0 ? pageOrder[currentIndex - 1] : null;
+      const nextHash = currentIndex < pageOrder.length - 1 ? pageOrder[currentIndex + 1] : null;
+      const nav = ensurePageNav(page);
+      nav.innerHTML = '';
+      nav.appendChild(createNavLink(prevHash, 'prev'));
+      nav.appendChild(createNavLink(nextHash, 'next'));
+    });
+  };
+
   const getTodayKey = () => {
     const now = new Date();
     return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
@@ -235,6 +354,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const initJourneyTableControls = () => {
+    const shells = Array.from(document.querySelectorAll('.journey-table-shell'));
+    if (!shells.length) return;
+
+    const updateLabels = () => {
+      document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-aria-label');
+        if (!key) return;
+        el.setAttribute('aria-label', getText(key, el.getAttribute('aria-label') || ''));
+      });
+    };
+
+    const updateWrapControls = (shell) => {
+      const wrap = shell.querySelector('.journey-table-wrap');
+      const leftBtn = shell.querySelector('[data-journey-scroll="left"]');
+      const rightBtn = shell.querySelector('[data-journey-scroll="right"]');
+      if (!wrap || !leftBtn || !rightBtn) return;
+
+      const maxScrollLeft = Math.max(0, wrap.scrollWidth - wrap.clientWidth);
+      const canScroll = maxScrollLeft > 4;
+      shell.classList.toggle('journey-table-wrap--scrollable', canScroll);
+
+      leftBtn.hidden = !canScroll;
+      rightBtn.hidden = !canScroll;
+      leftBtn.disabled = !canScroll || wrap.scrollLeft <= 4;
+      rightBtn.disabled = !canScroll || wrap.scrollLeft >= maxScrollLeft - 4;
+    };
+
+    shells.forEach((shell) => {
+      const wrap = shell.querySelector('.journey-table-wrap');
+      const leftBtn = shell.querySelector('[data-journey-scroll="left"]');
+      const rightBtn = shell.querySelector('[data-journey-scroll="right"]');
+      if (!wrap || !leftBtn || !rightBtn) return;
+
+      const scrollStep = () => Math.max(220, Math.round(wrap.clientWidth * 0.72));
+
+      leftBtn.addEventListener('click', () => {
+        wrap.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+      });
+
+      rightBtn.addEventListener('click', () => {
+        wrap.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+      });
+
+      wrap.addEventListener('scroll', () => updateWrapControls(shell), { passive: true });
+      updateWrapControls(shell);
+    });
+
+    updateLabels();
+    window.addEventListener('resize', () => shells.forEach(updateWrapControls));
+    document.addEventListener('i18n:applied', () => {
+      updateLabels();
+      shells.forEach(updateWrapControls);
+    });
+  };
+
+  const initDynamicPageNavigation = () => {
+    renderPageNavigation();
+    window.addEventListener('hashchange', renderPageNavigation);
+    document.addEventListener('i18n:applied', renderPageNavigation);
+  };
+
   // Apply audience mode before navigation setup.
   if (typeof Audience !== 'undefined' && Audience && typeof Audience.init === 'function') {
     Audience.init();
@@ -258,4 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initDonateForm();
   initCopyEmail();
+  initDynamicPageNavigation();
+  initJourneyTableControls();
 });
