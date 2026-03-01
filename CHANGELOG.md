@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.14 - 2026-03-01
+
+### Changed
+- Updated the English `Who We Are` / `Why EarthPatchers` copy with the revised longer narrative and wording.
+- Updated the Romanian `Who We Are` / `De ce EarthPatchers` opening phrase from `Pentru că timp de 13 ani` to `Pentru ca de mai bine de un deceniu`.
+
 ## v1.13 - 2026-03-01
 
 ### Changed
