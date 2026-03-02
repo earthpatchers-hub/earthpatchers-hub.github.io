@@ -1636,6 +1636,10 @@ html:not([data-theme="light"]) .callout__title {
   margin-bottom: 0;
 }
 
+.overview-problem-text {
+  margin-bottom: var(--space-lg);
+}
+
 .overview-problem-signoff {
   display: block;
   color: var(--color-bandage-amber);

@@ -4,6 +4,23 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.15 - 2026-03-02
+
+### Changed
+- Refined the Overview `What we're trying to fix` section with the new “scattered socks” framing, clearer “choose how” options, and improved spacing before the trust callout.
+- Simplified the Overview hero copy so the Tribe/joining explanation lives in the problem section instead of the hero.
+- Added a matching end-of-page CTA strip to `What we're trying to fix` and aligned the Overview/About CTA flow so `Who We Are` points to `What we're trying to fix` and `What we're trying to fix` points to `Base Camp`.
+- Reworked the Overview partnerships block into two paragraphs for easier reading.
+- Updated `Who We Are` copy across mission, vision, transparency, and “Where We Start” sections with the latest EN/RO wording.
+- Adjusted the About/Who We Are transparency card to a two-line message with explicit budget/donation wording.
+
+### Updated
+- Refined Tribes public-vs-partner messaging:
+- hid detailed parenthetical visibility/privacy explanations in the Tribe type bullets from public view,
+- hid the “without exposing children's accounts” sentence fragment from public view,
+- kept the stricter “unrelated posts” rule only in partner view,
+- changed the public-view social-media rule to the latest Romanian/English wording.
+
 ## v1.14 - 2026-03-01
 
 ### Changed
