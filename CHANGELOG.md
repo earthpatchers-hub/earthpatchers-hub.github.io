@@ -4,6 +4,11 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.16 - 2026-03-03
+
+### Fixed
+- Removed `aria-hidden="true"` from the Overview journey-table scroll controls so the left/right buttons are exposed to assistive technologies instead of being hidden from screen readers.
+
 ## v1.15 - 2026-03-02
 
 ### Changed
