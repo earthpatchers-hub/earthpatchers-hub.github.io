@@ -4,6 +4,14 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.17 - 2026-03-04
+
+### Changed
+- Reworked Overview page messaging and structure across public and partner views, including the placement of `Important!`, updated `What Will an EarthPatchers Mission Look Like?` and `How Will It Work` sections, and improved Tribe guidance placement.
+- Polished public-view English and Romanian copy in `Who We Are` and `What We Do`, including CTA targets, mission examples, trust messaging, and clearer future-facing wording.
+- Refined mobile and tablet Overview title behavior in EN/RO for public and partner views, with tighter partner-view title sizing and controlled public-view line breaks.
+- Adjusted Overview spacing around the mission and workflow `Important!` callouts for cleaner section rhythm.
+
 ## v1.16 - 2026-03-03
 
 ### Fixed

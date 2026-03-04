@@ -830,12 +830,50 @@ html[data-lang="ro"] #page-overview .hero__tagline {
   max-width: 18ch;
 }
 
+.hero__tagline-line {
+  display: block;
+}
+
+.hero__tagline-line--mobile {
+  display: none;
+  white-space: nowrap;
+}
+
+.hero__tagline-line--desktop {
+  display: block;
+}
+
+.hero__tagline-line--fixed {
+  white-space: nowrap;
+}
+
+
 .page > h1:first-child {
   color: var(--color-bandage-brown);
 }
 
 .module-hero__content h1 {
   color: var(--color-bandage-brown);
+}
+
+html[data-audience="public"][data-lang="en"] #page-overview .hero__tagline,
+html[data-audience="public"][data-lang="en"] .page > h1:first-child,
+html[data-audience="public"][data-lang="en"] .module-hero__content h1 {
+  font-size: 2em;
+}
+
+html[data-audience="public"][data-lang="en"] #page-overview .hero__tagline {
+  font-size: 2em !important;
+}
+
+html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline,
+html[data-audience="public"][data-lang="ro"] .page > h1:first-child,
+html[data-audience="public"][data-lang="ro"] .module-hero__content h1 {
+  font-size: 2em;
+}
+
+html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
+  font-size: 2em !important;
 }
 
 .hero__subtitle {
@@ -966,6 +1004,19 @@ html[data-lang="ro"] #page-overview .hero__tagline {
 
 #page-overview .section + .section.section--trust::before {
   display: none;
+}
+
+#page-overview .section.section--trust {
+  margin-bottom: var(--space-2xl);
+}
+
+#page-overview .section.section--trust.section--trust-missions {
+  margin-top: var(--space-lg);
+}
+
+#page-overview .section.section--trust.section--trust-how {
+  margin-top: calc(-1 * var(--space-sm));
+  margin-bottom: var(--space-xl);
 }
 
 /* No divider between Partnerships and bottom CTA */
@@ -1648,6 +1699,11 @@ html:not([data-theme="light"]) .callout__title {
   font-weight: 700;
 }
 
+.overview-problem-lead {
+  color: var(--color-text-accent);
+  font-weight: 600;
+}
+
 html[data-theme="dark"] .overview-problem-signoff,
 html:not([data-theme="light"]) .overview-problem-signoff {
   color: var(--color-earth-green-light);
@@ -2223,6 +2279,18 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     max-width: 15ch;
   }
 
+  html[data-audience="public"] #page-overview .hero__tagline {
+    max-width: none;
+  }
+
+  html[data-audience="public"] #page-overview .hero__tagline .hero__tagline-line--desktop {
+    display: none;
+  }
+
+  html[data-audience="public"] #page-overview .hero__tagline .hero__tagline-line--mobile {
+    display: block;
+  }
+
   .hero__logo {
     width: 140px;
   }
@@ -2402,6 +2470,56 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     font-size: 1.66rem !important;
     line-height: 1.12 !important;
     letter-spacing: -0.05em !important;
+  }
+}
+
+@media (max-width: 430px) {
+  html[data-audience="partners"][data-lang="en"] #page-overview .hero__tagline {
+    font-size: 1.78rem !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  html[data-audience="partners"][data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.78rem !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.035em !important;
+  }
+}
+
+@media (max-width: 375px) {
+  html[data-audience="partners"][data-lang="en"] #page-overview .hero__tagline {
+    font-size: 1.68rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  html[data-audience="partners"][data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.68rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.04em !important;
+  }
+}
+
+@media (max-width: 390px) {
+  html[data-audience="partners"][data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.68rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.04em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  html[data-audience="partners"][data-lang="en"] #page-overview .hero__tagline {
+    font-size: 1.68rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  html[data-audience="partners"][data-lang="ro"] #page-overview .hero__tagline {
+    font-size: 1.62rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.04em !important;
   }
 }
 

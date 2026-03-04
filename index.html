@@ -22,7 +22,7 @@
       var manualTheme = sessionStorage.getItem('ep-theme-manual-override');
       var resolvedTheme = (manualTheme === 'light' || manualTheme === 'dark') ? manualTheme : autoTheme;
 
-      root.lang = (savedLang === 'ro' || savedLang === 'en') ? savedLang : 'en';
+      root.lang = (savedLang === 'ro' || savedLang === 'en') ? savedLang : 'ro';
       root.setAttribute('data-lang', root.lang);
       root.setAttribute('data-theme', resolvedTheme);
     })();
@@ -70,7 +70,7 @@
         <a href="#about" class="sidebar__link active" data-i18n="nav.about">Who We Are</a>
       </li>
       <li>
-        <a href="#overview" class="sidebar__link" data-i18n="nav.overview">What We're Trying to Fix</a>
+        <a href="#overview" class="sidebar__link" data-i18n="nav.overview">What We Do</a>
       </li>
       <li class="sidebar__accordion">
         <div class="sidebar__accordion-toggle" data-accordion="mvp">
@@ -142,7 +142,7 @@
 
       <!-- Hero -->
       <div class="hero">
-        <h1 class="hero__tagline" data-i18n="hero.tagline">Patching the Earth Together,
+        <h1 class="hero__tagline" data-i18n="hero.tagline" data-i18n-html>Patching the Earth Together,
 One Stitch at a Time</h1>
         <p class="hero__subtitle rich-text" data-i18n="hero.subtitle" data-i18n-html>Between work, school, laundry, and the everlasting question "where did I leave my keys?", searching for trusted planet missions shouldn&rsquo;t be another task on the list.<br><br>EarthPatchers wants to gather them for you in one place. Creating your own Tribe (a team), starting your own mission, jumping into one started by others, or teaming up with one created by our trusted NGO partners is what we plan to start building first.</p>
       </div>
@@ -162,10 +162,16 @@ One Stitch at a Time</h1>
       <!-- What Is a Mission -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.mission.title">What would a Mission to Save the Earth look like</h2>
+          <h2 data-i18n="overview.mission.title">What Will an EarthPatchers Mission Look Like?</h2>
         </div>
         <div class="section__divider"></div>
         <p data-i18n="overview.mission.text">A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules. A realistic rhythm could be one to three missions a month, when life allows.</p>
+        <div class="section section--trust section--trust-missions">
+          <div class="callout callout--green">
+            <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
+            <div class="callout__text rich-text" data-i18n="overview.trust.missions" data-i18n-html><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p></div>
+          </div>
+        </div>
         <p data-i18n="overview.mission.examples-intro">Examples by mission size and age group:</p>
         <div class="feature-grid mission-size-grid">
           <div class="feature-card">
@@ -228,15 +234,22 @@ One Stitch at a Time</h1>
               <li>adults-only (adults choose how public their involvement is)</li>
             </ul>
           </div>
+          <div class="feature-card__text rich-text" data-i18n="overview.tribe.leaders" data-i18n-html><p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p></div>
         </div>
       </div>
 
       <!-- How It Works -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.how.title">How We Plan It to Work</h2>
+          <h2 data-i18n="overview.how.title">How Will It Work</h2>
         </div>
         <div class="section__divider"></div>
+        <div class="section section--trust section--trust-how">
+          <div class="callout callout--green">
+            <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
+            <div class="callout__text rich-text" data-i18n="overview.trust.how" data-i18n-html><p>To begin with, we will test missions <strong>offline</strong> while the <strong>website</strong> functionality is still <strong>under construction</strong>.</p></div>
+          </div>
+        </div>
         <div class="journey-table-shell">
           <div class="journey-table-controls">
             <button type="button" class="journey-table-control journey-table-control--left" data-journey-scroll="left" data-i18n-aria-label="overview.how.scroll.left" aria-label="Scroll left">←</button>
@@ -368,14 +381,6 @@ One Stitch at a Time</h1>
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
-
-      <!-- Trust & Safety -->
-      <div class="section section--trust">
-        <div class="callout callout--green">
-          <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
-          <div class="callout__text rich-text" data-i18n="overview.trust.text" data-i18n-html><p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p></div>
         </div>
       </div>
 
@@ -1048,7 +1053,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       <div class="cta-strip page-end-cta">
         <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
         <div class="cta-strip__buttons">
-          <a href="#overview" class="btn btn--primary" data-i18n="about.cta.overview">See What We're Trying to Fix</a>
+          <a href="#overview" class="btn btn--primary" data-i18n="about.cta.overview">See What We Do</a>
           <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
         </div>
       </div>
