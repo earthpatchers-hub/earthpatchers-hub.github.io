@@ -27,6 +27,13 @@ const Router = {
     }
   },
 
+  stabilizeScrollReset() {
+    this.resetScrollPosition();
+    requestAnimationFrame(() => this.resetScrollPosition());
+    setTimeout(() => this.resetScrollPosition(), 0);
+    setTimeout(() => this.resetScrollPosition(), 120);
+  },
+
   navigate() {
     const currentHash = location.hash || '#about';
     const hash = (typeof Audience !== 'undefined' && Audience && typeof Audience.normalizeHash === 'function')
@@ -66,8 +73,7 @@ const Router = {
     }
 
     // Scroll to top after layout updates so page switches do not keep prior position.
-    this.resetScrollPosition();
-    requestAnimationFrame(() => this.resetScrollPosition());
+    this.stabilizeScrollReset();
 
     // Close mobile sidebar
     if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.close === 'function') {
@@ -84,5 +90,18 @@ const Router = {
     }
 
     return 'page-' + (path || 'about');
+  },
+
+  goTo(hash) {
+    if (!hash || !hash.startsWith('#')) return;
+
+    const currentHash = location.hash || '#about';
+    if (currentHash === hash) {
+      this.navigate();
+      return;
+    }
+
+    window.history.pushState(null, '', `${window.location.pathname}${window.location.search}${hash}`);
+    this.navigate();
   }
 };

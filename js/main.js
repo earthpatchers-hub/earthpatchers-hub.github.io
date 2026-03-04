@@ -227,6 +227,23 @@ document.addEventListener('DOMContentLoaded', () => {
     rememberPreviousHash();
     window.addEventListener('hashchange', rememberPreviousHash);
 
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      if (link.closest('.sidebar__accordion-toggle')) return;
+
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+
+      event.preventDefault();
+
+      if (typeof Router !== 'undefined' && Router && typeof Router.goTo === 'function') {
+        Router.goTo(hash);
+      } else {
+        location.hash = hash;
+      }
+    });
+
     if (donateBackBtn) {
       donateBackBtn.addEventListener('click', () => {
         location.hash = lastNonDonateHash || '#overview';

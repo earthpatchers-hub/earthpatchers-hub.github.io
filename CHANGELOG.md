@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## v1.18 - 2026-03-04
+
+### Fixed
+- Hardened internal page-to-page navigation on mobile so switching between sections resets the scroll position to the top instead of sometimes keeping the previous page scrolled to the bottom.
+- Switched internal hash navigation to programmatic router navigation to avoid browser hash-jump timing issues on live/mobile.
+
 ## v1.17 - 2026-03-04
 
 ### Changed
