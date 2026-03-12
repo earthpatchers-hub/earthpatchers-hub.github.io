@@ -78,6 +78,7 @@ const I18n = {
   ],
   moduleSectionPrefixes: [
     'missions-hq.',
+    'patch-coins.',
     'tribes.',
     'market-hut.',
     'earth-side.',
@@ -114,6 +115,10 @@ const I18n = {
 
       // Module names
       'mod.missions-hq': 'Missions HQ',
+      'mod.patch-coins': 'Patch Coins',
+      'mod.small-missions': 'Small Missions',
+      'mod.medium-missions': 'Medium Missions',
+      'mod.large-missions': 'Large Missions',
       'mod.tribes': 'Tribes',
       'mod.market-hut': 'Market Hut',
       'mod.earth-side': "Earth's Side of the Story",
@@ -124,6 +129,20 @@ const I18n = {
       'mod.org-scientists': 'Organisations & Scientists',
       'mod.new-cities': 'New Cities & Discovery Phase',
       'mod.patcher-camp': 'Patcher Camp',
+
+      // Mission size pages
+      'patch-coins.title': 'Patch Coins',
+      'patch-coins.desc': '<p>Patch Coins are EarthPatchers points for effort and learning. They are earned when missions are completed and validated, and from learning journeys with quizzes.</p><ul><li>They keep progress visible for kids, teens, and adults.</li><li>They reward real effort and useful habits.</li><li>Later, they unlock practical use in modules like Market Hut and Games Room.</li></ul>',
+      'patch-coins.why': 'Patch Coins make progress visible, fair, and motivating. They help turn small consistent action into a clear journey.',
+      'small-missions.title': 'Small Missions',
+      'small-missions.desc': '<p>Small Missions are the quickest EarthPatchers actions. They are meant to fit into ordinary weekdays and help people start without needing a big block of time.</p><ul><li>Short actions you can do once.</li><li>Simple habits repeated for a few days.</li><li>Good starting points for children, teens, adults, and families.</li></ul>',
+      'small-missions.why': 'Small Missions make action feel possible. They are how busy days still turn into useful steps.',
+      'medium-missions.title': 'Medium Missions',
+      'medium-missions.desc': '<p>Medium Missions need a bit more time, usually one focused session in a week. They are a good next step once smaller actions already feel natural.</p><ul><li>Often done in 45-60 minutes.</li><li>Good for family sessions, Tribes, or one clear adult task.</li><li>Useful when you want progress you can already see.</li></ul>',
+      'medium-missions.why': 'Medium Missions turn good intentions into visible progress. They give Tribes and families something concrete to do together.',
+      'large-missions.title': 'Large Missions',
+      'large-missions.desc': '<p>Large Missions are the bigger EarthPatchers challenges. They usually need a weekend block, stronger coordination, or a team ready to organize something measurable.</p><ul><li>Often half a day or a full day.</li><li>Better suited to schools, neighborhoods, or community teams.</li><li>Best when a group is ready to plan and follow through.</li></ul>',
+      'large-missions.why': 'Large Missions show what a community can do when effort is shared. They turn courage, planning, and teamwork into visible local change.',
 
       // Overview / Landing
       'hero.tagline': 'Patching the Earth Together,\nOne Stitch at a Time',
@@ -410,6 +429,10 @@ const I18n = {
 
       // Module short descriptions (for cards)
       'mod.missions-hq.short': 'Real-life missions for kids, teens, and adults. Clear actions, Patch Coins, badges, and achievements.',
+      'mod.patch-coins.short': 'How Patch Coins are earned, tracked, and later used across EarthPatchers modules.',
+      'mod.small-missions.short': 'The quickest missions in the EarthPatchers flow: short actions and habits that fit busy weekdays.',
+      'mod.medium-missions.short': 'Missions that need one focused weekly session and make progress easier to notice.',
+      'mod.large-missions.short': 'Bigger community missions for weekends, teams, and measurable local impact.',
       'mod.tribes.short': 'Safe team spaces with camp rules. Kids use aliases; missions can be shared across Tribes.',
       'mod.market-hut.short': 'Cluj-first circular exchange with Patch Coins, reuse, swaps, and safety-by-design.',
       'mod.earth-side.short': 'Learning plus action map starting in Cluj: hazards, local recovery map, and learn-and-play.',
@@ -512,6 +535,10 @@ const I18n = {
 
       // Module names
       'mod.missions-hq': 'Cartierul Misiunilor',
+      'mod.patch-coins': 'Monede Patch',
+      'mod.small-missions': 'Misiuni Mici',
+      'mod.medium-missions': 'Misiuni Medii',
+      'mod.large-missions': 'Misiuni Mari',
       'mod.tribes': 'Triburi',
       'mod.market-hut': 'C\u0103su\u021ba de Schimb',
       'mod.earth-side': 'Povestea P\u0103m\u00e2ntului',
@@ -522,6 +549,20 @@ const I18n = {
       'mod.org-scientists': 'Organiza\u021bii & Oameni de \u0218tiin\u021b\u0103',
       'mod.new-cities': 'Ora\u0219e\u00a0Noi\u00a0& Faza\u00a0de\u00a0Descoperire',
       'mod.patcher-camp': 'Tab\u0103ra Patcher',
+
+      // Mission size pages
+      'patch-coins.title': 'Monede Patch',
+      'patch-coins.desc': '<p>Monedele Patch sunt punctele EarthPatchers pentru efort și învățare. Se câștigă când misiunile sunt finalizate și validate, dar și din trasee de învățare cu quiz.</p><ul><li>Fac progresul vizibil pentru copii, adolescenți și adulți.</li><li>Recompensează efortul real și obiceiurile utile.</li><li>Mai târziu, vor putea fi folosite practic în module precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
+      'patch-coins.why': 'Monedele Patch fac progresul vizibil, corect și motivant. Transformă pașii mici, constanți, într-un parcurs clar.',
+      'small-missions.title': 'Misiuni Mici',
+      'small-missions.desc': '<p>Misiunile Mici sunt cele mai rapide acțiuni EarthPatchers. Sunt gândite să încapă în zile obișnuite și să te ajute să începi fără să ai nevoie de un bloc mare de timp.</p><ul><li>Acțiuni scurte pe care le poți face o singură dată.</li><li>Obiceiuri simple repetate câteva zile.</li><li>Puncte bune de pornire pentru copii, adolescenți, adulți și familii.</li></ul>',
+      'small-missions.why': 'Misiunile Mici fac acțiunea să pară posibilă. Așa se transformă chiar și zilele ocupate în pași utili.',
+      'medium-missions.title': 'Misiuni Medii',
+      'medium-missions.desc': '<p>Misiunile Medii au nevoie de puțin mai mult timp, de obicei o sesiune clară într-o săptămână. Sunt pasul bun următor după ce acțiunile mici deja par firești.</p><ul><li>De multe ori se fac în 45-60 de minute.</li><li>Sunt bune pentru familii, Triburi sau o sarcină clară pentru un adult.</li><li>Utile când vrei un progres pe care deja îl poți vedea.</li></ul>',
+      'medium-missions.why': 'Misiunile Medii transformă intențiile bune în progres vizibil. Dau Triburilor și familiilor ceva concret de făcut împreună.',
+      'large-missions.title': 'Misiuni Mari',
+      'large-missions.desc': '<p>Misiunile Mari sunt provocările mai mari EarthPatchers. De obicei cer un bloc de weekend, mai multă coordonare sau o echipă pregătită să organizeze ceva măsurabil.</p><ul><li>Adesea durează o jumătate de zi sau o zi întreagă.</li><li>Se potrivesc mai bine pentru școli, cartiere sau echipe comunitare.</li><li>Funcționează cel mai bine când grupul e gata să planifice și să ducă lucrurile până la capăt.</li></ul>',
+      'large-missions.why': 'Misiunile Mari arată ce poate face o comunitate când efortul este împărțit. Transformă curajul, planificarea și munca în echipă în schimbare locală vizibilă.',
 
       // Overview / Landing
       'hero.tagline': "Reparăm Pământul împreună,\nPetec cu Petec.",
@@ -808,6 +849,10 @@ const I18n = {
 
       // Module short descriptions
       'mod.missions-hq.short': 'Misiuni reale pentru copii, adolescenți și adulți. Câștigă Monede Patch, Insigne și Realizări.',
+      'mod.patch-coins.short': 'Cum se câștigă, se contorizează și se vor folosi Monedele Patch în modulele EarthPatchers.',
+      'mod.small-missions.short': 'Cele mai rapide misiuni din fluxul EarthPatchers: acțiuni și obiceiuri scurte pentru zile ocupate.',
+      'mod.medium-missions.short': 'Misiuni care cer o sesiune clară săptămânală și fac progresul mai ușor de observat.',
+      'mod.large-missions.short': 'Misiuni mai mari pentru weekenduri, echipe și impact local măsurabil.',
       'mod.tribes.short': 'Spații sigure de echipă cu reguli de tabără. Copiii folosesc aliasuri; misiunile circulă între Triburi.',
       'mod.market-hut.short': 'Schimb circular local cu Monede Patch. Refolosește în loc să cumperi nou.',
       'mod.earth-side.short': 'Hartă de învățare + acțiune începând din Cluj. Trei uși: riscuri, hartă locală, învață și joacă.',
