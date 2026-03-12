@@ -3,6 +3,10 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof MenuTrail !== 'undefined' && MenuTrail && typeof MenuTrail.init === 'function') {
+    MenuTrail.init();
+  }
+
   const DONATE_FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@earthpatchers.org';
   const THEME_NOTE_DATE_KEY = 'ep-theme-energy-note-date';
   const THEME_OVERRIDE_KEY = 'ep-theme-manual-override';
@@ -29,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
       '#overview',
       '#mvp',
       '#module/missions-hq',
+      '#module/patch-coins',
+      '#module/small-missions',
+      '#module/medium-missions',
+      '#module/large-missions',
       '#module/tribes',
       '#contact'
     ],
@@ -37,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
       '#overview',
       '#mvp',
       '#module/missions-hq',
+      '#module/patch-coins',
+      '#module/small-missions',
+      '#module/medium-missions',
+      '#module/large-missions',
       '#module/tribes',
       '#module/earth-side',
       '#module/market-hut',
@@ -60,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '#contact': 'contact.title',
     '#donate': 'donate.title',
     '#module/missions-hq': 'mod.missions-hq',
+    '#module/patch-coins': 'mod.patch-coins',
+    '#module/small-missions': 'mod.small-missions',
+    '#module/medium-missions': 'mod.medium-missions',
+    '#module/recycling-images': 'mod.recycling-images',
+    '#module/large-missions': 'mod.large-missions',
     '#module/tribes': 'mod.tribes',
     '#module/market-hut': 'mod.market-hut',
     '#module/earth-side': 'mod.earth-side',
@@ -438,6 +455,10 @@ document.addEventListener('DOMContentLoaded', () => {
     Audience.init();
   }
 
+  if (typeof MenuTrail !== 'undefined' && MenuTrail && typeof MenuTrail.layoutAll === 'function') {
+    MenuTrail.layoutAll();
+  }
+
   // Initialize sidebar/router first so page navigation still works
   // even if i18n content has an error.
   Sidebar.init();
@@ -458,4 +479,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail();
   initDynamicPageNavigation();
   initJourneyTableControls();
+
+  if (typeof MenuTrail !== 'undefined' && MenuTrail && typeof MenuTrail.layoutAll === 'function') {
+    MenuTrail.layoutAll();
+  }
 });
