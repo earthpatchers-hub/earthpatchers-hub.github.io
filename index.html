@@ -65,44 +65,7 @@
       </div>
     </div>
 
-    <ul class="sidebar__nav">
-      <li>
-        <a href="#about" class="sidebar__link active" data-i18n="nav.about">Who We Are</a>
-      </li>
-      <li>
-        <a href="#overview" class="sidebar__link" data-i18n="nav.overview">What We Do</a>
-      </li>
-      <li class="sidebar__accordion">
-        <div class="sidebar__accordion-toggle" data-accordion="mvp">
-          <a href="#mvp" class="sidebar__accordion-link" data-i18n="nav.mvp">Base Camp</a>
-          <button class="sidebar__accordion-arrow" aria-label="Toggle submenu" aria-expanded="false">&#9654;</button>
-        </div>
-        <ul class="sidebar__submenu">
-          <li><a href="#module/missions-hq" class="sidebar__sublink" data-i18n="mod.missions-hq">Missions HQ</a></li>
-          <li><a href="#module/tribes" class="sidebar__sublink" data-i18n="mod.tribes">Tribes</a></li>
-          <li data-audience="partners"><a href="#module/earth-side" class="sidebar__sublink" data-i18n="mod.earth-side">Earth's Side of the Story</a></li>
-          <li data-audience="partners"><a href="#module/market-hut" class="sidebar__sublink" data-i18n="mod.market-hut">Market Hut</a></li>
-        </ul>
-      </li>
-      <li class="sidebar__accordion" data-audience="partners">
-        <div class="sidebar__accordion-toggle" data-accordion="next-steps">
-          <a href="#next-steps" class="sidebar__accordion-link" data-i18n="nav.next-steps">Next Steps</a>
-          <button class="sidebar__accordion-arrow" aria-label="Toggle submenu" aria-expanded="false">&#9654;</button>
-        </div>
-        <ul class="sidebar__submenu">
-          <li><a href="#module/activity-hut" class="sidebar__sublink" data-i18n="mod.activity-hut">Activity Hut</a></li>
-          <li><a href="#module/eco-shops" class="sidebar__sublink" data-i18n="mod.eco-shops">Eco Shops Directory</a></li>
-          <li><a href="#module/green-wall" class="sidebar__sublink" data-i18n="mod.green-wall">The Green Wall</a></li>
-          <li><a href="#module/org-scientists" class="sidebar__sublink" data-i18n="mod.org-scientists">Organisations & Scientists</a></li>
-          <li><a href="#module/new-cities" class="sidebar__sublink" data-i18n="mod.new-cities">New Cities & Discovery Phase</a></li>
-          <li><a href="#module/games-room" class="sidebar__sublink" data-i18n="mod.games-room">Games Room</a></li>
-          <li><a href="#module/patcher-camp" class="sidebar__sublink" data-i18n="mod.patcher-camp">Patcher Camp</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#contact" class="sidebar__link" data-i18n="nav.contact">Ways to Get Involved</a>
-      </li>
-    </ul>
+    <ul class="sidebar__nav" data-menu-trail-root="sidebar-primary"></ul>
   </nav>
 
   <!-- ========== OVERLAY ========== -->
@@ -685,6 +648,126 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
       </div>
       <div class="module-nav">
         <span class="module-nav__spacer" aria-hidden="true"></span>
+        <a href="#module/patch-coins" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: PATCH COINS ===== -->
+    <section id="page-module-patch-coins" class="page page--module">
+      <div class="module-hero">
+        <img src="assets/50_PC.png" alt="Patch Coins" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
+          <h1 data-i18n="patch-coins.title">Patch Coins</h1>
+        </div>
+      </div>
+      <div class="module-body">
+        <div class="rich-text module-body__intro" data-i18n="patch-coins.desc" data-i18n-html>
+          Patch Coins are EarthPatchers points for effort and learning.
+        </div>
+        <div class="callout callout--golden module-body__why">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="patch-coins.why">Patch Coins make progress visible, fair, and motivating. They help turn small consistent action into a clear journey.</p>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/missions-hq" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/small-missions" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: SMALL MISSIONS ===== -->
+    <section id="page-module-small-missions" class="page page--module">
+      <div class="module-hero">
+        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Small Missions" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
+          <h1 data-i18n="small-missions.title">Small Missions</h1>
+        </div>
+      </div>
+      <div class="module-body">
+        <div class="rich-text module-body__intro" data-i18n="small-missions.desc" data-i18n-html>
+          Small Missions are the quickest EarthPatchers actions.
+        </div>
+        <div class="callout callout--golden module-body__why">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="small-missions.why">Small Missions make action feel possible. They are how busy days still turn into useful steps.</p>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/patch-coins" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/medium-missions" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: MEDIUM MISSIONS ===== -->
+    <section id="page-module-medium-missions" class="page page--module">
+      <div class="module-hero">
+        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Medium Missions" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
+          <h1 data-i18n="medium-missions.title">Medium Missions</h1>
+        </div>
+      </div>
+      <div class="module-body">
+        <div class="rich-text module-body__intro" data-i18n="medium-missions.desc" data-i18n-html>
+          Medium Missions need a bit more time, usually one focused session in a week.
+        </div>
+        <div class="callout callout--golden module-body__why">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="medium-missions.why">Medium Missions turn good intentions into visible progress. They give Tribes and families something concrete to do together.</p>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/small-missions" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/large-missions" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: RECYCLING THROUGH IMAGES ===== -->
+    <section id="page-module-recycling-images" class="page page--module" hidden>
+      <div class="module-hero">
+        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Recycling through Images" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
+          <h1 data-i18n="recycling-images.title">Recycling through Images</h1>
+        </div>
+      </div>
+      <div class="module-body">
+        <div class="rich-text module-body__intro" data-i18n="recycling-images.desc" data-i18n-html>
+          Recycling through Images turns written recycling guidance into simple visual instructions.
+        </div>
+        <div class="callout callout--golden module-body__why">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="recycling-images.why">People sort better when guidance is visual, local, and easy to notice.</p>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/medium-missions" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
+        <a href="#module/large-missions" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== MODULE: LARGE MISSIONS ===== -->
+    <section id="page-module-large-missions" class="page page--module">
+      <div class="module-hero">
+        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Large Missions" class="module-hero__image" loading="lazy">
+        <div class="module-hero__content">
+          <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
+          <h1 data-i18n="large-missions.title">Large Missions</h1>
+        </div>
+      </div>
+      <div class="module-body">
+        <div class="rich-text module-body__intro" data-i18n="large-missions.desc" data-i18n-html>
+          Large Missions are the bigger EarthPatchers challenges.
+        </div>
+        <div class="callout callout--golden module-body__why">
+          <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
+          <p class="callout__text" data-i18n="large-missions.why">Large Missions show what a community can do when effort is shared. They turn courage, planning, and teamwork into visible local change.</p>
+        </div>
+      </div>
+      <div class="module-nav">
+        <a href="#module/medium-missions" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
         <a href="#module/tribes" class="module-nav__link module-nav__next" data-i18n="module.next">Next &rarr;</a>
       </div>
     </section>
@@ -1143,6 +1226,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
 </main>
 
   <!-- Scripts -->
+  <script src="js/menu-trail.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/audience.js"></script>
   <script src="js/sidebar.js"></script>
