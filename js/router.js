@@ -79,6 +79,13 @@ const Router = {
     if (typeof Sidebar !== 'undefined' && Sidebar && typeof Sidebar.close === 'function') {
       Sidebar.close();
     }
+
+    window.dispatchEvent(new CustomEvent('earthpatchers:routechange', {
+      detail: {
+        hash: safeHash,
+        pageId
+      }
+    }));
   },
 
   hashToPageId(hash) {

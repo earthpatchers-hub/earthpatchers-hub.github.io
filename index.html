@@ -59,8 +59,18 @@
         </label>
         <span class="theme-switch__label" data-i18n="theme.dark">Dark</span>
       </div>
+      <div class="patch-counter" data-patch-counter>
+        <button class="patch-counter__trigger" type="button" aria-expanded="false" aria-controls="patch-counter-popover-desktop">
+          <img src="assets/patch-counter-icon.png" alt="Patch Coin counter" class="patch-counter__coin">
+          <span class="patch-counter__value">0</span>
+        </button>
+        <div id="patch-counter-popover-desktop" class="patch-counter__popover" hidden>
+          <p class="patch-counter__text" data-i18n="patch-counter.info">Mock Patch Coin counter for now. It is not implemented yet.</p>
+          <a href="#module/patch-coins" class="patch-counter__link" data-i18n="patch-counter.link">More about Patch Coins</a>
+        </div>
+      </div>
       <div class="audience-switch">
-        <a id="audience-switch-to-partners" class="audience-switch__btn" href="partners.html" data-i18n="audience.switch.partners" data-audience="public">Partners View</a>
+        <a id="audience-switch-to-partners" class="audience-switch__btn" href="index.html?view=partners#overview" data-i18n="audience.switch.partners" data-audience="public">Partners View</a>
         <a id="audience-switch-to-public" class="audience-switch__btn" href="index.html" data-i18n="audience.switch.public" data-audience="partners">Public View</a>
       </div>
     </div>
@@ -132,14 +142,14 @@ One Stitch at a Time</h1>
         <div class="section section--trust section--trust-missions">
           <div class="callout callout--green">
             <h4 class="callout__title" data-i18n="overview.trust.title">Important!</h4>
-            <div class="callout__text rich-text" data-i18n="overview.trust.missions" data-i18n-html><p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p></div>
+            <div class="callout__text rich-text" data-i18n="overview.trust.missions" data-i18n-html><p>For now, <strong>Patch Coins</strong> will be tracked as a visible thank-you for real effort until the features that use them are ready.</p><p>Until mission functionality is in place on the website, missions can be validated by leaders, also called <strong>MasterPatchers</strong>, or by sending the requested proof to us by email.</p></div>
           </div>
         </div>
         <p data-i18n="overview.mission.examples-intro">Examples by mission size and age group:</p>
         <div class="feature-grid mission-size-grid">
           <div class="feature-card">
             <div class="mission-size-header">
-              <img src="assets/10_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <img src="assets/10_PC.png" alt="Small Mission reward icon" class="mission-size-coin">
               <h4 class="feature-card__title" data-i18n="overview.mission.small.title">Small Mission (10 Patch Coins)</h4>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.small.examples" data-i18n-html>
@@ -153,7 +163,7 @@ One Stitch at a Time</h1>
           </div>
           <div class="feature-card">
             <div class="mission-size-header">
-              <img src="assets/25_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <img src="assets/25_PC.png" alt="Medium Mission reward icon" class="mission-size-coin">
               <h4 class="feature-card__title" data-i18n="overview.mission.medium.title">Medium Mission (25 Patch Coins)</h4>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.medium.examples" data-i18n-html>
@@ -167,7 +177,7 @@ One Stitch at a Time</h1>
           </div>
           <div class="feature-card">
             <div class="mission-size-header">
-              <img src="assets/50_PC.png" alt="" aria-hidden="true" class="mission-size-coin">
+              <img src="assets/50_PC.png" alt="Large Mission reward icon" class="mission-size-coin">
               <h4 class="feature-card__title" data-i18n="overview.mission.big.title">Big Mission (50 Patch Coins)</h4>
             </div>
             <div class="feature-card__text" data-i18n="overview.mission.big.examples" data-i18n-html>
@@ -347,15 +357,15 @@ One Stitch at a Time</h1>
         </div>
       </div>
 
-      <!-- Starting in Cluj -->
+      <!-- Pilot and discovery -->
       <div class="section">
         <div class="section__heading">
-          <h2 data-i18n="overview.cluj.title">Starting in Cluj</h2>
+          <h2 data-i18n="overview.cluj.title">Pilot and Discovery First</h2>
         </div>
         <div class="section__divider"></div>
         <div class="feature-card feature-card--single feature-card--cluj-single">
-          <div class="feature-card__icon feature-card__icon--cluj"><img src="assets/Starting_in_Cluj_scene_1200x1200_last_one.png" alt="" aria-hidden="true"></div>
-          <p class="feature-card__text" data-i18n="overview.cluj.text">EarthPatchers plans to start in Cluj and grow carefully. New cities would open later only when there is enough discovery support (data + partners), so the information stays real and trustworthy.</p>
+          <div class="feature-card__icon feature-card__icon--cluj"><img src="assets/Pilot_and_Discovery_First.png" alt="Pilot and Discovery First"></div>
+          <p class="feature-card__text" data-i18n="overview.cluj.text" data-i18n-html>EarthPatchers plans to begin through pilots with interested schools, leaders, and early partners, then grow carefully.<br><br>New locations would open later only when there is enough discovery support (data + partners), so the information stays real, useful, and trustworthy.</p>
         </div>
       </div>
 
@@ -371,14 +381,13 @@ One Stitch at a Time</h1>
       <div class="cta-strip page-end-cta">
         <h2 data-i18n="overview.cta.title">Ready to Learn More?</h2>
         <div class="cta-strip__buttons">
-          <a href="#mvp" class="btn btn--primary" data-i18n="overview.cta.mvp">Read Base Camp</a>
           <a href="#contact" class="btn btn--secondary" data-i18n="overview.cta.contact">Ways to Get Involved</a>
         </div>
       </div>
 
       <!-- Bottom CTA -->
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
@@ -387,8 +396,8 @@ One Stitch at a Time</h1>
 
       <h1 data-i18n="mvp.title">Base Camp</h1>
       <p class="mvp-title-plan" data-i18n="mvp.title.plan" data-audience="partners">36-Month Plan</p>
-      <p data-i18n="mvp.intro" data-audience="public">EarthPatchers starts with a focused plan in Cluj and begins with two core pillars:</p>
-      <p data-i18n="mvp.intro" data-audience="partners">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life, in Cluj, before we expand. This starting plan has four pillars:</p>
+      <p data-i18n="mvp.intro" data-audience="public">EarthPatchers begins through focused pilots with interested schools, leaders, and early partners, and starts with two core pillars:</p>
+      <p data-i18n="mvp.intro" data-audience="partners">EarthPatchers is starting with a focused 36-month plan that proves the platform works in real life through pilots with interested schools, leaders, and early partners before we expand. This starting plan has four pillars:</p>
 
       <!-- MVP Pillars -->
       <div class="pillars">
@@ -405,7 +414,7 @@ One Stitch at a Time</h1>
             <img src="assets/Tribes_diverse_last.png" alt="Tribes" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar2.title">Tribes</h3>
-          <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups in Cluj with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
+          <p class="pillar__text" data-i18n="mvp.pillar2.text">Small pilot groups with a realistic rhythm: monthly or seasonal challenges. Clear rules, reporting, and adult/guardian involvement where needed.</p>
           <a href="#module/tribes" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
         <div class="pillar" data-audience="partners">
@@ -413,7 +422,7 @@ One Stitch at a Time</h1>
             <img src="assets/Earths_Side_of_the_Story_1200x1200_last.png" alt="Earth's Side of the Story" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar4.title">Earth’s Side of the Story</h3>
-          <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.</p>
+          <p class="pillar__text" data-i18n="mvp.pillar4.text">A step-by-step learning-and-action world with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions. Over time, missions can be tailored by location through collaboration with trusted local NGOs and partners.</p>
           <a href="#module/earth-side" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
         <div class="pillar" data-audience="partners">
@@ -421,7 +430,7 @@ One Stitch at a Time</h1>
             <img src="assets/Market_Hut_last_one.png?v=2" alt="Market Hut" class="pillar__image" loading="lazy">
           </a>
           <h3 class="pillar__title" data-i18n="mvp.pillar3.title">Market Hut</h3>
-          <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings for Cluj. Safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior.</p>
+          <p class="pillar__text" data-i18n="mvp.pillar3.text">Local swap and give-away listings with safety-by-design: clear exchange rules, safe pickup practices, and moderation for suspicious behavior. Patch Coins will have practical use here in future modules like Market Hut and Games Room.</p>
           <a href="#module/market-hut" class="card__link pillar__explore-link"><span data-i18n="nextsteps.explore">Explore</span> &rarr;</a>
         </div>
       </div>
@@ -438,7 +447,7 @@ One Stitch at a Time</h1>
           <div class="timeline__phase">
             <div class="timeline__dot"></div>
             <div class="timeline__label"><span data-i18n="mvp.phase1.label">Phase 1</span> &middot; <span data-i18n="mvp.phase1.months">Months 0–12</span></div>
-            <h3 class="timeline__title" data-i18n="mvp.phase1.title">Prove the Core Loop in Cluj</h3>
+            <h3 class="timeline__title" data-i18n="mvp.phase1.title">Prove the Core Loop in Early Pilots</h3>
             <ul class="timeline__list">
               <li data-i18n="mvp.phase1.item1">Launch the missions library and start tracking progress</li>
               <li data-i18n="mvp.phase1.item2">Run the first youth community pilot groups with strong safety rules</li>
@@ -480,7 +489,7 @@ One Stitch at a Time</h1>
             </ul>
             <div class="timeline__goal">
               <div class="timeline__goal-label">Goal</div>
-              <p class="timeline__goal-text" data-i18n="mvp.phase3.goal">EarthPatchers becomes repeatable as a model, starting from Cluj.</p>
+              <p class="timeline__goal-text" data-i18n="mvp.phase3.goal">EarthPatchers becomes repeatable as a model that can adapt to different locations.</p>
             </div>
           </div>
         </div>
@@ -493,23 +502,23 @@ One Stitch at a Time</h1>
         </div>
         <div class="section__divider"></div>
         <ul class="metrics">
-          <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Missions are completed and people return.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item1">Missions are completed and people return for more</span></li>
-          <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item2">Youth participation is safe, supportive, and meaningful</span></li>
-          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/Circular_exchange_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item3">Circular exchange works smoothly with trust and moderation</span></li>
-          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/povestea_pamantului_jolly.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item4">The staged learning layer helps people understand "why" and "what to do next"</span></li>
-          <li><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost"><img src="assets/Cluj becomes a strong foundation.png" alt="" aria-hidden="true"></span> <span data-i18n="mvp.success.item5">Cluj becomes a strong foundation for future expansion</span></li>
+          <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Missions are completed and people return.png" alt="Missions are completed and people return for more"></span> <span data-i18n="mvp.success.item1">Missions are completed and people return for more</span></li>
+          <li><span class="metrics__icon metrics__icon--missions"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="Youth participation is safe, supportive, and meaningful"></span> <span data-i18n="mvp.success.item2">Youth participation is safe, supportive, and meaningful</span></li>
+          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost metrics__icon--missions-boost-wide"><img src="assets/Circular_exchange_jolly.png" alt="Circular exchange works smoothly with trust and moderation"></span> <span data-i18n="mvp.success.item3">Circular exchange works smoothly with trust and moderation</span></li>
+          <li data-audience="partners"><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost metrics__icon--missions-boost-wide"><img src="assets/povestea_pamantului_jolly.png" alt="The staged learning layer helps people understand why and what to do next"></span> <span data-i18n="mvp.success.item4">The staged learning layer helps people understand "why" and "what to do next"</span></li>
+          <li><span class="metrics__icon metrics__icon--missions metrics__icon--missions-boost metrics__icon--missions-pilot"><img src="assets/pilot.png" alt="Early pilots become a strong foundation for future expansion"></span> <span data-i18n="mvp.success.item5">Early pilots become a strong foundation for future expansion</span></li>
         </ul>
       </div>
       <div class="callout callout--golden" data-audience="public">
         <h4 class="callout__title" data-i18n="mvp.more.title">Want to see everything we would like to build?</h4>
         <p class="callout__text" data-i18n="mvp.more.text">Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.</p>
         <p class="callout__actions">
-          <a href="partners.html#mvp" class="btn btn--secondary" data-i18n="mvp.more.cta">Go to Partner View</a>
+          <a href="index.html?view=partners#mvp" class="btn btn--secondary" data-i18n="mvp.more.cta">Go to Partner View</a>
         </p>
       </div>
 
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
@@ -605,7 +614,7 @@ One Stitch at a Time</h1>
       </div>
 
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
@@ -623,20 +632,22 @@ One Stitch at a Time</h1>
 
 Missions come in sizes that fit busy life: • Tiny missions (10–20 minutes) • Weekend missions (1–2 hours) • Team missions (families, schools, clubs, Tribes)
 
-Adults can filter missions by time, topic, and skills (repairing, organising, teaching, gardening, design, photography), so helping can match what people are actually good at.</div>
+Adults can filter missions by time, topic, and skills (repairing, organising, teaching, gardening, design, photography), so helping can match what people are actually good at.
+
+For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until website mission validation is ready.</div>
         <div class="module-rewards">
           <h4 class="module-rewards__title" data-i18n="missions-hq.rewards.title">Rewards stay simple:</h4>
           <div class="feature-grid mission-rewards-grid">
             <div class="feature-card">
-              <div class="feature-card__icon feature-card__icon--missions-coin"><img src="assets/50_PC.png" alt="" aria-hidden="true"></div>
+              <div class="feature-card__icon feature-card__icon--missions-coin feature-card__icon--missions-coin-primary"><img src="assets/50_PC.png" alt="Patch Coins"></div>
               <p class="feature-card__text" data-i18n="missions-hq.rewards.coins">Patch Coins: you earn them through missions and learning, and use them in Market Hut (and later in Games Room).</p>
             </div>
             <div class="feature-card">
-              <div class="feature-card__icon feature-card__icon--missions-coin"><img src="assets/badge.png" alt="" aria-hidden="true"></div>
+              <div class="feature-card__icon feature-card__icon--missions-coin"><img src="assets/badge.png" alt="Badges"></div>
               <p class="feature-card__text" data-i18n="missions-hq.rewards.badges">Badges: they are about who you are becoming (brave, kind, curious).</p>
             </div>
             <div class="feature-card">
-              <div class="feature-card__icon feature-card__icon--missions-coin"><img src="assets/Achievement.png" alt="" aria-hidden="true"></div>
+              <div class="feature-card__icon feature-card__icon--missions-coin"><img src="assets/Achievement.png" alt="Achievements"></div>
               <p class="feature-card__text" data-i18n="missions-hq.rewards.achievements">Achievements: the things you did, like stickers in your adventure notebook.</p>
             </div>
           </div>
@@ -655,7 +666,7 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
     <!-- ===== MODULE: PATCH COINS ===== -->
     <section id="page-module-patch-coins" class="page page--module">
       <div class="module-hero">
-        <img src="assets/50_PC.png" alt="Patch Coins" class="module-hero__image" loading="lazy">
+        <img src="assets/patch-coins-page-icon.png" alt="Patch Coins" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="patch-coins.title">Patch Coins</h1>
@@ -663,7 +674,8 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
       </div>
       <div class="module-body">
         <div class="rich-text module-body__intro" data-i18n="patch-coins.desc" data-i18n-html>
-          Patch Coins are EarthPatchers points for effort and learning.
+          <p>Patch Coins are EarthPatchers thank-you points for effort and learning.</p>
+          <p>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until in-platform mission validation is ready.</p>
         </div>
         <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
@@ -679,7 +691,7 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
     <!-- ===== MODULE: SMALL MISSIONS ===== -->
     <section id="page-module-small-missions" class="page page--module">
       <div class="module-hero">
-        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Small Missions" class="module-hero__image" loading="lazy">
+        <img src="assets/small-missions-page.png" alt="Small Missions" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="small-missions.title">Small Missions</h1>
@@ -693,6 +705,17 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="small-missions.why">Small Missions make action feel possible. They are how busy days still turn into useful steps.</p>
         </div>
+        <section id="small-missions" class="missions-section">
+          <div class="missions-section__header">
+            <h2>Quest Board</h2>
+            <p class="mission-intro">
+              Small, clear missions you can do without an internet scavenger hunt.
+              You save money, learn something useful, and yes - the planet gets a patch too.
+            </p>
+          </div>
+          <div id="mission-filters"></div>
+          <div id="mission-grid"></div>
+        </section>
       </div>
       <div class="module-nav">
         <a href="#module/patch-coins" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
@@ -703,7 +726,7 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
     <!-- ===== MODULE: MEDIUM MISSIONS ===== -->
     <section id="page-module-medium-missions" class="page page--module">
       <div class="module-hero">
-        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Medium Missions" class="module-hero__image" loading="lazy">
+        <img src="assets/medium-missions-page.png" alt="Medium Missions" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="medium-missions.title">Medium Missions</h1>
@@ -717,6 +740,16 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="medium-missions.why">Medium Missions turn good intentions into visible progress. They give Tribes and families something concrete to do together.</p>
         </div>
+        <section id="medium-missions-board" class="missions-section">
+          <div class="missions-section__header">
+            <h2>Quest Board</h2>
+            <p class="mission-intro">
+              Medium missions need a little more time, but they still stay practical, playful, and realistic for family life.
+            </p>
+          </div>
+          <div id="medium-mission-filters"></div>
+          <div id="medium-mission-grid"></div>
+        </section>
       </div>
       <div class="module-nav">
         <a href="#module/small-missions" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
@@ -751,7 +784,7 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
     <!-- ===== MODULE: LARGE MISSIONS ===== -->
     <section id="page-module-large-missions" class="page page--module">
       <div class="module-hero">
-        <img src="assets/Missions_HQ_1200x1200_clean_fullbleed_last_one.png?v=2" alt="Large Missions" class="module-hero__image" loading="lazy">
+        <img src="assets/large-missions-page.png" alt="Large Missions" class="module-hero__image" loading="lazy">
         <div class="module-hero__content">
           <span class="module-hero__badge module-hero__badge--mvp" data-i18n="module.mvp-badge">Base Camp</span>
           <h1 data-i18n="large-missions.title">Large Missions</h1>
@@ -765,6 +798,16 @@ Adults can filter missions by time, topic, and skills (repairing, organising, te
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="large-missions.why">Large Missions show what a community can do when effort is shared. They turn courage, planning, and teamwork into visible local change.</p>
         </div>
+        <section id="large-missions-board" class="missions-section">
+          <div class="missions-section__header">
+            <h2>Quest Board</h2>
+            <p class="mission-intro">
+              Large missions are bigger adventures for shared effort, stronger planning, and visible local impact.
+            </p>
+          </div>
+          <div id="large-mission-filters"></div>
+          <div id="large-mission-grid"></div>
+        </section>
       </div>
       <div class="module-nav">
         <a href="#module/medium-missions" class="module-nav__link module-nav__prev" data-i18n="module.prev">&larr; Previous</a>
@@ -827,7 +870,7 @@ Tribe “camp rules” keep things kind and clean: • Be kind • Keep private 
         </div>
       </div>
       <div class="module-body">
-        <div class="rich-text module-body__intro" data-i18n="market-hut.desc" data-i18n-html>The Market Hut is a Cluj-first circular exchange where people reuse items instead of buying new. Patch Coins make it work without awkward item-for-item matching: you earn coins by helping, then use coins to choose items.
+        <div class="rich-text module-body__intro" data-i18n="market-hut.desc" data-i18n-html>The Market Hut is a circular exchange where people reuse items instead of buying new. Patch Coins make it work without awkward item-for-item matching: you earn coins by helping, then use coins to choose items.
 
 Safety guidance is built into the flow. Adults choose their visibility, but children’s faces are never allowed.</div>
         <div class="callout callout--golden module-body__why">
@@ -861,11 +904,11 @@ Safety guidance is built into the flow. Adults choose their visibility, but chil
         </div>
       </div>
       <div class="module-body">
-        <div class="rich-text module-body__intro" data-i18n="earth-side.desc" data-i18n-html>Earth’s Side of the Story is the learning-and-action world that starts in Cluj and connects learning to missions. It has three doors:
+        <div class="rich-text module-body__intro" data-i18n="earth-side.desc" data-i18n-html>Earth’s Side of the Story is the learning-and-action world that connects learning to missions. It has three doors:
 
 1) My Hazards • Explains hazards in a friendly way: - natural hazards - natural hazards made worse by pollution/changes people cause - hazards caused directly by people • Short learning cards and quizzes earn Patch Coins.
 
-2) Contamination & Recovery Zone (Cluj map) Adults (and older teens where appropriate) can add a pin (photo + short note) for: • littering hot spots • damaged areas / broken things • trees cut where they shouldn’t be • places needing care
+2) Contamination & Recovery Zone (local map where relevant) Adults (and older teens where appropriate) can add a pin (photo + short note) for: • littering hot spots • damaged areas / broken things • trees cut where they shouldn’t be • places needing care
 
 Pins can become missions (or requests for missions). Later, this map can include verified helper pins: • Helpers (NGOs, researchers, community groups) • Missions (ways to help) • Reports (things needing attention)
 
@@ -957,7 +1000,7 @@ Pins can become missions (or requests for missions). Later, this map can include
         </div>
       </div>
       <div class="module-body">
-        <div class="rich-text module-body__intro" data-i18n="eco-shops.desc" data-i18n-html>Eco Shops is a Cluj-first guide to sustainable products and local shops with ratings and comments to keep things honest. Quality rules reduce spam: • You can review or add products after earning enough Patch Coins and completing a verified mission. • New products are submitted via a template (photo, where to buy, materials, why it’s better, what to watch out for). • Leaders, also called MasterPatchers, verify entries before they go live.</div>
+        <div class="rich-text module-body__intro" data-i18n="eco-shops.desc" data-i18n-html>Eco Shops is a guide to sustainable products and local shops with ratings and comments to keep things honest. Quality rules reduce spam: • You can review or add products after earning enough Patch Coins and completing a verified mission. • New products are submitted via a template (photo, where to buy, materials, why it’s better, what to watch out for). • Leaders, also called MasterPatchers, verify entries before they go live.</div>
         <div class="callout callout--golden module-body__why">
           <h4 class="callout__title" data-i18n="module.why">Why It Matters</h4>
           <p class="callout__text" data-i18n="eco-shops.why">Finding truly sustainable products is hard. This directory keeps things honest with community reviews, verified missions, and Leader oversight (MasterPatcher role).</p>
@@ -1102,22 +1145,22 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
         <div class="section__divider"></div>
         <div class="values-grid">
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/sustainability.png" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/sustainability.png" alt="Sustainability"></div>
             <h4 class="value-card__title" data-i18n="about.value1.title">Sustainability</h4>
             <p class="value-card__text" data-i18n="about.value1.text">Real action over awareness campaigns. Small steps that add up to lasting change.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/community.png" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/community.png" alt="Community"></div>
             <h4 class="value-card__title" data-i18n="about.value2.title">Community</h4>
             <p class="value-card__text" data-i18n="about.value2.text">Local support, shared missions, and the power of acting together.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/Transparency.png" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/Transparency.png" alt="Transparency"></div>
             <h4 class="value-card__title" data-i18n="about.value3.title">Transparency</h4>
             <p class="value-card__text rich-text" data-i18n="about.value3.text" data-i18n-html>Clear budgets. Public plans. Donations explained.<br>You know what you support. You know where it goes.</p>
           </div>
           <div class="value-card">
-            <div class="value-card__icon"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="" aria-hidden="true"></div>
+            <div class="value-card__icon"><img src="assets/Youth participation is safe supportive and meaningful.png" alt="Child Safety"></div>
             <h4 class="value-card__title" data-i18n="about.value4.title">Child Safety</h4>
             <p class="value-card__text" data-i18n="about.value4.text">Privacy-by-design, age-appropriate content, and guardian involvement at every step.</p>
           </div>
@@ -1130,7 +1173,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
           <h2 data-i18n="about.how.title">Where We Start</h2>
         </div>
         <div class="section__divider"></div>
-        <p data-i18n="about.how.text">We will work through partnerships with schools and NGOs, pilot programs in Cluj, and community voting to decide what happens next. Everything will start small, be tested, and grow based on real feedback.</p>
+        <p data-i18n="about.how.text">We will work through partnerships with schools, NGOs, local leaders, and early pilot partners, plus community voting to decide what happens next. Everything will start small, be tested, and grow based on real feedback. Over time, missions can be tailored by location through collaboration with trusted local NGOs and partners.</p>
       </div>
 
       <div class="cta-strip page-end-cta">
@@ -1142,7 +1185,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       </div>
 
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
@@ -1158,7 +1201,7 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       <p id="contact-copy-status" class="donate-status" aria-live="polite"></p>
 
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
@@ -1219,13 +1262,17 @@ If discovery isn’t supported yet, the new city stays “sleeping” until the 
       <p id="donate-status" class="donate-status" aria-live="polite"></p>
 
       <div class="footer-note page-footer-note">
-        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, starting in Cluj.</p>
+        <p data-i18n="footer.text">EarthPatchers — Community-powered sustainability, built through pilots and local collaboration.</p>
       </div>
     </section>
 
 </main>
 
   <!-- Scripts -->
+  <script src="js/missions-small.js"></script>
+  <script src="js/missions-large.js"></script>
+  <script src="js/missions-medium.js"></script>
+  <script src="js/missions-ui.js"></script>
   <script src="js/menu-trail.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/audience.js"></script>

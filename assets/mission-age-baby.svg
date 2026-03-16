@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Mission age icon</title>
+  <desc id="desc">A playful stitched-style baby face icon.</desc>
+  <defs>
+    <linearGradient id="faceFill" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD58F"/>
+      <stop offset="100%" stop-color="#F0B15D"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="#E7F1D6" stroke="#8FB36B" stroke-width="2.5"/>
+  <circle cx="32" cy="34" r="15.5" fill="url(#faceFill)" stroke="#8B4513" stroke-width="2.5"/>
+  <path d="M26.5 28.5c.9-3.2 3.1-5 5.8-6.2 2.8-1.2 4.8-3 5.6-6.3 2.5 2.8 3.1 6.1 1.8 9.3"
+        fill="none" stroke="#8B4513" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="27" cy="34" r="1.9" fill="#2D6B3F"/>
+  <circle cx="37" cy="34" r="1.9" fill="#2D6B3F"/>
+  <path d="M27.5 41c2.6 2.1 6.4 2.1 9 0" fill="none" stroke="#8B4513" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="23" cy="38.5" r="2.2" fill="#F49A8B" opacity=".7"/>
+  <circle cx="41" cy="38.5" r="2.2" fill="#F49A8B" opacity=".7"/>
+  <circle cx="18" cy="20" r="2.1" fill="#F0C040"/>
+  <circle cx="47" cy="20" r="1.9" fill="#F0C040"/>
+</svg>

@@ -15,22 +15,32 @@ const I18n = {
         'overview.problem.text': 'We are not short on information.<br>We are short on time, clarity, and simple ways to act.<br><br>The missions that teach you something useful are scattered like socks after laundry day: everywhere, when all you want is to have them neatly in a drawer, where they belong.<br><br>You find them on different websites, in long reports, across social media... exactly the kind of “hunt” you want to do when one hand is on the washing line, one is on the child, the dog is barking at the door, and your phone lights up with a work message: “You forgot to reply to the client!”... right?<br><br>EarthPatchers aims to gather them in one place so you can move straight to “let’s do this.”<br><br><span class="overview-problem-lead">Then you choose how:</span><ul><li><strong>At home:</strong> small, quick missions for busy days.</li><li><strong>In a Tribe:</strong> build your own team or join one already started by people like you.</li><li><strong>With NGOs:</strong> join a trusted NGO’s Tribe and help with their missions.</li></ul>',
         'overview.problem.solution': '<span class="overview-problem-signoff">No stress. No worries.</span><br>Just practical action, shared effort, and the reminder that big things do not get fixed when you try to do them alone.',
         'overview.mission.title': 'What Will an EarthPatchers Mission Look Like?',
+        'overview.mission.text': 'A mission is one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. EarthPatchers missions are clear, safe, and doable for different ages and schedules. A realistic rhythm is one to three missions a month, when life allows.',
         'overview.mission.small.examples': '<ul><li>Time: about 1-20 minutes, either once or repeated over a few days until the habit sticks.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>',
         'overview.tribe.leaders': '<p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p>',
-        'overview.trust.missions': '<p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p>',
-      'overview.trust.how': '<p>To begin with, we will test missions <strong>offline</strong> while the <strong>website</strong> functionality is still <strong>under construction</strong>.</p>',
-        'missions-hq.rewards.coins': 'Patch Coins: you will earn them through missions and learning, and use them in later wonderful things we will create, like Market Hut and Games Room.',
+        'overview.trust.missions': '<p>For now, <strong>Patch Coins</strong> will be tracked as a visible thank-you for real effort until the features that use them are ready. Later, they will have practical use in future modules like <strong>Market Hut</strong> and <strong>Games Room</strong>.</p><p>Until mission functionality is in place on the website, missions can be validated by leaders, also called <strong>MasterPatchers</strong>, or by sending the requested proof to us by email.</p>',
+        'overview.trust.how': '<p>For now, missions run with <strong>offline</strong> validation while more website functionality is still being built. Leaders (MasterPatchers) or email proof are used to confirm completion.</p>',
+        'patch-counter.info': 'Mock Patch Coin counter for now. It is not implemented yet.',
+        'patch-counter.link': 'More about Patch Coins',
+        'missions-hq.rewards.coins': 'Patch Coins: you earn them through missions and learning, and they later have practical use in modules like Market Hut and Games Room.',
+        'missions-hq.desc': "<p>Missions HQ is where EarthPatchers begins. It is a library of real-life missions for kids, teens, and adults, designed to make saving the Earth feel doable.</p><p>It supports different lives:</p><ul><li>tiny missions for busy families (10-20 minutes)</li><li>weekend missions for deeper impact (1-2 hours)</li><li>team missions for schools, youth groups, and community teams</li></ul><p>For adults, missions are matched to skills (repairing, organising, teaching, gardening, design, photography) and time available, so volunteering feels efficient and rewarding. For kids, missions feel like adventures.</p><p>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until website mission validation is ready.</p><p>This structure also makes projects easier to repeat across communities: once a mission works well, it can be reused by other groups without starting from scratch.</p>",
+        'missions-hq.rewards.badges': 'Badges: they reflect who you are becoming (brave, kind, curious).',
+        'missions-hq.rewards.achievements': 'Achievements: they capture what you did, like stickers in your adventure notebook.',
+        'missions-hq.why': 'Missions turn caring for the planet into an adventure. They give families and young people a clear starting point: one mission at a time, building real change step by step.',
         'about.mission.text': 'Make it simple to save money and teach children useful life skills, without having your time slip away while “searching the internet.” EarthPatchers aims to offer clear missions, Tribes (small teams), and ideas for reusing and repairing. Less waste. Less “we bought another one again,” so money does not keep flying out the window.<br><br>Bonus: we repair the planet too, one mission at a time. We start with what hurts you the most: time, budget, and daily chaos. With superheroes, but without all the drama. Just small steps, done together.',
         'about.vision.text': 'A world where reusing and repairing are normal, like “who left the toilet seat up?” (in other words: daily).',
         'about.vision.expand': 'Local communities doing small but clever things, saving money on bills and shopping, and raising resourceful children who know how to repair, choose better, and not panic over a stubborn zipper.',
         'about.why.text': '<p>Because for a while now, it has been “that brilliant idea someone should build.”</p><p>We’ve shared it with over 1,000 people. It collected feedback. It grew. And the reaction was almost always the same:</p><p>“Wow. This should exist.”</p><p>Most of us live from one short horizon to the next: what I do tomorrow, this month, this quarter. We rarely have the mental space for “what do we do in 10 years?” or “how could I help myself while helping the planet too?”</p><p>Not out of indifference. Out of reality.</p><p>EarthPatchers was born from this exact question: How do we help busy people do something valuable quickly, without searching for needles in haystacks?</p><p>So we changed the big question: not “How do we build everything?” but “Where do we start?”</p><p>Today, with the help of AI and a stubborn persistence, we are starting small. Clear. Practical.</p><p>We are not promising to save your wallet and the planet in one weekend.</p><p>We are promising a simpler path from “someone should” to “let’s do this.”</p><p>Together.</p>',
-        'mvp.intro': 'EarthPatchers will start with a focused plan in Cluj and will begin with two core pillars:',
+        'mvp.intro': 'EarthPatchers will begin through focused pilots with interested schools, leaders, and early partners, and will start with two core pillars:',
         'mvp.more.title': 'Want to see everything we would like to build?',
         'mvp.more.text': 'Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.',
         'mvp.more.cta': 'Go to Partner View'
       },
       partners: {
         'hero.tagline': '<span class="hero__tagline-line hero__tagline-line--fixed">Patching the Earth Together,</span><span class="hero__tagline-line hero__tagline-line--fixed">One Stitch at a Time</span>',
+        'overview.problem.title': 'What Problem Does EarthPatchers Solve',
+        'overview.problem.text': 'We are not short on information.<br>We are short on time, clarity, and simple ways to act.<br><br>The missions that teach you something useful are scattered like socks after laundry day: everywhere, when all you want is to have them neatly in a drawer, where they belong.<br><br>You find them on different websites, in long reports, across social media... exactly the kind of “hunt” you want to do when one hand is on the washing line, one is on the child, the dog is barking at the door, and your phone lights up with a work message: “You forgot to reply to the client!”... right?<br><br>EarthPatchers aims to gather them in one place so you can move straight to “let’s do this.”<br><br><span class="overview-problem-lead">Then you choose how:</span><ul><li><strong>At home:</strong> small, quick missions for busy days.</li><li><strong>In a Tribe:</strong> build your own team or join one already started by people like you.</li><li><strong>With NGOs:</strong> join a trusted NGO’s Tribe and help with their missions.</li></ul>',
+        'overview.problem.solution': '<span class="overview-problem-signoff">No stress. No worries.</span><br>Just practical action, shared effort, and the reminder that big things do not get fixed when you try to do them alone.',
         'overview.mission.small.examples': '<ul><li>Time: about 1-20 minutes, either once or repeated over a few days until the habit sticks.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>'
       }
     },
@@ -42,21 +52,31 @@ const I18n = {
         'overview.problem.text': 'Nu ducem lipsă de informații.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile care te învață ceva folositor sunt împrăștiate ca șosetele după spălat: peste tot, când tu le-ai vrea frumos în sertar, la locul lor.<br><br>Le găsești pe site-uri diferite, în rapoarte lungi, prin social media… adică fix genul de „vânătoare” pe care vrei să o faci când ai o mână pe sfoara de rufe, una pe copil, câinele latră la ușă, iar pe telefon îți vine mesaj de la serviciu: „Ai uitat să-i răspunzi clientului!”… nu?<br><br>EarthPatchers își propune să le adune într-un singur loc, ca să treci direct la „hai să facem”.<br><br><span class="overview-problem-lead">Apoi alegi cum vrei:</span><ul><li><strong>Acasă:</strong> misiuni mici, rapide, pentru zilele aglomerate.</li><li><strong>În Trib:</strong> îți faci echipa ta sau te alături uneia deja pornite de oameni ca tine.</li><li><strong>Cu ONG-uri:</strong> intri într-un Trib al unui ONG de încredere și ajuți la misiunile lor.</li></ul>',
         'overview.problem.solution': '<span class="overview-problem-signoff">Fără stress. Fără griji.</span><br>Doar acțiune practică, efort împărțit și reamintirea că lucrurile mari nu se repară când încerci să le faci de unul singur.',
         'overview.mission.title': 'Cum va arăta o misiune EarthPatchers?',
+        'overview.mission.text': 'O misiune este o acțiune practică ce ajută natura, cartierul sau comunitatea ta și care poate fi dusă la capăt în viața reală. Misiunile EarthPatchers sunt clare, sigure și realizabile pentru vârste și programe diferite. Un ritm realist este una până la trei misiuni pe lună, când programul îți permite.',
         'overview.mission.small.examples': '<ul><li>Timp: aproximativ 1–20 de minute, fie o singură dată, fie repetat câteva zile, până când obiceiul devine o rutină.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găseste 2 lucruri care trebuie mâncate azi sau mâine și muta-le în față.</li></ul>',
         'overview.tribe.leaders': '<p><strong>Liderii de Trib</strong> vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe <strong>Monede Patch</strong> pentru această responsabilitate extra.</p>',
-        'overview.trust.missions': '<p>Deocamdată, <strong>Monedele Patch</strong> vor fi doar contorizate, până când vom construi funcționalitățile viitoare în care vor fi folosite.</p>',
-        'overview.trust.how': '<p>Pentru început, vom testa misiunile <strong>offline</strong>, cât timp funcționalitățile <strong>website-ului</strong> sunt încă <strong>în construcție</strong>.</p>',
-        'missions-hq.rewards.coins': 'Monede Patch: le vei câștiga din misiuni și învățare și le vei folosi mai târziu în lucrurile minunate pe care le vom construi, cum ar fi Căsuța de Schimb și Camera de Jocuri.',
+        'overview.trust.missions': '<p>Deocamdată, <strong>Monedele Patch</strong> vor fi contorizate ca un mulțumesc vizibil pentru efortul real, până când vom construi funcționalitățile în care vor fi folosite. Mai târziu, vor avea utilitate practică în module viitoare precum <strong>Căsuța de Schimb</strong> și <strong>Camera de Jocuri</strong>.</p><p>Până când funcționalitatea de misiuni va fi gata pe site, misiunile pot fi validate de lideri, numiți și <strong>MasterPatchers</strong>, sau prin trimiterea dovezii cerute pe email.</p>',
+        'overview.trust.how': '<p>Deocamdată, misiunile funcționează cu validare <strong>offline</strong>, cât timp construim mai multe funcționalități pe site. Confirmarea se face prin lideri (MasterPatchers) sau prin dovadă trimisă pe email.</p>',
+        'patch-counter.info': 'Contor demonstrativ de Monede Patch pentru moment. Nu este implementat încă.',
+        'patch-counter.link': 'Mai multe despre Monede Patch',
+        'missions-hq.rewards.coins': 'Monede Patch: le câștigi din misiuni și învățare, iar ele au apoi utilitate practică în module precum Căsuța de Schimb și Camera de Jocuri.',
+        'missions-hq.desc': "<p>Cartierul Misiunilor este locul unde începe EarthPatchers. Este o bibliotecă de misiuni din viața reală pentru copii, adolescenți și adulți, gândită ca salvarea Pământului să pară ceva realizabil.</p><p>Se potrivește cu stiluri de viață diferite:</p><ul><li>misiuni mici pentru familii ocupate (10-20 minute)</li><li>misiuni de weekend pentru impact mai mare (1-2 ore)</li><li>misiuni de echipă pentru școli, grupuri de tineri și echipe din comunitate</li></ul><p>Pentru adulți, misiunile sunt potrivite cu abilitățile (reparat, organizat, predat, grădinărit, design, fotografie) și cu timpul disponibil, astfel încât voluntariatul să fie eficient și satisfăcător. Pentru copii, misiunile se simt ca niște aventuri.</p><p>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea misiunilor va fi gata pe site.</p><p>Structura aceasta face proiectele mai ușor de repetat în comunități diferite: odată ce o misiune funcționează bine, poate fi refolosită de alte grupuri fără să pornească de la zero.</p>",
+        'missions-hq.rewards.badges': 'Insignele: reflectă cine devii (curajos, bun, curios).',
+        'missions-hq.rewards.achievements': 'Realizările: surprind ce ai făcut, ca niște stickere în caietul tău de aventuri.',
+        'missions-hq.why': 'Misiunile transformă grija pentru planetă într-o aventură. Oferă familiilor și tinerilor un punct de plecare clar: o misiune o dată, construind schimbare reală pas cu pas.',
         'about.mission.text': 'Să fie simplu să economisești bani și să-i înveți pe cei mici lucruri de folos, fără să-ți mai mănânce timpul „căutatul pe internet”. EarthPatchers își propune misiuni clare, Triburi (echipe mici) și idei de refolosit și reparat. Mai puțină risipă. Mai puțin „iar am cumpărat încă unul”, ca să nu aruncăm banii pe fereastră.<br><br>Bonus: reparăm și planeta, misiune cu misiune. Începem cu ce te doare: timpul, bugetul și haosul zilnic. Cu Supereroi, dar fără toată drama. Doar pași mici, făcuți împreună.',
         'about.vision.text': 'O lume în care refolositul și reparatul sunt normale, ca „cine a lăsat colacul ridicat?” (adică zilnic).',
         'about.vision.expand': 'Comunități locale care fac lucruri mici, dar istețe, economisesc la facturi și cumpărături și cresc copii descurcăreți: știu să repare, să aleagă mai bine și să nu se sperie de un fermoar încăpățânat.',
         'about.why.text': ' <p>Pentru ca de ceva vreme a fost „ideea aia genială pe care cineva ar trebui să o facă”.</p><p>Ideea a ajuns din vorbă în vorbă la urechile a peste 1000 de oameni. A primit feedback. A crescut. Reacția era mereu aceeași:</p><p>„Wow. Ar trebui să existe.”</p><p>Majoritatea dintre noi trăim din aproape în aproape: ce fac mâine, luna asta, trimestrul ăsta. Rar avem spațiu mental pentru „ce facem peste 10 ani” sau cum aș putea să mă ajut pe mine, ajutând și planeta în același timp.</p><p>Nu din indiferență. Din realitate.</p><p>EarthPatchers s-a născut tocmai din această întrebare: Cum îi ajutăm pe oameni ocupați să facă rapid ceva valoros — fără să mai caute ace în carul cu fân?</p><p>Așa că am schimbat întrebarea mare: nu „Cum construim totul?”, ci „Cu ce începem?”</p><p>Astăzi, cu ajutorul AI și multă perseverență, începem mic. Clar. Concret.</p><p>Nu promitem că salvăm buzunarele și planeta într-un weekend.</p><p>Promitem un drum mai simplu de la „ar trebui” la „hai să facem”.</p><p>Împreună.</p>',
-        'mvp.intro': 'EarthPatchers va începe cu un plan concentrat în Cluj și va porni cu doi piloni de bază:',
+        'mvp.intro': 'EarthPatchers va începe prin programe pilot concentrate, alături de școli interesate, lideri și parteneri timpurii, și va porni cu doi piloni de bază:',
         'mvp.more.title': 'Vrei să vezi tot ce am dori să construim?',
         'mvp.more.text': 'Schimbă la Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.',
         'mvp.more.cta': 'Mergi la Varianta Parteneri'
       },
       partners: {
+        'overview.problem.title': 'Ce problemă rezolvă EarthPatchers',
+        'overview.problem.text': 'Nu ducem lipsă de informații.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile care te învață ceva folositor sunt împrăștiate ca șosetele după spălat: peste tot, când tu le-ai vrea frumos în sertar, la locul lor.<br><br>Le găsești pe site-uri diferite, în rapoarte lungi, prin social media… adică fix genul de „vânătoare” pe care vrei să o faci când ai o mână pe sfoara de rufe, una pe copil, câinele latră la ușă, iar pe telefon îți vine mesaj de la serviciu: „Ai uitat să-i răspunzi clientului!”… nu?<br><br>EarthPatchers își propune să le adune într-un singur loc, ca să treci direct la „hai să facem”.<br><br><span class="overview-problem-lead">Apoi alegi cum vrei:</span><ul><li><strong>Acasă:</strong> misiuni mici, rapide, pentru zilele aglomerate.</li><li><strong>În Trib:</strong> îți faci echipa ta sau te alături uneia deja pornite de oameni ca tine.</li><li><strong>Cu ONG-uri:</strong> intri într-un Trib al unui ONG de încredere și ajuți la misiunile lor.</li></ul>',
+        'overview.problem.solution': '<span class="overview-problem-signoff">Fără stress. Fără griji.</span><br>Doar acțiune practică, efort împărțit și reamintirea că lucrurile mari nu se repară când încerci să le faci de unul singur.',
         'overview.mission.small.examples': '<ul><li>Timp: aproximativ 1–20 de minute, fie o singură dată, fie repetat câteva zile, până când obiceiul devine o rutină.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găseste 2 lucruri care trebuie mâncate azi sau mâine și muta-le în față.</li></ul>'
       }
     }
@@ -116,6 +136,8 @@ const I18n = {
       'theme.dark': 'Dark',
       'theme.auto.note': "Dark mode was auto-enabled to save energy. Friendly reminder: turn off lights you don't need.",
       'theme.manual.daytime-note': 'You kept dark mode on. If you prefer, you can switch to light mode for daytime at any time.',
+      'patch-counter.info': 'Mock Patch Coin counter for now. It is not implemented yet.',
+      'patch-counter.link': 'More about Patch Coins',
 
       // Module names
       'mod.missions-hq': 'Missions HQ',
@@ -137,19 +159,19 @@ const I18n = {
 
       // Mission size pages
       'patch-coins.title': 'Patch Coins',
-      'patch-coins.desc': '<p>Patch Coins are EarthPatchers points for effort and learning. They are earned when missions are completed and validated, and from learning journeys with quizzes.</p><ul><li>They keep progress visible for kids, teens, and adults.</li><li>They reward real effort and useful habits.</li><li>Later, they unlock practical use in modules like Market Hut and Games Room.</li></ul>',
-      'patch-coins.why': 'Patch Coins make progress visible, fair, and motivating. They help turn small consistent action into a clear journey.',
+      'patch-coins.desc': '<p><span class=\"patch-coins-desc__primary\">Patch Coins are EarthPatchers thank-you points for effort, care, and learning.</span> <span class=\"patch-coins-desc__secondary\">They are earned when missions are completed and validated, and from learning journeys with quizzes.</span></p><ul><li>They keep progress visible for kids, teens, and adults.</li><li>They act as a clear thank-you for real effort and useful habits.</li><li>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until in-platform mission validation is ready.</li><li>Later, they have practical use in future modules like Market Hut and Games Room.</li></ul>',
+      'patch-coins.why': 'Patch Coins make progress visible, fair, and motivating. They are a simple thank-you for small consistent action, and they help turn that action into a clear journey.',
       'small-missions.title': 'Small Missions',
-      'small-missions.desc': '<p>Small Missions are the quickest EarthPatchers actions. They are meant to fit into ordinary weekdays and help people start without needing a big block of time.</p><ul><li>Short actions you can do once.</li><li>Simple habits repeated for a few days.</li><li>Good starting points for children, teens, adults, and families.</li></ul>',
+      'small-missions.desc': '<p>Small Missions are the quickest EarthPatchers actions. They are meant to fit into ordinary weekdays and help people start without needing a big block of time.</p><ul><li>Short actions you can do once.</li><li>Simple habits repeated for a few days.</li><li>Good starting points for children, teens, adults, and families.</li><li>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until in-platform mission validation is ready.</li><li>They can earn Patch Coins, which later have practical use in future modules like Market Hut and Games Room.</li></ul>',
       'small-missions.why': 'Small Missions make action feel possible. They are how busy days still turn into useful steps.',
       'medium-missions.title': 'Medium Missions',
-      'medium-missions.desc': '<p>Medium Missions need a bit more time, usually one focused session in a week. They are a good next step once smaller actions already feel natural.</p><ul><li>Often done in 45-60 minutes.</li><li>Good for family sessions, Tribes, or one clear adult task.</li><li>Useful when you want progress you can already see.</li></ul>',
+      'medium-missions.desc': '<p>Medium Missions need a bit more time, usually one focused session in a week. They are a good next step once smaller actions already feel natural.</p><ul><li>Often done in 45-60 minutes.</li><li>Good for family sessions, Tribes, or one clear adult task.</li><li>Useful when you want progress you can already see.</li><li>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until in-platform mission validation is ready.</li><li>They can earn Patch Coins, which later have practical use in future modules like Market Hut and Games Room.</li></ul>',
       'medium-missions.why': 'Medium Missions turn good intentions into visible progress. They give Tribes and families something concrete to do together.',
       'recycling-images.title': 'Recycling through Images',
       'recycling-images.desc': '<p>Recycling through Images turns written recycling guidance into simple visual instructions people can understand at a glance. It is designed for posters, labels, and bin-side communication where text alone is often ignored.</p><ul><li>Useful for companies, schools, apartment blocks, and public spaces.</li><li>Can translate local recycling rules into image-led guidance.</li><li>Can carry EarthPatchers branding and a website link for wider discovery.</li></ul>',
       'recycling-images.why': 'People sort better when guidance is visual, local, and easy to notice. This module can turn long documentation into practical image-based prompts that work in real places.',
       'large-missions.title': 'Large Missions',
-      'large-missions.desc': '<p>Large Missions are the bigger EarthPatchers challenges. They usually need a weekend block, stronger coordination, or a team ready to organize something measurable.</p><ul><li>Often half a day or a full day.</li><li>Better suited to schools, neighborhoods, or community teams.</li><li>Best when a group is ready to plan and follow through.</li></ul>',
+      'large-missions.desc': '<p>Large Missions are the bigger EarthPatchers challenges. They usually need a weekend block, stronger coordination, or a team ready to organize something measurable.</p><ul><li>Often half a day or a full day.</li><li>Better suited to schools, neighborhoods, or community teams.</li><li>Best when a group is ready to plan and follow through.</li><li>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until in-platform mission validation is ready.</li><li>They can earn Patch Coins, which later have practical use in future modules like Market Hut and Games Room.</li></ul>',
       'large-missions.why': 'Large Missions show what a community can do when effort is shared. They turn courage, planning, and teamwork into visible local change.',
 
       // Overview / Landing
@@ -159,18 +181,18 @@ const I18n = {
       'hero.cta.donate': 'Donate Interest',
       'hero.cta.modules': 'Browse Modules',
 
-      'overview.problem.title': 'What would EarthPatchers stitch together',
-      'overview.problem.text': 'There’s no shortage of information about the planet.<br>There’s just a shortage of time, clarity, and simple ways to act on it.<br><br>The missions that truly help the planet are scattered like socks after laundry: everywhere, when what you really want is to have them neatly in one drawer, in the right place.<br><br>You find them across different websites, buried in long reports, floating through social media… exactly the kind of “hunt” you want to do when one hand is on the washing line, one is on the child, the dog is barking at the door, and your phone lights up with a work message: “You forgot to reply to the client!”… right?<br><br>EarthPatchers aims to gather them in one place so you can move straight to “let’s do this.”<br><br><span class="overview-problem-lead">Then you choose how:</span><ul><li><strong>At home:</strong> small, quick missions for busy days.</li><li><strong>In a Tribe:</strong> build your own team or join one already started by people like you.</li><li><strong>With NGOs:</strong> join a trusted NGO’s Tribe and help with their real missions.</li></ul>',
-      'overview.problem.solution': '<span class="overview-problem-signoff">No stress. No fuss.</span><br>Just practical action, shared effort, and the reminder that big things don’t get fixed alone.',
+      'overview.problem.title': 'What Problem Does EarthPatchers Solve',
+      'overview.problem.text': 'We are not short on information.<br>We are short on time, clarity, and simple ways to act.<br><br>The missions that teach you something useful are scattered like socks after laundry day: everywhere, when all you want is to have them neatly in a drawer, where they belong.<br><br>You find them on different websites, in long reports, across social media... exactly the kind of “hunt” you want to do when one hand is on the washing line, one is on the child, the dog is barking at the door, and your phone lights up with a work message: “You forgot to reply to the client!”... right?<br><br>EarthPatchers aims to gather them in one place so you can move straight to “let’s do this.”<br><br><span class="overview-problem-lead">Then you choose how:</span><ul><li><strong>At home:</strong> small, quick missions for busy days.</li><li><strong>In a Tribe:</strong> build your own team or join one already started by people like you.</li><li><strong>With NGOs:</strong> join a trusted NGO’s Tribe and help with their missions.</li></ul>',
+      'overview.problem.solution': '<span class="overview-problem-signoff">No stress. No worries.</span><br>Just practical action, shared effort, and the reminder that big things do not get fixed when you try to do them alone.',
 
       'overview.mission.title': 'What Will an EarthPatchers Mission Look Like?',
       'overview.mission.text': 'A mission will be one practical action that helps nature, your neighborhood, or your community, and can be finished in real life. We plan missions to be clear, safe, and doable for different ages and schedules. A realistic rhythm could be one to three missions a month, when life allows.',
       'overview.mission.examples-intro': 'Planned examples by mission size and age group:',
-      'overview.mission.small.title': 'Small Mission (10 Patch Coins)',
+      'overview.mission.small.title': 'Small Mission (5-15 Patch Coins)',
       'overview.mission.small.examples': '<ul><li>Time: about 1-20 minutes, either once or repeated over a few days until the habit sticks.</li><li>Kids: water one local tree or plant and track it for a week.</li><li>Teens: run a one-week save water at home Tribe challenge.</li><li>Adults: check the fridge, find 2 things that need to be eaten today or tomorrow, and move them to the front.</li></ul>',
-      'overview.mission.medium.title': 'Medium Mission (25 Patch Coins)',
+      'overview.mission.medium.title': 'Medium Mission (15-25 Patch Coins)',
       'overview.mission.medium.examples': '<ul><li>Time: about 45-60 minutes a week, usually done in one session.</li><li>Kids + family: park or riverbank clean-up.</li><li>Teens: take one no-car day and use bike, bus, or walking.</li><li>Adults: donate one item you no longer use (for example a pair of sunglasses, a book, or a jacket).</li></ul>',
-      'overview.mission.big.title': 'Big Mission (50 Patch Coins)',
+      'overview.mission.big.title': 'Big Mission (25-50 Patch Coins)',
       'overview.mission.big.examples': '<ul><li>Time: about half a day to a full day, usually during the weekend.</li><li>Kids + school: build and maintain a pollinator corner in the school yard.</li><li>Teens: lead a neighborhood energy-saving mini campaign with measurable results.</li><li>Adults: coordinate a community day with clean-up, repair, and tree-care actions.</li></ul>',
 
       'overview.tribe.title': 'What Is a Tribe',
@@ -220,7 +242,7 @@ const I18n = {
       'overview.how.a.step3.title': 'Join a small mission',
       'overview.how.a.step3.text': 'The child joins a small mission inside the Tribe, for example Learn how to sew a button. For in-person missions, depending on mission type and children’s ages, a minimum number of parents should be present to help.',
       'overview.how.a.step4.title': 'Leader validates and Patch Coins are earned',
-      'overview.how.a.step4.text': 'After completion and leader validation, the child earns 10 Patch Coins. If the parent also participates and the leader validates, the parent also earns 10 Patch Coins for time and effort.',
+      'overview.how.a.step4.text': 'After completion, the mission can be validated by the leader or, until website mission validation is ready, through the requested proof sent by email. Then the child earns 10 Patch Coins. If the parent also participates and is validated, the parent also earns 10 Patch Coins for time and effort.',
       'overview.how.a.step5.title': 'Explore and play the quiz',
       'overview.how.a.step5.text': 'The child explores Earth’s Side of the Story. It is useful for adults too, to understand the city and what it needs. Content is tailored by age, and extra Patch Coins can be earned by completing the quiz at the end.',
       'overview.how.a.step6.title': 'Use Patch Coins in Market Hut',
@@ -233,18 +255,18 @@ const I18n = {
       'overview.how.b.step3.title': 'Join the mission Tribe',
       'overview.how.b.step3.text': 'They join the Tribe that created that mission and complete it together.',
       'overview.how.b.step4.title': 'Leader validates and Patch Coins are earned',
-      'overview.how.b.step4.text': 'At the end, the Tribe leader validates the mission and they earn Patch Coins.',
+      'overview.how.b.step4.text': 'At the end, the mission can be validated by the Tribe leader or, until website mission validation is ready, through the requested proof sent by email. Then they earn Patch Coins.',
       'overview.how.b.step5.title': 'Explore and play the quiz',
       'overview.how.b.step5.text': 'They also explore Earth’s Side of the Story. It is useful for adults too, to understand the city and what it needs. Content is tailored by age, and extra Patch Coins can be earned from the quiz.',
       'overview.how.b.step6.title': 'Use Patch Coins in Market Hut',
       'overview.how.b.step6.text': 'They use earned Patch Coins in Market Hut to choose useful community-shared items, like clothes, books, tools, toys, and other practical reusable things, and later in Games too.',
-      'overview.cluj.title': 'Starting in Cluj',
-      'overview.cluj.text': 'EarthPatchers plans to start in Cluj and grow carefully. New cities would open later only when there is enough discovery support (data + partners), so the information stays real and trustworthy.',
+      'overview.cluj.title': 'Pilot and Discovery First',
+      'overview.cluj.text': 'EarthPatchers plans to begin through pilots with interested schools, leaders, and early partners, then grow carefully.<br><br>New locations would open later only when there is enough discovery support (data + partners), so the information stays real, useful, and trustworthy.',
 
       'overview.trust.title': 'Important!',
       'overview.tribe.leaders': '<p><strong>Tribe leaders</strong> will need a validated account. They will help with moderation, keep things safe and clean, and can earn more <strong>Patch Coins</strong> for this extra responsibility.</p>',
-      'overview.trust.missions': '<p>For now, <strong>Patch Coins</strong> will just be tracked until the features that use them are ready.</p>',
-      'overview.trust.how': '<p>To begin with, we will test missions <strong>offline</strong> while the <strong>website</strong> functionality is still <strong>under construction</strong>.</p>',
+      'overview.trust.missions': '<p>For now, <strong>Patch Coins</strong> will be tracked as a visible thank-you for real effort until the features that use them are ready. Later, they will have practical use in future modules like <strong>Market Hut</strong> and <strong>Games Room</strong>.</p><p>Until mission functionality is in place on the website, missions can be validated by leaders, also called <strong>MasterPatchers</strong>, or by sending the requested proof to us by email.</p>',
+      'overview.trust.how': '<p>To begin with, we will test missions <strong>offline</strong> while the <strong>website</strong> functionality is still <strong>under construction</strong>. Until mission validation is built in, leaders (MasterPatchers) or email proof will be used to confirm completion.</p>',
 
       'overview.partners.title': 'Partnerships',
       'overview.partners.text': 'EarthPatchers is designed to work alongside schools and NGOs, not replace them. We plan to build local partnerships and collaboration goals as missions scale.<br><br>If you want to start missions or get involved as a teacher, parent, scout leader, NGO, or partner, find more details in Ways to Get Involved.',
@@ -254,12 +276,12 @@ const I18n = {
       'overview.cta.about': 'See Who We Are',
       'overview.cta.modules': 'Explore Modules',
       'overview.cta.contact': 'Ways to Get Involved',
-      'about.cta.overview': 'See What We Do',
+      'about.cta.overview': 'Read Base Camp',
 
       // MVP Page
       'mvp.title': 'Base Camp',
       'mvp.title.plan': '36-Month Plan',
-      'mvp.intro': 'EarthPatchers will start with a focused 36-month plan that will prove the core loop works in real life in Cluj, before expanding. This starting plan will have four pillars:',
+      'mvp.intro': 'EarthPatchers will start with a focused 36-month plan that proves the core loop works in real life through pilots with interested schools, leaders, and early partners before expanding. This starting plan will have four pillars:',
 
       'mvp.pillar1.title': 'Missions HQ',
       'mvp.pillar1.subtitle': 'Real actions for the planet',
@@ -268,17 +290,17 @@ const I18n = {
 
       'mvp.pillar2.title': 'Tribes',
       'mvp.pillar2.subtitle': 'Small, safe, meaningful',
-      'mvp.pillar2.text': 'Small, safe, meaningful groups in Cluj with a realistic rhythm (monthly or seasonal challenges), with clear rules, guardian involvement where needed, and reporting plus moderation.',
+      'mvp.pillar2.text': 'Small, safe, meaningful pilot groups with a realistic rhythm (monthly or seasonal challenges), with clear rules, guardian involvement where needed, and reporting plus moderation.',
       'mvp.pillar2.why': 'Young people care deeply about their future. This will give them a safe way to contribute without being overwhelmed.',
 
       'mvp.pillar3.title': 'Market Hut',
       'mvp.pillar3.subtitle': 'Swap, share, reuse',
-      'mvp.pillar3.text': 'A Cluj-first swap and reuse space where trust will come first: clear exchange rules, safe pickup guidance, and moderation for suspicious behaviour.',
+      'mvp.pillar3.text': 'A swap and reuse space where trust will come first: clear exchange rules, safe pickup guidance, and moderation for suspicious behaviour. Patch Coins will have practical use here in future modules like Market Hut and Games Room.',
       'mvp.pillar3.why': 'Circular habits will work when people trust the system.',
 
       'mvp.pillar4.title': 'Earth\'s Side of the Story',
-      'mvp.pillar4.subtitle': 'Learning + action, Cluj-first',
-      'mvp.pillar4.text': 'A step-by-step learning-and-action world in Cluj with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions.',
+      'mvp.pillar4.subtitle': 'Learning + action, tailored locally',
+      'mvp.pillar4.text': 'A step-by-step learning-and-action world with three doors: My Hazards, Contamination & Recovery Zone, and Learn & Play, all connected to missions. Over time, missions can be tailored by location through collaboration with trusted local NGOs and partners.',
       'mvp.pillar4.why': 'This will make learning practical and trustworthy by connecting it directly to local actions.',
 
       'mvp.modules.title': 'Core Start Modules',
@@ -288,11 +310,11 @@ const I18n = {
 
       'mvp.phase1.label': 'Phase 1',
       'mvp.phase1.months': 'Months 0\u201312',
-      'mvp.phase1.title': 'Prove the Core Loop in Cluj',
+      'mvp.phase1.title': 'Prove the Core Loop in Early Pilots',
       'mvp.phase1.item1': 'Launch Missions HQ',
       'mvp.phase1.item2': 'Run first youth pilot Tribes with strong safety rules',
       'mvp.phase1.item3': 'Launch the Market Hut pilot, with moderation and clear guidance for safe pickup',
-      'mvp.phase1.item4': 'Launch the first small version of Earth\u2019s Side of the Story (Cluj-only, simple learning corner plus first map pins)',
+      'mvp.phase1.item4': 'Launch the first small version of Earth\u2019s Side of the Story (simple learning corner plus first local map pins where relevant)',
       'mvp.phase1.goal': 'Prove people return, participate, and feel safe.',
 
       'mvp.phase2.label': 'Phase 2',
@@ -301,7 +323,7 @@ const I18n = {
       'mvp.phase2.item1': 'Improve mission quality and mission packs (seasonal collections)',
       'mvp.phase2.item2': 'Expand youth pilot Tribes if Phase 1 works well',
       'mvp.phase2.item3': 'Improve safe exchange flows (categories, templates, trust signals)',
-      'mvp.phase2.item4': 'Grow Earth\u2019s Side of the Story carefully (more topics, better learning paths, still Cluj-first)',
+      'mvp.phase2.item4': 'Grow Earth\u2019s Side of the Story carefully (more topics, better learning paths, and local tailoring where useful)',
       'mvp.phase2.goal': 'Reduce admin/moderation effort while improving experience and safety.',
 
       'mvp.phase3.label': 'Phase 3',
@@ -310,11 +332,11 @@ const I18n = {
       'mvp.phase3.item1': 'Make the 4 core start modules stable and repeatable',
       'mvp.phase3.item2': 'Ensure safety workflows work at larger scale',
       'mvp.phase3.item3': 'Strengthen learning paths connected to missions and local action',
-      'mvp.phase3.goal': 'EarthPatchers becomes repeatable as a model, starting from Cluj.',
+      'mvp.phase3.goal': 'EarthPatchers becomes repeatable as a model that can adapt to different locations.',
 
       'mvp.globe.title': 'Important Note',
       'mvp.globe.intro': 'Earth\u2019s Side of the Story is built one small chapter at a time:',
-      'mvp.globe.phase1': 'Phase 1: small learning corner in Cluj',
+      'mvp.globe.phase1': 'Phase 1: small learning corner in pilot locations',
       'mvp.globe.phase2': 'Phase 2: richer learning content and clearer paths',
       'mvp.globe.phase3': 'Phase 3: stronger, more complete learning journeys tied to missions',
       'mvp.globe.why': 'We build it step-by-step so it stays reliable and understandable.',
@@ -327,7 +349,7 @@ const I18n = {
       'mvp.success.item2': 'Youth participation will be safe, supportive, and meaningful',
       'mvp.success.item3': 'Circular exchange will work smoothly with trust and moderation',
       'mvp.success.item4': 'Earth\u2019s Side of the Story will help people understand "why" and "what to do next"',
-      'mvp.success.item5': 'Cluj will become a strong foundation for future expansion',
+      'mvp.success.item5': 'Early pilots will become a strong foundation for future expansion',
       'mvp.more.title': 'Want to see everything we would like to build?',
       'mvp.more.text': 'Switch to Partner View to explore the full Base Camp plan and Next Steps in our Adventure.',
       'mvp.more.cta': 'Go to Partner View',
@@ -351,12 +373,12 @@ const I18n = {
       // Missions HQ
       'missions-hq.title': 'Missions HQ',
       'missions-hq.subtitle': 'Where It All Begins',
-      'missions-hq.desc': "<p>Missions HQ will be where EarthPatchers begins. It will be a library of real-life missions for kids, teens, and adults, designed to make saving the Earth feel doable.</p><p>It will support different lives:</p><ul><li>tiny missions for busy families (10-20 minutes)</li><li>weekend missions for deeper impact (1-2 hours)</li><li>team missions for schools, youth groups, and community teams</li></ul><p>For adults, missions will be matched to skills (repairing, organising, teaching, gardening, design, photography) and time available, so volunteering feels efficient and rewarding. For kids, missions will feel like adventures.</p><p>This structure will also make projects easier to repeat across communities: once a mission works well, it can be reused by other groups without starting from scratch.</p>",
+      'missions-hq.desc': "<p>Missions HQ is where EarthPatchers begins. It is a library of real-life missions for kids, teens, and adults, designed to make saving the Earth feel doable.</p><p>It supports different lives:</p><ul><li>tiny missions for busy families (10-20 minutes)</li><li>weekend missions for deeper impact (1-2 hours)</li><li>team missions for schools, youth groups, and community teams</li></ul><p>For adults, missions are matched to skills (repairing, organising, teaching, gardening, design, photography) and time available, so volunteering feels efficient and rewarding. For kids, missions feel like adventures.</p><p>For now, missions can be validated by leaders (MasterPatchers) or by sending the requested proof to us by email until website mission validation is ready.</p><p>This structure also makes projects easier to repeat across communities: once a mission works well, it can be reused by other groups without starting from scratch.</p>",
       'missions-hq.rewards.title': 'Rewards stay simple:',
-      'missions-hq.rewards.coins': 'Patch Coins: you will earn them through missions and learning, and use them in Market Hut (and later in Games Room).',
-      'missions-hq.rewards.badges': 'Badges: they will reflect who you are becoming (brave, kind, curious).',
-      'missions-hq.rewards.achievements': 'Achievements: they will capture what you did, like stickers in your adventure notebook.',
-      'missions-hq.why': 'Missions will turn caring for the planet into an adventure. They will give families and young people a clear starting point: one mission at a time, building real change step by step.',
+      'missions-hq.rewards.coins': 'Patch Coins: you earn them through missions and learning, and use them in Market Hut (and later in Games Room).',
+      'missions-hq.rewards.badges': 'Badges: they reflect who you are becoming (brave, kind, curious).',
+      'missions-hq.rewards.achievements': 'Achievements: they capture what you did, like stickers in your adventure notebook.',
+      'missions-hq.why': 'Missions turn caring for the planet into an adventure. They give families and young people a clear starting point: one mission at a time, building real change step by step.',
 
       // Tribes
       'tribes.title': 'Tribes',
@@ -373,7 +395,7 @@ const I18n = {
       // Market Hut
       'market-hut.title': 'Market Hut',
       'market-hut.subtitle': 'Swap, Share, Reuse',
-      'market-hut.desc': "<p>The Market Hut will be a Cluj Napoca-first circular exchange where people reuse items instead of buying new:</p><ul><li>Patch Coins will solve the awkward item-for-item matching problem: you earn coins by helping, then use them to choose what you need — for example a toy, a warm jacket, books, or school supplies.</li><li>Safety will be built in: adults choose their visibility, and children's faces are not allowed.</li></ul>",
+      'market-hut.desc': "<p>The Market Hut will be a circular exchange where people reuse items instead of buying new:</p><ul><li>Patch Coins will solve the awkward item-for-item matching problem: you earn coins by helping, then use them to choose what you need — for example a toy, a warm jacket, books, or school supplies.</li><li>Safety will be built in: adults choose their visibility, and children's faces are not allowed.</li><li>As EarthPatchers grows, the exchange can be tailored to different locations through collaboration with trusted local NGOs, schools, and partners.</li></ul>",
       'market-hut.why': 'Circular habits are one of the fastest ways to reduce waste. Patch Coins will make reuse simple and fair — no awkward item-for-item matching, just kindness and coins.',
       'market-hut.next1': "Optional polite bidding using Patch Coins for high-demand items (simple and kid-safe).",
       'market-hut.next2': "Borrowing shelves (tools, books, sports gear, kids gear).",
@@ -382,8 +404,8 @@ const I18n = {
 
       // Earth's Side of the Story
       'earth-side.title': 'Earth\'s Side of the Story',
-      'earth-side.subtitle': 'Learning That Starts in Cluj',
-      'earth-side.desc': "<p>Earth's Side of the Story will be the learning-and-action world that will start in Cluj Napoca and will connect learning to missions. It will have three doors:</p><ol><li>My Hazards: will explain hazards in a friendly way (natural hazards, hazards made worse by pollution or human changes, and hazards caused directly by people). Short learning cards and quizzes will earn Patch Coins.</li><li>Contamination and Recovery Zone (Cluj Napoca map): adults (and older teens where appropriate) will be able to add a pin (photo and short note) for littering hot spots, damaged areas, cut trees, and places needing care. Pins will become missions.</li><li>Learn and Play: short learning paths and quizzes that will connect back to missions and Patch Coins.</li></ol>",
+      'earth-side.subtitle': 'Learning That Connects to Place',
+      'earth-side.desc': "<p>Earth's Side of the Story will be the learning-and-action world that connects learning to missions. It will have three doors:</p><ol><li>My Hazards: will explain hazards in a friendly way (natural hazards, hazards made worse by pollution or human changes, and hazards caused directly by people). Short learning cards and quizzes will earn Patch Coins.</li><li>Contamination and Recovery Zone (local map where relevant): adults (and older teens where appropriate) will be able to add a pin (photo and short note) for littering hot spots, damaged areas, cut trees, and places needing care. Pins will become missions.</li><li>Learn and Play: short learning paths and quizzes that will connect back to missions and Patch Coins.</li></ol><p>Over time, missions and local learning layers can be tailored by location through collaboration with trusted local NGOs and partners.</p>",
       'earth-side.next1': 'Tribe alerts: new pins can gently alert nearby Tribes so local teams can choose to help.',
       'earth-side.next2': 'New cities/countries open slowly via a Discovery Phase (data + partners + priority missions). If discovery isn\'t supported, the area stays \u201csleeping\u201d until the community helps find data sources or partners.',
       'earth-side.next3': "Community help for discovery (finding data sources and mapping local helpers).",
@@ -408,7 +430,7 @@ const I18n = {
       // Eco Shops Directory
       'eco-shops.title': 'Eco Shops Directory',
       'eco-shops.subtitle': 'Find What’s Truly Sustainable',
-      'eco-shops.desc': "<p>Eco Shops will be a Cluj Napoca-first guide to sustainable products and local shops, with ratings and comments from validated community members.</p><p>It will also include an Interest or Wish feature for zero-waste products that are not available locally yet:</p><ul><li>People will be able to click \"I want this here\" to show demand without everyone ordering separately.</li><li>If enough people are interested, the community will be able to organise a bulk order to reduce packaging and transport waste.</li><li>Makers and companies will be able to see interest levels and plan production better.</li></ul><p>Quality rules will keep things honest and reduce spam:</p><ul><li>You will be able to review or add products after earning enough Patch Coins and completing a verified mission.</li><li>New products will be submitted via a simple template (photo, where to buy, materials, why it is better, what to watch out for).</li><li>Leaders, also called MasterPatchers, will verify entries before they go live.</li></ul>",
+      'eco-shops.desc': "<p>Eco Shops will be a guide to sustainable products and local shops, with ratings and comments from validated community members.</p><p>It will also include an Interest or Wish feature for zero-waste products that are not available locally yet:</p><ul><li>People will be able to click \"I want this here\" to show demand without everyone ordering separately.</li><li>If enough people are interested, the community will be able to organise a bulk order to reduce packaging and transport waste.</li><li>Makers and companies will be able to see interest levels and plan production better.</li></ul><p>Quality rules will keep things honest and reduce spam:</p><ul><li>You will be able to review or add products after earning enough Patch Coins and completing a verified mission.</li><li>New products will be submitted via a simple template (photo, where to buy, materials, why it is better, what to watch out for).</li><li>Leaders, also called MasterPatchers, will verify entries before they go live.</li></ul><p>Over time, local recommendations can be shaped with trusted local NGOs and partners so the guidance stays grounded in each place.</p>",
       'eco-shops.why': 'Finding truly sustainable products is hard. This directory will keep things honest with community reviews, verified missions, and Leader oversight (MasterPatcher role).',
 
       // The Green Wall
@@ -443,8 +465,8 @@ const I18n = {
       'mod.recycling-images.short': 'Visual recycling guidance that can turn written documentation into simple image-based prompts for bins and public spaces.',
       'mod.large-missions.short': 'Bigger community missions for weekends, teams, and measurable local impact.',
       'mod.tribes.short': 'Safe team spaces with camp rules. Kids use aliases; missions can be shared across Tribes.',
-      'mod.market-hut.short': 'Cluj-first circular exchange with Patch Coins, reuse, swaps, and safety-by-design.',
-      'mod.earth-side.short': 'Learning plus action map starting in Cluj: hazards, local recovery map, and learn-and-play.',
+      'mod.market-hut.short': 'Circular exchange with Patch Coins, reuse, swaps, and safety-by-design, ready to adapt locally over time.',
+      'mod.earth-side.short': 'Learning plus action with hazards, local recovery maps where relevant, and learn-and-play.',
       'mod.games-room.short': 'Future hub for trusted nature-learning games unlocked with Patch Coins.',
       'mod.activity-hut.short': 'Future personal adventure journal with progress trail, badges, achievements, and Patch Coins totals.',
       'mod.eco-shops.short': 'Future community guide to sustainable products and shops, with verification and demand signals.',
@@ -472,7 +494,7 @@ const I18n = {
       'about.value4.title': 'Child Safety',
       'about.value4.text': 'Privacy-by-design, age-appropriate content, and guardian involvement at every step.',
       'about.how.title': 'Where We Start',
-      'about.how.text': 'We will work through partnerships with schools and NGOs, pilot programs in Cluj, and community voting to decide what happens next. Everything will start small, be tested, and grow based on real feedback.',
+      'about.how.text': 'We will work through partnerships with schools, NGOs, local leaders, and early pilot partners, plus community voting to decide what happens next. Everything will start small, be tested, and grow based on real feedback. Over time, missions can be tailored by location through collaboration with trusted local NGOs and partners.',
 
       // Contact Us
       'contact.title': 'Ways to Get Involved',
@@ -522,7 +544,7 @@ const I18n = {
       'donate.status.error': 'Could not send right now. Please use the "Copy Email" button above.',
 
       // Footer
-      'footer.text': 'EarthPatchers \u2014 Community-powered sustainability, starting in Cluj.',
+      'footer.text': 'EarthPatchers \u2014 Community-powered sustainability, built through pilots and local collaboration.',
     },
 
     ro: {
@@ -541,6 +563,8 @@ const I18n = {
       'theme.dark': 'Dark',
       'theme.auto.note': 'Modul dark a fost activat automat pentru a consuma mai puțină energie. Mic reminder: stinge luminile de care nu ai nevoie.',
       'theme.manual.daytime-note': 'Ai păstrat dark mode. Dacă vrei, poți trece oricând la varianta light pentru timpul zilei.',
+      'patch-counter.info': 'Contor demonstrativ de Monede Patch pentru moment. Nu este implementat încă.',
+      'patch-counter.link': 'Mai multe despre Monede Patch',
 
       // Module names
       'mod.missions-hq': 'Cartierul Misiunilor',
@@ -562,19 +586,19 @@ const I18n = {
 
       // Mission size pages
       'patch-coins.title': 'Monede Patch',
-      'patch-coins.desc': '<p>Monedele Patch sunt punctele EarthPatchers pentru efort și învățare. Se câștigă când misiunile sunt finalizate și validate, dar și din trasee de învățare cu quiz.</p><ul><li>Fac progresul vizibil pentru copii, adolescenți și adulți.</li><li>Recompensează efortul real și obiceiurile utile.</li><li>Mai târziu, vor putea fi folosite practic în module precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
-      'patch-coins.why': 'Monedele Patch fac progresul vizibil, corect și motivant. Transformă pașii mici, constanți, într-un parcurs clar.',
+      'patch-coins.desc': '<p><span class=\"patch-coins-desc__primary\">Monedele Patch sunt punctele de mulțumire EarthPatchers pentru efort, grijă și învățare.</span> <span class=\"patch-coins-desc__secondary\">Se câștigă când misiunile sunt finalizate și validate, dar și din trasee de învățare cu quiz.</span></p><ul><li>Fac progresul vizibil pentru copii, adolescenți și adulți.</li><li>Sunt un mod clar de a spune „mulțumim” pentru efortul real și obiceiurile utile.</li><li>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea în platformă va fi gata.</li><li>Mai târziu, au utilitate practică în module viitoare precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
+      'patch-coins.why': 'Monedele Patch fac progresul vizibil, corect și motivant. Sunt un mod simplu de a spune „mulțumim” pentru pașii mici, constanți, și îi transformă într-un parcurs clar.',
       'small-missions.title': 'Misiuni Mici',
-      'small-missions.desc': '<p>Misiunile Mici sunt cele mai rapide acțiuni EarthPatchers. Sunt gândite să încapă în zile obișnuite și să te ajute să începi fără să ai nevoie de un bloc mare de timp.</p><ul><li>Acțiuni scurte pe care le poți face o singură dată.</li><li>Obiceiuri simple repetate câteva zile.</li><li>Puncte bune de pornire pentru copii, adolescenți, adulți și familii.</li></ul>',
+      'small-missions.desc': '<p>Misiunile Mici sunt cele mai rapide acțiuni EarthPatchers. Sunt gândite să încapă în zile obișnuite și să te ajute să începi fără să ai nevoie de un bloc mare de timp.</p><ul><li>Acțiuni scurte pe care le poți face o singură dată.</li><li>Obiceiuri simple repetate câteva zile.</li><li>Puncte bune de pornire pentru copii, adolescenți, adulți și familii.</li><li>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea în platformă va fi gata.</li><li>Pot aduce Monede Patch, care mai târziu au utilitate practică în module viitoare precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
       'small-missions.why': 'Misiunile Mici fac acțiunea să pară posibilă. Așa se transformă chiar și zilele ocupate în pași utili.',
       'medium-missions.title': 'Misiuni Medii',
-      'medium-missions.desc': '<p>Misiunile Medii au nevoie de puțin mai mult timp, de obicei o sesiune clară într-o săptămână. Sunt pasul bun următor după ce acțiunile mici deja par firești.</p><ul><li>De multe ori se fac în 45-60 de minute.</li><li>Sunt bune pentru familii, Triburi sau o sarcină clară pentru un adult.</li><li>Utile când vrei un progres pe care deja îl poți vedea.</li></ul>',
+      'medium-missions.desc': '<p>Misiunile Medii au nevoie de puțin mai mult timp, de obicei o sesiune clară într-o săptămână. Sunt pasul bun următor după ce acțiunile mici deja par firești.</p><ul><li>De multe ori se fac în 45-60 de minute.</li><li>Sunt bune pentru familii, Triburi sau o sarcină clară pentru un adult.</li><li>Utile când vrei un progres pe care deja îl poți vedea.</li><li>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea în platformă va fi gata.</li><li>Pot aduce Monede Patch, care mai târziu au utilitate practică în module viitoare precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
       'medium-missions.why': 'Misiunile Medii transformă intențiile bune în progres vizibil. Dau Triburilor și familiilor ceva concret de făcut împreună.',
       'recycling-images.title': 'Reciclare in imagini',
       'recycling-images.desc': '<p>Reciclare in imagini transformă ghidurile scrise de reciclare în instrucțiuni vizuale simple, ușor de înțeles dintr-o privire. Este gândit pentru postere, etichete și mesaje lângă pubele, acolo unde textul singur este deseori ignorat.</p><ul><li>Util pentru companii, școli, blocuri și spații publice.</li><li>Poate traduce reguli locale de reciclare în ghidaj bazat pe imagini.</li><li>Poate purta branding EarthPatchers și un link spre site pentru vizibilitate mai mare.</li></ul>',
       'recycling-images.why': 'Oamenii sortează mai bine când ghidajul este vizual, local și ușor de observat. Acest modul poate transforma documentația lungă în semnale practice bazate pe imagini, utile în locuri reale.',
       'large-missions.title': 'Misiuni Mari',
-      'large-missions.desc': '<p>Misiunile Mari sunt provocările mai mari EarthPatchers. De obicei cer un bloc de weekend, mai multă coordonare sau o echipă pregătită să organizeze ceva măsurabil.</p><ul><li>Adesea durează o jumătate de zi sau o zi întreagă.</li><li>Se potrivesc mai bine pentru școli, cartiere sau echipe comunitare.</li><li>Funcționează cel mai bine când grupul e gata să planifice și să ducă lucrurile până la capăt.</li></ul>',
+      'large-missions.desc': '<p>Misiunile Mari sunt provocările mai mari EarthPatchers. De obicei cer un bloc de weekend, mai multă coordonare sau o echipă pregătită să organizeze ceva măsurabil.</p><ul><li>Adesea durează o jumătate de zi sau o zi întreagă.</li><li>Se potrivesc mai bine pentru școli, cartiere sau echipe comunitare.</li><li>Funcționează cel mai bine când grupul e gata să planifice și să ducă lucrurile până la capăt.</li><li>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea în platformă va fi gata.</li><li>Pot aduce Monede Patch, care mai târziu au utilitate practică în module viitoare precum Căsuța de Schimb și Camera de Jocuri.</li></ul>',
       'large-missions.why': 'Misiunile Mari arată ce poate face o comunitate când efortul este împărțit. Transformă curajul, planificarea și munca în echipă în schimbare locală vizibilă.',
 
       // Overview / Landing
@@ -584,18 +608,18 @@ const I18n = {
       'hero.cta.donate': "Interes pentru donație",
       'hero.cta.modules': "Vezi modulele",
 
-      'overview.problem.title': "Ce problemă ar rezolva EarthPatchers",
-      'overview.problem.text': "Nu ducem lipsă de informații despre planetă.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile care chiar ajută planeta sunt împrăștiate ca șosetele după spălat: peste tot, când tu le-ai vrea frumos în sertar, la locul lor.<br><br>Le găsești pe site-uri diferite, în rapoarte lungi, prin social media… adică fix genul de „vânătoare” pe care vrei să o faci când ai o mână pe sfoara de rufe, una pe copil, câinele latră la ușă, iar pe telefon îți vine mesaj de la serviciu: „Ai uitat să-i răspunzi clientului!”… nu?<br><br>EarthPatchers își propune să le adune într-un singur loc, ca să treci direct la „hai să facem”.<br><br><span class=\"overview-problem-lead\">Apoi alegi cum vrei:</span><ul><li><strong>Acasă:</strong> misiuni mici, rapide, pentru zilele aglomerate.</li><li><strong>În Trib:</strong> îți faci echipa ta sau te alături uneia deja pornite de oameni ca tine.</li><li><strong>Cu ONG-uri:</strong> intri într-un Trib al unui ONG de încredere și ajuți la misiunile lor reale.</li></ul>",
+      'overview.problem.title': "Ce problemă rezolvă EarthPatchers",
+      'overview.problem.text': "Nu ducem lipsă de informații.<br>Ducem lipsă de timp, claritate și moduri simple de a acționa.<br><br>Misiunile care te învață ceva folositor sunt împrăștiate ca șosetele după spălat: peste tot, când tu le-ai vrea frumos în sertar, la locul lor.<br><br>Le găsești pe site-uri diferite, în rapoarte lungi, prin social media… adică fix genul de „vânătoare” pe care vrei să o faci când ai o mână pe sfoara de rufe, una pe copil, câinele latră la ușă, iar pe telefon îți vine mesaj de la serviciu: „Ai uitat să-i răspunzi clientului!”… nu?<br><br>EarthPatchers își propune să le adune într-un singur loc, ca să treci direct la „hai să facem”.<br><br><span class=\"overview-problem-lead\">Apoi alegi cum vrei:</span><ul><li><strong>Acasă:</strong> misiuni mici, rapide, pentru zilele aglomerate.</li><li><strong>În Trib:</strong> îți faci echipa ta sau te alături uneia deja pornite de oameni ca tine.</li><li><strong>Cu ONG-uri:</strong> intri într-un Trib al unui ONG de încredere și ajuți la misiunile lor.</li></ul>",
       'overview.problem.solution': "<span class=\"overview-problem-signoff\">Fără stress. Fără griji.</span><br>Doar acțiune practică, efort împărțit și reamintirea că lucrurile mari nu se repară când încerci să le faci de unul singur.",
 
       'overview.mission.title': "Cum va arăta o misiune EarthPatchers?",
       'overview.mission.text': "O misiune va fi o acțiune practică ce ajută natura, cartierul sau comunitatea ta și care poate fi dusă la capăt în viața reală. Planificăm misiuni clare, sigure și realizabile pentru vârste și programe diferite. Un ritm realist ar putea fi una până la trei misiuni pe lună, când programul îți permite.",
       'overview.mission.examples-intro': "Exemple planificate pe mărimi de misiune și grupe de vârstă:",
-      'overview.mission.small.title': "Misiune mică (10 Monede Patch)",
+      'overview.mission.small.title': "Misiune mică (5-15 Monede Patch)",
       'overview.mission.small.examples': "<ul><li>Timp: aproximativ 1-20 de minute, fie o singură dată, fie repetat câteva zile, până când obiceiul se fixează.</li><li>Copii: udă un copac sau o plantă din apropiere și urmăresc evoluția timp de o săptămână.</li><li>Adolescenți: organizează în Trib o provocare de o săptămână pentru reducerea consumului de apă acasă.</li><li>Adulți: verifică frigiderul, găsesc 2 lucruri care trebuie mâncate azi sau mâine și mută-le în față.</li></ul>",
-      'overview.mission.medium.title': "Misiune medie (25 Monede Patch)",
+      'overview.mission.medium.title': "Misiune medie (15-25 Monede Patch)",
       'overview.mission.medium.examples': "<ul><li>Timp: aproximativ 45-60 de minute pe săptămână, de obicei într-o singură zi.</li><li>Copii + familie: curățenie într-un parc sau pe malul unui râu.</li><li>Adolescenți: aleg o zi fără mașină și merg cu bicicleta, autobuzul sau pe jos.</li><li>Adulți: donează un obiect pe care nu îl mai folosesc (de exemplu o pereche de ochelari de soare, o carte sau o geacă).</li></ul>",
-      'overview.mission.big.title': "Misiune mare (50 Monede Patch)",
+      'overview.mission.big.title': "Misiune mare (25-50 Monede Patch)",
       'overview.mission.big.examples': "<ul><li>Timp: aproximativ o jumătate de zi sau o zi întreagă, de regulă în weekend.</li><li>Copii + școală: construiesc și întrețin un colț pentru polenizatori în curtea școlii.</li><li>Adolescenți: conduc o mini-campanie de cartier pentru economisirea energiei, cu rezultate măsurabile.</li><li>Adulți: coordonează o zi comunitară cu acțiuni de curățenie, reparații și îngrijirea copacilor.</li></ul>",
 
       'overview.tribe.title': "Ce reprezintă un Trib",
@@ -645,7 +669,7 @@ const I18n = {
       'overview.how.a.step3.title': "Intrați într-o misiune mică",
       'overview.how.a.step3.text': "Copilul intră într-o misiune mică din Trib, de exemplu Învață cum să coși un nasture. Pentru misiunile în persoană, în funcție de tipul misiunii și de vârsta copiilor, trebuie să fie prezenți un număr minim de părinți care să ajute.",
       'overview.how.a.step4.title': "Liderul validează și se câștigă Monede Patch",
-      'overview.how.a.step4.text': "După finalizare și validare de către lider, copilul primește 10 Monede Patch. Dacă și părintele participă, iar liderul validează, și părintele primește 10 Monede Patch pentru timp și efort.",
+      'overview.how.a.step4.text': "După finalizare, misiunea poate fi validată de lider sau, până când validarea misiunilor va fi gata pe site, prin dovada cerută trimisă pe email. Apoi copilul primește 10 Monede Patch. Dacă și părintele participă și este validat, și părintele primește 10 Monede Patch pentru timp și efort.",
       'overview.how.a.step5.title': "Explorezi și faci quiz-ul",
       'overview.how.a.step5.text': "Copilul explorează Povestea Pământului. Este utilă și pentru adulți, ca să înțeleagă orașul și ce nevoi are. Conținutul este adaptat pe vârste, iar copilul poate câștiga Monede Patch extra dacă face quiz-ul de la final.",
       'overview.how.a.step6.title': "Folosești Monede Patch în Căsuța de Schimb",
@@ -658,18 +682,18 @@ const I18n = {
       'overview.how.b.step3.title': "Te alături Tribului care a creat misiunea",
       'overview.how.b.step3.text': "Se alătură Tribului care a creat misiunea și o finalizează împreună cu echipa.",
       'overview.how.b.step4.title': "Liderul validează și se câștigă Monede Patch",
-      'overview.how.b.step4.text': "La final, liderul Tribului validează misiunea și adultul primește Monede Patch.",
+      'overview.how.b.step4.text': "La final, misiunea poate fi validată de liderul Tribului sau, până când validarea misiunilor va fi gata pe site, prin dovada cerută trimisă pe email. Apoi adultul primește Monede Patch.",
       'overview.how.b.step5.title': "Explorezi și faci quiz-ul",
       'overview.how.b.step5.text': "Adultul explorează și Povestea Pământului. Este utilă și pentru adulți, ca să înțeleagă orașul și ce nevoi are. Conținutul este adaptat pe vârste, iar adultul poate câștiga Monede Patch extra din quiz.",
       'overview.how.b.step6.title': "Folosești Monede Patch în Căsuța de Schimb",
       'overview.how.b.step6.text': "Monedele Patch câștigate sunt folosite în Căsuța de Schimb pentru a alege obiecte utile din comunitate, ca haine, cărți, unelte, jucării și alte lucruri practice care pot fi refolosite, iar mai târziu și în Jocuri.",
-      'overview.cluj.title': "Începem în Cluj",
-      'overview.cluj.text': "EarthPatchers își propune să pornească din Cluj și să crească cu grijă. Orașele noi s-ar deschide mai târziu doar când există suficient suport pentru faza de descoperire (date + parteneri), ca informația să rămână reală și de încredere.",
+      'overview.cluj.title': "Pilot și descoperire mai întâi",
+      'overview.cluj.text': "EarthPatchers își propune să pornească prin programe pilot cu școli interesate, lideri și parteneri timpurii, apoi să crească cu grijă.<br><br>Locațiile noi s-ar deschide mai târziu doar când există suficient suport pentru faza de descoperire (date + parteneri), ca informația să rămână reală, utilă și de încredere.",
 
       'overview.trust.title': "Important!",
       'overview.tribe.leaders': "<p><strong>Liderii de Trib</strong> vor avea nevoie de cont validat. Ei vor ajuta cu moderarea, vor păstra spațiul sigur și curat și pot câștiga mai multe <strong>Monede Patch</strong> pentru această responsabilitate extra.</p>",
-      'overview.trust.missions': "<p>Deocamdată, <strong>Monedele Patch</strong> vor fi doar contorizate, până când vom construi funcționalitățile viitoare în care vor fi folosite.</p>",
-      'overview.trust.how': "<p>Pentru început, vom testa misiunile <strong>offline</strong>, cât timp funcționalitățile <strong>website-ului</strong> sunt încă <strong>în construcție</strong>.</p>",
+      'overview.trust.missions': "<p>Deocamdată, <strong>Monedele Patch</strong> vor fi contorizate ca un mulțumesc vizibil pentru efortul real, până când vom construi funcționalitățile în care vor fi folosite. Mai târziu, vor avea utilitate practică în module viitoare precum <strong>Căsuța de Schimb</strong> și <strong>Camera de Jocuri</strong>.</p><p>Până când funcționalitatea de misiuni va fi gata pe site, misiunile pot fi validate de lideri, numiți și <strong>MasterPatchers</strong>, sau prin trimiterea dovezii cerute pe email.</p>",
+      'overview.trust.how': "<p>Pentru început, vom testa misiunile <strong>offline</strong>, cât timp funcționalitățile <strong>website-ului</strong> sunt încă <strong>în construcție</strong>. Până când validarea va fi construită în platformă, confirmarea se va face prin lideri (MasterPatchers) sau prin dovadă trimisă pe email.</p>",
 
       'overview.partners.title': "Parteneriate",
       'overview.partners.text': "EarthPatchers este gândit să lucreze alături de școli și ONG-uri, nu să le înlocuiască. Planificăm să dezvoltăm parteneriate locale și obiective de colaborare pe măsură ce misiunile se extind.<br><br>Dacă vrei să începi misiuni sau să te implici ca profesor, părinte, lider de cercetași, ONG sau partener, află mai multe detalii la secțiunea Modalități de Implicare.",
@@ -679,12 +703,12 @@ const I18n = {
       'overview.cta.about': "Vezi Cine Suntem",
       'overview.cta.modules': "Explorează modulele",
       'overview.cta.contact': "Modalități de Implicare",
-      'about.cta.overview': 'Vezi Ce Facem',
+      'about.cta.overview': 'Citește Tabăra de Bază',
 
       // MVP Page
       'mvp.title': "Tabăra de Bază",
       'mvp.title.plan': "Plan pe 36 de luni",
-      'mvp.intro': "EarthPatchers va începe cu un plan concentrat pe 36 de luni, care va dovedi că bucla de bază va funcționa în viața reală, în Cluj, înainte de extindere. Acest plan de pornire va avea patru piloni:",
+      'mvp.intro': "EarthPatchers va începe cu un plan concentrat pe 36 de luni, care va dovedi că bucla de bază funcționează în viața reală prin programe pilot cu școli interesate, lideri și parteneri timpurii, înainte de extindere. Acest plan de pornire va avea patru piloni:",
 
       'mvp.pillar1.title': "Cartierul Misiunilor",
       'mvp.pillar1.subtitle': "Acțiuni reale pentru planetă",
@@ -693,17 +717,17 @@ const I18n = {
 
       'mvp.pillar2.title': "Triburi",
       'mvp.pillar2.subtitle': "Mici, sigure, cu sens",
-      'mvp.pillar2.text': "Grupuri mici, sigure și cu sens în Cluj, cu un ritm realist (provocări lunare sau sezoniere), reguli clare, implicarea tutorilor unde e nevoie, plus raportare și moderare.",
+      'mvp.pillar2.text': "Grupuri pilot mici, sigure și cu sens, cu un ritm realist (provocări lunare sau sezoniere), reguli clare, implicarea tutorilor unde e nevoie, plus raportare și moderare.",
       'mvp.pillar2.why': "Tinerilor le pasă profund de viitorul lor. Aici vor avea un mod sigur de a contribui, fără să fie copleșiți.",
 
       'mvp.pillar3.title': "Căsuța de Schimb",
       'mvp.pillar3.subtitle': "Schimb, partajare, reutilizare",
-      'mvp.pillar3.text': "Un spațiu de schimb și reutilizare, cu focus pe Cluj, unde încrederea va fi pe primul loc: reguli clare de schimb, ghid pentru preluare în siguranță și moderare pentru comportamente suspecte.",
+      'mvp.pillar3.text': "Un spațiu de schimb și reutilizare unde încrederea va fi pe primul loc: reguli clare de schimb, ghid pentru preluare în siguranță și moderare pentru comportamente suspecte. Monedele Patch vor avea utilitate practică aici, în module viitoare precum Căsuța de Schimb și Camera de Jocuri.",
       'mvp.pillar3.why': "Obiceiurile circulare vor funcționa când oamenii au încredere în sistem.",
 
       'mvp.pillar4.title': "Povestea Pământului",
-      'mvp.pillar4.subtitle': "Învățare + acțiune, Cluj întâi",
-      'mvp.pillar4.text': "O lume de învățare și acțiune construită pas cu pas în Cluj, cu trei uși: Pericolele Mele, Zona de Contaminare și Refacere, și Învață & Joacă, toate conectate la misiuni.",
+      'mvp.pillar4.subtitle': "Învățare + acțiune, adaptate local",
+      'mvp.pillar4.text': "O lume de învățare și acțiune construită pas cu pas, cu trei uși: Pericolele Mele, Zona de Contaminare și Refacere, și Învață & Joacă, toate conectate la misiuni. În timp, misiunile pot fi adaptate în funcție de loc prin colaborare cu ONG-uri locale și parteneri de încredere.",
       'mvp.pillar4.why': "Va face învățarea practică și de încredere, legând-o direct de acțiunile locale.",
 
       'mvp.modules.title': "Modulele de pornire",
@@ -713,11 +737,11 @@ const I18n = {
 
       'mvp.phase1.label': "Faza 1",
       'mvp.phase1.months': "Lunile 0–12",
-      'mvp.phase1.title': "Dovedim bucla de bază în Cluj",
+      'mvp.phase1.title': "Dovedim bucla de bază în programe pilot",
       'mvp.phase1.item1': "Lansăm Cartierul Misiunilor",
       'mvp.phase1.item2': "Rulăm primele Triburi pilot pentru tineri, cu reguli solide de siguranță",
       'mvp.phase1.item3': "Lansăm pilotul Căsuța de Schimb, cu moderare și ghid clar pentru preluare în siguranță",
-      'mvp.phase1.item4': "Lansăm prima versiune mică din Povestea Pământului (doar Cluj, colț simplu de învățare + primele pinuri pe hartă)",
+      'mvp.phase1.item4': "Lansăm prima versiune mică din Povestea Pământului (colț simplu de învățare + primele pinuri locale pe hartă, acolo unde este relevant)",
       'mvp.phase1.goal': "Dovedim că oamenii revin, participă și se simt în siguranță.",
 
       'mvp.phase2.label': "Faza 2",
@@ -726,7 +750,7 @@ const I18n = {
       'mvp.phase2.item1': "Îmbunătățim calitatea misiunilor și pachetele de misiuni (colecții sezoniere)",
       'mvp.phase2.item2': "Extindem Triburile pilot pentru tineri dacă Faza 1 merge bine",
       'mvp.phase2.item3': "Îmbunătățim fluxurile de schimb sigur (categorii, șabloane, semnale de încredere)",
-      'mvp.phase2.item4': "Dezvoltăm cu grijă Povestea Pământului (mai multe teme, trasee de învățare mai bune, în continuare doar pentru Cluj)",
+      'mvp.phase2.item4': "Dezvoltăm cu grijă Povestea Pământului (mai multe teme, trasee de învățare mai bune și adaptare locală acolo unde este util)",
       'mvp.phase2.goal': "Reducem efortul de administrare și moderare, în timp ce creștem calitatea experienței și nivelul de siguranță.",
 
       'mvp.phase3.label': "Faza 3",
@@ -735,11 +759,11 @@ const I18n = {
       'mvp.phase3.item1': "Facem cele 4 module de pornire stabile și repetabile",
       'mvp.phase3.item2': "Ne asigurăm că fluxurile de siguranță funcționează și la scară mai mare",
       'mvp.phase3.item3': "Întărim traseele de învățare conectate la misiuni și la acțiunea locală",
-      'mvp.phase3.goal': "EarthPatchers devine un model care poate fi replicat, pornind din Cluj.",
+      'mvp.phase3.goal': "EarthPatchers devine un model care poate fi replicat și adaptat în locații diferite.",
 
       'mvp.globe.title': "Notă importantă",
       'mvp.globe.intro': "Povestea Pământului se construiește pe capitole mici, pas cu pas:",
-      'mvp.globe.phase1': "Faza 1: colț mic de învățare în Cluj",
+      'mvp.globe.phase1': "Faza 1: colț mic de învățare în locații pilot",
       'mvp.globe.phase2': "Faza 2: conținut de învățare mai bogat și trasee mai clare",
       'mvp.globe.phase3': "Faza 3: parcursuri de învățare mai solide și mai complete, conectate la misiuni",
       'mvp.globe.why': "Construim etapizat, ca să rămână fiabil și ușor de înțeles.",
@@ -752,7 +776,7 @@ const I18n = {
       'mvp.success.item2': "Participarea tinerilor va fi sigură, susținută și cu sens",
       'mvp.success.item3': "Schimbul circular va funcționa fluid, cu încredere și moderare",
       'mvp.success.item4': "Povestea Pământului îi va ajuta pe oameni să înțeleagă „de ce” și „ce urmează”",
-      'mvp.success.item5': "Cluj va deveni o bază solidă pentru extinderea viitoare",
+      'mvp.success.item5': "Primele programe pilot vor deveni o bază solidă pentru extinderea viitoare",
       'mvp.more.title': "Vrei să vezi tot ce am dori să construim?",
       'mvp.more.text': "Schimbă la Varianta Parteneri ca să explorezi planul complet din Tabăra de Bază și pașii următori din aventura noastră.",
       'mvp.more.cta': "Mergi la Varianta Parteneri",
@@ -776,12 +800,12 @@ const I18n = {
       // Missions HQ
       'missions-hq.title': 'Cartierul Misiunilor',
       'missions-hq.subtitle': 'De Unde Începe Totul',
-      'missions-hq.desc': "<p>Cartierul Misiunilor va fi locul unde începe EarthPatchers. Va fi o bibliotecă de misiuni din viața reală pentru copii, adolescenți și adulți, gândită ca salvarea Pământului să pară ceva realizabil.</p><p>Se va potrivi cu stiluri de viață diferite:</p><ul><li>misiuni mici pentru familii ocupate (10-20 minute)</li><li>misiuni de weekend pentru impact mai mare (1-2 ore)</li><li>misiuni de echipă pentru școli, grupuri de tineri și echipe din comunitate</li></ul><p>Pentru adulți, misiunile vor putea fi potrivite cu abilitățile (reparat, organizat, predat, grădinărit, design, fotografie) și cu timpul disponibil, ceea ce va face voluntariatul eficient și satisfăcător. Pentru copii, misiunile se vor simți ca niște aventuri.</p><p>Structura aceasta va face proiectele mai ușor de repetat în comunități diferite: odată ce o misiune funcționează bine, va putea fi refolosită de alte grupuri fără să pornească de la zero.</p>",
+      'missions-hq.desc': "<p>Cartierul Misiunilor este locul unde începe EarthPatchers. Este o bibliotecă de misiuni din viața reală pentru copii, adolescenți și adulți, gândită ca salvarea Pământului să pară ceva realizabil.</p><p>Se potrivește cu stiluri de viață diferite:</p><ul><li>misiuni mici pentru familii ocupate (10-20 minute)</li><li>misiuni de weekend pentru impact mai mare (1-2 ore)</li><li>misiuni de echipă pentru școli, grupuri de tineri și echipe din comunitate</li></ul><p>Pentru adulți, misiunile sunt potrivite cu abilitățile (reparat, organizat, predat, grădinărit, design, fotografie) și cu timpul disponibil, ceea ce face voluntariatul eficient și satisfăcător. Pentru copii, misiunile se simt ca niște aventuri.</p><p>Deocamdată, misiunile pot fi validate de lideri (MasterPatchers) sau prin trimiterea dovezii cerute pe email, până când validarea misiunilor va fi gata pe site.</p><p>Structura aceasta face proiectele mai ușor de repetat în comunități diferite: odată ce o misiune funcționează bine, poate fi refolosită de alte grupuri fără să pornească de la zero.</p>",
       'missions-hq.rewards.title': 'Recompensele rămân simple:',
-      'missions-hq.rewards.coins': 'Monede Patch: le vei câștiga din misiuni și învățare și le vei folosi în Căsuța de Schimb (și mai târziu în Camera de Jocuri).',
-      'missions-hq.rewards.badges': 'Insignele: vor fi despre cine devii (curajos, bun, curios).',
-      'missions-hq.rewards.achievements': 'Realizările: vor fi lucrurile pe care le-ai făcut, ca niște stickere în caietul tău de aventuri.',
-      'missions-hq.why': 'Misiunile vor transforma grija pentru planetă într-o aventură. Vor oferi familiilor și tinerilor un punct de plecare clar: o misiune o dată, construind schimbare reală pas cu pas.',
+      'missions-hq.rewards.coins': 'Monede Patch: le câștigi din misiuni și învățare și le folosești în Căsuța de Schimb (și mai târziu în Camera de Jocuri).',
+      'missions-hq.rewards.badges': 'Insignele: reflectă cine devii (curajos, bun, curios).',
+      'missions-hq.rewards.achievements': 'Realizările: surprind lucrurile pe care le-ai făcut, ca niște stickere în caietul tău de aventuri.',
+      'missions-hq.why': 'Misiunile transformă grija pentru planetă într-o aventură. Oferă familiilor și tinerilor un punct de plecare clar: o misiune o dată, construind schimbare reală pas cu pas.',
 
       // Tribes
       'tribes.title': 'Triburi',
@@ -798,7 +822,7 @@ const I18n = {
       // Market Hut
       'market-hut.title': 'Căsuța de Schimb',
       'market-hut.subtitle': 'Schimbă, Împarte, Reutilizează',
-      'market-hut.desc': "<p>Căsuța de Schimb va fi un schimb circular, la început în Cluj Napoca, unde vom refolosi lucruri în loc să cumpărăm mereu altele noi:</p><ul><li>Monedele Patch vor rezolva problema schimbului perfect: vei câștiga monede ajutând, apoi le vei folosi ca să alegi ce ai nevoie — de exemplu o jucărie, o geacă călduroasă, cărți sau rechizite.</li><li>Siguranța va fi integrată: adulții își vor alege vizibilitatea, iar fețele copiilor nu vor fi permise.</li></ul>",
+      'market-hut.desc': "<p>Căsuța de Schimb va fi un spațiu de schimb circular, unde vom refolosi lucruri în loc să cumpărăm mereu altele noi:</p><ul><li>Monedele Patch vor rezolva problema schimbului perfect: vei câștiga monede ajutând, apoi le vei folosi ca să alegi ce ai nevoie — de exemplu o jucărie, o geacă călduroasă, cărți sau rechizite.</li><li>Siguranța va fi integrată: adulții își vor alege vizibilitatea, iar fețele copiilor nu vor fi permise.</li><li>Pe măsură ce EarthPatchers crește, schimbul va putea fi adaptat la locuri diferite prin colaborare cu ONG-uri locale, școli și parteneri de încredere.</li></ul>",
       'market-hut.why': 'Obiceiurile circulare sunt una dintre cele mai rapide modalități de a reduce risipa. Monedele Patch vor face reutilizarea simplă și corectă — fără schimb complicat, doar bunătate și monede.',
       'market-hut.next1': "Licitație politicoasă opțională cu Monede Patch pentru produse foarte căutate (simplu și sigur pentru copii).",
       'market-hut.next2': "Rafturi de împrumut (unelte, cărți, echipament sport, echipament copii).",
@@ -807,8 +831,8 @@ const I18n = {
 
       // Earth's Side of the Story
       'earth-side.title': 'Povestea Pământului',
-      'earth-side.subtitle': 'Învățare care începe în Cluj',
-      'earth-side.desc': "<p>Povestea Pământului va fi lumea de învățare și acțiune care va porni în Cluj Napoca și va lega învățarea de misiuni. Va avea trei uși:</p><ol><li>Pericolele Mele: va explica simplu pericolele naturale, pericolele naturale agravate de poluare sau schimbări făcute de oameni și pericolele cauzate direct de oameni. Aventuri scurte de tip traseu, din care vei învăța lucruri interesante, fiecare cu o mini-provocare la final, vor putea oferi Monede Patch.</li><li>Zona de Mizerie și Reparare (Harta Clujului): adulții (și adolescenții mai mari, unde e potrivit) vor putea pune un pin cu poză și notiță pentru gunoaie, lucruri stricate și zone care au nevoie de grijă. Pinurile vor putea deveni misiuni.</li><li>Învață și Joacă: învățare scurtă, conectată la misiuni și monede.</li></ol>",
+      'earth-side.subtitle': 'Învățare conectată la loc',
+      'earth-side.desc': "<p>Povestea Pământului va fi lumea de învățare și acțiune care leagă învățarea de misiuni. Va avea trei uși:</p><ol><li>Pericolele Mele: va explica simplu pericolele naturale, pericolele naturale agravate de poluare sau schimbări făcute de oameni și pericolele cauzate direct de oameni. Aventuri scurte de tip traseu, din care vei învăța lucruri interesante, fiecare cu o mini-provocare la final, vor putea oferi Monede Patch.</li><li>Zona de Mizerie și Reparare (hartă locală, unde este relevant): adulții (și adolescenții mai mari, unde e potrivit) vor putea pune un pin cu poză și notiță pentru gunoaie, lucruri stricate și zone care au nevoie de grijă. Pinurile vor putea deveni misiuni.</li><li>Învață și Joacă: învățare scurtă, conectată la misiuni și monede.</li></ol><p>În timp, misiunile și straturile locale de învățare pot fi adaptate în funcție de loc prin colaborare cu ONG-uri locale și parteneri de încredere.</p>",
       'earth-side.next1': 'Alertele noi pot trimite un semn bl\u00e2nd Triburilor din zon\u0103, ca echipele locale s\u0103 poat\u0103 alege s\u0103 ajute.',
       'earth-side.next2': 'Ora\u0219ele noi se deschid doar cu Faza de descoperire (date + parteneri + misiuni importante). Dac\u0103 descoperirea nu e sus\u021binut\u0103, zona r\u0103m\u00e2ne \u201eadormit\u0103\u201d p\u00e2n\u0103 c\u00e2nd comunitatea ajut\u0103 s\u0103 g\u0103seasc\u0103 surse de date sau parteneri.',
       'earth-side.next3': "Ajutorul comunității pentru descoperire (surse de date și cartografiere ajutori locali).",
@@ -833,7 +857,7 @@ const I18n = {
       // Eco Shops Directory
       'eco-shops.title': 'Ghidul Eco',
       'eco-shops.subtitle': 'Găsește Ce E Cu Adevărat Sustenabil',
-      'eco-shops.desc': "<p>Ghidul Eco va fi un ghid care va porni din Cluj Napoca, cu produse sustenabile și magazine locale, plus ratinguri și comentarii de la membri validați.</p><p>Va include și o funcție de Interes sau Dorință pentru produse zero deșeuri care încă nu se găsesc local:</p><ul><li>Oamenii vor putea apăsa \"Vreau și la noi\" ca să arate interesul, fără ca fiecare să comande separat.</li><li>Dacă sunt destui interesați, comunitatea va putea organiza o comandă la comun, ca să scadă ambalajele și risipa de transport.</li><li>Producătorii și companiile vor putea vedea nivelul de interes și planifica mai bine.</li></ul><p>Regulile de calitate vor păstra încrederea și vor reduce spamul:</p><ul><li>Vei putea lăsa recenzie sau adăuga produse după ce câștigi destule Monede Patch și faci o misiune verificată.</li><li>Produsele noi vor fi trimise printr-un șablon simplu (poză, de unde îl iei, materiale, de ce e mai bun, la ce să fii atent).</li><li>Liderii, numiți și MasterPatchers, vor verifica intrările înainte să apară public.</li></ul>",
+      'eco-shops.desc': "<p>Ghidul Eco va fi un ghid cu produse sustenabile și magazine locale, plus ratinguri și comentarii de la membri validați.</p><p>Va include și o funcție de Interes sau Dorință pentru produse zero deșeuri care încă nu se găsesc local:</p><ul><li>Oamenii vor putea apăsa \"Vreau și la noi\" ca să arate interesul, fără ca fiecare să comande separat.</li><li>Dacă sunt destui interesați, comunitatea va putea organiza o comandă la comun, ca să scadă ambalajele și risipa de transport.</li><li>Producătorii și companiile vor putea vedea nivelul de interes și planifica mai bine.</li></ul><p>Regulile de calitate vor păstra încrederea și vor reduce spamul:</p><ul><li>Vei putea lăsa recenzie sau adăuga produse după ce câștigi destule Monede Patch și faci o misiune verificată.</li><li>Produsele noi vor fi trimise printr-un șablon simplu (poză, de unde îl iei, materiale, de ce e mai bun, la ce să fii atent).</li><li>Liderii, numiți și MasterPatchers, vor verifica intrările înainte să apară public.</li></ul><p>În timp, recomandările locale pot fi modelate împreună cu ONG-uri locale și parteneri de încredere, ca ghidul să rămână bine ancorat în fiecare loc.</p>",
       'eco-shops.why': 'Găsirea produselor cu adevărat sustenabile e dificilă. Acest director va păstra lucrurile cinstite cu recenzii din comunitate, misiuni verificate și verificare din partea Leader-ilor (rolul MasterPatcher).',
 
       // The Green Wall
@@ -869,7 +893,7 @@ const I18n = {
       'mod.large-missions.short': 'Misiuni mai mari pentru weekenduri, echipe și impact local măsurabil.',
       'mod.tribes.short': 'Spații sigure de echipă cu reguli de tabără. Copiii folosesc aliasuri; misiunile circulă între Triburi.',
       'mod.market-hut.short': 'Schimb circular local cu Monede Patch. Refolosește în loc să cumperi nou.',
-      'mod.earth-side.short': 'Hartă de învățare + acțiune începând din Cluj. Trei uși: riscuri, hartă locală, învață și joacă.',
+      'mod.earth-side.short': 'Hartă de învățare + acțiune, cu riscuri, hartă locală unde este relevant și învață și joacă.',
       'mod.games-room.short': 'Hub viitor cu jocuri de încredere despre natură, deblocate cu Monede Patch.',
       'mod.activity-hut.short': 'Jurnal personal de aventuri pe care îl vom avea, cu Insigne, Realizări și urmărire Monede Patch.',
       'mod.eco-shops.short': 'Ghid comunitar pe care îl vom avea, cu produse și magazine sustenabile, verificat de Lideri (MasterPatchers).',
@@ -897,7 +921,7 @@ const I18n = {
       'about.value4.title': 'Siguran\u021ba Copiilor',
       'about.value4.text': 'Confiden\u021bialitate prin design, con\u021binut adecvat v\u00e2rstei \u0219i implicarea tutorilor la fiecare pas.',
       'about.how.title': 'De unde începem',
-      'about.how.text': 'Vom lucra prin parteneriate cu \u0219coli \u0219i ONG-uri, programe pilot \u00een Cluj \u0219i vot comunitar pentru a decide ce facem mai departe. Totul va \u00eencepe mic, va fi testat \u0219i va cre\u0219te pe baza feedback-ului real.',
+      'about.how.text': 'Vom lucra prin parteneriate cu școli, ONG-uri, lideri locali și parteneri timpurii, plus vot comunitar pentru a decide ce facem mai departe. Totul va începe mic, va fi testat și va crește pe baza feedback-ului real. În timp, misiunile pot fi adaptate în funcție de loc prin colaborare cu ONG-uri locale și parteneri de încredere.',
 
       // Contact Us
       'contact.title': 'Modalități de Implicare',
@@ -947,7 +971,7 @@ const I18n = {
       'donate.status.error': 'Nu s-a putut trimite acum. Te rog folosește butonul „Copiază emailul” de mai sus.',
 
       // Footer
-      'footer.text': 'EarthPatchers \u2014 Sustenabilitate ghidat\u0103 de comunitate, \u00eencep\u00e2nd din Cluj.',
+      'footer.text': 'EarthPatchers \u2014 Sustenabilitate ghidată de comunitate, construită prin programe pilot și colaborare locală.',
     }
   },
 

@@ -52,6 +52,21 @@ const Sidebar = {
         }
       };
 
+      const openAndNavigate = () => {
+        const href = link?.getAttribute('href');
+        setOpenState(true);
+        if (!href) return;
+
+        if (typeof Router !== 'undefined' && Router && typeof Router.goTo === 'function') {
+          Router.goTo(href);
+          return;
+        }
+
+        if (location.hash !== href) {
+          location.hash = href;
+        }
+      };
+
       // Clicking the arrow button toggles the submenu
       const arrow = toggle.querySelector('.sidebar__accordion-arrow');
       if (arrow) {
@@ -74,7 +89,7 @@ const Sidebar = {
       if (link) {
         link.addEventListener('click', (e) => {
           e.preventDefault();
-          openOrCollapseRow();
+          openAndNavigate();
         });
       }
     });

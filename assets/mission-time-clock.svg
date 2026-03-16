@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Mission time clock</title>
+  <desc id="desc">A playful clock icon matching the mission card stat icons.</desc>
+  <defs>
+    <radialGradient id="clockFace" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fff5d9"/>
+      <stop offset="100%" stop-color="#f0d39a"/>
+    </radialGradient>
+    <linearGradient id="clockRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6e4c22"/>
+      <stop offset="100%" stop-color="#a66c1c"/>
+    </linearGradient>
+    <linearGradient id="clockAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9fe3b1"/>
+      <stop offset="100%" stop-color="#4b9c6a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="34" r="22" fill="url(#clockRim)"/>
+  <circle cx="32" cy="34" r="18" fill="url(#clockFace)"/>
+  <path d="M20 11c1.5-3.5 4.5-5.5 8-5.5 3.4 0 5.8 1.1 7 3.3-4.1.8-7.3 2.1-9.5 3.8L20 11Z" fill="url(#clockAccent)"/>
+  <path d="M44 11c-1.5-3.5-4.5-5.5-8-5.5-3.4 0-5.8 1.1-7 3.3 4.1.8 7.3 2.1 9.5 3.8L44 11Z" fill="url(#clockAccent)"/>
+  <circle cx="32" cy="34" r="2.8" fill="#6e4c22"/>
+  <path d="M32 34V22" stroke="#6e4c22" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M32 34l9 5" stroke="#6e4c22" stroke-width="3.4" stroke-linecap="round"/>
+  <g fill="#6e4c22">
+    <circle cx="32" cy="18" r="1.3"/>
+    <circle cx="48" cy="34" r="1.3"/>
+    <circle cx="32" cy="50" r="1.3"/>
+    <circle cx="16" cy="34" r="1.3"/>
+  </g>
+</svg>

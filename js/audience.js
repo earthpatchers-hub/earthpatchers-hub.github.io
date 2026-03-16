@@ -30,6 +30,7 @@ const Audience = {
     }
 
     this.applyVisibility();
+    this.bindSwitchHandlers();
     window.addEventListener('hashchange', () => this.updateSwitchLinks());
   },
 
@@ -73,12 +74,58 @@ const Audience = {
     return this.fallbackHash();
   },
 
-  updateSwitchLinks() {
-    const hash = window.location.hash || '#overview';
-    const normalizedHash = this.normalizeHash(hash);
+  getCurrentHash() {
+    if (window.location.hash) {
+      return window.location.hash;
+    }
 
-    const toPartnersHref = `partners.html${normalizedHash}`;
-    const toPublicHref = `index.html${normalizedHash}`;
+    const activePage = document.querySelector('.page.active');
+    if (!activePage) return '#overview';
+
+    const pageId = activePage.id || '';
+    if (pageId.startsWith('page-module-')) {
+      return `#module/${pageId.replace('page-module-', '')}`;
+    }
+    if (pageId.startsWith('page-')) {
+      return `#${pageId.replace('page-', '')}`;
+    }
+
+    return '#overview';
+  },
+
+  getSwitchTargetHref(targetMode) {
+    const hash = this.getCurrentHash();
+    const normalizedHash = targetMode === 'public'
+      ? this.normalizeHash(hash)
+      : hash;
+
+    return targetMode === 'partners'
+      ? `index.html?view=partners${normalizedHash}`
+      : `index.html${normalizedHash}`;
+  },
+
+  bindSwitchHandlers() {
+    const desktopPartners = document.getElementById('audience-switch-to-partners');
+    const desktopPublic = document.getElementById('audience-switch-to-public');
+    const mobile = document.getElementById('audience-switch-mobile');
+
+    const bind = (el, targetMode) => {
+      if (!el || el.dataset.audienceBound === 'true') return;
+      el.dataset.audienceBound = 'true';
+      el.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.assign(this.getSwitchTargetHref(targetMode));
+      });
+    };
+
+    bind(desktopPartners, 'partners');
+    bind(desktopPublic, 'public');
+    bind(mobile, this.isPartners() ? 'public' : 'partners');
+  },
+
+  updateSwitchLinks() {
+    const toPartnersHref = this.getSwitchTargetHref('partners');
+    const toPublicHref = this.getSwitchTargetHref('public');
 
     const desktopPartners = document.getElementById('audience-switch-to-partners');
     const desktopPublic = document.getElementById('audience-switch-to-public');
@@ -92,10 +139,12 @@ const Audience = {
         mobile.setAttribute('href', toPublicHref);
         mobile.setAttribute('data-i18n', 'audience.switch.public-mobile');
         mobile.textContent = 'Public';
+        mobile.dataset.audienceTarget = 'public';
       } else {
         mobile.setAttribute('href', toPartnersHref);
         mobile.setAttribute('data-i18n', 'audience.switch.partners-mobile');
         mobile.textContent = 'Partners';
+        mobile.dataset.audienceTarget = 'partners';
       }
     }
   }

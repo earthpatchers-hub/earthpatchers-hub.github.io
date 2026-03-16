@@ -187,7 +187,7 @@ li {
 }
 
 .sidebar__logo {
-  width: 120px;
+  width: 200px;
   margin: 0 auto var(--space-sm);
 }
 
@@ -195,6 +195,81 @@ li {
   display: flex;
   justify-content: center;
   gap: var(--space-xs);
+}
+
+.patch-counter {
+  position: relative;
+  margin-top: var(--space-sm);
+  display: flex;
+  justify-content: center;
+}
+
+.patch-counter__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-bandage-brown);
+  cursor: pointer;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.patch-counter__trigger:hover,
+.patch-counter__trigger:focus-visible,
+.patch-counter__trigger[aria-expanded="true"] {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.patch-counter__coin {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.patch-counter__value {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+html[data-theme="dark"] .patch-counter__value {
+  color: var(--color-text-accent);
+}
+
+.patch-counter__popover {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(260px, calc(100vw - 2rem));
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-card) 94%, #fff 6%);
+  box-shadow: 0 18px 42px rgba(36, 54, 39, 0.2);
+  text-align: left;
+  z-index: 1100;
+}
+
+.patch-counter__text {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.patch-counter__link {
+  font-weight: 700;
+  color: var(--color-text-accent);
+}
+
+.patch-counter__link:hover {
+  color: var(--color-golden-glow);
 }
 
 .audience-switch {
@@ -682,6 +757,573 @@ html[data-theme="dark"] .theme-switch--mobile .theme-switch__icon--light {
   color: var(--color-golden-glow);
   border-left-color: var(--color-golden-glow);
   background: var(--color-bg-card);
+}
+
+#mission-grid,
+#medium-mission-grid,
+#large-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.missions-section {
+  margin-top: var(--space-xl);
+}
+
+.missions-section__header {
+  margin-bottom: var(--space-lg);
+}
+
+.missions-section__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-bandage-brown);
+}
+
+.mission-intro {
+  max-width: 58ch;
+  color: var(--color-text-secondary);
+}
+
+.missions-filters {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 228, 0.55), rgba(236, 239, 225, 0.55)),
+    var(--color-bg-card);
+}
+
+.missions-filters__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  color: var(--color-text-heading);
+}
+
+.missions-filters__controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.missions-filter {
+  display: grid;
+  gap: 6px;
+}
+
+.missions-filter__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bandage-brown);
+}
+
+.missions-filter__select {
+  appearance: none;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 40px 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background:
+    linear-gradient(45deg, transparent 50%, var(--color-text-accent) 50%) calc(100% - 19px) calc(50% - 3px) / 7px 7px no-repeat,
+    linear-gradient(135deg, var(--color-text-accent) 50%, transparent 50%) calc(100% - 14px) calc(50% - 3px) / 7px 7px no-repeat,
+    var(--color-bg-card);
+  color: var(--color-text-heading);
+  font: inherit;
+  cursor: pointer;
+}
+
+.missions-filter__select:hover,
+.missions-filter__select:focus {
+  border-color: var(--color-border-hover);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(240, 192, 64, 0.12);
+}
+
+.missions-empty {
+  margin: 30px 0 0;
+  padding: 18px 20px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-card);
+}
+
+.mission-card {
+  position: relative;
+  perspective: 1200px;
+  min-height: 580px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mission-card:hover {
+  transform: none;
+}
+
+.mission-card__inner {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+.mission-card--flipped .mission-card__inner {
+  transform: rotateY(180deg);
+}
+
+.mission-card__face {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 2px 12px rgba(13, 31, 21, 0.06);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.mission-card:hover .mission-card__face {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 4px 20px rgba(240, 192, 64, 0.08);
+}
+
+.mission-card__face--back {
+  transform: rotateY(180deg);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.mission-image {
+  height: 190px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 190px;
+  background:
+    radial-gradient(circle at top, rgba(240, 192, 64, 0.16), transparent 52%),
+    linear-gradient(180deg, rgba(255, 248, 228, 0.95), rgba(236, 239, 225, 0.95));
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mission-image--cover {
+  position: relative;
+  height: auto;
+  flex: 0 0 auto;
+  aspect-ratio: 3 / 2;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.mission-image--cover img {
+  position: absolute;
+  inset: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  object-fit: cover;
+  object-position: var(--mission-cover-position, center center);
+  transform: scale(var(--mission-cover-scale, 1.09));
+  transform-origin: center center;
+  border-radius: 0 !important;
+  max-width: none;
+}
+
+.mission-image--cover.mission-image--contain img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(var(--mission-cover-scale, 1));
+}
+
+.mission-image--empty {
+  background:
+    radial-gradient(circle at top, rgba(240, 192, 64, 0.16), transparent 52%),
+    linear-gradient(180deg, rgba(255, 248, 228, 0.95), rgba(236, 239, 225, 0.95));
+}
+
+.mission-image:not(.mission-image--cover) {
+  padding: 18px;
+}
+
+.mission-image:not(.mission-image--cover) img {
+  width: auto;
+  height: auto;
+  max-height: 112px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.mission-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.mission-content--back {
+  justify-content: flex-start;
+  min-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mission-achievement {
+  margin: 0 0 0.45rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bandage-amber);
+}
+
+html[data-theme="light"] .mission-card .mission-card__face--back .mission-achievement,
+html:not([data-theme]) .mission-card .mission-card__face--back .mission-achievement {
+  color: var(--color-bandage-amber);
+}
+
+.mission-achievement__label {
+  color: var(--color-text-secondary);
+  margin-right: 0.2rem;
+}
+
+.mission-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+html[data-theme="dark"] .mission-card .mission-achievement {
+  color: var(--color-bandage-amber);
+}
+
+html[data-theme="dark"] .mission-card .mission-card__face--back .mission-content h3 {
+  color: var(--color-text-heading);
+}
+
+.mission-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: start;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(45, 107, 63, 0.18);
+  background: rgba(45, 107, 63, 0.12);
+  color: #1f5b37;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.chip--category {
+  grid-column: 1;
+}
+
+.chip--type {
+  grid-column: 1 / -1;
+  width: fit-content;
+  max-width: 100%;
+  background: rgba(240, 192, 64, 0.2);
+  border-color: rgba(184, 127, 29, 0.22);
+  color: #8b5c10;
+}
+
+.chip--difficulty {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  background: rgba(51, 111, 169, 0.15);
+  border-color: rgba(51, 111, 169, 0.2);
+  color: #2d5f94;
+}
+
+html[data-theme="dark"] .chip {
+  background: rgba(93, 167, 114, 0.18);
+  border-color: rgba(93, 167, 114, 0.35);
+  color: #d9f6df;
+}
+
+html[data-theme="dark"] .chip--type {
+  background: rgba(240, 192, 64, 0.18);
+  border-color: rgba(240, 192, 64, 0.32);
+  color: #f7d680;
+}
+
+html[data-theme="dark"] .chip--difficulty {
+  background: rgba(111, 165, 226, 0.18);
+  border-color: rgba(111, 165, 226, 0.32);
+  color: #cde1ff;
+}
+
+.mission-stats {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 0;
+  font-size: 12px;
+  margin: 8px 0 12px;
+}
+
+.mission-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.14rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  letter-spacing: -0.015em;
+  min-width: 0;
+}
+
+.mission-chip__icon,
+.mission-stats__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.mission-stats__icon {
+  border-radius: 4px;
+}
+
+.mission-stats__coins {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.14rem;
+}
+
+.mission-stats__coin {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.mission-stats__age {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  font-size: 12px;
+  padding-left: 0.2rem;
+}
+
+.mission-summary {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+.mission-actions {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.mission-backbar {
+  position: relative;
+  z-index: 2;
+  padding: 18px 18px 10px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.mission-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--color-text-accent);
+  border: 2px solid var(--color-text-accent);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.mission-btn:hover {
+  background: var(--color-text-accent);
+  color: var(--color-bg-deep);
+}
+
+.mission-btn--back {
+  border-color: var(--color-text-accent);
+  color: var(--color-text-accent);
+}
+
+.mission-btn--backtop {
+  width: auto;
+  min-width: 144px;
+}
+
+.mission-btn--back:hover {
+  background: var(--color-text-accent);
+  color: var(--color-bg-deep);
+}
+
+.mission-details__block {
+  margin-top: 10px;
+}
+
+.mission-details__block--steps {
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.mission-details__block h4 {
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-bandage-brown);
+}
+
+html[data-theme="light"] .mission-card .mission-card__face--back .mission-details__block h4,
+html:not([data-theme]) .mission-card .mission-card__face--back .mission-details__block h4 {
+  color: var(--color-bandage-brown);
+}
+
+html[data-theme="dark"] .mission-details__block h4 {
+  color: var(--color-text-heading);
+}
+
+.mission-details__block p,
+.mission-details__block li {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.mission-details__block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+html[data-theme="dark"] .mission-image {
+  background:
+    radial-gradient(circle at top, rgba(240, 192, 64, 0.18), transparent 52%),
+    linear-gradient(180deg, rgba(55, 68, 55, 0.92), rgba(43, 55, 43, 0.95));
+}
+
+html[data-theme="dark"] .mission-card__face {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .mission-backbar {
+  background: var(--color-bg-card);
+}
+
+html[data-theme="dark"] .missions-filters {
+  background:
+    linear-gradient(180deg, rgba(240, 192, 64, 0.08), rgba(93, 167, 114, 0.08)),
+    var(--color-bg-card);
+}
+
+html[data-theme="dark"] .missions-filter__label {
+  color: var(--color-text-heading);
+}
+
+html[data-theme="dark"] .missions-filter__select {
+  background:
+    linear-gradient(45deg, transparent 50%, #9fe3b1 50%) calc(100% - 19px) calc(50% - 3px) / 7px 7px no-repeat,
+    linear-gradient(135deg, #9fe3b1 50%, transparent 50%) calc(100% - 14px) calc(50% - 3px) / 7px 7px no-repeat,
+    var(--color-bg-card);
+  border-color: rgba(159, 227, 177, 0.25);
+  color: var(--color-text-heading);
+}
+
+@media (max-width: 640px) {
+  .missions-filters__controls {
+    grid-template-columns: 1fr;
+  }
+
+  #mission-grid,
+  #medium-mission-grid,
+  #large-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    min-height: 620px;
+  }
+
+  .mission-card__inner {
+    min-height: 620px;
+  }
+
+  .mission-content h3 {
+    font-size: clamp(1.1rem, 7vw, 1.45rem);
+    line-height: 1.12;
+  }
+
+  .mission-meta {
+    gap: 6px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .missions-filters__controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #mission-grid,
+  #medium-mission-grid,
+  #large-mission-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* --- Mobile Header --- */
@@ -1178,14 +1820,14 @@ html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
 }
 
 .feature-card__icon--cluj img {
-  width: 112px;
-  height: 112px;
+  width: 128px;
+  height: 128px;
 }
 
 .feature-card__icon--cluj {
-  width: 112px;
-  height: 112px;
-  min-width: 112px;
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
 }
 
 .feature-card__icon--missions-coin {
@@ -1228,7 +1870,7 @@ html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
 }
 
 .feature-card--cluj-single {
-  padding-left: 0;
+  padding-left: var(--space-sm);
 }
 
 .mission-size-grid {
@@ -1409,6 +2051,11 @@ html:not([data-theme="light"]) #page-overview [data-i18n="overview.trust.title"]
 .journey-table-control[disabled] {
   opacity: 0.4;
   cursor: default;
+}
+
+html[data-theme="dark"] .journey-table-control {
+  color: #9fe3b1;
+  border-color: rgba(159, 227, 177, 0.28);
 }
 
 .journey-table th,
@@ -1667,6 +2314,51 @@ html[data-theme="light"] #page-overview .journey-table td:first-child {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.page--module .module-hero__image {
+  width: 260px;
+  min-width: 260px;
+}
+
+#page-module-small-missions .module-hero__image,
+#page-module-medium-missions .module-hero__image,
+#page-module-large-missions .module-hero__image {
+  width: 200px;
+  min-width: 200px;
+}
+
+#page-module-patch-coins .module-hero__image {
+  width: 200px;
+  min-width: 200px;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  transform-origin: center;
+}
+
+#page-module-patch-coins .module-hero {
+  gap: var(--space-xl);
+  align-items: flex-start;
+  margin-bottom: var(--space-2xl);
+}
+
+#page-module-patch-coins .module-hero__content {
+  padding-top: 0;
+}
+
+#page-module-patch-coins .module-body__intro {
+  margin-top: 0;
+}
+
+#page-module-patch-coins .patch-coins-desc__primary {
+  color: var(--color-text-accent);
+}
+
+#page-module-patch-coins .patch-coins-desc__secondary {
+  color: var(--color-text-accent);
+}
+
 .module-hero__content {
   flex: 1;
   min-width: 0;
@@ -1775,7 +2467,44 @@ html:not([data-theme="light"]) .overview-problem-signoff {
 }
 
 .mission-rewards-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.mission-rewards-grid .feature-card {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+.mission-rewards-grid .feature-card__icon {
+  width: 112px;
+  height: 112px;
+  min-width: 112px;
+  margin-bottom: 0;
+  justify-self: center;
+}
+
+.mission-rewards-grid .feature-card__icon img {
+  width: 112px;
+  height: 112px;
+}
+
+.mission-rewards-grid .feature-card__icon--missions-coin-primary {
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
+}
+
+.mission-rewards-grid .feature-card__icon--missions-coin-primary img {
+  width: 128px;
+  height: 128px;
+}
+
+.mission-rewards-grid .feature-card__text {
+  margin: 0;
 }
 
 .module-body > p,
@@ -2190,6 +2919,11 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   height: 112px;
 }
 
+.metrics__icon--missions-pilot img {
+  width: 94px;
+  height: 94px;
+}
+
 /* --- Footer Note --- */
 .footer-note {
   text-align: center;
@@ -2373,6 +3107,42 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     min-width: unset;
   }
 
+  .page--module .module-hero__image {
+    width: min(360px, 92vw);
+  }
+
+  #page-module-small-missions .module-hero__image,
+  #page-module-medium-missions .module-hero__image,
+  #page-module-large-missions .module-hero__image {
+    width: min(220px, 60vw);
+  }
+
+  #page-module-patch-coins .module-hero__image {
+    width: min(220px, 60vw);
+    transform: scale(1.18) translateY(-28px);
+    transform-origin: center top;
+  }
+
+  .page--module .module-hero {
+    margin-bottom: var(--space-lg);
+  }
+
+  .page--module .module-hero__content h1 {
+    margin-bottom: 0.4rem;
+  }
+
+  #page-module-patch-coins .module-hero {
+    margin-bottom: var(--space-sm);
+  }
+
+  #page-module-patch-coins .module-body__intro {
+    margin-top: calc(-1 * var(--space-sm));
+  }
+
+  #page-module-patch-coins .module-body__intro {
+    margin-top: 0;
+  }
+
   .values-grid {
     grid-template-columns: 1fr;
   }
@@ -2390,13 +3160,18 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 
   .metrics__icon--missions img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
   }
 
   .metrics__icon--missions-boost img {
-    width: 88px;
-    height: 88px;
+    width: 106px;
+    height: 106px;
+  }
+
+  .metrics__icon--missions-pilot img {
+    width: 66px;
+    height: 66px;
   }
 
   .feature-card__icon--missions-coin {
@@ -2411,14 +3186,14 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 
   .feature-card__icon--cluj {
-    width: 96px;
-    height: 96px;
-    min-width: 96px;
+    width: 104px;
+    height: 104px;
+    min-width: 104px;
   }
 
   .feature-card__icon--cluj img {
-    width: 96px;
-    height: 96px;
+    width: 104px;
+    height: 104px;
   }
 
   .value-card__icon {
@@ -2467,24 +3242,24 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 
   .metrics__icon--missions img {
-    width: 72px;
-    height: 72px;
+    width: 90px;
+    height: 90px;
   }
 
   .metrics__icon--missions-boost img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
   }
 
   .feature-card__icon--cluj {
-    width: 84px;
-    height: 84px;
-    min-width: 84px;
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
   }
 
   .feature-card__icon--cluj img {
-    width: 84px;
-    height: 84px;
+    width: 88px;
+    height: 88px;
   }
 
   .value-card__icon {
@@ -2580,6 +3355,45 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     font-size: 1.4rem !important;
     line-height: 1.06 !important;
     letter-spacing: -0.065em !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Final mobile override: keep Patch Coins aligned with the generic module hero flow. */
+  #page-module-patch-coins .module-hero {
+    gap: var(--space-xl);
+    margin-bottom: var(--space-lg) !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  #page-module-patch-coins .module-hero__image {
+    width: min(220px, 60vw) !important;
+    min-width: unset;
+    object-fit: contain;
+    object-position: center;
+    transform: none !important;
+    transform-origin: center top;
+  }
+
+  #page-module-patch-coins .module-hero__content {
+    padding-top: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  #page-module-patch-coins .module-hero__content h1 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  #page-module-patch-coins .module-hero__badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #page-module-patch-coins .module-body__intro {
+    margin-top: 0 !important;
   }
 }
 
@@ -2684,6 +3498,11 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     height: 96px;
   }
 
+  .metrics__icon--missions-pilot img {
+    width: 84px;
+    height: 84px;
+  }
+
   .feature-card__icon--missions-coin {
     width: 104px;
     height: 104px;
@@ -2758,5 +3577,46 @@ body.sidebar-open {
     border-color: #ccc;
     background: #fafafa;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #page-mvp .section--mvp-success .metrics li {
+    display: grid;
+    grid-template-columns: 144px minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-md);
+  }
+
+  #page-mvp .section--mvp-success .metrics__icon {
+    justify-self: center;
+  }
+
+  .metrics__icon--missions,
+  .metrics__icon--missions-boost,
+  .metrics__icon--missions-pilot {
+    width: 112px !important;
+    height: 112px !important;
+  }
+
+  .metrics__icon--missions-boost-wide {
+    width: 144px !important;
+    height: 144px !important;
+  }
+
+  .metrics__icon--missions img,
+  .metrics__icon--missions-boost img {
+    width: 124px !important;
+    height: 124px !important;
+  }
+
+  .metrics__icon--missions-boost-wide img {
+    width: 144px !important;
+    height: 144px !important;
+  }
+
+  .metrics__icon--missions-pilot img {
+    width: 112px !important;
+    height: 112px !important;
   }
 }

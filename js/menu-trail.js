@@ -247,10 +247,10 @@ const MenuTrail = {
       const to = itemMap.get(toId);
       if (!from || !to) return;
 
-      const x1 = this.getNodeX(from);
-      const y1 = this.getNodeY(from);
-      const x2 = this.getNodeX(to);
-      const y2 = this.getNodeY(to);
+      const x1 = this.getNodeX(from, list);
+      const y1 = this.getNodeY(from, list);
+      const x2 = this.getNodeX(to, list);
+      const y2 = this.getNodeY(to, list);
 
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('d', `M ${x1} ${y1} L ${x2} ${y2}`);
@@ -298,13 +298,18 @@ const MenuTrail = {
     return segments;
   },
 
-  getNodeX(item) {
+  getNodeX(item, list) {
     const lane = parseFloat(getComputedStyle(item).getPropertyValue('--lane-x'));
-    return Number.isFinite(lane) ? lane : 20;
+    const itemRect = item.getBoundingClientRect();
+    const listRect = list.getBoundingClientRect();
+    const baseX = Number.isFinite(lane) ? lane : 20;
+    return itemRect.left - listRect.left + baseX;
   },
 
-  getNodeY(item) {
-    return item.offsetTop + 16;
+  getNodeY(item, list) {
+    const itemRect = item.getBoundingClientRect();
+    const listRect = list.getBoundingClientRect();
+    return itemRect.top - listRect.top + 16;
   },
 
   createLink(item, className) {

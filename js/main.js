@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeEnergyNote = document.getElementById('theme-energy-note');
   const themeEnergyNoteText = document.querySelector('.theme-energy-note__text');
   const themeEnergyNoteClose = document.getElementById('theme-energy-note-close');
+  const patchCounters = Array.from(document.querySelectorAll('[data-patch-counter]'));
 
   const getText = (key, fallback) => {
     return (typeof I18n !== 'undefined' && I18n && typeof I18n.t === 'function')
@@ -203,6 +204,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const initPatchCounter = () => {
+    if (!patchCounters.length) return;
+
+    const closeAllPatchCounters = () => {
+      patchCounters.forEach((counter) => {
+        const trigger = counter.querySelector('.patch-counter__trigger');
+        const popover = counter.querySelector('.patch-counter__popover');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        if (popover) popover.hidden = true;
+      });
+    };
+
+    patchCounters.forEach((counter) => {
+      const trigger = counter.querySelector('.patch-counter__trigger');
+      const popover = counter.querySelector('.patch-counter__popover');
+      if (!trigger || !popover) return;
+
+      trigger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        closeAllPatchCounters();
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        popover.hidden = isOpen;
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target.closest('[data-patch-counter]')) return;
+      closeAllPatchCounters();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeAllPatchCounters();
+      }
+    });
+  };
+
   const applyAutoThemeOnEntry = () => {
     const autoTheme = getAutoTheme();
     const manualTheme = getManualThemeOverride();
@@ -270,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const initTheme = () => {
     applyAutoThemeOnEntry();
+    initPatchCounter();
 
     themeToggles.forEach((toggle) => {
       toggle.addEventListener('change', () => {
@@ -479,6 +519,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail();
   initDynamicPageNavigation();
   initJourneyTableControls();
+  if (typeof renderSmallMissions === 'function') {
+    renderSmallMissions();
+  }
+
+  if (typeof renderMediumMissions === 'function') {
+    renderMediumMissions();
+  }
+
+  if (typeof renderLargeMissions === 'function') {
+    renderLargeMissions();
+  }
 
   if (typeof MenuTrail !== 'undefined' && MenuTrail && typeof MenuTrail.layoutAll === 'function') {
     MenuTrail.layoutAll();
