@@ -1320,11 +1320,13 @@ html[data-theme="dark"] .missions-filter__select {
     display: grid;
     min-height: auto;
     overflow: visible;
+    touch-action: pan-y;
   }
 
   .mission-card--flipped .mission-content--back {
     overflow: visible;
     -webkit-overflow-scrolling: auto;
+    touch-action: pan-y;
   }
 
   .mission-content h3 {
@@ -2864,6 +2866,14 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   padding-top: var(--space-xl);
   border-top: 1px solid var(--color-border);
   margin-top: var(--space-2xl);
+  position: static;
+  inset: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  clear: both;
+  width: 100%;
+  align-self: stretch;
 }
 
 .module-nav__spacer {
@@ -3179,6 +3189,11 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     flex-direction: column;
     gap: var(--space-md);
     text-align: center;
+    position: static;
+    inset: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 
   /* Keep key custom icons readable on mobile */

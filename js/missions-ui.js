@@ -208,6 +208,12 @@ const MissionUI = (() => {
     large: { sessionLength: "all", recurrence: "all", type: "all", difficulty: "all" }
   };
 
+  const touchState = {
+    x: 0,
+    y: 0,
+    moved: false
+  };
+
   const collections = {
     small: {
       dataKey: "SmallMissions",
@@ -337,8 +343,28 @@ const MissionUI = (() => {
         </div>
       `;
 
+      card.addEventListener("touchstart", (event) => {
+        const touch = event.touches && event.touches[0];
+        if (!touch) return;
+        touchState.x = touch.clientX;
+        touchState.y = touch.clientY;
+        touchState.moved = false;
+      }, { passive: true });
+
+      card.addEventListener("touchmove", (event) => {
+        const touch = event.touches && event.touches[0];
+        if (!touch) return;
+        if (Math.abs(touch.clientX - touchState.x) > 8 || Math.abs(touch.clientY - touchState.y) > 8) {
+          touchState.moved = true;
+        }
+      }, { passive: true });
+
       card.addEventListener("click", (event) => {
         if (event.target.closest("button")) return;
+        if (touchState.moved) {
+          touchState.moved = false;
+          return;
+        }
         flipMission(card, !card.classList.contains("mission-card--flipped"));
       });
 
