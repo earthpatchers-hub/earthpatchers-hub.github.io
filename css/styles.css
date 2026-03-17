@@ -1299,6 +1299,34 @@ html[data-theme="dark"] .missions-filter__select {
     min-height: 620px;
   }
 
+  .mission-card--flipped {
+    min-height: auto;
+  }
+
+  .mission-card--flipped .mission-card__inner {
+    min-height: auto;
+    height: auto;
+    transform: none;
+  }
+
+  .mission-card--flipped .mission-card__face--front {
+    display: none;
+  }
+
+  .mission-card--flipped .mission-card__face--back {
+    position: relative;
+    inset: auto;
+    transform: none;
+    display: grid;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .mission-card--flipped .mission-content--back {
+    overflow: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+
   .mission-content h3 {
     font-size: clamp(1.1rem, 7vw, 1.45rem);
     line-height: 1.12;
