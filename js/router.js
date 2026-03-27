@@ -16,22 +16,54 @@ const Router = {
     this.navigate();
   },
 
+  blurActiveElement() {
+    const active = document.activeElement;
+    if (active && typeof active.blur === 'function' && active !== document.body) {
+      active.blur();
+    }
+  },
+
   resetScrollPosition() {
+    this.blurActiveElement();
+
+    const rootStyle = document.documentElement.style;
+    const bodyStyle = document.body?.style;
+    const content = document.querySelector('.content');
+    const contentStyle = content?.style;
+    const previousRootBehavior = rootStyle.scrollBehavior;
+    const previousBodyBehavior = bodyStyle ? bodyStyle.scrollBehavior : '';
+    const previousContentBehavior = contentStyle ? contentStyle.scrollBehavior : '';
+
+    rootStyle.scrollBehavior = 'auto';
+    if (bodyStyle) bodyStyle.scrollBehavior = 'auto';
+    if (contentStyle) contentStyle.scrollBehavior = 'auto';
+
+    const scrollRoot = document.scrollingElement || document.documentElement;
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    if (scrollRoot) {
+      scrollRoot.scrollTop = 0;
+      scrollRoot.scrollLeft = 0;
+    }
 
-    const content = document.querySelector('.content');
     if (content) {
       content.scrollTop = 0;
+      if (typeof content.scrollTo === 'function') {
+        content.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      }
     }
+
+    rootStyle.scrollBehavior = previousRootBehavior;
+    if (bodyStyle) bodyStyle.scrollBehavior = previousBodyBehavior;
+    if (contentStyle) contentStyle.scrollBehavior = previousContentBehavior;
   },
 
   stabilizeScrollReset() {
     this.resetScrollPosition();
     requestAnimationFrame(() => this.resetScrollPosition());
     setTimeout(() => this.resetScrollPosition(), 0);
-    setTimeout(() => this.resetScrollPosition(), 120);
+    setTimeout(() => this.resetScrollPosition(), 80);
   },
 
   navigate() {

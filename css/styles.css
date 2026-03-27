@@ -1440,6 +1440,7 @@ html[data-theme="dark"] .missions-filter__select {
   margin-left: var(--sidebar-width);
   flex: 1;
   min-height: 100vh;
+  overflow-anchor: none;
 }
 
 .page {
@@ -1449,6 +1450,7 @@ html[data-theme="dark"] .missions-filter__select {
   margin: 0;
   animation: fadeIn 0.3s ease;
   position: relative;
+  overflow-anchor: none;
 }
 
 .page::before {
@@ -1907,6 +1909,12 @@ html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.mission-size-grid .feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .mission-size-header {
   display: flex;
   align-items: center;
@@ -1927,6 +1935,21 @@ html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
   position: relative;
   z-index: 2;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.mission-size-link {
+  width: 100%;
+  margin-top: var(--space-md);
+  justify-content: center;
+  margin-top: auto;
+}
+
+.mission-examples-intro {
+  margin-top: calc(var(--space-md) * -1);
+}
+
+.overview-mission-paths {
+  margin-top: var(--space-xl);
 }
 
 #page-overview .mission-size-grid .feature-card__title {
@@ -2084,7 +2107,7 @@ html:not([data-theme="light"]) #page-overview [data-i18n="overview.trust.title"]
 }
 
 html[data-theme="dark"] .journey-table-control {
-  color: #9fe3b1;
+  color: var(--color-text-accent);
   border-color: rgba(159, 227, 177, 0.28);
 }
 
@@ -2796,6 +2819,12 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   border-radius: var(--radius);
 }
 
+.value-card__media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .value-card__icon {
   font-size: 1.8rem;
   margin-bottom: var(--space-sm);
@@ -2874,6 +2903,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   clear: both;
   width: 100%;
   align-self: stretch;
+  overflow-anchor: none;
 }
 
 .module-nav__spacer {
@@ -2883,6 +2913,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
 .module-nav__link {
   font-size: var(--font-size-sm);
   font-weight: 600;
+  overflow-anchor: none;
 }
 
 .module-nav__prev {}
@@ -2972,7 +3003,31 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   margin-top: var(--space-3xl);
 }
 
-.page-end-cta {}
+.page-end-cta.section--about-trail-before {
+  margin-top: var(--space-lg);
+}
+
+#page-about .section--about-why {
+  margin-top: calc(-1 * var(--space-lg));
+}
+
+#page-about .page-nav {
+  position: relative;
+  border-top: none;
+  padding-top: calc(var(--space-lg) + 14px);
+}
+
+#page-about .page-nav::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--space-sm));
+  left: 0;
+  right: 0;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: var(--trail-divider-svg);
+}
 
 .page-footer-note {}
 
@@ -3128,6 +3183,25 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     align-items: flex-start;
   }
 
+  .feature-card--cluj-single {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-md);
+    padding-left: var(--space-lg);
+  }
+
+  .feature-card--cluj-single .feature-card__icon {
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .feature-card--cluj-single .feature-card__text {
+    width: 100%;
+    margin: 0;
+  }
+
   .pillars {
     grid-template-columns: 1fr;
   }
@@ -3155,12 +3229,6 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     width: min(220px, 60vw);
   }
 
-  #page-module-patch-coins .module-hero__image {
-    width: min(220px, 60vw);
-    transform: scale(1.18) translateY(-28px);
-    transform-origin: center top;
-  }
-
   .page--module .module-hero {
     margin-bottom: var(--space-lg);
   }
@@ -3169,20 +3237,42 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     margin-bottom: 0.4rem;
   }
 
-  #page-module-patch-coins .module-hero {
-    margin-bottom: var(--space-sm);
-  }
-
-  #page-module-patch-coins .module-body__intro {
-    margin-top: calc(-1 * var(--space-sm));
-  }
-
-  #page-module-patch-coins .module-body__intro {
-    margin-top: 0;
-  }
-
   .values-grid {
     grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-lg);
+  }
+
+  .value-card__media {
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .value-card__icon {
+    width: 124px;
+    height: 124px;
+    margin-bottom: var(--space-xs);
+  }
+
+  .value-card__icon img {
+    width: 124px;
+    height: 124px;
+  }
+
+  .value-card__title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .value-card__text {
+    align-self: center;
+    margin: 0;
   }
 
   .module-nav {
@@ -3305,6 +3395,12 @@ html:not([data-theme="light"]) .overview-problem-signoff {
     height: 88px;
   }
 
+  .feature-card--cluj-single {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
   .value-card__icon {
     width: 80px;
     height: 80px;
@@ -3411,7 +3507,7 @@ html:not([data-theme="light"]) .overview-problem-signoff {
   }
 
   #page-module-patch-coins .module-hero__image {
-    width: min(220px, 60vw) !important;
+    width: min(360px, 92vw) !important;
     min-width: unset;
     object-fit: contain;
     object-position: center;

@@ -35,7 +35,7 @@ window.SmallMissions = [
     badge: "light-switch",
     summary: "Turn off lights when leaving rooms.",
     purpose: "Save electricity and build energy awareness.",
-    validation: "Self-check for 7 days.",
+    validation: "Self-check for 7 days and send an email confirmation.",
     prep: [],
     steps: [
       "Turn off lights when leaving a room",
@@ -104,9 +104,9 @@ window.SmallMissions = [
     validation: "Photo of the items.",
     prep: ["open fridge"],
     steps: [
-      "Check fridge",
-      "Choose 3 foods to eat soon",
-      "Plan to use them first"
+      "Check the fridge",
+      "Choose 3 foods that will go bad soon",
+      "Move them to the front to use them first"
     ]
   },
   {
@@ -119,11 +119,11 @@ window.SmallMissions = [
     duration: "5 days",
     coins: 8,
     age: "5+",
-    achievement: "Water Sprinter",
+    achievement: "Quick Shower Hero",
     badge: "speedy-shower",
     summary: "Take showers under five minutes.",
     purpose: "Save water and heating energy.",
-    validation: "Photo of timer or self-check.",
+    validation: "Send a photo of the timer or self-check for 5 days and send an email confirmation.",
     prep: ["timer"],
     steps: [
       "Start timer",
@@ -163,7 +163,7 @@ window.SmallMissions = [
     duration: "15 min",
     coins: 10,
     age: "3+",
-    achievement: "Seed Starter",
+    achievement: "Little Gardener",
     badge: "plant",
     summary: "Plant seeds or a small plant.",
     purpose: "Encourage greenery and care for living things.",
@@ -172,7 +172,7 @@ window.SmallMissions = [
     steps: [
       "Prepare soil",
       "Plant seeds",
-      "Water the plant"
+      "Water the planted seeds"
     ]
   },
   {
@@ -194,7 +194,7 @@ window.SmallMissions = [
     steps: [
       "Choose five usable items",
       "Pack them",
-      "Take them to donation center"
+      "Take them to donation center or donate them directly to a person in need"
     ]
   },
   {
@@ -254,7 +254,7 @@ window.SmallMissions = [
     badge: "standby",
     summary: "Find devices on standby and turn them off.",
     purpose: "Reduce electricity waste.",
-    validation: "Photo of device switched off.",
+    validation: "Photos of devices switched off.",
     prep: ["walk around house"],
     steps: [
       "Find devices with standby lights",

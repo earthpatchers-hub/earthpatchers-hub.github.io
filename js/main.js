@@ -292,9 +292,25 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!hash || hash === '#') return;
 
       event.preventDefault();
+      if (typeof link.blur === 'function') {
+        link.blur();
+      }
+      const isModulePagerLink = !!link.closest('.module-nav');
+      if (isModulePagerLink) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
 
       if (typeof Router !== 'undefined' && Router && typeof Router.goTo === 'function') {
         Router.goTo(hash);
+        if (isModulePagerLink) {
+          requestAnimationFrame(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+          });
+        }
       } else {
         location.hash = hash;
       }
@@ -450,10 +466,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const canScroll = maxScrollLeft > 4;
       shell.classList.toggle('journey-table-wrap--scrollable', canScroll);
 
-      leftBtn.hidden = !canScroll;
-      rightBtn.hidden = !canScroll;
+      leftBtn.hidden = false;
+      rightBtn.hidden = false;
       leftBtn.disabled = !canScroll || wrap.scrollLeft <= 4;
       rightBtn.disabled = !canScroll || wrap.scrollLeft >= maxScrollLeft - 4;
+      leftBtn.setAttribute('aria-hidden', 'false');
+      rightBtn.setAttribute('aria-hidden', 'false');
     };
 
     shells.forEach((shell) => {
@@ -474,14 +492,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       wrap.addEventListener('scroll', () => updateWrapControls(shell), { passive: true });
       updateWrapControls(shell);
+
+      if (typeof ResizeObserver !== 'undefined') {
+        const observer = new ResizeObserver(() => updateWrapControls(shell));
+        observer.observe(wrap);
+        const table = wrap.querySelector('.journey-table');
+        if (table) observer.observe(table);
+      }
     });
 
     updateLabels();
     window.addEventListener('resize', () => shells.forEach(updateWrapControls));
+    window.addEventListener('load', () => shells.forEach(updateWrapControls));
     document.addEventListener('i18n:applied', () => {
       updateLabels();
       shells.forEach(updateWrapControls);
     });
+    requestAnimationFrame(() => shells.forEach(updateWrapControls));
+    setTimeout(() => shells.forEach(updateWrapControls), 120);
+    setTimeout(() => shells.forEach(updateWrapControls), 320);
   };
 
   const initDynamicPageNavigation = () => {

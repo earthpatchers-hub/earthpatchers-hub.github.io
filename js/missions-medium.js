@@ -67,7 +67,7 @@ window.MediumMissions = [
     purpose: "Reduce food waste and make food easier to find.",
     validation: "Upload a before and after photo of the fridge shelf.",
     prep: ["cloth for cleaning", "container or tray"],
-    steps: ["Remove items from one shelf", "Group similar foods together", "Place older food toward the front", "Clean the shelf"]
+    steps: ["Remove items from one shelf", "Clean the shelf", "Group similar foods together", "Place older food toward the front"]
   },
   {
     id: "bike-explorer",
@@ -81,8 +81,8 @@ window.MediumMissions = [
     age: "6+ with help / 12-16 solo depending on parents",
     achievement: "Leg Powered Traveler",
     summary: "Replace one short car trip with walking or biking.",
-    purpose: "Reduce emissions and build healthy habits.",
-    validation: "Upload a photo of your destination.",
+    purpose: "Reduce polution and build healthy habits.",
+    validation: "Upload a photo of you on your bike or walking.",
     prep: ["bike or walking shoes", "helmet (if biking)"],
     steps: ["Choose a destination nearby", "Travel by bike or foot", "Notice your surroundings"]
   },

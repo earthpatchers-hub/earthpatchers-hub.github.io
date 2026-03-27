@@ -12,7 +12,7 @@ window.LargeMissions = [
     achievement: "Root Starter",
     summary: "Plant trees to improve biodiversity and green spaces.",
     purpose: "Plant trees to improve biodiversity and green spaces.",
-    validation: "Upload a photo of the planted tree and the planting activity.",
+    validation: "Upload a photo of the planted trees and the planting activity.",
     prep: ["shovel", "gloves", "water", "young tree or sapling"],
     steps: ["Find a tree planting event or suitable place to plant.", "Dig the planting hole.", "Plant the tree correctly.", "Water the tree after planting."]
   },
@@ -28,7 +28,7 @@ window.LargeMissions = [
     age: "8+ with help / 14-18 solo depending on parents",
     achievement: "Road Replacer",
     summary: "Spend one day replacing car trips with walking, cycling, or public transport.",
-    purpose: "Reduce emissions by replacing car trips with walking, cycling, or public transport.",
+    purpose: "Reduce polution by replacing car trips with walking, cycling, or public transport.",
     validation: "Upload photos showing three trips completed without a car.",
     prep: ["bicycle, walking shoes, or public transport"],
     steps: ["Plan a day without using a car.", "Complete at least three trips without a car."]
@@ -169,7 +169,7 @@ window.LargeMissions = [
     achievement: "Change Spark",
     summary: "Start a sustainability improvement in school.",
     purpose: "Start a sustainability improvement in school.",
-    validation: "Upload a photo or description of the initiative.",
+    validation: "Upload a photo of the change or a photo of the initiative plan.",
     prep: ["idea for improvement", "discussion with teacher or staff"],
     steps: ["Identify one sustainability improvement for school.", "Discuss it with a teacher or staff member.", "Do one improvement."]
   },
@@ -202,10 +202,10 @@ window.LargeMissions = [
     duration: "1-2 hours",
     coins: 35,
     age: "12+ with help / 15+ solo",
-    achievement: "Power Questioner",
     summary: "Research your home electricity provider and explore renewable options.",
     purpose: "Research your home electricity provider and explore renewable options.",
-    validation: "Upload a screenshot of your current provider and a screenshot of renewable options or a message sent to the provider.",
+    achievement: "Energy Explorer",
+    validation: "Upload a photo of your current provider and a photo of renewable options or a message sent to the provider.",
     prep: ["electricity bill", "internet access"],
     steps: ["Identify your electricity provider.", "Research renewable energy options.", "If available, explore switching providers.", "If not available, contact the provider requesting renewable options."]
   }
