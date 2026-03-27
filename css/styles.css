@@ -1896,6 +1896,10 @@ html[data-audience="public"][data-lang="ro"] #page-overview .hero__tagline {
   gap: var(--space-md);
 }
 
+#page-overview .overview-how-public[data-audience="public"] {
+  margin-bottom: var(--space-xl);
+}
+
 .feature-card--single .feature-card__icon {
   margin-bottom: 0;
   flex-shrink: 0;
