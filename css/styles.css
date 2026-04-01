@@ -1293,6 +1293,7 @@ html[data-theme="dark"] .missions-filter__select {
 
   .mission-card {
     min-height: 620px;
+    touch-action: pan-y;
   }
 
   .mission-card__inner {
@@ -1301,12 +1302,14 @@ html[data-theme="dark"] .missions-filter__select {
 
   .mission-card--flipped {
     min-height: auto;
+    overflow: visible;
   }
 
   .mission-card--flipped .mission-card__inner {
     min-height: auto;
     height: auto;
     transform: none;
+    pointer-events: none;
   }
 
   .mission-card--flipped .mission-card__face--front {
@@ -1321,6 +1324,7 @@ html[data-theme="dark"] .missions-filter__select {
     min-height: auto;
     overflow: visible;
     touch-action: pan-y;
+    pointer-events: auto;
   }
 
   .mission-card--flipped .mission-content--back {

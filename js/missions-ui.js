@@ -354,7 +354,7 @@ const MissionUI = (() => {
       card.addEventListener("touchmove", (event) => {
         const touch = event.touches && event.touches[0];
         if (!touch) return;
-        if (Math.abs(touch.clientX - touchState.x) > 8 || Math.abs(touch.clientY - touchState.y) > 8) {
+        if (Math.abs(touch.clientX - touchState.x) > 12 || Math.abs(touch.clientY - touchState.y) > 12) {
           touchState.moved = true;
         }
       }, { passive: true });
@@ -363,6 +363,9 @@ const MissionUI = (() => {
         if (event.target.closest("button")) return;
         if (touchState.moved) {
           touchState.moved = false;
+          return;
+        }
+        if (window.matchMedia("(max-width: 767px)").matches && card.classList.contains("mission-card--flipped")) {
           return;
         }
         flipMission(card, !card.classList.contains("mission-card--flipped"));
