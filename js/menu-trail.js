@@ -16,15 +16,16 @@ const MenuTrail = {
     'sidebar-primary': [
       {
         kind: 'link',
-        href: '#about',
-        i18n: 'nav.about',
-        text: 'Who We Are'
-      },
-      {
-        kind: 'link',
         href: '#overview',
         i18n: 'nav.overview',
         text: 'What We Do'
+      },
+      {
+        kind: 'link',
+        href: '#about',
+        i18n: 'nav.about',
+        text: 'Who We Are',
+        audience: 'partners'
       },
       {
         kind: 'accordion',
@@ -59,6 +60,13 @@ const MenuTrail = {
             ['missions-hq', 'patch-coins', 'small-missions', 'medium-missions', 'recycling-images', 'large-missions', 'tribes']
           ]
         }
+      },
+      {
+        kind: 'link',
+        href: '#about',
+        i18n: 'nav.about',
+        text: 'Who We Are',
+        audience: 'public'
       },
       {
         kind: 'accordion',
@@ -104,6 +112,10 @@ const MenuTrail = {
       if (!items) return;
       this.render(root, items);
     });
+
+    if (typeof Audience !== 'undefined' && Audience && typeof Audience.applyVisibility === 'function') {
+      Audience.applyVisibility();
+    }
 
     const relayout = () => this.layoutAll();
     window.addEventListener('resize', relayout);

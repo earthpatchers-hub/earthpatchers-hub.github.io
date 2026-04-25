@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pageOrderByAudience = {
     public: [
-      '#about',
       '#overview',
       '#mvp',
+      '#about',
       '#module/missions-hq',
       '#module/patch-coins',
       '#module/small-missions',
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '#contact'
     ],
     partners: [
-      '#about',
       '#overview',
+      '#about',
       '#mvp',
       '#module/missions-hq',
       '#module/patch-coins',
