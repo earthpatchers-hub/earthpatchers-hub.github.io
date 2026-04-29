@@ -208,12 +208,6 @@ const MissionUI = (() => {
     large: { sessionLength: "all", recurrence: "all", type: "all", difficulty: "all" }
   };
 
-  const touchState = {
-    x: 0,
-    y: 0,
-    moved: false
-  };
-
   const collections = {
     small: {
       dataKey: "SmallMissions",
@@ -343,44 +337,28 @@ const MissionUI = (() => {
         </div>
       `;
 
-      let suppressClick = false;
+      let pointerStartX = 0;
+      let pointerStartY = 0;
+      let pointerMoved = false;
 
-      card.addEventListener("touchstart", (event) => {
-        const touch = event.touches && event.touches[0];
-        if (!touch) return;
-        touchState.x = touch.clientX;
-        touchState.y = touch.clientY;
-        touchState.moved = false;
-      }, { passive: true });
+      card.addEventListener("pointerdown", (event) => {
+        if (event.pointerType !== "touch") return;
+        pointerStartX = event.clientX;
+        pointerStartY = event.clientY;
+        pointerMoved = false;
+      });
 
-      card.addEventListener("touchmove", (event) => {
-        const touch = event.touches && event.touches[0];
-        if (!touch) return;
-        if (Math.abs(touch.clientX - touchState.x) > 12 || Math.abs(touch.clientY - touchState.y) > 12) {
-          touchState.moved = true;
+      card.addEventListener("pointermove", (event) => {
+        if (event.pointerType !== "touch") return;
+        if (Math.abs(event.clientX - pointerStartX) > 10 || Math.abs(event.clientY - pointerStartY) > 10) {
+          pointerMoved = true;
         }
-      }, { passive: true });
-
-      card.addEventListener("touchend", (event) => {
-        if (!window.matchMedia("(max-width: 767px)").matches) return;
-        if (!card.classList.contains("mission-card--flipped")) return;
-        if (event.target.closest("button")) return;
-        if (touchState.moved) {
-          touchState.moved = false;
-          return;
-        }
-        suppressClick = true;
-        flipMission(card, false);
-      }, { passive: true });
+      });
 
       card.addEventListener("click", (event) => {
         if (event.target.closest("button")) return;
-        if (suppressClick) {
-          suppressClick = false;
-          return;
-        }
-        if (touchState.moved) {
-          touchState.moved = false;
+        if (pointerMoved) {
+          pointerMoved = false;
           return;
         }
         flipMission(card, !card.classList.contains("mission-card--flipped"));
